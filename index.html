@@ -1482,7 +1482,7 @@
               '        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>',
               '        <circle cx="12" cy="12" r="3"></circle>',
               '      </svg>',
-              '      <span id="page-views-count">Views: ...</span>',
+              '      <span id="page-views-count">1 view</span>',
               '    </span>',
               '  </div>',
               '  <div class="header-bar-right">',
@@ -1659,14 +1659,15 @@
                     var raw = String(data.count).replace(/,/g, '').trim();
                     var num = parseInt(raw, 10);
                     if (!isNaN(num)) {
-                      countEl.textContent = raw + (raw === '1' ? ' view' : ' views');
+                      var displayCount = Math.max(1, num);
+                      countEl.textContent = displayCount + (displayCount === 1 ? ' view' : ' views');
                       return;
                     }
                   }
-                  countEl.textContent = '0 views';
+                  countEl.textContent = '1 view';
                 })
                 .catch(function() {
-                  countEl.textContent = '0 views';
+                  countEl.textContent = '1 view';
                 });
             };
             fetchCount();
