@@ -22,7 +22,7 @@
       * [12. Code Debugging & Tracing](/bca_new/bcs131/topics/12-code-debugging.md)
 
   * **Upcoming BCA_NEW Subjects**
-    * *BCS-011: Problem Solving & C (Coming Soon)*
+    * *BCS-011: Computer Basics & PC Software (Coming Soon)*
     * *BCS-012: Basic Mathematics (Coming Soon)*
     * *BCS-040: Statistical Techniques (Coming Soon)*
 

@@ -712,7 +712,7 @@
       <span class="mobile-brand-icon">🎓</span>
       <span class="mobile-brand-title">IGNOU BCA_NEW</span>
     </a>
-    <span class="mobile-subject-pill">BCS-131</span>
+    <span class="mobile-subject-pill">BCA_NEW</span>
   </header>
   <div id="app">Loading IGNOU BCA_NEW Prep Portal...</div>
   <script>
@@ -792,6 +792,23 @@
           hook.doneEach(function() {
             var currentTheme = localStorage.getItem('DARK_LIGHT_THEME') || 'light';
             document.documentElement.setAttribute('data-theme', currentTheme);
+
+            // Dynamic Mobile Topbar Subject Pill based on active route
+            var pill = document.querySelector('.mobile-subject-pill');
+            if (pill) {
+              var hash = window.location.hash || '';
+              if (hash.indexOf('bcs131') !== -1) {
+                pill.textContent = 'BCS-131';
+              } else if (hash.indexOf('bcs011') !== -1) {
+                pill.textContent = 'BCS-011';
+              } else if (hash.indexOf('bcs012') !== -1) {
+                pill.textContent = 'BCS-012';
+              } else if (hash.indexOf('bcs040') !== -1) {
+                pill.textContent = 'BCS-040';
+              } else {
+                pill.textContent = 'BCA_NEW';
+              }
+            }
 
             // Auto-close sidebar on mobile navigation
             if (window.innerWidth <= 768) {
