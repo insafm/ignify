@@ -1,12 +1,10 @@
 * [🏠 Home](/)
 
-* **📚 Curriculum**
-  * [Programme Blueprint](/#/README?id=programme-overview-structure)
-  * [Semester 1 (🟡 Pipeline)](/#/README?id=-semester-1)
-  * [Semester 2 (🟡 Pipeline)](/#/README?id=-semester-2)
-  * [Semester 3 (🟢 BCS-131 Active)](/bca_new/bcs131/README.md)
-  * [Semesters 4–6 (⚪ Planned)](/#/README?id=-semesters-4-through-6)
+* [💡 About & Vision](/#/README?id=-about-the-creator--why-this-was-built)
 
-* [📘 Blueprint](/#/README?id=programme-overview-structure)
+* **🏛️ Programmes**
+  * [BCA_NEW Hub (🟢 Live)](/bca_new/README.md)
+  * [BCS-131: C++ (Sem 3 Active)](/bca_new/bcs131/README.md)
+  * [All Programmes](/#/README?id=-academic-programmes-directory)
 
 * [🌐 mohammedinsaf.com](https://mohammedinsaf.com)

@@ -7,7 +7,7 @@
 
 ## ❓ Question Bank & Canonical Answers
 
-### [Q212] Identify the errors in the code segment: cin >> num >> auuto; float area = length * breadth;. :id=q212
+### Q212: Identify the errors in the code segment: cin >> num >> auuto; float area = length * breadth;. :id=q212
 
 ⚪ **Low Priority** • **1 (4 marks)** • *Debugging / Short Answer*
 
@@ -17,7 +17,7 @@ Missing #include <iostream>/using namespace std;; undeclared variables (num, auu
 
 > **🗓️ Asked In Papers:** `2017-12 1(c)`
 
-### [Q213] Why will the function fragment (float sum(float, float); declared inside main(), called inside calc()) not work, and how do you fix it? :id=q213
+### Q213: Why will the function fragment (float sum(float, float); declared inside main(), called inside calc()) not work, and how do you fix it? :id=q213
 
 ⚪ **Low Priority** • **1 (4 marks)** • *Debugging / Short Answer*
 
@@ -27,7 +27,7 @@ sum() prototype has block scope local to main() and is invisible inside calc(); 
 
 > **🗓️ Asked In Papers:** `2017-12 1(d)`
 
-### [Q214] Given int ch=20; cout << ++ch << "\n" << ch << "\n";, what output does it produce, and what is the effect of replacing ++ch with ch+1? :id=q214
+### Q214: Given int ch=20; cout << ++ch << "\n" << ch << "\n";, what output does it produce, and what is the effect of replacing ++ch with ch+1? :id=q214
 
 ⚪ **Low Priority** • **1 (4 marks)** • *Debugging / Output / Short Answer*
 
@@ -37,7 +37,7 @@ In standard IGNOU left-to-right tracing, ++ch mutates ch to print 21 then 21 (no
 
 > **🗓️ Asked In Papers:** `2017-12S 1(c)`
 
-### [Q215] Identify the problem with void large(int &a, int &b); called as large(5, 7); and suggest a fix. :id=q215
+### Q215: Identify the problem with void large(int &a, int &b); called as large(5, 7); and suggest a fix. :id=q215
 
 ⚪ **Low Priority** • **1 (4 marks)** • *Debugging / Short Answer*
 

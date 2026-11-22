@@ -42,6 +42,7 @@ To score maximum marks, ensure you write:
 
 | Resource | Scope | Focus |
 | :--- | :--- | :--- |
+| **[📑 Question Papers Archive (30 PDFs)](/bca_new/bcs131/papers.md)** | All 30 TEE papers | Original question paper PDFs (Dec 2012 – Jun 2026) in `/pqp/` |
 | **[📊 30-Paper Comprehensive Analysis](/bca_new/bcs131/analysis.md)** | All 30 TEE papers | Mark weightages, topic rankings & frequency score formula |
 | **[🎯 High-Probability Predictions](/bca_new/bcs131/predictions.md)** | 12 Target questions | Statistical gap analysis & 10-mark expected questions |
 | **[⚖️ Most Repeated Comparison Questions](/bca_new/bcs131/comparisons.md)** | 14 Repeated pairs | High-scoring difference tables (OOP vs Procedural, Overloading vs Overriding, etc.) |

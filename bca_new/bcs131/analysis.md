@@ -1,6 +1,8 @@
 # 📊 30-Paper Comprehensive Exam Analysis (BCS-131 / BCS-031)
 
 > **Archive Coverage:** Across 30 previous-year IGNOU Term-End Examination papers spanning December 2012 through June 2026—including two supplementary BCS-031(S) papers, one undated BCAOL Online BCA paper, and dual-coded BCS-031/BCS-131 papers.
+>
+> 📥 **Original PDF Archive:** Access all 30 original [Term-End Exam Question Paper PDFs here](/bca_new/bcs131/papers.md).
 
 ---
 
