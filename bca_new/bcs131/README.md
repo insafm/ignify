@@ -28,9 +28,7 @@ As published on IGNOU's eGyanKosh repository, BCS-131 follows the **3-Block, 11-
 
 ## 🚨 The June 2026 Exam Format Shift
 
-<div class="callout callout-important">
-  <strong>Critical Exam Alert:</strong> In the June 2026 paper, IGNOU replaced the old pattern of eight 5-mark short questions with <strong>twelve 10-mark long-answer questions</strong> (4 in compulsory Question 1, and 2 each in Q2–Q5).
-</div>
+> **Critical Exam Alert:** In the June 2026 paper, IGNOU replaced the old pattern of eight 5-mark short questions with **twelve 10-mark long-answer questions** (4 in compulsory Question 1, and 2 each in Q2–Q5).
 
 To score maximum marks, ensure you write:
 1. **Formal Definition & Need** (2 marks)

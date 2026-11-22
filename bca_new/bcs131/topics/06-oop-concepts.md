@@ -12,27 +12,25 @@ This module covers **11 canonical questions** asked across 30 previous-year IGNO
 
 | ID | Question Summary | Frequency | Marks | Type | Importance |
 | :--- | :--- | :---: | :---: | :--- | :---: |
-| [Q134](#q134) | What is the Object-Oriented Programming (OOP) paradigm? Explain its basic c... | **16x** | 103 marks | Theory / Short Answer & Long Answer | <span class="badge badge-vhigh">Very High</span> |
-| [Q135](#q135) | What is message passing? Explain how it is used in C++ (and supports interf... | **12x** | 76 marks | Theory (+ Coding) / Short Answer & Long Answer | <span class="badge badge-vhigh">Very High</span> |
-| [Q136](#q136) | What is encapsulation? Are encapsulation and information hiding the same? D... | **6x** | 29 marks | Theory / Short Answer | <span class="badge badge-vhigh">Very High</span> |
-| [Q137](#q137) | Explain the features, advantages, and disadvantages of the structured progr... | **3x** | 19 marks | Theory / Short Answer & Long Answer | <span class="badge badge-high">High</span> |
-| [Q138](#q138) | What do you mean by Abstraction and Encapsulation? How are the two terms in... | **3x** | 13 marks | Theory / Short Answer | <span class="badge badge-high">High</span> |
-| [Q139](#q139) | Write a short note on Encapsulation with an example. | **2x** | 10 marks | Theory (+ Coding) / Short Answer | <span class="badge badge-medium">Medium</span> |
-| [Q140](#q140) | Explain any four benefits of Object-Oriented Programming. | **2x** | 9 marks | Theory / Short Answer | <span class="badge badge-medium">Medium</span> |
-| [Q141](#q141) | What is encapsulation? Explain how it differs from information hiding using... | **1x** | 8 marks | Theory + Coding / Long Answer | <span class="badge badge-low">Low</span> |
-| [Q142](#q142) | Define Abstraction and Encapsulation, and explain class and object with an ... | **1x** | 6 marks | Theory / Short Answer | <span class="badge badge-low">Low</span> |
-| [Q143](#q143) | What design concepts would you keep in mind while designing an object-orien... | **1x** | 5 marks | Theory / Short Answer | <span class="badge badge-low">Low</span> |
-| [Q144](#q144) | "A class is a way to accomplish data hiding." Comment with a suitable examp... | **1x** | 5 marks | Theory / Short Answer | <span class="badge badge-low">Low</span> |
+| [Q134](#q134) | What is the Object-Oriented Programming (OOP) paradigm? Explain its basic c... | **16x** | 103 marks | Theory / Short Answer & Long Answer | 🔴 **Very High** |
+| [Q135](#q135) | What is message passing? Explain how it is used in C++ (and supports interf... | **12x** | 76 marks | Theory (+ Coding) / Short Answer & Long Answer | 🔴 **Very High** |
+| [Q136](#q136) | What is encapsulation? Are encapsulation and information hiding the same? D... | **6x** | 29 marks | Theory / Short Answer | 🔴 **Very High** |
+| [Q137](#q137) | Explain the features, advantages, and disadvantages of the structured progr... | **3x** | 19 marks | Theory / Short Answer & Long Answer | 🟠 **High** |
+| [Q138](#q138) | What do you mean by Abstraction and Encapsulation? How are the two terms in... | **3x** | 13 marks | Theory / Short Answer | 🟠 **High** |
+| [Q139](#q139) | Write a short note on Encapsulation with an example. | **2x** | 10 marks | Theory (+ Coding) / Short Answer | 🔵 **Medium** |
+| [Q140](#q140) | Explain any four benefits of Object-Oriented Programming. | **2x** | 9 marks | Theory / Short Answer | 🔵 **Medium** |
+| [Q141](#q141) | What is encapsulation? Explain how it differs from information hiding using... | **1x** | 8 marks | Theory + Coding / Long Answer | ⚪ **Low** |
+| [Q142](#q142) | Define Abstraction and Encapsulation, and explain class and object with an ... | **1x** | 6 marks | Theory / Short Answer | ⚪ **Low** |
+| [Q143](#q143) | What design concepts would you keep in mind while designing an object-orien... | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
+| [Q144](#q144) | "A class is a way to accomplish data hiding." Comment with a suitable examp... | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
 
 ---
 
 ## ❓ Detailed Question Bank & Answers
 
-<div class="question-box" id="q134">
+### [Q134] What is the Object-Oriented Programming (OOP) paradigm? Explain its basic characteristics and advantages over structured/procedural programming.
 
-### <span class="badge-qid">Q134</span> What is the Object-Oriented Programming (OOP) paradigm? Explain its basic characteristics and advantages over structured/procedural programming.
-
-<span class="badge badge-vhigh">Very High Priority</span> <span class="badge badge-freq">Frequency: 16 (103 marks)</span> <span class="badge badge-topic">Theory / Short Answer & Long Answer</span>
+🔴 **Very High Priority** • **16 (103 marks)** • *Theory / Short Answer & Long Answer*
 
 **💡 Key Answer Points:**
 
@@ -40,13 +38,9 @@ Models real-world entities combining data + behavior (Encapsulation, Abstraction
 
 > **🗓️ Asked In Papers:** `2013-06 1(a), 2013-12 1(a), 2014-06 1(a), 2014-12 1(a), 2015-06 1(a), 2016-12 1(a), 2017-06 1(a), 2019-06 1(a), 2020-06 1(a), 2021-06 1(a), 2021-12 1(a), 2022-06 1(e), 2023-06 1(c), 2024-06 1(a), 2025-06 1(a), 2026-06 4(a)`
 
-</div>
+### [Q135] What is message passing? Explain how it is used in C++ (and supports interfaces) with an example.
 
-<div class="question-box" id="q135">
-
-### <span class="badge-qid">Q135</span> What is message passing? Explain how it is used in C++ (and supports interfaces) with an example.
-
-<span class="badge badge-vhigh">Very High Priority</span> <span class="badge badge-freq">Frequency: 12 (76 marks)</span> <span class="badge badge-topic">Theory (+ Coding) / Short Answer & Long Answer</span>
+🔴 **Very High Priority** • **12 (76 marks)** • *Theory (+ Coding) / Short Answer & Long Answer*
 
 **💡 Key Answer Points:**
 
@@ -54,13 +48,9 @@ Objects communicate by invoking each other's public member functions (obj.method
 
 > **🗓️ Asked In Papers:** `2012-12 2(b), 2014-06 5(b), 2017-12 3(b), 2018-12S 5(a), 2019-06 5(b), 2020-06 4(a), 2020-12 5(iv), 2021-06 2(a), 2022-06 1(b), 2022-12 5(ii), BCAOL S2-14, 2025-12 2(a)`
 
-</div>
+### [Q136] What is encapsulation? Are encapsulation and information hiding the same? Differentiate with an example.
 
-<div class="question-box" id="q136">
-
-### <span class="badge-qid">Q136</span> What is encapsulation? Are encapsulation and information hiding the same? Differentiate with an example.
-
-<span class="badge badge-vhigh">Very High Priority</span> <span class="badge badge-freq">Frequency: 6 (29 marks)</span> <span class="badge badge-topic">Theory / Short Answer</span>
+🔴 **Very High Priority** • **6 (29 marks)** • *Theory / Short Answer*
 
 **💡 Key Answer Points:**
 
@@ -68,13 +58,9 @@ Not identical: encapsulation bundles data + methods into a single unit (class), 
 
 > **🗓️ Asked In Papers:** `2016-06 1(f), 2018-06 1(f), 2018-12S 1(b), 2020-06 1(b), 2022-12 1(a), 2023-06 2(c)`
 
-</div>
+### [Q137] Explain the features, advantages, and disadvantages of the structured programming paradigm with respect to OOP.
 
-<div class="question-box" id="q137">
-
-### <span class="badge-qid">Q137</span> Explain the features, advantages, and disadvantages of the structured programming paradigm with respect to OOP.
-
-<span class="badge badge-high">High Priority</span> <span class="badge badge-freq">Frequency: 3 (19 marks)</span> <span class="badge badge-topic">Theory / Short Answer & Long Answer</span>
+🟠 **High Priority** • **3 (19 marks)** • *Theory / Short Answer & Long Answer*
 
 **💡 Key Answer Points:**
 
@@ -82,13 +68,9 @@ Features: sequence/selection/iteration, top-down functions; Pros: simple for sma
 
 > **🗓️ Asked In Papers:** `2012-12 1(a), 2015-12 1(a), 2018-12S 1(a)`
 
-</div>
+### [Q138] What do you mean by Abstraction and Encapsulation? How are the two terms interrelated?
 
-<div class="question-box" id="q138">
-
-### <span class="badge-qid">Q138</span> What do you mean by Abstraction and Encapsulation? How are the two terms interrelated?
-
-<span class="badge badge-high">High Priority</span> <span class="badge badge-freq">Frequency: 3 (13 marks)</span> <span class="badge badge-topic">Theory / Short Answer</span>
+🟠 **High Priority** • **3 (13 marks)** • *Theory / Short Answer*
 
 **💡 Key Answer Points:**
 
@@ -96,13 +78,9 @@ Abstraction exposes essential interface hiding complexity ("what"); Encapsulatio
 
 > **🗓️ Asked In Papers:** `2017-12 1(a), 2023-12 2(a), BCAOL S1-1`
 
-</div>
+### [Q139] Write a short note on Encapsulation with an example.
 
-<div class="question-box" id="q139">
-
-### <span class="badge-qid">Q139</span> Write a short note on Encapsulation with an example.
-
-<span class="badge badge-medium">Medium Priority</span> <span class="badge badge-freq">Frequency: 2 (10 marks)</span> <span class="badge badge-topic">Theory (+ Coding) / Short Answer</span>
+🔵 **Medium Priority** • **2 (10 marks)** • *Theory (+ Coding) / Short Answer*
 
 **💡 Key Answer Points:**
 
@@ -110,13 +88,9 @@ Wrapping data members and member functions inside a class with controlled public
 
 > **🗓️ Asked In Papers:** `2014-06 5(a), 2019-06 5(c)`
 
-</div>
+### [Q140] Explain any four benefits of Object-Oriented Programming.
 
-<div class="question-box" id="q140">
-
-### <span class="badge-qid">Q140</span> Explain any four benefits of Object-Oriented Programming.
-
-<span class="badge badge-medium">Medium Priority</span> <span class="badge badge-freq">Frequency: 2 (9 marks)</span> <span class="badge badge-topic">Theory / Short Answer</span>
+🔵 **Medium Priority** • **2 (9 marks)** • *Theory / Short Answer*
 
 **💡 Key Answer Points:**
 
@@ -124,13 +98,9 @@ Reusability (inheritance), Data Security (encapsulation), Extensibility (polymor
 
 > **🗓️ Asked In Papers:** `2017-12S 1(h), 2023-06 2(a)`
 
-</div>
+### [Q141] What is encapsulation? Explain how it differs from information hiding using a Library Books issue/return program.
 
-<div class="question-box" id="q141">
-
-### <span class="badge-qid">Q141</span> What is encapsulation? Explain how it differs from information hiding using a Library Books issue/return program.
-
-<span class="badge badge-low">Low Priority</span> <span class="badge badge-freq">Frequency: 1 (8 marks)</span> <span class="badge badge-topic">Theory + Coding / Long Answer</span>
+⚪ **Low Priority** • **1 (8 marks)** • *Theory + Coding / Long Answer*
 
 **💡 Key Answer Points:**
 
@@ -138,13 +108,9 @@ LibraryBook class bundles bookID, isIssued (private = info hiding) with issueBoo
 
 > **🗓️ Asked In Papers:** `2012-12 1(b)`
 
-</div>
+### [Q142] Define Abstraction and Encapsulation, and explain class and object with an example.
 
-<div class="question-box" id="q142">
-
-### <span class="badge-qid">Q142</span> Define Abstraction and Encapsulation, and explain class and object with an example.
-
-<span class="badge badge-low">Low Priority</span> <span class="badge badge-freq">Frequency: 1 (6 marks)</span> <span class="badge badge-topic">Theory / Short Answer</span>
+⚪ **Low Priority** • **1 (6 marks)** • *Theory / Short Answer*
 
 **💡 Key Answer Points:**
 
@@ -152,13 +118,9 @@ Combine definitions of both OOP pillars with a concrete Car/Account class and ob
 
 > **🗓️ Asked In Papers:** `2018-06 1(a)`
 
-</div>
+### [Q143] What design concepts would you keep in mind while designing an object-oriented application? Explain with an example.
 
-<div class="question-box" id="q143">
-
-### <span class="badge-qid">Q143</span> What design concepts would you keep in mind while designing an object-oriented application? Explain with an example.
-
-<span class="badge badge-low">Low Priority</span> <span class="badge badge-freq">Frequency: 1 (5 marks)</span> <span class="badge badge-topic">Theory / Short Answer</span>
+⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
 **💡 Key Answer Points:**
 
@@ -166,19 +128,13 @@ Identify domain classes/nouns, assign single responsibilities, favor composition
 
 > **🗓️ Asked In Papers:** `2023-12 5(d)`
 
-</div>
+### [Q144] "A class is a way to accomplish data hiding." Comment with a suitable example.
 
-<div class="question-box" id="q144">
-
-### <span class="badge-qid">Q144</span> "A class is a way to accomplish data hiding." Comment with a suitable example.
-
-<span class="badge badge-low">Low Priority</span> <span class="badge badge-freq">Frequency: 1 (5 marks)</span> <span class="badge badge-topic">Theory / Short Answer</span>
+⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
 **💡 Key Answer Points:**
 
 Default private access prevents external direct corruption of member state, allowing mutation only through validated public methods.
 
 > **🗓️ Asked In Papers:** `2024-12 1(a)`
-
-</div>
 

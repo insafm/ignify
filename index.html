@@ -414,6 +414,22 @@
             var currentTheme = localStorage.getItem('DARK_LIGHT_THEME') || 'light';
             document.documentElement.setAttribute('data-theme', currentTheme);
           });
+
+          // Sanitize search results: strip any raw HTML tags from search previews
+          hook.ready(function() {
+            var cleanSearchSnippets = function() {
+              var snippets = document.querySelectorAll('.results-panel .matching-post p, .results-panel .matching-post h2');
+              snippets.forEach(function(el) {
+                if (el.innerHTML.indexOf('<') !== -1) {
+                  // Keep search highlight <em class="search-keyword">, strip all other HTML tags
+                  el.innerHTML = el.innerHTML.replace(/<(?!\/?em\b)[^>]+>/gi, '');
+                }
+              });
+            };
+            var searchContainer = document.querySelector('.sidebar') || document.body;
+            var observer = new MutationObserver(cleanSearchSnippets);
+            observer.observe(searchContainer, { childList: true, subtree: true });
+          });
         }
       ]
     }

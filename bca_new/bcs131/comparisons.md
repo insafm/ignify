@@ -27,171 +27,115 @@
 
 ## 📝 Detailed Comparison Guides & Answer Templates
 
-<div class="question-box">
-
 ### ⚖️ Structured / Procedural Programming vs. OOP
 
-<span class="badge badge-qid">Q134</span> <span class="badge badge-freq">Asked 16 times (103 marks)</span> <span class="badge badge-topic">Recent: Jun 2026 Q4(a)</span>
+**Q134** **Asked 16 times (103 marks)** **Recent: Jun 2026 Q4(a)**
 
 **Key Differentiating Points:**
 
 Procedural focuses on step-by-step algorithms and functions (top-down), data moves freely and is vulnerable. OOP models real-world entities with classes and objects (bottom-up), binding data and methods together with access control (data hiding).
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Function Overloading vs. Function Overriding
 
-<span class="badge badge-qid">Q041</span> <span class="badge badge-freq">Asked 7 times (60 marks)</span> <span class="badge badge-topic">Recent: Jun 2024 Q2(b)</span>
+**Q041** **Asked 7 times (60 marks)** **Recent: Jun 2024 Q2(b)**
 
 **Key Differentiating Points:**
 
 Overloading occurs in the same class/scope with identical function name but differing parameter lists (resolved at compile-time). Overriding occurs in base-derived inheritance where derived redefines base's virtual function with identical signature and return type (resolved at run-time).
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Virtual Function vs. Pure Virtual Function
 
-<span class="badge badge-qid">Q043</span> <span class="badge badge-freq">Asked 6 times (36 marks)</span> <span class="badge badge-topic">Recent: Jun 2026 Q1(b)</span>
+**Q043** **Asked 6 times (36 marks)** **Recent: Jun 2026 Q1(b)**
 
 **Key Differentiating Points:**
 
 Virtual function has a definition in the base class and provides default behavior (base class can be instantiated). Pure virtual function has `= 0` syntax, usually no body in base, forces derived classes to override it, and makes the class abstract (cannot be instantiated).
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Encapsulation vs. Information Hiding
 
-<span class="badge badge-qid">Q136</span> <span class="badge badge-freq">Asked 6 times (29 marks)</span> <span class="badge badge-topic">Recent: Jun 2023 Q2(c)</span>
+**Q136** **Asked 6 times (29 marks)** **Recent: Jun 2023 Q2(c)**
 
 **Key Differentiating Points:**
 
 Encapsulation is the mechanism of packaging data and the methods operating on that data into a single unit (class). Information Hiding is the design principle of concealing internal object state and implementation details from outside code (achieved using private/protected access specifiers).
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Compile-Time vs. Run-Time Polymorphism
 
-<span class="badge badge-qid">Q047</span> <span class="badge badge-freq">Asked 4 times (33 marks)</span> <span class="badge badge-topic">Recent: Jun 2021 Q4(d)</span>
+**Q047** **Asked 4 times (33 marks)** **Recent: Jun 2021 Q4(d)**
 
 **Key Differentiating Points:**
 
 Compile-time (Early/Static binding) resolves function calls at compile-time via function overloading, operator overloading, and templates (faster execution, less memory). Run-time (Late/Dynamic binding) resolves function calls during execution via virtual functions and base class pointers/references (flexible and extensible).
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Class Template vs. Function Template
 
-<span class="badge badge-qid">Q117</span> <span class="badge badge-freq">Asked 4 times (31 marks)</span> <span class="badge badge-topic">Recent: Jun 2021 Q5(b)</span>
+**Q117** **Asked 4 times (31 marks)** **Recent: Jun 2021 Q5(b)**
 
 **Key Differentiating Points:**
 
 Function template defines a generic algorithm where data types are passed as parameters (type deduction is automatic from function arguments). Class template defines a generic class/data-structure (e.g. Stack<T>, Vector<T>) where explicit type specification like `<int>` is required at instantiation.
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Default Constructor vs. Parameterized Constructor
 
-<span class="badge badge-qid">Q061</span> <span class="badge badge-freq">Asked 4 times (26 marks)</span> <span class="badge badge-topic">Recent: Jun 2021 Q5(c-i)</span>
+**Q061** **Asked 4 times (26 marks)** **Recent: Jun 2021 Q5(c-i)**
 
 **Key Differentiating Points:**
 
 Default constructor takes zero arguments (or all arguments have default values) and initializes objects with default states. Parameterized constructor accepts one or more arguments to initialize distinct objects with specific caller-provided values upon instantiation.
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Multiple vs. Multilevel Inheritance
 
-<span class="badge badge-qid">Q147</span> <span class="badge badge-freq">Asked 4 times (24 marks)</span> <span class="badge badge-topic">Recent: Jun 2026 Q1(c)</span>
+**Q147** **Asked 4 times (24 marks)** **Recent: Jun 2026 Q1(c)**
 
 **Key Differentiating Points:**
 
 Multiple inheritance allows one derived class to inherit directly from two or more distinct base classes (class C : public A, public B), potentially causing diamond ambiguity. Multilevel inheritance is a chain of single derivations where class B inherits from A, and class C inherits from B (transitive inheritance).
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Structure vs. Class in C++
 
-<span class="badge badge-qid">Q006</span> <span class="badge badge-freq">Asked 4 times (20 marks)</span> <span class="badge badge-topic">Recent: Dec 2025 Q1(a)</span>
+**Q006** **Asked 4 times (20 marks)** **Recent: Dec 2025 Q1(a)**
 
 **Key Differentiating Points:**
 
 In a C++ `struct`, members and base classes are `public` by default. In a `class`, members and base classes are `private` by default. Both support constructors, member functions, access specifiers, and inheritance.
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Call-by-Value vs. Call-by-Reference
 
-<span class="badge badge-qid">Q187</span> <span class="badge badge-freq">Asked 3 times (28 marks)</span> <span class="badge badge-topic">Recent: Dec 2022 Q4(b)</span>
+**Q187** **Asked 3 times (28 marks)** **Recent: Dec 2022 Q4(b)**
 
 **Key Differentiating Points:**
 
 Call-by-Value copies the argument value into function parameters (modifications inside the function do not affect caller's original variable; extra memory for copy). Call-by-Reference passes an alias (&) to the original variable (modifications directly mutate caller's variable; zero copy overhead).
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Copy Constructor vs. Default Constructor
 
-<span class="badge badge-qid">Q065</span> <span class="badge badge-freq">Asked 3 times (22 marks)</span> <span class="badge badge-topic">Recent: Jun 2026 Q4(b)</span>
+**Q065** **Asked 3 times (22 marks)** **Recent: Jun 2026 Q4(b)**
 
 **Key Differentiating Points:**
 
 Default constructor initializes an object from scratch with default values. Copy constructor (`ClassName(const ClassName& obj)`) initializes a newly created object as an exact replica of an existing object of the same class (prevents shallow-copy pointer aliasing).
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Early Binding vs. Late Binding
 
-<span class="badge badge-qid">Q053</span> <span class="badge badge-freq">Asked 3 times (15 marks)</span> <span class="badge badge-topic">Recent: Jun 2025 Q4(c)</span>
+**Q053** **Asked 3 times (15 marks)** **Recent: Jun 2025 Q4(c)**
 
 **Key Differentiating Points:**
 
 Early Binding associates function call with code address at compile time based on pointer type (default in C++, faster). Late Binding defers association until runtime using the object's vptr and vtable (enabled by `virtual` keyword, allows polymorphic dispatch).
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Global vs. Local Variable Scope
 
-<span class="badge badge-qid">Q082</span> <span class="badge badge-freq">Asked 3 times (15 marks)</span> <span class="badge badge-topic">Recent: Jun 2025 Q1(b)</span>
+**Q082** **Asked 3 times (15 marks)** **Recent: Jun 2025 Q1(b)**
 
 **Key Differentiating Points:**
 
 Local variables are declared inside a function or block, stored on stack, and accessible only within that block lifetime. Global variables are declared outside all functions, stored in data segment, exist for entire program execution, and can be accessed anywhere (or disambiguated with `::` operator).
 
-</div>
-
-<div class="question-box">
-
 ### ⚖️ Keyword vs. Identifier
 
-<span class="badge badge-qid">Q084</span> <span class="badge badge-freq">Asked 3 times (13 marks)</span> <span class="badge badge-topic">Recent: Dec 2025 Q2(c)</span>
+**Q084** **Asked 3 times (13 marks)** **Recent: Dec 2025 Q2(c)**
 
 **Key Differentiating Points:**
 
 Keywords are reserved words predefined by the C++ compiler with fixed syntactic meaning (e.g., `class`, `virtual`, `return`) and cannot be used as names. Identifiers are user-defined names given to variables, functions, arrays, and classes following naming rules.
-
-</div>
 

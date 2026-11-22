@@ -28,18 +28,18 @@ $$\text{Frequency Score} = \text{Total Occurrences} + \left(\frac{\text{Papers P
 
 | Rank | Topic | Syllabus Unit | Total Questions (Unique) | Repeated (Repeats) | Papers Present | Total Marks | Frequency Score | Importance |
 | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| 1 | [Classes, Objects, Access, Friend & Static (CLASSES)](/bca_new/bcs131/topics/01-classes-objects.md) | Block 1 Unit 3 | 102 (39) | 19 (63) | 29/30 | 680 | **155.3** | <span class="badge badge-vhigh">Very High</span> |
-| 2 | [Polymorphism, Virtual & Abstract Classes (POLY_VIRT)](/bca_new/bcs131/topics/02-polymorphism.md) | Block 2 Unit 3 | 74 (19) | 16 (55) | 30/30 | 520 | **120.0** | <span class="badge badge-vhigh">Very High</span> |
-| 3 | [Constructors, Destructors & Memory Mgmt (CONSTR)](/bca_new/bcs131/topics/03-constructors-memory.md) | Block 1 Unit 4 | 57 (20) | 13 (37) | 27/30 | 331 | **91.5** | <span class="badge badge-vhigh">Very High</span> |
-| 4 | [C++ Basics, Operators & Control Flow (BASICS)](/bca_new/bcs131/topics/04-basics-control-flow.md) | Block 1 Unit 2 | 57 (36) | 13 (21) | 27/30 | 321 | **91.0** | <span class="badge badge-high">High</span> |
-| 5 | [Templates & Standard Template Library (TEMPL_STL)](/bca_new/bcs131/topics/05-templates-stl.md) | Block 3 Unit 2 | 46 (19) | 10 (27) | 30/30 | 340 | **83.0** | <span class="badge badge-high">High</span> |
-| 6 | [OOP Concepts & Paradigms (OOP)](/bca_new/bcs131/topics/06-oop-concepts.md) | Block 1 Unit 1 | 48 (11) | 7 (37) | 29/30 | 283 | **81.5** | <span class="badge badge-high">High</span> |
-| 7 | [Inheritance & Code Reusability (INHERIT)](/bca_new/bcs131/topics/07-inheritance.md) | Block 2 Unit 1 | 42 (22) | 8 (20) | 27/30 | 284 | **74.2** | <span class="badge badge-high">High</span> |
-| 8 | [Streams, Manipulators & File Handling (STREAMS_FILES)](/bca_new/bcs131/topics/08-streams-files.md) | Block 3 Unit 1 | 39 (17) | 9 (22) | 24/30 | 260 | **68.0** | <span class="badge badge-medium">Medium-High</span> |
-| 9 | [Functions, Overloading & Passing (FUNCS)](/bca_new/bcs131/topics/09-functions-overloading.md) | Block 1 / Block 2 | 32 (10) | 4 (22) | 21/30 | 218 | **56.9** | <span class="badge badge-medium">Medium</span> |
-| 10 | [Exception Handling (EXCEPT)](/bca_new/bcs131/topics/10-exception-handling.md) | Block 3 Unit 3 | 27 (9) | 4 (18) | 26/30 | 212 | **54.9** | <span class="badge badge-medium">Medium</span> |
-| 11 | [Operator Overloading (OP_OVL)](/bca_new/bcs131/topics/11-operator-overloading.md) | Block 2 Unit 2 | 22 (9) | 6 (13) | 20/30 | 163 | **43.5** | <span class="badge badge-medium">Medium-Low</span> |
-| 12 | [Code Debugging & Output Tracing (DEBUG)](/bca_new/bcs131/topics/12-code-debugging.md) | Applied | 4 (4) | 0 (0) | 2/30 | 16 | **6.1** | <span class="badge badge-medium">Low</span> |
+| 1 | [Classes, Objects, Access, Friend & Static (CLASSES)](/bca_new/bcs131/topics/01-classes-objects.md) | Block 1 Unit 3 | 102 (39) | 19 (63) | 29/30 | 680 | **155.3** | **Very High** |
+| 2 | [Polymorphism, Virtual & Abstract Classes (POLY_VIRT)](/bca_new/bcs131/topics/02-polymorphism.md) | Block 2 Unit 3 | 74 (19) | 16 (55) | 30/30 | 520 | **120.0** | **Very High** |
+| 3 | [Constructors, Destructors & Memory Mgmt (CONSTR)](/bca_new/bcs131/topics/03-constructors-memory.md) | Block 1 Unit 4 | 57 (20) | 13 (37) | 27/30 | 331 | **91.5** | **Very High** |
+| 4 | [C++ Basics, Operators & Control Flow (BASICS)](/bca_new/bcs131/topics/04-basics-control-flow.md) | Block 1 Unit 2 | 57 (36) | 13 (21) | 27/30 | 321 | **91.0** | **High** |
+| 5 | [Templates & Standard Template Library (TEMPL_STL)](/bca_new/bcs131/topics/05-templates-stl.md) | Block 3 Unit 2 | 46 (19) | 10 (27) | 30/30 | 340 | **83.0** | **High** |
+| 6 | [OOP Concepts & Paradigms (OOP)](/bca_new/bcs131/topics/06-oop-concepts.md) | Block 1 Unit 1 | 48 (11) | 7 (37) | 29/30 | 283 | **81.5** | **High** |
+| 7 | [Inheritance & Code Reusability (INHERIT)](/bca_new/bcs131/topics/07-inheritance.md) | Block 2 Unit 1 | 42 (22) | 8 (20) | 27/30 | 284 | **74.2** | **High** |
+| 8 | [Streams, Manipulators & File Handling (STREAMS_FILES)](/bca_new/bcs131/topics/08-streams-files.md) | Block 3 Unit 1 | 39 (17) | 9 (22) | 24/30 | 260 | **68.0** | **Medium-High** |
+| 9 | [Functions, Overloading & Passing (FUNCS)](/bca_new/bcs131/topics/09-functions-overloading.md) | Block 1 / Block 2 | 32 (10) | 4 (22) | 21/30 | 218 | **56.9** | **Medium** |
+| 10 | [Exception Handling (EXCEPT)](/bca_new/bcs131/topics/10-exception-handling.md) | Block 3 Unit 3 | 27 (9) | 4 (18) | 26/30 | 212 | **54.9** | **Medium** |
+| 11 | [Operator Overloading (OP_OVL)](/bca_new/bcs131/topics/11-operator-overloading.md) | Block 2 Unit 2 | 22 (9) | 6 (13) | 20/30 | 163 | **43.5** | **Medium-Low** |
+| 12 | [Code Debugging & Output Tracing (DEBUG)](/bca_new/bcs131/topics/12-code-debugging.md) | Applied | 4 (4) | 0 (0) | 2/30 | 16 | **6.1** | **Low** |
 | **Total** | **All 12 Logical Topics** | **Complete Syllabus** | **550 (215)** | **109 (335)** | **30/30** | **3,628** | —— | —— |
 
 ---
