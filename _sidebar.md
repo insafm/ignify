@@ -3,6 +3,7 @@
 * **Academic Programmes**
   * [💻 BCA_NEW Programme Hub](/bca_new/README.md)
   * [🖥️ MCS-203: Operating Systems](/bca_new/mcs203/README.md)
+  * [📊 BCS-040: Statistical Techniques](/bca_new/bcs040/README.md)
   * [📘 BCS-131: Programming in C++](/bca_new/bcs131/README.md)
 
 * **Community & Resources**

@@ -78,7 +78,7 @@ Based on empirical credit weighting from the official curriculum guide, individu
 | **MCSL-209** | Data Structures and Algorithms Lab | 2 | SOCIS | ⚪ *Planned* |
 | **MCS-207** | Database Management Systems | 4 | SOCIS | 🟡 *In Pipeline* |
 | **BCSL-135** | DBMS and C++ Lab | 2 | SOCIS | ⚪ *Planned* |
-| **BCS-040** | Statistical Techniques | 4 | SOCIS | 🟡 *In Pipeline* |
+| **BCS-040** | **Statistical Techniques** | **4** | **SOCIS** | 🟢 **Complete** (26 PDFs / 99 Qs) → [Open Module](/bca_new/bcs040/README.md) |
 
 ### 🔹 Semester 4 (20 Credits • 16.67% of CGPA)
 

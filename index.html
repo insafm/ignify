@@ -1575,23 +1575,24 @@
               { path: '/bca_new/mcs203/papers', file: 'bca_new/mcs203/papers.md', title: '📑 Question Papers Archive (10 PDFs)' }
             ];
 
-            // Build MCS-203 Continuous Topic & Resource Guide Pagination
-            var mcsGuideChain = [
-              { path: '/bca_new/mcs203/README', file: 'bca_new/mcs203/README.md', title: '🖥️ MCS-203 Overview' },
-              { path: '/bca_new/mcs203/analysis', file: 'bca_new/mcs203/analysis.md', title: '📊 10-Paper Comprehensive Analysis' },
-              { path: '/bca_new/mcs203/predictions', file: 'bca_new/mcs203/predictions.md', title: '🎯 High-Probability Predictions' },
-              { path: '/bca_new/mcs203/comparisons', file: 'bca_new/mcs203/comparisons.md', title: '⚖️ Repeated Comparison Questions' },
-              { path: '/bca_new/mcs203/questions', file: 'bca_new/mcs203/questions.md', title: '🗂️ Master Question Bank by Topics' },
-              { path: '/bca_new/mcs203/topics/01-mobile-os', file: 'bca_new/mcs203/topics/01-mobile-os.md', title: '01. Case Study: Mobile OS (Android & iOS)' },
-              { path: '/bca_new/mcs203/topics/02-memory-management', file: 'bca_new/mcs203/topics/02-memory-management.md', title: '02. Memory Management & Virtual Memory' },
-              { path: '/bca_new/mcs203/topics/03-multiprocessor-distributed', file: 'bca_new/mcs203/topics/03-multiprocessor-distributed.md', title: '03. Multiprocessor & Distributed Systems' },
-              { path: '/bca_new/mcs203/topics/04-process-synchronization', file: 'bca_new/mcs203/topics/04-process-synchronization.md', title: '04. Process Synchronization & Concurrency' },
-              { path: '/bca_new/mcs203/topics/05-linux-case-study', file: 'bca_new/mcs203/topics/05-linux-case-study.md', title: '05. Case Study: Linux Architecture & Security' },
-              { path: '/bca_new/mcs203/topics/06-deadlocks', file: 'bca_new/mcs203/topics/06-deadlocks.md', title: '06. Deadlocks (Coffman, Havender, Banker\'s)' },
-              { path: '/bca_new/mcs203/topics/07-file-disk-management', file: 'bca_new/mcs203/topics/07-file-disk-management.md', title: '07. File Systems & Disk Management' },
-              { path: '/bca_new/mcs203/topics/08-process-cpu-scheduling', file: 'bca_new/mcs203/topics/08-process-cpu-scheduling.md', title: '08. Process Management & CPU Scheduling' },
-              { path: '/bca_new/mcs203/topics/09-windows10-case-study', file: 'bca_new/mcs203/topics/09-windows10-case-study.md', title: '09. Case Study: Windows 10 Architecture' },
-              { path: '/bca_new/mcs203/papers', file: 'bca_new/mcs203/papers.md', title: '📑 Question Papers Archive (10 PDFs)' }
+            // Build BCS-040 Continuous Topic & Resource Guide Pagination
+            var bcs040GuideChain = [
+              { path: '/bca_new/bcs040/README', file: 'bca_new/bcs040/README.md', title: '📊 BCS-040 Overview' },
+              { path: '/bca_new/bcs040/analysis', file: 'bca_new/bcs040/analysis.md', title: '📊 26-Paper Comprehensive Analysis' },
+              { path: '/bca_new/bcs040/predictions', file: 'bca_new/bcs040/predictions.md', title: '🎯 High-Probability Predictions' },
+              { path: '/bca_new/bcs040/comparisons', file: 'bca_new/bcs040/comparisons.md', title: '⚖️ High-Frequency Comparisons' },
+              { path: '/bca_new/bcs040/questions', file: 'bca_new/bcs040/questions.md', title: '🗂️ Master Question Bank by Topics' },
+              { path: '/bca_new/bcs040/topics/01-sampling-distributions', file: 'bca_new/bcs040/topics/01-sampling-distributions.md', title: '01. Sampling Techniques & Sampling Distributions' },
+              { path: '/bca_new/bcs040/topics/02-probability-distributions', file: 'bca_new/bcs040/topics/02-probability-distributions.md', title: '02. Probability & Probability Distributions' },
+              { path: '/bca_new/bcs040/topics/03-chi-square-tests', file: 'bca_new/bcs040/topics/03-chi-square-tests.md', title: '03. Chi-Square Tests' },
+              { path: '/bca_new/bcs040/topics/04-parametric-hypothesis-testing', file: 'bca_new/bcs040/topics/04-parametric-hypothesis-testing.md', title: '04. Parametric Hypothesis Testing' },
+              { path: '/bca_new/bcs040/topics/05-correlation-regression', file: 'bca_new/bcs040/topics/05-correlation-regression.md', title: '05. Correlation & Regression Analysis' },
+              { path: '/bca_new/bcs040/topics/06-descriptive-statistics', file: 'bca_new/bcs040/topics/06-descriptive-statistics.md', title: '06. Descriptive Statistics & Data Visualization' },
+              { path: '/bca_new/bcs040/topics/07-time-series-forecasting', file: 'bca_new/bcs040/topics/07-time-series-forecasting.md', title: '07. Time Series Analysis & Forecasting' },
+              { path: '/bca_new/bcs040/topics/08-anova', file: 'bca_new/bcs040/topics/08-anova.md', title: '08. Analysis of Variance (ANOVA)' },
+              { path: '/bca_new/bcs040/topics/09-estimation-confidence-intervals', file: 'bca_new/bcs040/topics/09-estimation-confidence-intervals.md', title: '09. Estimation & Confidence Intervals' },
+              { path: '/bca_new/bcs040/topics/10-statistical-quality-control', file: 'bca_new/bcs040/topics/10-statistical-quality-control.md', title: '10. Statistical Quality Control (SQC) Charts' },
+              { path: '/bca_new/bcs040/papers', file: 'bca_new/bcs040/papers.md', title: '📑 Question Papers Archive (26 PDFs)' }
             ];
 
             var normPath = ((vm && vm.route && vm.route.path) || '').replace(/^\/+|\/+$/g, '').toLowerCase();
@@ -1600,6 +1601,8 @@
             var activeGuideChain = null;
             if (normPath.indexOf('bca_new/mcs203') !== -1 || normFile.indexOf('bca_new/mcs203') !== -1) {
               activeGuideChain = mcsGuideChain;
+            } else if (normPath.indexOf('bca_new/bcs040') !== -1 || normFile.indexOf('bca_new/bcs040') !== -1) {
+              activeGuideChain = bcs040GuideChain;
             } else if (normPath.indexOf('bca_new/bcs131') !== -1 || normFile.indexOf('bca_new/bcs131') !== -1) {
               activeGuideChain = bcsGuideChain;
             }
