@@ -26,5 +26,4 @@
     * *BCS-012: Basic Mathematics (Coming Soon)*
     * *BCS-040: Statistical Techniques (Coming Soon)*
 
-* **About Creator**
-  * [🌐 Mohammed Insaf M (Portfolio)](https://mohammedinsaf.com)
+* [🌐 mohammedinsaf.com](https://mohammedinsaf.com)

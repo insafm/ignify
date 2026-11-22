@@ -1,7 +1,6 @@
 # 📘 BCS-131: Programming in C++
 
-> **Programme:** IGNOU BCA_NEW | **Course Code:** BCS-131 (Dual-coded with BCS-031) | **Credits:** 3 Credits  
-> **Curated by:** [Mohammed Insaf M](https://mohammedinsaf.com) ([mohammedinsaf.com](https://mohammedinsaf.com))
+> **Programme:** IGNOU BCA_NEW | **Course Code:** BCS-131 (Dual-coded with BCS-031) | **Credits:** 3 Credits
 
 ---
 

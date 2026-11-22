@@ -1,10 +1,6 @@
 # IGNOU BCA_NEW <small>Exam Prep</small>
 
-> Data-Driven Term-End Exam (TEE) Analysis & Question Bank Portal
-
-<div class="creator-tag">
-  Curated & Maintained by <a href="https://mohammedinsaf.com" target="_blank" rel="noopener"><strong>Mohammed Insaf M</strong></a> (<a href="https://mohammedinsaf.com" target="_blank" rel="noopener">mohammedinsaf.com</a>)
-</div>
+> Comprehensive Previous-Year Exam Analysis & Canonical Question Bank
 
 * 📊 **30 Previous-Year Papers Analyzed** (Dec 2012 – Jun 2026)
 * 🎯 **215 Canonical Questions** deduplicated with high-scoring answers
@@ -13,4 +9,5 @@
 
 [Start Learning (BCS-131)](/bca_new/bcs131/)
 [Browse Questions](/bca_new/bcs131/questions.md)
-[Meet Mohammed Insaf M](https://mohammedinsaf.com)
+
+<small>Curated by [Mohammed Insaf M](https://mohammedinsaf.com)</small>
