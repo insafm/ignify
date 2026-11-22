@@ -1082,6 +1082,10 @@
       repo: '',
       loadSidebar: true,
       loadNavbar: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+        '/.*/_navbar.md': '/_navbar.md'
+      },
       coverpage: false,
       onlyCover: false,
       subMaxLevel: 0,
@@ -1227,24 +1231,40 @@
             }
           });
 
-          // In-page smooth scrolling for question jump links (e.g. #q194 or ?id=q194)
+          // In-page smooth scrolling for jump links (e.g. ?id=about, ?id=programmes, #q194)
           hook.ready(function() {
+            // Filter external sidebar links out of docsify-pagination
+            var filterExternalPagination = function() {
+              document.querySelectorAll('.sidebar-nav a[href^="http"]').forEach(function(a) {
+                a.classList.add('section-link');
+              });
+            };
+            filterExternalPagination();
+            var sbEl = document.querySelector('.sidebar');
+            if (sbEl) {
+              new MutationObserver(filterExternalPagination).observe(sbEl, { childList: true, subtree: true });
+            }
+
             document.addEventListener('click', function(e) {
               var a = e.target.closest('a');
               if (!a) return;
               var href = a.getAttribute('href') || '';
-              var match = href.match(/[?&]id=(q\d+)|#(q\d+)$/i);
+              var match = href.match(/[?&]id=([^&#]+)|#([^&#]+)$/i);
               if (match) {
-                var qid = (match[1] || match[2]).toLowerCase();
-                var targetCard = document.getElementById('card-' + qid) || document.getElementById(qid) || document.querySelector('[data-id="' + qid + '"]');
-                if (targetCard) {
-                  e.preventDefault();
-                  var currentBase = window.location.hash.split('?')[0];
-                  history.replaceState(null, '', currentBase + '?id=' + qid);
-                  targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  targetCard.classList.remove('target-highlight');
-                  void targetCard.offsetWidth;
-                  targetCard.classList.add('target-highlight');
+                var tid = (match[1] || match[2]).toLowerCase();
+                var targetEl = document.getElementById('card-' + tid) || document.getElementById(tid) || document.querySelector('[data-id="' + tid + '"]');
+                if (targetEl) {
+                  var currentBase = (window.location.hash.split('?')[0].split('#')[0] || '#/').toLowerCase();
+                  var linkTarget = (href.split('?')[0].split('#')[0] || '').toLowerCase();
+                  var isSamePage = !linkTarget || linkTarget === '/' || linkTarget === '#/' || linkTarget === '#/readme' || linkTarget === 'readme' || linkTarget === currentBase;
+                  if (isSamePage) {
+                    e.preventDefault();
+                    history.replaceState(null, '', currentBase + '?id=' + tid);
+                    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    targetEl.classList.remove('target-highlight');
+                    void targetEl.offsetWidth;
+                    targetEl.classList.add('target-highlight');
+                  }
                 }
               }
             });

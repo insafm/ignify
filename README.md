@@ -6,7 +6,7 @@ This platform bridges the gap between voluminous self-learning study materials a
 
 ---
 
-## 💡 About the Creator & Why This Was Built
+## 💡 About the Creator & Why This Was Built :id=about
 
 ### 👤 Created by Mohammed Insaf M
 This learning portal was conceptualized, researched, and engineered by **[Mohammed Insaf M](https://mohammedinsaf.com)** as an open-access public educational initiative.
@@ -33,7 +33,7 @@ Rather than memorizing 500 pages linearly, learners achieve higher academic perf
 
 ---
 
-## 🏛️ Academic Programmes Directory
+## 🏛️ Academic Programmes Directory :id=programmes
 
 The portal is structured hierarchically by degree programme. Each programme contains its complete multi-semester syllabus, subject breakdowns, past papers archive, and canonical question banks:
 

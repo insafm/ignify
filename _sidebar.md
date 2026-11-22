@@ -1,37 +1,9 @@
 * [🏠 IGNify Portal Home](/)
-* [💡 About IGNify & Vision](/#/README?id=-about-the-creator--why-this-was-built)
-* [🏛️ Programmes Directory](/#/README?id=-academic-programmes-directory)
 
-* **Programme: BCA_NEW**
+* **Academic Programmes**
   * [💻 BCA_NEW Programme Hub](/bca_new/README.md)
+  * [📘 BCS-131: Programming in C++](/bca_new/bcs131/README.md)
 
-* **BCS-131: Programming in C++**
-  * [📘 Course Overview](/bca_new/bcs131/README.md)
-  * [📑 Past Papers Archive (30 PDFs)](/bca_new/bcs131/papers.md)
-  * [📊 30-Paper Exam Analysis](/bca_new/bcs131/analysis.md)
-  * [🎯 High-Probability Predictions](/bca_new/bcs131/predictions.md)
-  * [⚖️ Most Repeated Comparisons](/bca_new/bcs131/comparisons.md)
-  * [🗂️ Master Question Bank (215 Qs)](/bca_new/bcs131/questions.md)
-
-* **BCS-131 Topic Modules**
-  * [01. Classes, Objects & Friend](/bca_new/bcs131/topics/01-classes-objects.md)
-  * [02. Polymorphism & Virtual](/bca_new/bcs131/topics/02-polymorphism.md)
-  * [03. Constructors & Memory](/bca_new/bcs131/topics/03-constructors-memory.md)
-  * [04. Basics & Flow Control](/bca_new/bcs131/topics/04-basics-control-flow.md)
-  * [05. Templates & STL](/bca_new/bcs131/topics/05-templates-stl.md)
-  * [06. OOP Paradigm & Concepts](/bca_new/bcs131/topics/06-oop-concepts.md)
-  * [07. Inheritance & Reusability](/bca_new/bcs131/topics/07-inheritance.md)
-  * [08. Streams & File Handling](/bca_new/bcs131/topics/08-streams-files.md)
-  * [09. Functions & Overloading](/bca_new/bcs131/topics/09-functions-overloading.md)
-  * [10. Exception Handling](/bca_new/bcs131/topics/10-exception-handling.md)
-  * [11. Operator Overloading](/bca_new/bcs131/topics/11-operator-overloading.md)
-  * [12. Applied Code Debugging](/bca_new/bcs131/topics/12-code-debugging.md)
-
-* **Upcoming Programmes & Subjects**
-  * *BCA Sem 1: BCS-111, BCS-012*
-  * *BCA Sem 2: MCS-201, MCS-203*
-  * *BCA Sem 4: MCS-206, BCS-041*
-  * *MCA_NEW, BSCG, BAG, BCOMG*
-
-* [🐙 GitHub Repository](https://github.com/insafm/ignify)
-* [🌐 mohammedinsaf.com](https://mohammedinsaf.com)
+* **Community & Resources**
+  * [🐙 GitHub Repository](https://github.com/insafm/ignify ':class=section-link')
+  * [🌐 mohammedinsaf.com](https://mohammedinsaf.com ':class=section-link')
