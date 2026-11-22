@@ -789,6 +789,54 @@
       border: 1px solid var(--borderColor, #1f2937);
     }
 
+    /* Clean "Edit on GitHub" Action Bar */
+    .content-edit-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 3.5rem;
+      margin-bottom: 0.5rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--borderColor, #e2e8f0);
+    }
+    .edit-page-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--textColor, #64748b);
+      text-decoration: none;
+      opacity: 0.8;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--borderColor, #e2e8f0);
+      background: var(--codeBackgroundColor, #f8fafc);
+      transition: all 0.16s ease;
+    }
+    .edit-page-link:hover {
+      opacity: 1;
+      color: var(--accent, #4f46e5);
+      border-color: var(--accent, #4f46e5);
+      background: rgba(79, 70, 229, 0.08);
+      transform: translateY(-1px);
+    }
+    [data-theme="dark"] .edit-page-link {
+      background: #111827;
+      border-color: #1e293b;
+      color: #94a3b8;
+    }
+    [data-theme="dark"] .edit-page-link:hover {
+      color: #a5b4fc;
+      border-color: #818cf8;
+      background: rgba(129, 140, 248, 0.14);
+    }
+    .edit-page-link svg.edit-icon {
+      width: 15px;
+      height: 15px;
+      stroke-width: 2;
+    }
+
     /* Clean IGNify Footer with Legal Disclaimer */
     .portal-footer {
       margin-top: 60px;
@@ -1187,6 +1235,21 @@
               return '<div class="question-card" id="card-' + qid + '">\n' + block + '\n</div>';
             });
 
+            var file = (vm && vm.route && vm.route.file) || 'README.md';
+            file = file.replace(/^\/+/, '');
+            var editUrl = 'https://github.com/insafm/ignify/edit/main/' + file;
+            var editBar = [
+              '<div class="content-edit-bar">',
+              '  <a href="' + editUrl + '" target="_blank" rel="noopener" class="edit-page-link" title="Suggest an edit to this document on GitHub">',
+              '    <svg class="edit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
+              '      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>',
+              '      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>',
+              '    </svg>',
+              '    <span>Edit this page on GitHub</span>',
+              '  </a>',
+              '</div>'
+            ].join('\n');
+
             var footer = [
               '<footer class="portal-footer">',
               '  <div class="footer-brand-wrap">',
@@ -1201,7 +1264,7 @@
               '  </div>',
               '</footer>'
             ].join('\n');
-            return html + footer;
+            return html + editBar + footer;
           });
 
           // Sync theme attribute to HTML tag for CSS selectors & re-render Math
