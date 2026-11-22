@@ -1,5 +1,5 @@
-* [🏠 **Portal Home**](/)
-* [💡 **About & Creator's Vision**](/#/README?id=-about-the-creator--why-this-was-built)
+* [🏠 **IGNify Home**](/)
+* [💡 **About IGNify & Vision**](/#/README?id=-about-the-creator--why-this-was-built)
 * [🏛️ **Programmes Directory**](/#/README?id=-academic-programmes-directory)
 
 * **Programme: BCA_NEW**

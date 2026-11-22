@@ -1,8 +1,8 @@
-# 🎓 IGNOU Student Learning & Examination Portal
+# 🎓 IGNify — Your IGNOU Journey, Simplified.
 
-An independent, open, data-driven academic resource portal designed for students of the **Indira Gandhi National Open University (IGNOU)** across undergraduate and postgraduate programmes.
+**IGNify** is an independent, open, data-driven academic resource platform designed for students of the **Indira Gandhi National Open University (IGNOU)** across undergraduate and postgraduate programmes.
 
-This platform bridges the gap between voluminous self-learning study materials and the real-world expectations of Term-End Examinations (TEE). By applying longitudinal data analysis across past exam sessions, the portal eliminates redundant questions, maps topics by historical marks weightage, and provides high-scoring canonical answer frameworks.
+This platform bridges the gap between voluminous self-learning study materials and the real-world expectations of Term-End Examinations (TEE). By applying longitudinal data analysis across past exam sessions, **IGNify** eliminates redundant questions, maps topics by historical marks weightage, and provides high-scoring canonical answer frameworks.
 
 ---
 
@@ -85,5 +85,6 @@ This data-driven study methodology applies to any subject across any IGNOU progr
 
 This portal is continuously updated with every new IGNOU Term-End Examination session. Suggestions, corrections, and academic contributions are welcome.
 
+- **Platform:** **IGNify** — *Your IGNOU Journey, Simplified.*
 - **Author & Maintainer:** [Mohammed Insaf M](https://mohammedinsaf.com)
-- **Source Repository:** Hosted on GitHub Pages (`insignou.insafweb.in`)
+- **Source Repository:** Hosted on GitHub Pages ([insignou.insafweb.in](https://insignou.insafweb.in))

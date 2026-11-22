@@ -1,6 +1,6 @@
 # 💻 Programme: BCA_NEW (Bachelor of Computer Applications)
 
-> **Programme Code:** BCA_NEW (Revised Syllabus) | **Degree Level:** Undergraduate (3 Years / 6 Semesters) | **Total Credits:** 120 Credits  
+> **IGNify Programme Hub** | **Programme Code:** BCA_NEW (Revised Syllabus) | **Degree Level:** Undergraduate (3 Years / 6 Semesters) | **Total Credits:** 120 Credits  
 > **Evaluation Pattern:** 30% Continuous Assessment (Assignments) + 70% Term-End Examination (TEE) • Minimum 40% separate passing marks required in each component.  
 > 📥 **Official Document:** [Download BCA_NEW Program Structure & CGPA Guide (PDF)](bca_new/files/sylabuss.pdf ':target=_blank')
 
