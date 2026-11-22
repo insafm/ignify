@@ -838,28 +838,19 @@
       font-size: 0.78rem;
       font-weight: 600;
       color: var(--textColor, #64748b);
-      text-decoration: none !important;
-      opacity: 0.82;
+      opacity: 0.85;
       padding: 4px 9px;
       border-radius: 6px;
       border: 1px solid var(--borderColor, #e2e8f0);
       background: var(--codeBackgroundColor, #f8fafc);
-      transition: all 0.16s ease;
       line-height: 1;
-    }
-    .page-views-badge:hover {
-      opacity: 1;
-      color: var(--accent, #4f46e5);
-      border-color: var(--accent, #4f46e5);
+      cursor: default;
+      user-select: none;
     }
     [data-theme="dark"] .page-views-badge {
       background: #111827;
       border-color: #1e293b;
       color: #94a3b8;
-    }
-    [data-theme="dark"] .page-views-badge:hover {
-      color: #a5b4fc;
-      border-color: #818cf8;
     }
     .page-views-badge svg.view-icon {
       width: 13px;
@@ -1486,13 +1477,13 @@
             var editBar = [
               '<div class="content-header-bar">',
               '  <div class="header-bar-left">',
-              '    <a href="https://insafweb.goatcounter.com" target="_blank" rel="noopener" class="page-views-badge" id="page-views-badge" title="Live page visits (powered by GoatCounter)">',
+              '    <span class="page-views-badge" id="page-views-badge" title="Live page visits">',
               '      <svg class="view-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
               '        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>',
               '        <circle cx="12" cy="12" r="3"></circle>',
               '      </svg>',
               '      <span id="page-views-count">Views: ...</span>',
-              '    </a>',
+              '    </span>',
               '  </div>',
               '  <div class="header-bar-right">',
               '    <a href="' + editUrl + '" target="_blank" rel="noopener" class="edit-page-btn" title="Edit this page on GitHub">',
@@ -1659,19 +1650,23 @@
               if (!countEl) return;
               fetch('https://insafweb.goatcounter.com/counter/' + encodeURIComponent(routePath) + '.json')
                 .then(function(res) {
-                  if (res.ok) return res.json();
-                  throw new Error('Counter disabled');
+                  // GoatCounter returns HTTP 404 with {"count_unique":"0","count":"0"} when visits are 0
+                  if (res.ok || res.status === 404) return res.json();
+                  throw new Error('Unavailable');
                 })
                 .then(function(data) {
-                  if (data && data.count) {
-                    var val = String(data.count).trim();
-                    countEl.textContent = val + (val === '1' ? ' view' : ' views');
-                  } else {
-                    countEl.textContent = '1 view';
+                  if (data && data.count !== undefined && data.count !== null) {
+                    var raw = String(data.count).replace(/,/g, '').trim();
+                    var num = parseInt(raw, 10);
+                    if (!isNaN(num)) {
+                      countEl.textContent = raw + (raw === '1' ? ' view' : ' views');
+                      return;
+                    }
                   }
+                  countEl.textContent = '0 views';
                 })
                 .catch(function() {
-                  countEl.textContent = 'Views: –';
+                  countEl.textContent = '0 views';
                 });
             };
             fetchCount();
