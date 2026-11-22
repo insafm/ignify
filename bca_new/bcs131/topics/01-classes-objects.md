@@ -8,55 +8,11 @@
 
 This module covers **39 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
 
-### Quick Jump to Questions
-
-| ID | Question Summary | Frequency | Marks | Type | Importance |
-| :--- | :--- | :---: | :---: | :--- | :---: |
-| [Q001](#q001) | What are access control specifiers (public, private, protected) in C++? Exp... | **15x** | 79 marks | Theory (+ Coding in 2015-06) / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q002](#q002) | What is a friend function in C++? Explain its properties, advantages, and i... | **10x** | 54 marks | Theory + Coding / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q003](#q003) | What is an object in C++? Explain how an object can be passed as an argumen... | **7x** | 37 marks | Theory + Coding / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q004](#q004) | What are static data members and static member functions of a class? Explai... | **6x** | 47 marks | Theory + Coding / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q005](#q005) | What is the this pointer in C++? Explain its significance and usage with an... | **6x** | 31 marks | Theory + Coding / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q006](#q006) | How is a struct (structure) different from a class in C++? Discuss their sy... | **4x** | 20 marks | Theory + Coding / Short Answer | 🟠 **High** |
-| [Q007](#q007) | How do we declare and define static data members of a class? Explain their ... | **4x** | 19 marks | Theory / Short Answer | 🟠 **High** |
-| [Q008](#q008) | Write a C++ program using a Matrix class (with constructor, destructor, and... | **3x** | 32 marks | Coding / Long Answer | 🟠 **High** |
-| [Q009](#q009) | Write a C++ program to implement a simple calculator (+, -, *, /) on two op... | **3x** | 30 marks | Coding / Long Answer | 🟠 **High** |
-| [Q010](#q010) | Write a C++ program to find the largest of three numbers using a member fun... | **3x** | 25 marks | Coding / Short Answer & Long Answer | 🟠 **High** |
-| [Q011](#q011) | How is memory allocation performed in C++ when a class is declared versus w... | **3x** | 25 marks | Theory / Long Answer | 🟠 **High** |
-| [Q012](#q012) | Define class and object. How are they related? Explain with an example. | **3x** | 15 marks | Theory / Short Answer | 🟠 **High** |
-| [Q013](#q013) | What is a static member function in C++? Explain how the static keyword cha... | **3x** | 14 marks | Theory + Coding / Short Answer | 🟠 **High** |
-| [Q014](#q014) | Write a C++ program to add two complex numbers by defining a Complex class ... | **2x** | 20 marks | Coding / Long Answer | 🔵 **Medium** |
-| [Q015](#q015) | Write a C++ program to multiply two complex numbers using a Complex class a... | **2x** | 20 marks | Coding / Long Answer | 🔵 **Medium** |
-| [Q016](#q016) | Explain two merits and two demerits of using friend functions with an examp... | **2x** | 18 marks | Theory / Long Answer | 🔵 **Medium** |
-| [Q017](#q017) | Write a C++ program to create a Book class (publisher/title, author, price)... | **2x** | 17 marks | Coding / Long Answer | 🔵 **Medium** |
-| [Q018](#q018) | Write a C++ program to find the sum of n given numbers using a friend funct... | **2x** | 17 marks | Theory + Coding / Long Answer | 🔵 **Medium** |
-| [Q019](#q019) | Define a member function and briefly discuss its purpose in C++ with a suit... | **2x** | 10 marks | Theory / Short Answer | 🔵 **Medium** |
-| [Q020](#q020) | Write a C++ program to define class Circle with a constructor, a method for... | **1x** | 10 marks | Coding / Long Answer | ⚪ **Low** |
-| [Q021](#q021) | Write a C++ program to find the sum of n numbers by defining a proper class... | **1x** | 10 marks | Coding / Long Answer | ⚪ **Low** |
-| [Q022](#q022) | How does a friend function differ from a member function? Explain friend fu... | **1x** | 10 marks | Theory + Coding / Long Answer | ⚪ **Low** |
-| [Q023](#q023) | Write a C++ program for the subtraction of two matrices. | **1x** | 10 marks | Coding / Long Answer | ⚪ **Low** |
-| [Q024](#q024) | Write a C++ program to create a STUDENT class (Name, Enrollment No, Program... | **1x** | 10 marks | Coding / Long Answer | ⚪ **Low** |
-| [Q025](#q025) | Write a program to add and subtract two instances of a Complex class using ... | **1x** | 10 marks | Coding / Long Answer | ⚪ **Low** |
-| [Q026](#q026) | Compare friend function with member function. Write a program to add two Di... | **1x** | 10 marks | Theory + Coding / Long Answer | ⚪ **Low** |
-| [Q027](#q027) | Create an Employee class allowing multiple constructors and methods to gene... | **1x** | 10 marks | Coding / Long Answer | ⚪ **Low** |
-| [Q028](#q028) | Differentiate between member functions defined inside vs. outside the body ... | **1x** | 10 marks | Theory + Coding / Long Answer | ⚪ **Low** |
-| [Q029](#q029) | What is an object? Explain creation and destruction using a Bank-Account cl... | **1x** | 8 marks | Theory + Coding / Long Answer | ⚪ **Low** |
-| [Q030](#q030) | Define Member function and Friend function, and write the purpose of each. | **1x** | 8 marks | Theory / Long Answer | ⚪ **Low** |
-| [Q031](#q031) | How does a function behave differently when an object is passed by value ve... | **1x** | 6 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q032](#q032) | Write a C++ program to find the average of three given numbers by defining ... | **1x** | 5 marks | Coding / Short Answer | ⚪ **Low** |
-| [Q033](#q033) | Compare structures and classes, and explain what empty classes are and thei... | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q034](#q034) | What is the utility of a friend function? Does it violate the rule of encap... | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q035](#q035) | Differentiate between member functions and global functions with an example... | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q036](#q036) | What is the this pointer? What happens on the statement delete this; inside... | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q037](#q037) | Write a short note on array of objects with an example. | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q038](#q038) | How does the working of a member function differ from a friend function and... | **1x** | 4 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q039](#q039) | What is an Object? Explain with an example how an object is instantiated in... | **1x** | 4 marks | Theory / Short Answer | ⚪ **Low** |
-
 ---
 
 ## ❓ Detailed Question Bank & Answers
 
-### [Q001] What are access control specifiers (public, private, protected) in C++? Explain their need, accessibility rules, and usage with examples.
+### [Q001] What are access control specifiers (public, private, protected) in C++? Explain their need, accessibility rules, and usage with examples. :id=q001
 
 🔴 **Very High Priority** • **15 (79 marks)** • *Theory (+ Coding in 2015-06) / Short Answer & Long Answer*
 
@@ -66,7 +22,7 @@ private (class/friends only; default in class), protected (class + derived class
 
 > **🗓️ Asked In Papers:** `2012-12 3(a), 2014-06 4(c), 2015-06 2(b), 2017-06 1(e), 2019-06 2(b), 2019-12 1(b), 2020-06 1(d), 2020-12 5(ii), 2021-06 3(c), 2022-06 1(a), 2023-12 2(c), BCAOL S1-7, 2024-06 1(b), 2024-12 1(c), 2025-06 2(d)`
 
-### [Q002] What is a friend function in C++? Explain its properties, advantages, and implementation with an example program.
+### [Q002] What is a friend function in C++? Explain its properties, advantages, and implementation with an example program. :id=q002
 
 🔴 **Very High Priority** • **10 (54 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -76,7 +32,7 @@ Declared inside class with friend keyword; non-member function accessing private
 
 > **🗓️ Asked In Papers:** `2012-12 4(c), 2014-12 4(c), 2017-06 5(c), 2017-12 1(e), 2018-06 4(a), 2019-12 1(d), 2020-12 1(f), 2021-06 1(d), 2021-12 3(a), 2023-12 3(d)`
 
-### [Q003] What is an object in C++? Explain how an object can be passed as an argument to a function with an example.
+### [Q003] What is an object in C++? Explain how an object can be passed as an argument to a function with an example. :id=q003
 
 🔴 **Very High Priority** • **7 (37 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -86,7 +42,7 @@ Object is an instance of a class; passed by value (copy created), by reference (
 
 > **🗓️ Asked In Papers:** `2014-12 1(f), 2017-06 3(b), 2018-12S 3(b), 2019-06 1(f), 2020-12 1(e), 2021-06 1(c), 2024-06 1(f)`
 
-### [Q004] What are static data members and static member functions of a class? Explain their utility with an example program.
+### [Q004] What are static data members and static member functions of a class? Explain their utility with an example program. :id=q004
 
 🔴 **Very High Priority** • **6 (47 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -96,7 +52,7 @@ static data shared across all objects (initialized outside class using ::); stat
 
 > **🗓️ Asked In Papers:** `2013-12 3(b), 2019-06 4(a), 2020-06 2(b), 2021-12 1(d), 2024-06 2(a), 2025-06 1(c)`
 
-### [Q005] What is the this pointer in C++? Explain its significance and usage with an example program.
+### [Q005] What is the this pointer in C++? Explain its significance and usage with an example program. :id=q005
 
 🔴 **Very High Priority** • **6 (31 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -106,7 +62,7 @@ Implicit constant pointer passed to non-static member functions holding the invo
 
 > **🗓️ Asked In Papers:** `2015-06 4(a), 2017-12 2(c), 2019-12 5(b), 2022-12 1(g), 2025-06 4(b), 2025-12 5(e)`
 
-### [Q006] How is a struct (structure) different from a class in C++? Discuss their syntax with an example.
+### [Q006] How is a struct (structure) different from a class in C++? Discuss their syntax with an example. :id=q006
 
 🟠 **High Priority** • **4 (20 marks)** • *Theory + Coding / Short Answer*
 
@@ -116,7 +72,7 @@ Default member/inheritance access is public in struct vs. private in class; both
 
 > **🗓️ Asked In Papers:** `2014-06 1(f), 2019-06 3(c), 2020-12 1(d), 2025-12 1(a)`
 
-### [Q007] How do we declare and define static data members of a class? Explain their syntax, rules, and characteristics.
+### [Q007] How do we declare and define static data members of a class? Explain their syntax, rules, and characteristics. :id=q007
 
 🟠 **High Priority** • **4 (19 marks)** • *Theory / Short Answer*
 
@@ -126,7 +82,7 @@ Declared inside class with static; defined once at file scope (type Class::var =
 
 > **🗓️ Asked In Papers:** `2017-06 3(a), 2017-12 1(f), 2022-12 1(h), 2023-12 4(d)`
 
-### [Q008] Write a C++ program using a Matrix class (with constructor, destructor, and methods) to input and add two 3x3 matrices.
+### [Q008] Write a C++ program using a Matrix class (with constructor, destructor, and methods) to input and add two 3x3 matrices. :id=q008
 
 🟠 **High Priority** • **3 (32 marks)** • *Coding / Long Answer*
 
@@ -136,7 +92,7 @@ Class holds int m[3][3]; constructor initializes elements; destructor cleans up/
 
 > **🗓️ Asked In Papers:** `2012-12 2(a), 2017-06 1(c), 2020-06 4(b)`
 
-### [Q009] Write a C++ program to implement a simple calculator (+, -, *, /) on two operands using class methods for reading data and arithmetic operations.
+### [Q009] Write a C++ program to implement a simple calculator (+, -, *, /) on two operands using class methods for reading data and arithmetic operations. :id=q009
 
 🟠 **High Priority** • **3 (30 marks)** • *Coding / Long Answer*
 
@@ -146,7 +102,7 @@ Calculator class with a, b; read() method; switch(op) dispatching add(), sub(), 
 
 > **🗓️ Asked In Papers:** `2013-06 2(c), 2017-12 5(b), 2020-12 4(b)`
 
-### [Q010] Write a C++ program to find the largest of three numbers using a member function (and constructor in NUMBER class) defined in a class.
+### [Q010] Write a C++ program to find the largest of three numbers using a member function (and constructor in NUMBER class) defined in a class. :id=q010
 
 🟠 **High Priority** • **3 (25 marks)** • *Coding / Short Answer & Long Answer*
 
@@ -156,7 +112,7 @@ Class NUMBER with int a, b, c, constructor initializing values, and largest() us
 
 > **🗓️ Asked In Papers:** `2013-06 1(b), 2013-12 3(a), 2019-12 1(f)`
 
-### [Q011] How is memory allocation performed in C++ when a class is declared versus when a class is instantiated (covering classes, objects, data members, member functions, and friend functions)?
+### [Q011] How is memory allocation performed in C++ when a class is declared versus when a class is instantiated (covering classes, objects, data members, member functions, and friend functions)? :id=q011
 
 🟠 **High Priority** • **3 (25 marks)** • *Theory / Long Answer*
 
@@ -166,7 +122,7 @@ Class declaration allocates no memory (blueprint only); instantiation allocates 
 
 > **🗓️ Asked In Papers:** `2015-12 3(a), 2023-06 4(d), 2025-12 4(c)`
 
-### [Q012] Define class and object. How are they related? Explain with an example.
+### [Q012] Define class and object. How are they related? Explain with an example. :id=q012
 
 🟠 **High Priority** • **3 (15 marks)** • *Theory / Short Answer*
 
@@ -176,7 +132,7 @@ Class is a user-defined blueprint bundling data and methods; object is a runtime
 
 > **🗓️ Asked In Papers:** `2013-12 5(d), 2015-12 1(e), 2023-06 4(a)`
 
-### [Q013] What is a static member function in C++? Explain how the static keyword changes a function with a program.
+### [Q013] What is a static member function in C++? Explain how the static keyword changes a function with a program. :id=q013
 
 🟠 **High Priority** • **3 (14 marks)** • *Theory + Coding / Short Answer*
 
@@ -186,7 +142,7 @@ Belongs to the class rather than any object; lacks this pointer; accesses only s
 
 > **🗓️ Asked In Papers:** `2021-06 3(a), 2023-06 4(b), BCAOL S1-6`
 
-### [Q014] Write a C++ program to add two complex numbers by defining a Complex class and proper constructor.
+### [Q014] Write a C++ program to add two complex numbers by defining a Complex class and proper constructor. :id=q014
 
 🔵 **Medium Priority** • **2 (20 marks)** • *Coding / Long Answer*
 
@@ -196,7 +152,7 @@ Complex class (float real, imag); constructor initializes; add(Complex) sums rea
 
 > **🗓️ Asked In Papers:** `2015-06 1(e), 2026-06 3(a)`
 
-### [Q015] Write a C++ program to multiply two complex numbers using a Complex class and constructor.
+### [Q015] Write a C++ program to multiply two complex numbers using a Complex class and constructor. :id=q015
 
 🔵 **Medium Priority** • **2 (20 marks)** • *Coding / Long Answer*
 
@@ -206,7 +162,7 @@ Formula (a + bi)(c + di) = (ac - bd) + (ad + bc)i; Complex class with parameteri
 
 > **🗓️ Asked In Papers:** `2017-12S 5(b), 2022-06 4(b)`
 
-### [Q016] Explain two merits and two demerits of using friend functions with an example.
+### [Q016] Explain two merits and two demerits of using friend functions with an example. :id=q016
 
 🔵 **Medium Priority** • **2 (18 marks)** • *Theory / Long Answer*
 
@@ -216,7 +172,7 @@ Merits: accesses private data of multiple classes, enables symmetrical binary op
 
 > **🗓️ Asked In Papers:** `2013-12 1(d), 2020-06 5(b)`
 
-### [Q017] Write a C++ program to create a Book class (publisher/title, author, price) with proper constructor, destructor, and member functions to input/display records.
+### [Q017] Write a C++ program to create a Book class (publisher/title, author, price) with proper constructor, destructor, and member functions to input/display records. :id=q017
 
 🔵 **Medium Priority** • **2 (17 marks)** • *Coding / Long Answer*
 
@@ -226,7 +182,7 @@ Book class with string title, author, publisher; float price;, constructor/destr
 
 > **🗓️ Asked In Papers:** `2012-12 3(c), 2016-12 4(b)`
 
-### [Q018] Write a C++ program to find the sum of n given numbers using a friend function.
+### [Q018] Write a C++ program to find the sum of n given numbers using a friend function. :id=q018
 
 🔵 **Medium Priority** • **2 (17 marks)** • *Theory + Coding / Long Answer*
 
@@ -236,7 +192,7 @@ Class stores array/n; declares friend int calcSum(Series s); which loops 0..n-1 
 
 > **🗓️ Asked In Papers:** `2015-06 2(a), 2019-06 2(a)`
 
-### [Q019] Define a member function and briefly discuss its purpose in C++ with a suitable example.
+### [Q019] Define a member function and briefly discuss its purpose in C++ with a suitable example. :id=q019
 
 🔵 **Medium Priority** • **2 (10 marks)** • *Theory / Short Answer*
 
@@ -246,7 +202,7 @@ Function declared inside a class representing object behavior; operates directly
 
 > **🗓️ Asked In Papers:** `2015-12 2(b), 2022-12 1(f)`
 
-### [Q020] Write a C++ program to define class Circle with a constructor, a method for area (πr²), and a method for circumference (2πr).
+### [Q020] Write a C++ program to define class Circle with a constructor, a method for area (πr²), and a method for circumference (2πr). :id=q020
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Coding / Long Answer*
 
@@ -256,7 +212,7 @@ Circle(double r) constructor; area() returns 3.14159*r*r; circumference() return
 
 > **🗓️ Asked In Papers:** `2018-06 3(a)`
 
-### [Q021] Write a C++ program to find the sum of n numbers by defining a proper class, constructor, and methods.
+### [Q021] Write a C++ program to find the sum of n numbers by defining a proper class, constructor, and methods. :id=q021
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Coding / Long Answer*
 
@@ -266,7 +222,7 @@ Class takes n in constructor, reads n values into array/vector, and computes sum
 
 > **🗓️ Asked In Papers:** `2018-12S 2(b)`
 
-### [Q022] How does a friend function differ from a member function? Explain friend function implementation with a program.
+### [Q022] How does a friend function differ from a member function? Explain friend function implementation with a program. :id=q022
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Theory + Coding / Long Answer*
 
@@ -276,7 +232,7 @@ Member function uses dot/arrow operator and this; friend function is non-member,
 
 > **🗓️ Asked In Papers:** `2022-12 3(b)`
 
-### [Q023] Write a C++ program for the subtraction of two matrices.
+### [Q023] Write a C++ program for the subtraction of two matrices. :id=q023
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Coding / Long Answer*
 
@@ -286,7 +242,7 @@ Input dimensions and two 2D arrays (or Matrix objects); subtract element-wise C[
 
 > **🗓️ Asked In Papers:** `BCAOL S2-8`
 
-### [Q024] Write a C++ program to create a STUDENT class (Name, Enrollment No, Programme) with constructor and member functions.
+### [Q024] Write a C++ program to create a STUDENT class (Name, Enrollment No, Programme) with constructor and member functions. :id=q024
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Coding / Long Answer*
 
@@ -296,7 +252,7 @@ STUDENT class with parameterized/default constructor, getDetails(), and displayD
 
 > **🗓️ Asked In Papers:** `BCAOL S2-10`
 
-### [Q025] Write a program to add and subtract two instances of a Complex class using a friend function and parameterized constructor.
+### [Q025] Write a program to add and subtract two instances of a Complex class using a friend function and parameterized constructor. :id=q025
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Coding / Long Answer*
 
@@ -306,7 +262,7 @@ Complex(float r, float i); friend Complex add(Complex, Complex); and friend Comp
 
 > **🗓️ Asked In Papers:** `2024-06 3(b)`
 
-### [Q026] Compare friend function with member function. Write a program to add two Distance instances (km, m) using a friend function and parameterized constructor.
+### [Q026] Compare friend function with member function. Write a program to add two Distance instances (km, m) using a friend function and parameterized constructor. :id=q026
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Theory + Coding / Long Answer*
 
@@ -316,7 +272,7 @@ Convert excess m >= 1000 into km += m / 1000; m %= 1000; inside friend addDist(D
 
 > **🗓️ Asked In Papers:** `2024-12 3(a)`
 
-### [Q027] Create an Employee class allowing multiple constructors and methods to generate a salary report for 5 employees.
+### [Q027] Create an Employee class allowing multiple constructors and methods to generate a salary report for 5 employees. :id=q027
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Coding / Long Answer*
 
@@ -326,7 +282,7 @@ Overloaded constructors (default + parameterized); array Employee emp[5]; calcul
 
 > **🗓️ Asked In Papers:** `2024-12 3(b)`
 
-### [Q028] Differentiate between member functions defined inside vs. outside the body of a class. How are inline member functions defined outside the class?
+### [Q028] Differentiate between member functions defined inside vs. outside the body of a class. How are inline member functions defined outside the class? :id=q028
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Theory + Coding / Long Answer*
 
@@ -336,7 +292,7 @@ Inside-class definitions are implicitly inline; outside-class definitions use Re
 
 > **🗓️ Asked In Papers:** `2024-12 4(b)`
 
-### [Q029] What is an object? Explain creation and destruction using a Bank-Account class (name, account-number, balance, display balance).
+### [Q029] What is an object? Explain creation and destruction using a Bank-Account class (name, account-number, balance, display balance). :id=q029
 
 ⚪ **Low Priority** • **1 (8 marks)** • *Theory + Coding / Long Answer*
 
@@ -346,7 +302,7 @@ Objects created via constructor upon declaration/new and destroyed via destructo
 
 > **🗓️ Asked In Papers:** `2012-12 1(d)`
 
-### [Q030] Define Member function and Friend function, and write the purpose of each.
+### [Q030] Define Member function and Friend function, and write the purpose of each. :id=q030
 
 ⚪ **Low Priority** • **1 (8 marks)** • *Theory / Long Answer*
 
@@ -356,7 +312,7 @@ Member function defines intrinsic object behavior; friend function provides cont
 
 > **🗓️ Asked In Papers:** `2018-12S 3(a)`
 
-### [Q031] How does a function behave differently when an object is passed by value versus passed by reference?
+### [Q031] How does a function behave differently when an object is passed by value versus passed by reference? :id=q031
 
 ⚪ **Low Priority** • **1 (6 marks)** • *Theory / Short Answer*
 
@@ -366,7 +322,7 @@ By value invokes copy constructor and modifies only local copy; by reference ali
 
 > **🗓️ Asked In Papers:** `2017-12 2(a)`
 
-### [Q032] Write a C++ program to find the average of three given numbers by defining an appropriate class and methods.
+### [Q032] Write a C++ program to find the average of three given numbers by defining an appropriate class and methods. :id=q032
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Coding / Short Answer*
 
@@ -376,7 +332,7 @@ Average class reading 3 floats, computing (a+b+c)/3.0 in a method, and displayin
 
 > **🗓️ Asked In Papers:** `2020-12 2(c)`
 
-### [Q033] Compare structures and classes, and explain what empty classes are and their purpose in C++.
+### [Q033] Compare structures and classes, and explain what empty classes are and their purpose in C++. :id=q033
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
@@ -386,7 +342,7 @@ Empty class (class E {};) has no data members (sizeof(E) == 1 for unique address
 
 > **🗓️ Asked In Papers:** `2021-12 1(c)`
 
-### [Q034] What is the utility of a friend function? Does it violate the rule of encapsulation?
+### [Q034] What is the utility of a friend function? Does it violate the rule of encapsulation? :id=q034
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
@@ -396,7 +352,7 @@ Allows controlled non-member access; technically relaxes strict encapsulation, t
 
 > **🗓️ Asked In Papers:** `2023-06 1(d)`
 
-### [Q035] Differentiate between member functions and global functions with an example.
+### [Q035] Differentiate between member functions and global functions with an example. :id=q035
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
@@ -406,7 +362,7 @@ Member functions sit in class scope with this and access private members; global
 
 > **🗓️ Asked In Papers:** `2023-06 4(c)`
 
-### [Q036] What is the this pointer? What happens on the statement delete this; inside a class?
+### [Q036] What is the this pointer? What happens on the statement delete this; inside a class? :id=q036
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
@@ -416,7 +372,7 @@ delete this; deallocates the object if allocated via new; valid only if no membe
 
 > **🗓️ Asked In Papers:** `2024-12 1(d)`
 
-### [Q037] Write a short note on array of objects with an example.
+### [Q037] Write a short note on array of objects with an example. :id=q037
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
@@ -426,7 +382,7 @@ ClassName arr[N]; creates N contiguous objects calling default constructor N tim
 
 > **🗓️ Asked In Papers:** `2024-12 1(g)`
 
-### [Q038] How does the working of a member function differ from a friend function and a non-member function?
+### [Q038] How does the working of a member function differ from a friend function and a non-member function? :id=q038
 
 ⚪ **Low Priority** • **1 (4 marks)** • *Theory / Short Answer*
 
@@ -436,7 +392,7 @@ Member: obj.f(), has this, full private access; Friend: f(obj), no this, private
 
 > **🗓️ Asked In Papers:** `2017-12S 1(f)`
 
-### [Q039] What is an Object? Explain with an example how an object is instantiated in C++.
+### [Q039] What is an Object? Explain with an example how an object is instantiated in C++. :id=q039
 
 ⚪ **Low Priority** • **1 (4 marks)** • *Theory / Short Answer*
 

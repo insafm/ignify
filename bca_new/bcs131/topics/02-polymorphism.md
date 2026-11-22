@@ -8,35 +8,11 @@
 
 This module covers **19 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
 
-### Quick Jump to Questions
-
-| ID | Question Summary | Frequency | Marks | Type | Importance |
-| :--- | :--- | :---: | :---: | :--- | :---: |
-| [Q040](#q040) | Why do abstract classes play an important role in OOP? Implement an abstrac... | **8x** | 73 marks | Theory + Coding / Long Answer | 🔴 **Very High** |
-| [Q041](#q041) | What is the difference between function overloading and function overriding... | **7x** | 60 marks | Theory + Coding / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q042](#q042) | Write a C++ program defining a base class (Doctor / Teacher / Employee) wit... | **6x** | 58 marks | Coding / Long Answer | 🔴 **Very High** |
-| [Q043](#q043) | How does a virtual function differ from a pure virtual function? Explain wi... | **6x** | 36 marks | Theory + Coding / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q044](#q044) | What is an abstract class? Justify why it "provides a base upon which other... | **6x** | 35 marks | Theory / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q045](#q045) | What is a virtual function? Explain its need, advantages, and limitations i... | **6x** | 30 marks | Theory / Short Answer | 🔴 **Very High** |
-| [Q046](#q046) | What is polymorphism? List three or more advantages of polymorphism in OOP. | **5x** | 23 marks | Theory / Short Answer | 🟠 **High** |
-| [Q047](#q047) | Compare compile-time polymorphism and run-time polymorphism with examples. | **4x** | 33 marks | Theory + Coding / Short Answer & Long Answer | 🟠 **High** |
-| [Q048](#q048) | What happens if we do not use a virtual function in inheritance? Explain it... | **3x** | 30 marks | Theory + Coding / Long Answer | 🟠 **High** |
-| [Q049](#q049) | Explain the characteristics of virtual/pure virtual functions and illustrat... | **3x** | 28 marks | Theory + Coding / Long Answer | 🟠 **High** |
-| [Q050](#q050) | Define polymorphism, its advantages, and explain the various types of polym... | **3x** | 20 marks | Theory / Short Answer & Long Answer | 🟠 **High** |
-| [Q051](#q051) | Explain the association between dynamic binding and run-time polymorphism w... | **3x** | 15 marks | Theory / Short Answer | 🟠 **High** |
-| [Q052](#q052) | Briefly discuss function overriding in C++ with suitable example code. | **3x** | 15 marks | Theory + Coding / Short Answer | 🟠 **High** |
-| [Q053](#q053) | Compare Early Binding and Late Binding in C++, and explain when to use each... | **3x** | 15 marks | Theory / Short Answer | 🟠 **High** |
-| [Q054](#q054) | Write a short note on Pure Virtual Function with an example. | **3x** | 14 marks | Theory / Short Answer | 🟠 **High** |
-| [Q055](#q055) | What is Runtime Polymorphism? Explain its utility and how it is achieved in... | **2x** | 10 marks | Theory / Short Answer | 🔵 **Medium** |
-| [Q056](#q056) | Explain polymorphism, its advantages, and write a C++ program demonstrating... | **1x** | 10 marks | Theory + Coding / Long Answer | ⚪ **Low** |
-| [Q057](#q057) | What is polymorphism? Explain its advantages and write a C++ program to dem... | **1x** | 10 marks | Theory + Coding / Long Answer | ⚪ **Low** |
-| [Q058](#q058) | How does a virtual function differ from a regular (non-virtual) member func... | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
-
 ---
 
 ## ❓ Detailed Question Bank & Answers
 
-### [Q040] Why do abstract classes play an important role in OOP? Implement an abstract class using a pure virtual function in C++ (and explain why it cannot be instantiated).
+### [Q040] Why do abstract classes play an important role in OOP? Implement an abstract class using a pure virtual function in C++ (and explain why it cannot be instantiated). :id=q040
 
 🔴 **Very High Priority** • **8 (73 marks)** • *Theory + Coding / Long Answer*
 
@@ -46,7 +22,7 @@ Abstract class has ≥ 1 pure virtual function (virtual void f() = 0;); defines 
 
 > **🗓️ Asked In Papers:** `2014-12 3(b), 2015-06 1(d), 2015-12 4(a), 2017-06 4(a), 2017-12S 2(a), 2023-12 4(c), BCAOL S2-11, 2024-06 5(a)`
 
-### [Q041] What is the difference between function overloading and function overriding in C++? Explain with example code for each.
+### [Q041] What is the difference between function overloading and function overriding in C++? Explain with example code for each. :id=q041
 
 🔴 **Very High Priority** • **7 (60 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -56,7 +32,7 @@ Overloading: same scope, same name, different parameter list (compile-time); Ove
 
 > **🗓️ Asked In Papers:** `2013-06 5(a), 2017-12 4(a), 2020-12 3(a), 2022-06 3(a), 2023-06 2(d), 2023-12 4(b), 2024-06 2(b)`
 
-### [Q042] Write a C++ program defining a base class (Doctor / Teacher / Employee) with a virtual function salary() and derive a subclass (Visiting_Doctor / Associate_Professor / Assistant Professor / Manager) implementing salary().
+### [Q042] Write a C++ program defining a base class (Doctor / Teacher / Employee) with a virtual function salary() and derive a subclass (Visiting_Doctor / Associate_Professor / Assistant Professor / Manager) implementing salary(). :id=q042
 
 🔴 **Very High Priority** • **6 (58 marks)** • *Coding / Long Answer*
 
@@ -66,7 +42,7 @@ Base class defines virtual void salary(); derived class overrides salary(); invo
 
 > **🗓️ Asked In Papers:** `2013-06 1(d), 2018-06 1(e), 2020-12 3(b), 2022-06 2(a), 2025-06 3(a), 2025-12 3(a)`
 
-### [Q043] How does a virtual function differ from a pure virtual function? Explain with an example of each.
+### [Q043] How does a virtual function differ from a pure virtual function? Explain with an example of each. :id=q043
 
 🔴 **Very High Priority** • **6 (36 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -76,7 +52,7 @@ Virtual function has a body in base and allows base instantiation; pure virtual 
 
 > **🗓️ Asked In Papers:** `2016-12 1(f), 2021-12 2(b), 2022-06 1(f), 2024-12 2(c), 2025-06 1(e), 2026-06 1(b)`
 
-### [Q044] What is an abstract class? Justify why it "provides a base upon which other classes may be built" and list its advantages with an example.
+### [Q044] What is an abstract class? Justify why it "provides a base upon which other classes may be built" and list its advantages with an example. :id=q044
 
 🔴 **Very High Priority** • **6 (35 marks)** • *Theory / Short Answer & Long Answer*
 
@@ -86,7 +62,7 @@ Enforces uniform interface across derived types, prevents invalid partial object
 
 > **🗓️ Asked In Papers:** `2013-12 5(a), 2016-12 1(b), 2022-12 1(e), 2024-12 1(b), 2025-12 1(b), 2026-06 5(b)`
 
-### [Q045] What is a virtual function? Explain its need, advantages, and limitations in C++ with an example.
+### [Q045] What is a virtual function? Explain its need, advantages, and limitations in C++ with an example. :id=q045
 
 🔴 **Very High Priority** • **6 (30 marks)** • *Theory / Short Answer*
 
@@ -96,7 +72,7 @@ Enables runtime polymorphism via vtable/vptr; limitations include slight memory/
 
 > **🗓️ Asked In Papers:** `2013-12 1(f), 2014-06 4(b), 2021-06 5(c-ii), 2023-06 1(a), 2023-12 5(c), 2025-12 5(a)`
 
-### [Q046] What is polymorphism? List three or more advantages of polymorphism in OOP.
+### [Q046] What is polymorphism? List three or more advantages of polymorphism in OOP. :id=q046
 
 🟠 **High Priority** • **5 (23 marks)** • *Theory / Short Answer*
 
@@ -106,7 +82,7 @@ Enables runtime polymorphism via vtable/vptr; limitations include slight memory/
 
 > **🗓️ Asked In Papers:** `2013-12 4(b), 2018-12S 5(b), 2019-12 2(c), 2025-06 1(h), 2025-12 5(b)`
 
-### [Q047] Compare compile-time polymorphism and run-time polymorphism with examples.
+### [Q047] Compare compile-time polymorphism and run-time polymorphism with examples. :id=q047
 
 🟠 **High Priority** • **4 (33 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -116,7 +92,7 @@ Compile-time (static/early binding): function & operator overloading; Run-time (
 
 > **🗓️ Asked In Papers:** `2014-12 4(a), 2019-12 4(b), 2020-06 3(a), 2021-06 4(d)`
 
-### [Q048] What happens if we do not use a virtual function in inheritance? Explain its importance with an example.
+### [Q048] What happens if we do not use a virtual function in inheritance? Explain its importance with an example. :id=q048
 
 🟠 **High Priority** • **3 (30 marks)** • *Theory + Coding / Long Answer*
 
@@ -126,7 +102,7 @@ Calls through a Base* pointer statically bind to Base::func() based on pointer t
 
 > **🗓️ Asked In Papers:** `2014-12 2(b), 2019-12 3(a), 2020-06 3(b)`
 
-### [Q049] Explain the characteristics of virtual/pure virtual functions and illustrate a pure virtual function with an example program.
+### [Q049] Explain the characteristics of virtual/pure virtual functions and illustrate a pure virtual function with an example program. :id=q049
 
 🟠 **High Priority** • **3 (28 marks)** • *Theory + Coding / Long Answer*
 
@@ -136,7 +112,7 @@ Syntax virtual ret func() = 0;; derived class must override or remain abstract; 
 
 > **🗓️ Asked In Papers:** `2015-06 3(b), 2017-12S 3(b), BCAOL S2-9`
 
-### [Q050] Define polymorphism, its advantages, and explain the various types of polymorphism supported by C++ with examples.
+### [Q050] Define polymorphism, its advantages, and explain the various types of polymorphism supported by C++ with examples. :id=q050
 
 🟠 **High Priority** • **3 (20 marks)** • *Theory / Short Answer & Long Answer*
 
@@ -146,7 +122,7 @@ Static (function overloading, operator overloading, templates) and Dynamic (virt
 
 > **🗓️ Asked In Papers:** `2016-06 4(b), 2021-12 4(c), 2023-12 4(a)`
 
-### [Q051] Explain the association between dynamic binding and run-time polymorphism with a suitable example.
+### [Q051] Explain the association between dynamic binding and run-time polymorphism with a suitable example. :id=q051
 
 🟠 **High Priority** • **3 (15 marks)** • *Theory / Short Answer*
 
@@ -156,7 +132,7 @@ Dynamic binding defers function address resolution until runtime via vtable look
 
 > **🗓️ Asked In Papers:** `2016-12 3(c), 2022-06 1(g), 2025-12 2(b)`
 
-### [Q052] Briefly discuss function overriding in C++ with suitable example code.
+### [Q052] Briefly discuss function overriding in C++ with suitable example code. :id=q052
 
 🟠 **High Priority** • **3 (15 marks)** • *Theory + Coding / Short Answer*
 
@@ -166,7 +142,7 @@ Redefining a base class virtual function in a derived class with identical name,
 
 > **🗓️ Asked In Papers:** `2019-06 5(a), 2021-12 4(d), 2025-12 1(e)`
 
-### [Q053] Compare Early Binding and Late Binding in C++, and explain when to use each.
+### [Q053] Compare Early Binding and Late Binding in C++, and explain when to use each. :id=q053
 
 🟠 **High Priority** • **3 (15 marks)** • *Theory / Short Answer*
 
@@ -176,7 +152,7 @@ Early: compile-time resolution, faster (use for fixed types/overloads); Late: ru
 
 > **🗓️ Asked In Papers:** `2021-06 1(g), 2023-06 1(e), 2025-06 4(c)`
 
-### [Q054] Write a short note on Pure Virtual Function with an example.
+### [Q054] Write a short note on Pure Virtual Function with an example. :id=q054
 
 🟠 **High Priority** • **3 (14 marks)** • *Theory / Short Answer*
 
@@ -186,7 +162,7 @@ Declared with = 0 specifier; acts as a placeholder contract in an abstract base 
 
 > **🗓️ Asked In Papers:** `2016-12 5(d), 2017-06 5(b), 2022-12 5(i)`
 
-### [Q055] What is Runtime Polymorphism? Explain its utility and how it is achieved in C++.
+### [Q055] What is Runtime Polymorphism? Explain its utility and how it is achieved in C++. :id=q055
 
 🔵 **Medium Priority** • **2 (10 marks)** • *Theory / Short Answer*
 
@@ -196,7 +172,7 @@ Achieved via inheritance + virtual functions + base class pointer/reference; all
 
 > **🗓️ Asked In Papers:** `2023-06 1(g), 2024-06 1(c)`
 
-### [Q056] Explain polymorphism, its advantages, and write a C++ program demonstrating virtual functions.
+### [Q056] Explain polymorphism, its advantages, and write a C++ program demonstrating virtual functions. :id=q056
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Theory + Coding / Long Answer*
 
@@ -206,7 +182,7 @@ Base pointer pointing to derived class object invoking overridden virtual displa
 
 > **🗓️ Asked In Papers:** `2012-12 5(a)`
 
-### [Q057] What is polymorphism? Explain its advantages and write a C++ program to demonstrate polymorphism.
+### [Q057] What is polymorphism? Explain its advantages and write a C++ program to demonstrate polymorphism. :id=q057
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Theory + Coding / Long Answer*
 
@@ -216,7 +192,7 @@ Demonstrate both compile-time (overloading) or runtime (virtual dispatch) polymo
 
 > **🗓️ Asked In Papers:** `2018-06 1(b)`
 
-### [Q058] How does a virtual function differ from a regular (non-virtual) member function in C++?
+### [Q058] How does a virtual function differ from a regular (non-virtual) member function in C++? :id=q058
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 

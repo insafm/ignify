@@ -8,25 +8,11 @@
 
 This module covers **9 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
 
-### Quick Jump to Questions
-
-| ID | Question Summary | Frequency | Marks | Type | Importance |
-| :--- | :--- | :---: | :---: | :--- | :---: |
-| [Q194](#q194) | What is an exception? Explain the purpose of exception handling and how exc... | **14x** | 101 marks | Theory + Coding / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q195](#q195) | Explain exception handling in C++ with a program, and describe what happens... | **3x** | 30 marks | Theory + Coding / Long Answer | 🟠 **High** |
-| [Q196](#q196) | What is exception handling? Name the keywords used and write a C++ program ... | **3x** | 26 marks | Theory + Coding / Short Answer & Long Answer | 🟠 **High** |
-| [Q197](#q197) | Write syntax of try, throw, catch, and write a program to catch all excepti... | **2x** | 20 marks | Theory + Coding / Long Answer | 🔵 **Medium** |
-| [Q198](#q198) | What is the need for exception handling? Explain with an example and descri... | **1x** | 10 marks | Theory + Diagram / Long Answer | ⚪ **Low** |
-| [Q199](#q199) | Explain exception handling while executing constructors and destructors, an... | **1x** | 10 marks | Theory + Coding / Long Answer | ⚪ **Low** |
-| [Q200](#q200) | Explain a situation when you will use multiple catch statements in a C++ pr... | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q201](#q201) | List any five common examples of exceptions. | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q202](#q202) | Briefly discuss the functioning of try, throw, and catch expressions with a... | **1x** | 5 marks | Theory + Diagram / Short Answer | ⚪ **Low** |
-
 ---
 
 ## ❓ Detailed Question Bank & Answers
 
-### [Q194] What is an exception? Explain the purpose of exception handling and how exceptions are handled in C++ (try, throw, catch) with an example program.
+### [Q194] What is an exception? Explain the purpose of exception handling and how exceptions are handled in C++ (try, throw, catch) with an example program. :id=q194
 
 🔴 **Very High Priority** • **14 (101 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -36,7 +22,7 @@ Runtime anomaly; try encloses risky code, throw raises error object, catch handl
 
 > **🗓️ Asked In Papers:** `2013-12 2(a), 2015-12 4(b), 2016-06 5(a), 2018-06 5(b), 2021-12 5(c), 2022-06 5(d), 2022-12 1(b), 2023-12 1(b), BCAOL S3-16, 2024-06 4(a), 2024-12 1(f), 2025-06 5(b), 2025-12 1(h), 2026-06 1(a)`
 
-### [Q195] Explain exception handling in C++ with a program, and describe what happens if an exception is thrown outside of a try block and why.
+### [Q195] Explain exception handling in C++ with a program, and describe what happens if an exception is thrown outside of a try block and why. :id=q195
 
 🟠 **High Priority** • **3 (30 marks)** • *Theory + Coding / Long Answer*
 
@@ -46,7 +32,7 @@ Unhandled outside try (no active catch handler on call stack) invokes std::termi
 
 > **🗓️ Asked In Papers:** `2012-12 5(b), 2017-12 4(b), 2020-12 2(a)`
 
-### [Q196] What is exception handling? Name the keywords used and write a C++ program to handle a divide-by-zero exception.
+### [Q196] What is exception handling? Name the keywords used and write a C++ program to handle a divide-by-zero exception. :id=q196
 
 🟠 **High Priority** • **3 (26 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -56,7 +42,7 @@ Keywords: try, throw, catch; check if (den == 0) throw runtime_error("Div by 0")
 
 > **🗓️ Asked In Papers:** `2014-06 2(a), 2016-12 2(a), 2019-06 3(b)`
 
-### [Q197] Write syntax of try, throw, catch, and write a program to catch all exceptions (catch(...)). What happens if an exception is not caught?
+### [Q197] Write syntax of try, throw, catch, and write a program to catch all exceptions (catch(...)). What happens if an exception is not caught? :id=q197
 
 🔵 **Medium Priority** • **2 (20 marks)** • *Theory + Coding / Long Answer*
 
@@ -66,7 +52,7 @@ catch(...) acts as wildcard handler placed last; uncaught exceptions propagate o
 
 > **🗓️ Asked In Papers:** `2015-06 5(b), 2017-06 2(a)`
 
-### [Q198] What is the need for exception handling? Explain with an example and describe the hierarchy of exception classes in the C++ standard library.
+### [Q198] What is the need for exception handling? Explain with an example and describe the hierarchy of exception classes in the C++ standard library. :id=q198
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Theory + Diagram / Long Answer*
 
@@ -76,7 +62,7 @@ catch(...) acts as wildcard handler placed last; uncaught exceptions propagate o
 
 > **🗓️ Asked In Papers:** `2013-06 4(a)`
 
-### [Q199] Explain exception handling while executing constructors and destructors, and how exception types are specified in C++.
+### [Q199] Explain exception handling while executing constructors and destructors, and how exception types are specified in C++. :id=q199
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Theory + Coding / Long Answer*
 
@@ -86,7 +72,7 @@ Throwing in constructor prevents destructor call for that object (already-built 
 
 > **🗓️ Asked In Papers:** `2017-12S 2(b)`
 
-### [Q200] Explain a situation when you will use multiple catch statements in a C++ program for exception handling.
+### [Q200] Explain a situation when you will use multiple catch statements in a C++ program for exception handling. :id=q200
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
@@ -96,7 +82,7 @@ When one try block can throw different exception types (e.g., int for invalid in
 
 > **🗓️ Asked In Papers:** `2014-12 5(b)`
 
-### [Q201] List any five common examples of exceptions.
+### [Q201] List any five common examples of exceptions. :id=q201
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
@@ -106,7 +92,7 @@ Division by zero, array index out of bounds, memory allocation failure (bad_allo
 
 > **🗓️ Asked In Papers:** `2015-12 1(g)`
 
-### [Q202] Briefly discuss the functioning of try, throw, and catch expressions with a suitable block diagram.
+### [Q202] Briefly discuss the functioning of try, throw, and catch expressions with a suitable block diagram. :id=q202
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory + Diagram / Short Answer*
 

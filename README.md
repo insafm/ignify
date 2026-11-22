@@ -26,7 +26,6 @@ Subjects are systematically analyzed and added to this portal based on historica
 
 | Subject Code | Subject Title | Credits | Analysis Status | Portal Directory |
 | :---: | :--- | :---: | :---: | :---: |
-| **BCS-131** | **Programming in C++** | 4 | 🟢 **Complete** (30 Papers / 215 Qs) | [Open Subject Module →](/bca_new/bcs131/README.md) |
 | **BCS-011** | Computer Basics and PC Software | 3 | 🟡 *In Pipeline* | *Coming Soon* |
 | **BCS-012** | Basic Mathematics | 4 | 🟡 *In Pipeline* | *Coming Soon* |
 | **BEVAE-181** | Environmental Studies | 4 | ⚪ *Planned* | *Coming Soon* |
@@ -40,9 +39,18 @@ Subjects are systematically analyzed and added to this portal based on historica
 | **BCS-042** | Introduction to Algorithm Design | 2 | ⚪ *Planned* | *Coming Soon* |
 | **MCS-013** | Discrete Mathematics | 2 | ⚪ *Planned* | *Coming Soon* |
 
-### 🔹 Semesters 3 through 6
+### 🔹 Semester 3
 
-Upcoming modules include Data Structures (**MCS-021**), Object-Oriented Analysis & Design (**MCS-014**), Database Management Systems (**MCS-023**), Java Programming (**MCS-024**), and Web Technologies.
+| Subject Code | Subject Title | Credits | Analysis Status | Portal Directory |
+| :---: | :--- | :---: | :---: | :---: |
+| **BCS-131** | **Programming in C++** | 3 | 🟢 **Complete** (30 Papers / 215 Qs) | [Open Subject Module →](/bca_new/bcs131/README.md) |
+| **MCS-021** | Data Structures | 4 | 🟡 *In Pipeline* | *Coming Soon* |
+| **MCS-014** | Systems Analysis and Design | 3 | ⚪ *Planned* | *Coming Soon* |
+| **BCS-031** | C++ Programming Lab | 2 | ⚪ *Planned* | *Coming Soon* |
+
+### 🔹 Semesters 4 through 6
+
+Upcoming modules include Database Management Systems (**MCS-023**), Java Programming (**MCS-024**), Web Technologies, and Software Engineering.
 
 ---
 

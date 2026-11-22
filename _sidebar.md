@@ -1,7 +1,7 @@
 * [🏠 **Portal Home**](/)
 
 * **Programme: BCA_NEW**
-  * **BCS-131: Programming in C++**
+  * **BCS-131: Programming in C++ (Semester 3)**
     * [📘 Subject Overview & Syllabus](/bca_new/bcs131/README.md)
     * [📊 30-Paper Exam Analysis](/bca_new/bcs131/analysis.md)
     * [🎯 High-Probability Predictions](/bca_new/bcs131/predictions.md)

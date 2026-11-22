@@ -8,26 +8,11 @@
 
 This module covers **10 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
 
-### Quick Jump to Questions
-
-| ID | Question Summary | Frequency | Marks | Type | Importance |
-| :--- | :--- | :---: | :---: | :--- | :---: |
-| [Q184](#q184) | What are inline functions? How does their execution differ from normal func... | **13x** | 77 marks | Theory + Coding / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q185](#q185) | What is function overloading? Give its advantages and explain how it is imp... | **6x** | 46 marks | Theory + Coding / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q186](#q186) | How are function calls matched with overloaded functions in C++? Explain wi... | **4x** | 35 marks | Theory + Coding / Short Answer & Long Answer | 🟠 **High** |
-| [Q187](#q187) | Differentiate between call-by-value and call-by-reference in user-defined f... | **3x** | 28 marks | Theory + Coding / Long Answer | 🟠 **High** |
-| [Q188](#q188) | Explain Reference Variable and the principal reason for passing arguments b... | **1x** | 10 marks | Theory + Coding / Long Answer | ⚪ **Low** |
-| [Q189](#q189) | Differentiate C++ from C in terms of parameter passing in functions. | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q190](#q190) | What is the signature of a method? Briefly discuss its components. | **1x** | 5 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q191](#q191) | What is function overloading? Compare default arguments with function overl... | **1x** | 4 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q192](#q192) | Give the advantages and disadvantages of an inline function. | **1x** | 4 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q193](#q193) | What is Recursion? Explain it with an example. | **1x** | 4 marks | Theory / Short Answer | ⚪ **Low** |
-
 ---
 
 ## ❓ Detailed Question Bank & Answers
 
-### [Q184] What are inline functions? How does their execution differ from normal functions, and what are their importance and advantages? Write an example program.
+### [Q184] What are inline functions? How does their execution differ from normal functions, and what are their importance and advantages? Write an example program. :id=q184
 
 🔴 **Very High Priority** • **13 (77 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -37,7 +22,7 @@ Compiler replaces call with body at compile time (when small); eliminates stack-
 
 > **🗓️ Asked In Papers:** `2014-12 1(c), 2018-06 5(c-ii), 2018-12S 2(a), 2019-12 2(b), 2020-12 1(g), 2021-06 1(b), 2021-12 5(b), 2022-06 1(h), 2022-12 5(iii), 2023-06 3(b), 2024-06 1(d), 2025-06 2(c), 2026-06 2(b)`
 
-### [Q185] What is function overloading? Give its advantages and explain how it is implemented with a C++ program.
+### [Q185] What is function overloading? Give its advantages and explain how it is implemented with a C++ program. :id=q185
 
 🔴 **Very High Priority** • **6 (46 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -47,7 +32,7 @@ Multiple functions sharing same name with distinct parameter count/types/order (
 
 > **🗓️ Asked In Papers:** `2014-06 5(c), 2016-12 1(e), 2018-06 3(b), 2022-12 2(a), 2025-12 5(d), 2026-06 2(a)`
 
-### [Q186] How are function calls matched with overloaded functions in C++? Explain with an example program.
+### [Q186] How are function calls matched with overloaded functions in C++? Explain with an example program. :id=q186
 
 🟠 **High Priority** • **4 (35 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -57,7 +42,7 @@ Overload resolution order: (1) Exact match, (2) Integral/floating promotion, (3)
 
 > **🗓️ Asked In Papers:** `2013-06 5(b), 2017-12S 4(b), 2020-12 4(a), 2021-06 1(f)`
 
-### [Q187] Differentiate between call-by-value and call-by-reference in user-defined functions with an example.
+### [Q187] Differentiate between call-by-value and call-by-reference in user-defined functions with an example. :id=q187
 
 🟠 **High Priority** • **3 (28 marks)** • *Theory + Coding / Long Answer*
 
@@ -67,7 +52,7 @@ Call-by-value copies arguments (caller unaffected); call-by-reference passes ali
 
 > **🗓️ Asked In Papers:** `2017-12 3(a), 2019-12 4(a), 2022-12 4(b)`
 
-### [Q188] Explain Reference Variable and the principal reason for passing arguments by reference. Differentiate passing by pointer vs. reference with a program.
+### [Q188] Explain Reference Variable and the principal reason for passing arguments by reference. Differentiate passing by pointer vs. reference with a program. :id=q188
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Theory + Coding / Long Answer*
 
@@ -77,7 +62,7 @@ Reference avoids large-object copy overhead and cannot be null/rebound; pointer 
 
 > **🗓️ Asked In Papers:** `2024-12 2(b)`
 
-### [Q189] Differentiate C++ from C in terms of parameter passing in functions.
+### [Q189] Differentiate C++ from C in terms of parameter passing in functions. :id=q189
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
@@ -87,7 +72,7 @@ C supports only pass-by-value (and simulated reference via pointers); C++ adds n
 
 > **🗓️ Asked In Papers:** `2013-06 2(a)`
 
-### [Q190] What is the signature of a method? Briefly discuss its components.
+### [Q190] What is the signature of a method? Briefly discuss its components. :id=q190
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
@@ -97,7 +82,7 @@ Unique identifier for overload resolution: function name + number, types, and or
 
 > **🗓️ Asked In Papers:** `2021-12 2(a)`
 
-### [Q191] What is function overloading? Compare default arguments with function overloading.
+### [Q191] What is function overloading? Compare default arguments with function overloading. :id=q191
 
 ⚪ **Low Priority** • **1 (4 marks)** • *Theory / Short Answer*
 
@@ -107,7 +92,7 @@ Default arguments (f(int a, int b=0)) use one body when logic is identical; over
 
 > **🗓️ Asked In Papers:** `2017-12 1(h)`
 
-### [Q192] Give the advantages and disadvantages of an inline function.
+### [Q192] Give the advantages and disadvantages of an inline function. :id=q192
 
 ⚪ **Low Priority** • **1 (4 marks)** • *Theory / Short Answer*
 
@@ -117,7 +102,7 @@ Pros: faster execution, type-safe alternative to #define macros; Cons: code bloa
 
 > **🗓️ Asked In Papers:** `2017-12S 1(e)`
 
-### [Q193] What is Recursion? Explain it with an example.
+### [Q193] What is Recursion? Explain it with an example. :id=q193
 
 ⚪ **Low Priority** • **1 (4 marks)** • *Theory / Short Answer*
 

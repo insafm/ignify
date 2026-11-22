@@ -8,35 +8,11 @@
 
 This module covers **19 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
 
-### Quick Jump to Questions
-
-| ID | Question Summary | Frequency | Marks | Type | Importance |
-| :--- | :--- | :---: | :---: | :--- | :---: |
-| [Q115](#q115) | What are Containers (Containership) in C++? List the main types of containe... | **7x** | 54 marks | Theory / Short Answer & Long Answer | 🔴 **Very High** |
-| [Q116](#q116) | What is a class template? Explain its concept, advantages, and utility. | **5x** | 23 marks | Theory / Short Answer | 🟠 **High** |
-| [Q117](#q117) | Differentiate between a class template and a function template with an exam... | **4x** | 31 marks | Theory + Coding / Short Answer & Long Answer | 🟠 **High** |
-| [Q118](#q118) | What is a function template in C++? Explain its advantages with an example. | **4x** | 25 marks | Theory + Coding / Short Answer & Long Answer | 🟠 **High** |
-| [Q119](#q119) | Explain the use of the STL list container class with an example program. | **4x** | 21 marks | Theory + Coding / Short Answer | 🟠 **High** |
-| [Q120](#q120) | What is a template class? Give its advantages and create a template class f... | **3x** | 30 marks | Theory + Coding / Long Answer | 🟠 **High** |
-| [Q121](#q121) | What is a class template? Create a class template for a Stack data structur... | **3x** | 30 marks | Theory + Coding / Long Answer | 🟠 **High** |
-| [Q122](#q122) | What is STL (Standard Template Library)? Briefly discuss its components and... | **3x** | 15 marks | Theory / Short Answer | 🟠 **High** |
-| [Q123](#q123) | What is a template function? Write a template function to swap the values o... | **2x** | 20 marks | Theory + Coding / Long Answer | 🔵 **Medium** |
-| [Q124](#q124) | What is a function template? Write a function template SUM to add two numbe... | **2x** | 11 marks | Theory + Coding / Short Answer | 🔵 **Medium** |
-| [Q125](#q125) | What are templates in C++? Explain their advantages with an example. | **1x** | 15 marks | Theory / Long Answer | ⚪ **Low** |
-| [Q126](#q126) | Write an OOP program in C++ to read n integers and print the array in rever... | **1x** | 10 marks | Coding / Long Answer | ⚪ **Low** |
-| [Q127](#q127) | Write a C++ program using a class/operator template for binary numbers to p... | **1x** | 10 marks | Coding / Long Answer | ⚪ **Low** |
-| [Q128](#q128) | Write a function template printarray to display integer, float, and charact... | **1x** | 10 marks | Coding / Long Answer | ⚪ **Low** |
-| [Q129](#q129) | Explain class templates and function templates with illustrations. | **1x** | 10 marks | Theory + Coding / Long Answer | ⚪ **Low** |
-| [Q130](#q130) | What is a template class? Write a generic class to sort an array into ascen... | **1x** | 10 marks | Theory + Coding / Long Answer | ⚪ **Low** |
-| [Q131](#q131) | Define the Standard Template Library (STL) and explain how a class template... | **1x** | 6 marks | Theory / Short Answer | ⚪ **Low** |
-| [Q132](#q132) | Distinguish between an overloaded function and a function template with a s... | **1x** | 5 marks | Theory + Coding / Short Answer | ⚪ **Low** |
-| [Q133](#q133) | What are Iterators? List the five types of iterators supported by STL in C+... | **1x** | 4 marks | Theory / Short Answer | ⚪ **Low** |
-
 ---
 
 ## ❓ Detailed Question Bank & Answers
 
-### [Q115] What are Containers (Containership) in C++? List the main types of containers with examples, their importance, and common member functions.
+### [Q115] What are Containers (Containership) in C++? List the main types of containers with examples, their importance, and common member functions. :id=q115
 
 🔴 **Very High Priority** • **7 (54 marks)** • *Theory / Short Answer & Long Answer*
 
@@ -46,7 +22,7 @@ Sequence (vector, list, deque), Associative (set, map), Container Adapters (stac
 
 > **🗓️ Asked In Papers:** `2013-12 4(c), 2014-12 5(a), 2015-06 5(a), 2015-12 1(f), 2019-12 5(c), 2020-06 2(a), 2025-06 5(e)`
 
-### [Q116] What is a class template? Explain its concept, advantages, and utility.
+### [Q116] What is a class template? Explain its concept, advantages, and utility. :id=q116
 
 🟠 **High Priority** • **5 (23 marks)** • *Theory / Short Answer*
 
@@ -56,7 +32,7 @@ template <class T> class Box {...}; creates type-independent generic data struct
 
 > **🗓️ Asked In Papers:** `2016-12 5(c), 2020-12 2(b), 2021-12 5(d), 2023-12 5(b), 2025-06 5(a)`
 
-### [Q117] Differentiate between a class template and a function template with an example for each.
+### [Q117] Differentiate between a class template and a function template with an example for each. :id=q117
 
 🟠 **High Priority** • **4 (31 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -66,7 +42,7 @@ Function template parameterizes a single algorithm (template<typename T> T add(T
 
 > **🗓️ Asked In Papers:** `2014-12 1(d), 2016-06 3(a), 2019-12 2(a), 2021-06 5(b)`
 
-### [Q118] What is a function template in C++? Explain its advantages with an example.
+### [Q118] What is a function template in C++? Explain its advantages with an example. :id=q118
 
 🟠 **High Priority** • **4 (25 marks)** • *Theory + Coding / Short Answer & Long Answer*
 
@@ -76,7 +52,7 @@ Blueprint for generic functions deduced at compile time (template <class T>); re
 
 > **🗓️ Asked In Papers:** `2014-06 1(d), 2019-06 4(c), 2021-12 5(e), 2026-06 3(b)`
 
-### [Q119] Explain the use of the STL list container class with an example program.
+### [Q119] Explain the use of the STL list container class with an example program. :id=q119
 
 🟠 **High Priority** • **4 (21 marks)** • *Theory + Coding / Short Answer*
 
@@ -86,7 +62,7 @@ Doubly-linked list (<list>); O(1) insertion/deletion anywhere via push_back(), p
 
 > **🗓️ Asked In Papers:** `2018-06 5(a), 2022-12 1(c), 2023-12 1(f), 2025-12 4(b)`
 
-### [Q120] What is a template class? Give its advantages and create a template class for the Linked List data structure.
+### [Q120] What is a template class? Give its advantages and create a template class for the Linked List data structure. :id=q120
 
 🟠 **High Priority** • **3 (30 marks)** • *Theory + Coding / Long Answer*
 
@@ -96,7 +72,7 @@ template<class T> struct Node { T data; Node* next; }; inside template<class T> 
 
 > **🗓️ Asked In Papers:** `2013-06 4(b), 2017-12S 4(a), 2022-12 2(b)`
 
-### [Q121] What is a class template? Create a class template for a Stack data structure.
+### [Q121] What is a class template? Create a class template for a Stack data structure. :id=q121
 
 🟠 **High Priority** • **3 (30 marks)** • *Theory + Coding / Long Answer*
 
@@ -106,7 +82,7 @@ template<class T> class Stack with T arr[MAX]; int top;, push(T), pop(), peek(),
 
 > **🗓️ Asked In Papers:** `2018-06 4(b), 2022-06 2(b), 2025-12 3(b)`
 
-### [Q122] What is STL (Standard Template Library)? Briefly discuss its components and importance in C++.
+### [Q122] What is STL (Standard Template Library)? Briefly discuss its components and importance in C++. :id=q122
 
 🟠 **High Priority** • **3 (15 marks)** • *Theory / Short Answer*
 
@@ -116,7 +92,7 @@ Core components: Containers (data storage), Algorithms (sort, find), Iterators (
 
 > **🗓️ Asked In Papers:** `2021-12 1(g), 2023-06 1(h), 2025-06 1(d)`
 
-### [Q123] What is a template function? Write a template function to swap the values of two numbers.
+### [Q123] What is a template function? Write a template function to swap the values of two numbers. :id=q123
 
 🔵 **Medium Priority** • **2 (20 marks)** • *Theory + Coding / Long Answer*
 
@@ -126,7 +102,7 @@ template <typename T> void mySwap(T& a, T& b) { T temp = a; a = b; b = temp; }
 
 > **🗓️ Asked In Papers:** `2015-06 4(c), 2024-06 3(a)`
 
-### [Q124] What is a function template? Write a function template SUM to add two numbers.
+### [Q124] What is a function template? Write a function template SUM to add two numbers. :id=q124
 
 🔵 **Medium Priority** • **2 (11 marks)** • *Theory + Coding / Short Answer*
 
@@ -136,7 +112,7 @@ template <class T> T SUM(T a, T b) { return a + b; } tested with int and float/d
 
 > **🗓️ Asked In Papers:** `2012-12 1(f), 2020-12 1(b)`
 
-### [Q125] What are templates in C++? Explain their advantages with an example.
+### [Q125] What are templates in C++? Explain their advantages with an example. :id=q125
 
 ⚪ **Low Priority** • **1 (15 marks)** • *Theory / Long Answer*
 
@@ -146,7 +122,7 @@ Generic programming mechanism enabling type-parameterized functions and classes 
 
 > **🗓️ Asked In Papers:** `BCAOL S3-17`
 
-### [Q126] Write an OOP program in C++ to read n integers and print the array in reverse order using a class template.
+### [Q126] Write an OOP program in C++ to read n integers and print the array in reverse order using a class template. :id=q126
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Coding / Long Answer*
 
@@ -156,7 +132,7 @@ template<class T> class ArrayRev storing dynamic/fixed array T a[] and printing 
 
 > **🗓️ Asked In Papers:** `2013-12 2(b)`
 
-### [Q127] Write a C++ program using a class/operator template for binary numbers to perform simple arithmetic operations (add and subtract).
+### [Q127] Write a C++ program using a class/operator template for binary numbers to perform simple arithmetic operations (add and subtract). :id=q127
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Coding / Long Answer*
 
@@ -166,7 +142,7 @@ template<class T> class representing binary representations with add() and sub()
 
 > **🗓️ Asked In Papers:** `2014-06 2(b)`
 
-### [Q128] Write a function template printarray to display integer, float, and character arrays passed as arguments.
+### [Q128] Write a function template printarray to display integer, float, and character arrays passed as arguments. :id=q128
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Coding / Long Answer*
 
@@ -176,7 +152,7 @@ template<class T> void printarray(T arr[], int size) iterating 0..size-1
 
 > **🗓️ Asked In Papers:** `2015-12 1(d)`
 
-### [Q129] Explain class templates and function templates with illustrations.
+### [Q129] Explain class templates and function templates with illustrations. :id=q129
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Theory + Coding / Long Answer*
 
@@ -186,7 +162,7 @@ Show syntax and instantiation of both template<class T> T maxVal(T,T) and templa
 
 > **🗓️ Asked In Papers:** `2018-12S 1(e)`
 
-### [Q130] What is a template class? Write a generic class to sort an array into ascending order.
+### [Q130] What is a template class? Write a generic class to sort an array into ascending order. :id=q130
 
 ⚪ **Low Priority** • **1 (10 marks)** • *Theory + Coding / Long Answer*
 
@@ -196,7 +172,7 @@ template<class T> class Sorter implementing bubble/selection sort over T arr[n]
 
 > **🗓️ Asked In Papers:** `2024-12 5(b)`
 
-### [Q131] Define the Standard Template Library (STL) and explain how a class template differs from a function template.
+### [Q131] Define the Standard Template Library (STL) and explain how a class template differs from a function template. :id=q131
 
 ⚪ **Low Priority** • **1 (6 marks)** • *Theory / Short Answer*
 
@@ -206,7 +182,7 @@ STL provides generic containers/algorithms/iterators; function templates general
 
 > **🗓️ Asked In Papers:** `2017-06 1(d)`
 
-### [Q132] Distinguish between an overloaded function and a function template with a suitable program.
+### [Q132] Distinguish between an overloaded function and a function template with a suitable program. :id=q132
 
 ⚪ **Low Priority** • **1 (5 marks)** • *Theory + Coding / Short Answer*
 
@@ -216,7 +192,7 @@ Overloading writes separate bodies for distinct types/signatures; function templ
 
 > **🗓️ Asked In Papers:** `2024-12 2(a)`
 
-### [Q133] What are Iterators? List the five types of iterators supported by STL in C++.
+### [Q133] What are Iterators? List the five types of iterators supported by STL in C++. :id=q133
 
 ⚪ **Low Priority** • **1 (4 marks)** • *Theory / Short Answer*
 

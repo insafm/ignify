@@ -1,6 +1,6 @@
 # 📘 BCS-131: Programming in C++
 
-> **Programme:** IGNOU BCA_NEW | **Course Code:** BCS-131 (Dual-coded with BCS-031) | **Credits:** 3 Credits
+> **Programme:** IGNOU BCA_NEW (Semester 3) | **Course Code:** BCS-131 (Dual-coded with BCS-031) | **Credits:** 3 Credits
 
 ---
 
