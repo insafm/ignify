@@ -12,7 +12,49 @@
 🔴 **Very High Priority** • **6 (30 marks)** • *Numerical, Short Answer*
 
 **💡 Key Answer Points:**
-Use midpoints $m_i$, $\bar{x} = \frac{\sum f_i m_i}{N}$, $\sigma = \sqrt{\frac{\sum f_i m_i^2}{N} - \bar{x}^2}$. Dec 16 Q1 (0–70 marks, N = 100): $\bar{x} = 37.90, \sigma = 16.33$ ($s = 16.41$); 2019-I Q1 (200–600 wages, N = 20): $\bar{x} = 360.00, \sigma = 88.88$; Jun 22 Q2 (0–60 marks, N = 100): $\bar{x} = 31.30, \sigma = 13.90$; Dec 22 Q3 (0–60 marks, N = 100): $\bar{x} = 31.30$, Median $= 32.00$; Dec 24 Q5 (0–50 marks, N = 50): $\bar{x} = 24.00, \sigma = 12.21$; Jun 26 Q1 (250–750 wages, N = 50): $\bar{x} = 458.00, \sigma = 109.71$ ($s = 110.82$).
+
+#### 📋 Representative Exam Problem (June 2026, Q1 — 5 Marks)
+The daily wages (in rupees) of 50 workers of a factory are given as follows:
+
+| Daily Wages (₹) | No. of Workers ($f_i$) |
+| :---: | :---: |
+| 250–350 | 10 |
+| 350–450 | 12 |
+| 450–550 | 20 |
+| 550–650 | 5 |
+| 650–750 | 3 |
+
+*Task:* Calculate the Mean and Standard Deviation of the wages of the workers.
+
+#### 🧮 Step-by-Step Computational Table (Step-Deviation Method):
+Let assumed mean $A = 500$ (midpoint of central class $450-550$) and class width $h = 100$.
+Step deviation $d_i = \frac{x_i - A}{h} = \frac{x_i - 500}{100}$.
+
+| Class Interval | Frequency ($f_i$) | Midpoint ($x_i$) | $d_i$ | $f_i d_i$ | $f_i d_i^2$ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| 250–350 | 10 | 300 | -2 | -20 | 40 |
+| 350–450 | 12 | 400 | -1 | -12 | 12 |
+| 450–550 | 20 | 500 | 0 | 0 | 0 |
+| 550–650 | 5 | 600 | +1 | +5 | 5 |
+| 650–750 | 3 | 700 | +2 | +6 | 12 |
+| **Total** | **$N = 50$** | — | — | **$\sum f_i d_i = -21$** | **$\sum f_i d_i^2 = 69$** |
+
+#### 📐 Formulas & Solutions:
+1. **Arithmetic Mean ($\bar{x}$):**
+   $$\bar{x} = A + \left(\frac{\sum f_i d_i}{N}\right) \times h = 500 + \left(\frac{-21}{50}\right) \times 100 = 500 - 42.00 = \mathbf{458.00 \text{ rupees}}$$
+2. **Population Standard Deviation ($\sigma$):**
+   $$\sigma = h \times \sqrt{\frac{\sum f_i d_i^2}{N} - \left(\frac{\sum f_i d_i}{N}\right)^2} = 100 \times \sqrt{\frac{69}{50} - (-0.42)^2} = 100 \times \sqrt{1.38 - 0.1764} = 100 \times \sqrt{1.2036} = \mathbf{109.71 \text{ rupees}}$$
+   *(Sample standard deviation $s = \sigma \sqrt{\frac{N}{N-1}} = 109.71 \times \sqrt{\frac{50}{49}} = \mathbf{110.82 \text{ rupees}}$).*
+
+#### 🔄 Cross-Session Variations & Results:
+| Exam Session | Class Range & Variable | Sample ($N$) | Calculated Mean ($\bar{x}$) | Standard Deviation / Median |
+| :--- | :--- | :---: | :---: | :--- |
+| **Dec 2016 (Q1)** | 0–70 marks | $N = 100$ | $\bar{x} = 37.90$ | $\sigma = 16.33$ ($s = 16.41$) |
+| **2019-I (Q1)** | 200–600 wages | $N = 20$ | $\bar{x} = 360.00$ | $\sigma = 88.88$ ($s = 91.19$) |
+| **Jun 2022 (Q2)** | 0–60 marks | $N = 100$ | $\bar{x} = 31.30$ | $\sigma = 13.90$ ($s = 13.97$) |
+| **Dec 2022 (Q3)** | 0–60 marks | $N = 100$ | $\bar{x} = 31.30$ | $\text{Median} = \mathbf{32.00}$ |
+| **Dec 2024 (Q5)** | 0–50 marks | $N = 50$ | $\bar{x} = 24.00$ | $\sigma = 12.21$ ($s = 12.33$) |
+| **Jun 2026 (Q1)** | 250–750 daily wages | $N = 50$ | $\bar{x} = 458.00$ | $\sigma = \mathbf{109.71}$ |
 
 > **🗓️ Asked In Papers:** `Dec 2016 (Q1), 2019-I (Q1), Jun 2022 (Q2), Dec 2022 (Q3), Dec 2024 (Q5), Jun 2026 (Q1)`
 
@@ -23,7 +65,35 @@ Use midpoints $m_i$, $\bar{x} = \frac{\sum f_i m_i}{N}$, $\sigma = \sqrt{\frac{\
 🔴 **Very High Priority** • **5 (25 marks)** • *Numerical, Diagram, Short Answer*
 
 **💡 Key Answer Points:**
-Dec 17 Q1 / Dec 23 Q4 (50 weeks accidents, [8,22,10,8,2]): Mean $= 9.90$; Dec 24 Q1 ([8,20,12,8,2]): Mean $= 10.10$; Jun 18 Q1 (machine time 20–50, N = 36): Mean $= 34.03$ min, slightly right-skewed unimodal peaking at 30–35; Dec 22 Q1 (income 14k–20k, N = 52): plot bars [5,10,20,9,6,2] and join bar-top midpoints closing at 13.5k and 20.5k.
+
+#### 📋 Representative Exam Problem (Dec 2023, Q4 / Dec 2017, Q1 — 5 Marks)
+The number of road accidents occurring in a city across 50 weeks was recorded as:
+
+| Number of Accidents (Class) | Number of Weeks ($f_i$) | Midpoint ($x_i$) | $f_i x_i$ |
+| :---: | :---: | :---: | :---: |
+| 0–4 | 8 | 2 | 16 |
+| 5–9 | 22 | 7 | 154 |
+| 10–14 | 10 | 12 | 120 |
+| 15–19 | 8 | 17 | 136 |
+| 20–24 | 2 | 22 | 44 |
+| **Total** | **$N = 50$** | — | **$\sum f_i x_i = 470$** |
+
+*Tasks:*
+1. Calculate the mean number of accidents per week:
+   $$\bar{x} = \frac{\sum f_i x_i}{N} = \frac{470}{50} = \mathbf{9.40 \text{ accidents/week}}$$
+   *(Or with boundary adjustments $[0-5, 5-10, \dots]$ giving midpoint sequence $[2.5, 7.5, 12.5, 17.5, 22.5]$, $\sum f_i x_i = 495 \implies \mathbf{9.90}$).*
+2. **Histogram Construction:** Draw rectangular bars whose widths correspond to the class intervals on the $X$-axis and heights correspond to frequencies on the $Y$-axis.
+3. **Frequency Polygon:** Join the midpoints of the top of each histogram bar using straight line segments, and tie off at both ends to the horizontal axis at the midpoints of the preceding and succeeding imaginary classes.
+4. **Distribution Shape:** The distribution exhibits positive (right) skewness with a distinct modal peak in the $5-9$ range and a tapering tail toward higher accident counts.
+
+#### 🔄 Cross-Session Variations & Means:
+| Exam Session | Domain / Variable | Sample ($N$) | Mean Value | Graphical Note |
+| :--- | :--- | :---: | :---: | :--- |
+| **Dec 2017 (Q1)** | 50 weeks accidents ([8, 22, 10, 8, 2]) | $N = 50$ | **$9.90$** | Histogram + Frequency polygon |
+| **Jun 2018 (Q1)** | Machine production time 20–50 min | $N = 36$ | **$34.03$ min** | Unimodal, slightly right-skewed peaking at 30–35 |
+| **Dec 2022 (Q1)** | Weekly income ₹14k–₹20k ([5, 10, 20, 9, 6, 2]) | $N = 52$ | **₹ 16.71k** | Bars + polygon closed at 13.5k & 20.5k |
+| **Dec 2023 (Q4)** | 50 weeks accidents ([8, 22, 10, 8, 2]) | $N = 50$ | **$9.90$** | Histogram & mean |
+| **Dec 2024 (Q1)** | 50 weeks accidents ([8, 20, 12, 8, 2]) | $N = 50$ | **$10.10$** | Histogram & mean |
 
 > **🗓️ Asked In Papers:** `Dec 2017 (Q1), Jun 2018 (Q1), Dec 2022 (Q1), Dec 2023 (Q4), Dec 2024 (Q1)`
 

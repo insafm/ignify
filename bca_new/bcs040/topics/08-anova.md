@@ -12,7 +12,53 @@
 🔴 **Very High Priority** • **8 (80 marks)** • *Numerical, Long Answer*
 
 **💡 Key Answer Points:**
-Jun 17 Q8 Hospitals ($F = 1.8822 < 3.89$, fail to reject); Jun 18 Q9 Salesmen ($F = 0.1327 < 4.26$, fail to reject); Dec 18 Q10 Wheat ($F = 5.6765 > 3.41$, reject $H_0$); 2019-I Q6 Schools ($F = 1.8000 < 4.26$, fail to reject); 2019-II (6384) Q7 Salesmen ($F = 1.1633 < 4.26$, fail to reject); Jun 21 Q7 Diets ($F = 1.7273 < 3.885$, fail to reject); Dec 21 Q7 Processes ($F = 2.6577 < 3.24$, fail to reject); Jun 26 Q8 Glue drying ($F = 24.9697 > 3.89$, reject $H_0$).
+
+#### 📋 Representative Exam Problem (June 2026, Q8 — 10 Marks)
+The three drying techniques for a glue were studied and the following times (in minutes) were observed:
+
+| Observation | Technique A ($X_1$) | Technique B ($X_2$) | Technique C ($X_3$) |
+| :---: | :---: | :---: | :---: |
+| 1 | 13 | 10 | 5 |
+| 2 | 10 | 11 | 4 |
+| 3 | 8 | 14 | 4 |
+| 4 | 11 | 14 | 5 |
+| 5 | 8 | 15 | 6 |
+| **Total ($T_j$)** | **$T_1 = 50$** | **$T_2 = 64$** | **$T_3 = 24$** |
+| **Mean ($\bar{X}_j$)** | **10.0** | **12.8** | **4.8** |
+
+*Hypothesis:* $H_0: \mu_1 = \mu_2 = \mu_3$ (treatment means are equal) vs. $H_1:$ at least two means differ. Given critical $F_{0.05}(2, 12) = 3.89$.
+
+#### 🧮 Step-by-Step Computations:
+1. **Summary Totals & Correction Factor ($CF$):**
+   - $k = 3, n_1 = n_2 = n_3 = 5, N = 15$.
+   - Grand Total $G = 50 + 64 + 24 = 138$.
+   - $CF = \frac{G^2}{N} = \frac{138^2}{15} = \frac{19044}{15} = 1269.60$.
+2. **Total Sum of Squares ($TSS$):**
+   - $\sum \sum X^2 = (169+100+64+121+64) + (100+121+196+196+225) + (25+16+16+25+36) = 518 + 838 + 118 = 1474$.
+   - $TSS = \sum \sum X^2 - CF = 1474 - 1269.60 = 204.40$.
+3. **Between Treatments Sum of Squares ($SSB$):**
+   - $SSB = \sum \frac{T_j^2}{n_j} - CF = \frac{50^2 + 64^2 + 24^2}{5} - 1269.60 = \frac{2500 + 4096 + 576}{5} - 1269.60 = 1434.40 - 1269.60 = 164.80$.
+4. **Within Treatments / Error Sum of Squares ($SSW$):**
+   - $SSW = TSS - SSB = 204.40 - 164.80 = 39.60$.
+
+#### 📊 Completed ANOVA Summary Table:
+| Source of Variation | Sum of Squares ($SS$) | Degrees of Freedom ($df$) | Mean Square ($MS$) | Variance Ratio ($F$) | Critical $F_{0.05}$ | Decision |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Between Treatments** | 164.80 | $k - 1 = 2$ | $MSB = \frac{164.80}{2} = 82.40$ | $\frac{82.40}{3.30} = \mathbf{24.97}$ | $F(2, 12) = 3.89$ | **Reject $H_0$** ($24.97 > 3.89$) |
+| **Within / Error** | 39.60 | $N - k = 12$ | $MSW = \frac{39.60}{12} = 3.30$ | — | — | Average times differ significantly |
+| **Total** | 204.40 | $N - 1 = 14$ | — | — | — | — |
+
+#### 🔄 Cross-Session Variations & Decisions:
+| Exam Session | Domain / Treatments | Sample Size ($N$) | Calculated $F$ | Critical $F$ | Conclusion |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| **Jun 2017 (Q8)** | 3 Hospitals | $N = 15$ | $F = 1.882$ | $F(2,12) = 3.89$ | Fail to reject $H_0$ |
+| **Jun 2018 (Q9)** | 3 Salesmen | $N = 12$ | $F = 0.133$ | $F(2,9) = 4.26$ | Fail to reject $H_0$ |
+| **Dec 2018 (Q10)**| 4 Wheat Fertilizers | $N = 16$ | $F = 5.677$ | $F(3,12) = 3.41$ | **Reject $H_0$** |
+| **2019-I (Q6)** | 3 Schools | $N = 12$ | $F = 1.800$ | $F(2,9) = 4.26$ | Fail to reject $H_0$ |
+| **Dec 2019 (Q7)** | 3 Salesmen | $N = 12$ | $F = 1.163$ | $F(2,9) = 4.26$ | Fail to reject $H_0$ |
+| **Jun 2021 (Q7)** | 3 Diets (Cholesterol)| $N = 15$ | $F = 1.727$ | $F(2,12) = 3.885$ | Fail to reject $H_0$ |
+| **Dec 2021 (Q7)** | 3 Industrial Processes | $N = 18$ | $F = 2.658$ | $F(2,15) = 3.24$ | Fail to reject $H_0$ |
+| **Jun 2026 (Q8)** | 3 Glue Drying Techniques | $N = 15$ | $F = 24.970$ | $F(2,12) = 3.89$ | **Reject $H_0$** |
 
 > **🗓️ Asked In Papers:** `Jun 2017 (Q8), Jun 2018 (Q9), Dec 2018 (Q10), 2019-I (Q6), Dec June 2019 (Q7), Jun 2021 (Q7), Dec 2021 (Q7), Jun 2026 (Q8)`
 

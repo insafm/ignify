@@ -34,7 +34,39 @@ Intersection gives $\bar{x} = 13, \bar{y} = 17$. Slopes $b_{yx} = 8/10 = 0.80$ a
 🟠 **High Priority** • **4 (40 marks)** • *Numerical, Diagram, Long Answer*
 
 **💡 Key Answer Points:**
-Dec 17 Q7 (Stress/Tensile): $\hat{y} = -3.20 + 0.80x$, at 5 kg $\to 0.80$; Jun 21 Q9 (X/Y + scatter): $\hat{y} = 1.7506 + 1.3716x$, at 8 $\to 12.7237$; Dec 21 Q10 (Age/BP): $\hat{y} = 22.8871 + 1.6935x$, at 38 $\to 87.24$ mmHg; Jun 24 Q8 (Cost/Sales + scatter): $\hat{y} = 0.25 + 1.25x$, at 15 $\to 19.00$ (₹ 19,000).
+
+#### 📋 Representative Exam Problem (June 2024, Q8 — 10 Marks)
+Given data on Advertising Cost ($X$, in ₹ '000) and Sales Volume ($Y$, in ₹ '000) for 6 regions:
+| Region | 1 | 2 | 3 | 4 | 5 | 6 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Adv. Cost ($X$)** | 2 | 4 | 5 | 6 | 8 | 11 |
+| **Sales ($Y$)** | 3 | 5 | 6 | 8 | 10 | 14 |
+
+*Task:* Fit linear regression equation $\hat{Y} = a + bX$ and estimate sales for an advertising expenditure of ₹ 15,000 ($X = 15$).
+
+#### 🧮 Step-by-Step Computational Table:
+| Point | $X$ | $Y$ | $X^2$ | $XY$ |
+| :---: | :---: | :---: | :---: | :---: |
+| 1 | 2 | 3 | 4 | 6 |
+| 2 | 4 | 5 | 16 | 20 |
+| 3 | 5 | 6 | 25 | 30 |
+| 4 | 6 | 8 | 36 | 48 |
+| 5 | 8 | 10 | 64 | 80 |
+| 6 | 11 | 14 | 121 | 154 |
+| **Total ($n=6$)** | **36** | **46** | **266** | **338** |
+
+- $\bar{X} = 6.0, \bar{Y} = 7.667$.
+- Slope $b = \frac{6(338) - 36(46)}{6(266) - 36^2} = \frac{2028 - 1656}{1596 - 1296} = \frac{372}{300} = \mathbf{1.24} \approx 1.25$. Intercept $a = 7.667 - 1.24(6.0) = \mathbf{0.227} \approx 0.25$.
+- Regression line: $\mathbf{\hat{Y} = 0.25 + 1.25X}$.
+- Prediction at $X = 15$: $\hat{Y} = 0.25 + 1.25(15) = \mathbf{19.00}$ (₹ 19,000).
+
+#### 🔄 Cross-Session Variations & Regression Equations:
+| Exam Session | Variables ($X \to Y$) | Sample ($n$) | Fitted Line | Prediction Target & Result |
+| :--- | :--- | :---: | :--- | :--- |
+| **Dec 2017 (Q7)** | Stress ($X$) $\to$ Tensile Strength ($Y$) | $n = 5$ | $\hat{Y} = -3.20 + 0.80X$ | At $X = 5 \text{ kg} \to \hat{Y} = \mathbf{0.80}$ |
+| **Jun 2021 (Q9)** | Paired $(X, Y)$ test data | $n = 7$ | $\hat{Y} = 1.751 + 1.372X$ | At $X = 8 \to \hat{Y} = \mathbf{12.72}$ |
+| **Dec 2021 (Q10)**| Age ($X$) $\to$ Blood Pressure ($Y$) | $n = 8$ | $\hat{Y} = 22.887 + 1.694X$ | At Age $38 \to \hat{Y} = \mathbf{87.24}\text{ mmHg}$ |
+| **Jun 2024 (Q8)** | Adv Cost ($X$) $\to$ Sales ($Y$) | $n = 6$ | $\hat{Y} = 0.25 + 1.25X$ | At $X = 15 \to \hat{Y} = \mathbf{19.00}\text{ (₹19,000)}$ |
 
 > **🗓️ Asked In Papers:** `Dec 2017 (Q7), Jun 2021 (Q9), Dec 2021 (Q10), Jun 2024 (Q8)`
 

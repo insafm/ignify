@@ -23,7 +23,40 @@ A chronological sequence of observations recorded over equal time intervals. Com
 🔴 **Very High Priority** • **9 (90 marks)** • *Numerical, Diagram, Short Answer*
 
 **💡 Key Answer Points:**
-Dec 16 Q8: 4-day MA [245.0, 237.5, 243.75, 281.25, 318.75, 372.5, 421.25, 446.25, 408.75, 405.0, 375.0, 328.75]; 2-day MA [215.0, 225.0, 275.0, 250.0, 212.5, 312.5, 425.0, 432.5, 417.5, 460.0, 400.0, 350.0, 350.0, 307.5]. Jun 17 Q7(b) & Dec 21 Q6: 3-yr MA [27.0, 28.33, 29.0, 28.67, 28.67, 29.33, 31.0, 31.33]; 4-yr centered [28.125, 28.5, 28.75, 29.125, 29.625, 30.5]. Dec 18 Q9: [52.0, 51.0, 51.33, 52.0, 60.0, 61.67, 59.67, 56.0, 51.0, 53.0], M13 forecast $= 53.0$. Jun 21 Q6: [23.33, 27.67, 42.0, 52.67, 68.33, 78.33, 77.67, 62.67, 46.67, 39.33]. Jun 22 Q7(a): [46.33, 47.0, 51.0, 54.33, 55.67, 53.67, 52.0, 50.0, 49.67, 52.33]. Dec 24 Q4: [450.0, 450.0, 516.67, 600.0, 600.0]. Jun 26 Q3: [450.0, 450.0, 516.67, 600.0, 700.0]. Jun 18 Q10(e): short note.
+
+#### 📋 Representative Exam Problem (June 2026, Q3 — 5 Marks)
+Consider the following data of sales of milk by a dairy in a week:
+
+| Day | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Sales (in litres)** | 500 | 400 | 450 | 500 | 600 | 700 | 800 |
+
+*Task:* Find the moving average of length 3. Also plot these moving averages.
+
+#### 🧮 Step-by-Step Computational Table (3-Day Moving Average):
+| Day ($t$) | Sales ($Y_t$) | 3-Day Moving Total | 3-Day Moving Average ($\bar{Y}_t$) | Trend Pattern |
+| :--- | :---: | :---: | :---: | :--- |
+| Monday | 500 | — | — | Initial boundary (no prior days) |
+| Tuesday | 400 | $500 + 400 + 450 = 1350$ | $\frac{1350}{3} = \mathbf{450.0}$ | Local dip |
+| Wednesday | 450 | $400 + 450 + 500 = 1350$ | $\frac{1350}{3} = \mathbf{450.0}$ | Stabilization |
+| Thursday | 500 | $450 + 500 + 600 = 1550$ | $\frac{1550}{3} = \mathbf{516.67}$ | Rising upward |
+| Friday | 600 | $500 + 600 + 700 = 1800$ | $\frac{1800}{3} = \mathbf{600.0}$ | Strong upward trend |
+| Saturday | 700 | $600 + 700 + 800 = 2100$ | $\frac{2100}{3} = \mathbf{700.0}$ | Peak weekend demand |
+| Sunday | 800 | — | — | Terminal boundary (no next day) |
+
+*Plotting Instructions:* Plot Day on horizontal $X$-axis and Sales (litres) on vertical $Y$-axis. Plot raw data as solid line with dots; plot moving averages centered at Tuesday through Saturday as a dashed smoothed line clearly showing the upward secular trend.
+
+#### 🔄 Cross-Session Variations & Moving Average Types:
+| Exam Session | Dataset & Metric | Period / Length | Computed Moving Averages / Forecast |
+| :--- | :--- | :--- | :--- |
+| **Dec 2016 (Q8)** | Electricity demand (14 days) | 4-day & 2-day centered | 4-day MA: [245.0, 237.5, 243.75, 281.25, 318.75, 372.5, 421.25, 446.25, 408.75, 405.0, 375.0, 328.75] |
+| **Jun 2017 (Q7b)**| Production (10 years) | 3-year & 4-year centered | 3-yr MA: [27.0, 28.33, 29.0, 28.67, 28.67, 29.33, 31.0, 31.33]; 4-yr centered: [28.13, 28.50, 28.75, 29.13, 29.63, 30.50] |
+| **Dec 2018 (Q9)** | Monthly demand (12 months) | 3-month moving average | [52.0, 51.0, 51.33, 52.0, 60.0, 61.67, 59.67, 56.0, 51.0, 53.0]; Forecast for Month 13 = **53.0 units** |
+| **Jun 2021 (Q6)** | Annual sales (12 years) | 3-year moving average | [23.33, 27.67, 42.0, 52.67, 68.33, 78.33, 77.67, 62.67, 46.67, 39.33] |
+| **Dec 2021 (Q6)** | Annual rainfall (10 years) | 3-year moving average | [27.0, 28.33, 29.0, 28.67, 28.67, 29.33, 31.0, 31.33] |
+| **Jun 2022 (Q7a)**| Quarterly sales (12 quarters)| 3-period moving average | [46.33, 47.0, 51.0, 54.33, 55.67, 53.67, 52.0, 50.0, 49.67, 52.33] |
+| **Dec 2024 (Q4)** | Weekly milk sales (7 days) | 3-day moving average | [450.0, 450.0, 516.67, 600.0, 600.0] |
+| **Jun 2026 (Q3)** | Weekly milk sales (7 days) | 3-day moving average | [450.0, 450.0, 516.67, 600.0, 700.0] |
 
 > **🗓️ Asked In Papers:** `Dec 2016 (Q8), Jun 2017 (Q7(b)), Jun 2018 (Q10(e)), Dec 2018 (Q9), Jun 2021 (Q6), Dec 2021 (Q6), Jun 2022 (Q7(a)), Dec 2024 (Q4), Jun 2026 (Q3)`
 

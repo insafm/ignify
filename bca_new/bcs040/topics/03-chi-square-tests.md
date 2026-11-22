@@ -45,7 +45,45 @@ Tests independence of two categorical attributes in an $r \times c$ table using 
 🟠 **High Priority** • **4 (40 marks)** • *Numerical, Long Answer*
 
 **💡 Key Answer Points:**
-Dec 14 Q8 (N = 1650, df = 9): $\chi^2 = 118.0511 > 16.918$; Jun 18 Q8 (N = 900, df = 4): $\chi^2 = 36.1227 > 9.488$; Jun 24 Q7 (N = 165, df = 2): $\chi^2 = 14.1138 > 5.99$; Jun 26 Q9 (N = 300, df = 2): $\chi^2 = 33.6806 > 5.99$. All four reject $H_0$.
+
+#### 📋 Representative Exam Problem (June 2026, Q9 — 10 Marks)
+The following data give the information about the condition of home and condition of child of 300 families:
+
+| Condition of Home | Child Clean ($C_1$) | Child Dirty ($C_2$) | Total ($R_i$) |
+| :--- | :---: | :---: | :---: |
+| **Clean ($R_1$)** | 70 | 50 | **120** |
+| **Fairly Clean ($R_2$)** | 80 | 20 | **100** |
+| **Dirty ($R_3$)** | 30 | 50 | **80** |
+| **Total ($C_j$)** | **180** | **120** | **$N = 300$** |
+
+*Hypothesis:* $H_0:$ Condition of home and condition of child are independent vs. $H_1:$ They are not independent. Test at $\alpha = 0.05$ (Given $\chi^2_{0.05}(2) = 5.99$).
+
+#### 🧮 Step-by-Step Expected Frequencies & Chi-Square Calculation:
+Formula for expected frequency: $E_{ij} = \frac{R_i \times C_j}{N}$
+- $E_{11} = \frac{120 \times 180}{300} = 72$, $E_{12} = \frac{120 \times 120}{300} = 48$
+- $E_{21} = \frac{100 \times 180}{300} = 60$, $E_{22} = \frac{100 \times 120}{300} = 40$
+- $E_{31} = \frac{80 \times 180}{300} = 48$, $E_{32} = \frac{80 \times 120}{300} = 32$
+
+| Cell ($i, j$) | Observed ($O_{ij}$) | Expected ($E_{ij}$) | Difference ($O - E$) | $(O - E)^2$ | $\frac{(O_{ij} - E_{ij})^2}{E_{ij}}$ |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Clean, Clean | 70 | 72 | -2 | 4 | 0.0556 |
+| Clean, Dirty | 50 | 48 | +2 | 4 | 0.0833 |
+| Fairly Clean, Clean | 80 | 60 | +20 | 400 | 6.6667 |
+| Fairly Clean, Dirty | 20 | 40 | -20 | 400 | 10.0000 |
+| Dirty, Clean | 30 | 48 | -18 | 324 | 6.7500 |
+| Dirty, Dirty | 50 | 32 | +18 | 324 | 10.1250 |
+| **Total** | **300** | **300** | **0** | — | $\mathbf{\chi^2 = 33.6806}$ |
+
+- **Degrees of Freedom:** $df = (r - 1)(c - 1) = (3 - 1)(2 - 1) = 2 \times 1 = 2$.
+- **Statistical Decision:** Since calculated $\chi^2 = 33.68 > 5.99$, we **reject $H_0$** at the 5% level of significance. Condition of home and condition of child are strongly associated (not independent).
+
+#### 🔄 Cross-Session Variations & Contingency Table Setups:
+| Exam Session | Contingency Table Setup | Dimensions | Calculated $\chi^2$ | Critical $\chi^2$ | Statistical Decision |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| **Dec 2014 (Q8)** | School Types vs. Economic Class | $4 \times 4$ ($N = 1650, df = 9$) | $\chi^2 = 118.05$ | $\chi^2_{0.05}(9) = 16.918$ | **Reject $H_0$** (Dependent) |
+| **Jun 2018 (Q8)** | Music Preference vs. Age Group | $3 \times 3$ ($N = 900, df = 4$) | $\chi^2 = 36.12$ | $\chi^2_{0.05}(4) = 9.488$ | **Reject $H_0$** (Dependent) |
+| **Jun 2024 (Q7)** | City Smoking vs. Physical Health | $2 \times 3$ ($N = 165, df = 2$) | $\chi^2 = 14.11$ | $\chi^2_{0.05}(2) = 5.99$ | **Reject $H_0$** (Dependent) |
+| **Jun 2026 (Q9)** | Condition of Home vs. Condition of Child | $3 \times 2$ ($N = 300, df = 2$) | $\chi^2 = 33.68$ | $\chi^2_{0.05}(2) = 5.99$ | **Reject $H_0$** (Dependent) |
 
 > **🗓️ Asked In Papers:** `Dec 2014 (Q8), Jun 2018 (Q8), Jun 2024 (Q7), Jun 2026 (Q9)`
 
