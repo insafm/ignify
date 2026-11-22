@@ -309,14 +309,28 @@
       text-decoration: underline;
     }
 
-    /* Cover Page */
+    /* Cover Page (Neutral & Non-Green if enabled) */
+    section.cover {
+      background: var(--background, #ffffff) !important;
+    }
     section.cover .cover-main {
       max-width: 800px;
+      color: var(--textColor) !important;
     }
     section.cover h1 {
       font-size: 2.75rem;
       font-weight: 800;
       letter-spacing: -0.03em;
+      color: var(--textColor) !important;
+    }
+    section.cover a {
+      border-radius: 8px !important;
+      border: 1px solid var(--accent, #4f46e5) !important;
+      color: var(--accent, #4f46e5) !important;
+    }
+    section.cover a:hover {
+      background: var(--accent, #4f46e5) !important;
+      color: #ffffff !important;
     }
   </style>
 </head>
@@ -328,7 +342,7 @@
       repo: '',
       loadSidebar: true,
       loadNavbar: true,
-      coverpage: true,
+      coverpage: false,
       onlyCover: false,
       subMaxLevel: 3,
       auto2top: true,
@@ -366,7 +380,8 @@
           borderColor: '#1e293b',
           blockQuoteColor: '#94a3b8',
           highlightColor: '#818cf8',
-          sidebarSublink: '#94a3b8'
+          sidebarSublink: '#94a3b8',
+          coverBackground: '#0a0f1d'
         },
         light: {
           accent: '#4f46e5',
@@ -378,7 +393,8 @@
           borderColor: '#e2e8f0',
           blockQuoteColor: '#64748b',
           highlightColor: '#4f46e5',
-          sidebarSublink: '#64748b'
+          sidebarSublink: '#64748b',
+          coverBackground: '#ffffff'
         }
       },
       plugins: [
