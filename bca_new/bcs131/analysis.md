@@ -20,9 +20,14 @@
 
 ## 📐 Frequency Score Formula
 
-Topics are sorted using a balanced composite Frequency Score weighing question count, consistency across papers, and total offered marks:
+Topics are prioritized using a weighted composite formula that balances raw question count, cross-paper consistency across all 30 exam papers, and total offered marks:
 
 $$\text{Frequency Score} = \text{Total Occurrences} + \left(\frac{\text{Papers Present}}{30} \times 20\right) + \frac{\text{Total Marks}}{20}$$
+
+> **Formula Breakdown:**
+> - **Total Occurrences:** Raw count of appearances across the 30-paper dataset.
+> - **Consistency Factor:** `(Papers Present / 30) × 20` (awards up to 20 points for consistency across exam sessions).
+> - **Mark Weightage:** `Total Marks / 20` (weights overall marks contributed to the question pool).
 
 ### Topic Frequency & Importance Leaderboard
 

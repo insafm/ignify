@@ -70,14 +70,121 @@
       color: var(--textColor);
     }
 
-    /* Sidebar Navigation */
-    .sidebar {
-      border-right: 1px solid var(--borderColor, rgba(148, 163, 184, 0.18));
-      font-size: 0.92rem;
-      width: 300px !important;
+    /* Desktop Sidebar & Content Layout */
+    @media screen and (min-width: 769px) {
+      .sidebar {
+        border-right: 1px solid var(--borderColor, rgba(148, 163, 184, 0.18));
+        font-size: 0.92rem;
+        width: 300px !important;
+      }
+      .content {
+        left: 300px !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
     }
-    .content {
-      left: 300px !important;
+
+    /* Mobile Responsive Overhaul (<= 768px) */
+    @media screen and (max-width: 768px) {
+      .content {
+        left: 0 !important;
+        width: 100% !important;
+        position: relative !important;
+      }
+      .markdown-section {
+        max-width: 100% !important;
+        padding: 20px 14px 90px 14px !important;
+      }
+      .markdown-section h1 {
+        font-size: 1.7rem !important;
+        line-height: 1.25;
+      }
+      .markdown-section h2 {
+        font-size: 1.3rem !important;
+      }
+      .markdown-section h3 {
+        font-size: 1.1rem !important;
+      }
+      .markdown-section table th,
+      .markdown-section table td {
+        padding: 0.55rem 0.75rem;
+        font-size: 0.82rem;
+        white-space: nowrap;
+      }
+      /* Sidebar on Mobile */
+      .sidebar {
+        width: 280px !important;
+        border-right: 1px solid var(--borderColor, #1e293b);
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+      }
+      /* Top Navbar on Mobile */
+      .app-nav {
+        position: static !important;
+        text-align: left;
+        padding: 10px 16px;
+        margin-bottom: 8px;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      .app-nav li {
+        display: inline-block;
+        margin: 2px 4px;
+      }
+    }
+
+    /* Mobile Sidebar Hamburger Toggle Button */
+    .sidebar-toggle {
+      background: var(--codeBackgroundColor, #ffffff) !important;
+      border: 1px solid var(--borderColor, #e2e8f0);
+      border-radius: 8px;
+      padding: 10px !important;
+      width: 44px !important;
+      height: 44px !important;
+      left: 14px !important;
+      bottom: 14px !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .sidebar-toggle span {
+      background-color: var(--textColor, #0f172a) !important;
+      height: 2.5px !important;
+      width: 20px !important;
+      margin: 2px 0 !important;
+      border-radius: 2px;
+    }
+
+
+
+    /* Code Blocks & Math: Fluid & Scrollable */
+    .markdown-section pre {
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      max-width: 100%;
+    }
+    /* KaTeX Math Display Styling (High Contrast & Fluid) */
+    .katex, .katex-display, .katex-html, .katex * {
+      color: var(--textColor) !important;
+    }
+    .katex-display {
+      background: var(--codeBackgroundColor, #f8fafc) !important;
+      border: 1px solid var(--borderColor, #e2e8f0);
+      border-radius: 8px;
+      padding: 1.1rem 1.4rem !important;
+      margin: 1.5rem 0 !important;
+      font-size: 1.18rem;
+      overflow-x: auto !important;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      max-width: 100%;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     }
     .sidebar-nav ul {
       padding-left: 1.1rem;
@@ -225,17 +332,18 @@
       background-color: rgba(168, 85, 247, 0.2);
     }
 
-    /* Tables (High Contrast in Both Themes) */
+    /* Tables (Fluid, Scrollable & High Contrast) */
     .markdown-section table {
-      display: table !important;
+      display: block !important;
       width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       border-collapse: separate;
       border-spacing: 0;
       margin: 1.75rem 0;
       font-size: 0.92rem;
       border: 1px solid var(--borderColor, #e2e8f0);
       border-radius: 8px;
-      overflow: hidden;
       background: var(--codeBackgroundColor, #ffffff);
     }
     .markdown-section table th {
@@ -409,10 +517,21 @@
             return html + footer;
           });
 
-          // Sync theme attribute to HTML tag for CSS selectors
+          // Sync theme attribute to HTML tag for CSS selectors & re-render Math
           hook.doneEach(function() {
             var currentTheme = localStorage.getItem('DARK_LIGHT_THEME') || 'light';
             document.documentElement.setAttribute('data-theme', currentTheme);
+
+            // Ensure all LaTeX math expressions are rendered with KaTeX
+            if (window.renderMathInElement) {
+              renderMathInElement(document.getElementById('main') || document.body, {
+                delimiters: [
+                  {left: '$$', right: '$$', display: true},
+                  {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+              });
+            }
           });
 
           // Sanitize search results: strip any raw HTML tags from search previews
@@ -434,6 +553,11 @@
       ]
     }
   </script>
+  <!-- KaTeX for LaTeX Math (Loaded before Docsify for reliable math rendering) -->
+  <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
   <!-- Docsify Core -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   
@@ -442,10 +566,6 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
-
-  <!-- KaTeX for LaTeX Math -->
-  <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
 
   <!-- Prism Syntax Highlighting for C/C++ -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
