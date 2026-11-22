@@ -1382,7 +1382,56 @@
       auto2top: true,
       search: {
         maxAge: 86400000,
-        paths: 'auto',
+        paths: [
+          '/',
+          '/bca_new/README',
+          '/bca_new/bcs131/README',
+          '/bca_new/bcs131/analysis',
+          '/bca_new/bcs131/predictions',
+          '/bca_new/bcs131/comparisons',
+          '/bca_new/bcs131/questions',
+          '/bca_new/bcs131/topics/01-classes-objects',
+          '/bca_new/bcs131/topics/02-polymorphism',
+          '/bca_new/bcs131/topics/03-constructors-memory',
+          '/bca_new/bcs131/topics/04-basics-control-flow',
+          '/bca_new/bcs131/topics/05-templates-stl',
+          '/bca_new/bcs131/topics/06-oop-concepts',
+          '/bca_new/bcs131/topics/07-inheritance',
+          '/bca_new/bcs131/topics/08-streams-files',
+          '/bca_new/bcs131/topics/09-functions-overloading',
+          '/bca_new/bcs131/topics/10-exception-handling',
+          '/bca_new/bcs131/topics/11-operator-overloading',
+          '/bca_new/bcs131/topics/12-code-debugging',
+          '/bca_new/mcs203/README',
+          '/bca_new/mcs203/analysis',
+          '/bca_new/mcs203/predictions',
+          '/bca_new/mcs203/comparisons',
+          '/bca_new/mcs203/questions',
+          '/bca_new/mcs203/topics/01-mobile-os',
+          '/bca_new/mcs203/topics/02-memory-management',
+          '/bca_new/mcs203/topics/03-multiprocessor-distributed',
+          '/bca_new/mcs203/topics/04-process-synchronization',
+          '/bca_new/mcs203/topics/05-linux-case-study',
+          '/bca_new/mcs203/topics/06-deadlocks',
+          '/bca_new/mcs203/topics/07-file-disk-management',
+          '/bca_new/mcs203/topics/08-process-cpu-scheduling',
+          '/bca_new/mcs203/topics/09-windows10-case-study',
+          '/bca_new/bcs040/README',
+          '/bca_new/bcs040/analysis',
+          '/bca_new/bcs040/predictions',
+          '/bca_new/bcs040/comparisons',
+          '/bca_new/bcs040/questions',
+          '/bca_new/bcs040/topics/01-sampling-distributions',
+          '/bca_new/bcs040/topics/02-probability-distributions',
+          '/bca_new/bcs040/topics/03-chi-square-tests',
+          '/bca_new/bcs040/topics/04-parametric-hypothesis-testing',
+          '/bca_new/bcs040/topics/05-correlation-regression',
+          '/bca_new/bcs040/topics/06-descriptive-statistics',
+          '/bca_new/bcs040/topics/07-time-series-forecasting',
+          '/bca_new/bcs040/topics/08-anova',
+          '/bca_new/bcs040/topics/09-estimation-confidence-intervals',
+          '/bca_new/bcs040/topics/10-statistical-quality-control'
+        ],
         placeholder: 'Search questions, topics, concepts...',
         noData: 'No matching questions or topics found',
         depth: 4,
@@ -1829,20 +1878,38 @@
             });
           });
 
-          // Sanitize search results: strip any raw HTML tags from search previews
+          // Sanitize search results: strip any unrendered HTML tags without infinite mutation loops
           hook.ready(function() {
+            var cleaning = false;
             var cleanSearchSnippets = function() {
-              var snippets = document.querySelectorAll('.results-panel .matching-post p, .results-panel .matching-post h2');
-              snippets.forEach(function(el) {
-                if (el.innerHTML.indexOf('<') !== -1) {
-                  // Keep search highlight <em class="search-keyword">, strip all other HTML tags
-                  el.innerHTML = el.innerHTML.replace(/<(?!\/?em\b)[^>]+>/gi, '');
-                }
-              });
+              if (cleaning) return;
+              var resultsPanel = document.querySelector('.results-panel');
+              if (!resultsPanel) return;
+              cleaning = true;
+              try {
+                var snippets = resultsPanel.querySelectorAll('.matching-post p, .matching-post h2');
+                snippets.forEach(function(el) {
+                  var html = el.innerHTML;
+                  // Only replace if there are non-em HTML tags
+                  if (/<(?!\/?em\b)[^>]+>/i.test(html)) {
+                    var cleaned = html.replace(/<(?!\/?em\b)[^>]+>/gi, '');
+                    if (cleaned !== html) {
+                      el.innerHTML = cleaned;
+                    }
+                  }
+                });
+              } finally {
+                setTimeout(function() { cleaning = false; }, 40);
+              }
             };
-            var searchContainer = document.querySelector('.sidebar') || document.body;
-            var observer = new MutationObserver(cleanSearchSnippets);
-            observer.observe(searchContainer, { childList: true, subtree: true });
+
+            // Safely listen to search input events instead of an unconstrained MutationObserver
+            document.addEventListener('input', function(e) {
+              if (e.target && (e.target.type === 'search' || e.target.classList.contains('search-input') || e.target.closest('.search'))) {
+                setTimeout(cleanSearchSnippets, 60);
+                setTimeout(cleanSearchSnippets, 200);
+              }
+            });
           });
 
           // Question Card Ask AI (ChatGPT & DeepSeek) Actions & Toast Notifications
