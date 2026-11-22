@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IGNOU BCA_NEW Exam Prep Portal</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="IGNOU BCA_NEW Comprehensive Exam Analysis, Canonical Question Bank & Revision Portal">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  
+  <!-- Theme: Docsify DarkLight Theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css"/>
+  
+  <!-- KaTeX CSS for Math Formulas -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --docsifytabs-border-color: #e2e8f0;
+      --theme-color: #0284c7;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    code, pre {
+      font-family: 'JetBrains Mono', Consolas, Monaco, 'Andale Mono', monospace !important;
+    }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-right: 0.35rem;
+      margin-bottom: 0.25rem;
+    }
+    .badge-vhigh {
+      background-color: #fee2e2;
+      color: #b91c1c;
+      border: 1px solid #fca5a5;
+    }
+    .badge-high {
+      background-color: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+    .badge-medium {
+      background-color: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+    .badge-low {
+      background-color: #f1f5f9;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+    }
+    .badge-topic {
+      background-color: #ede9fe;
+      color: #6d28d9;
+      border: 1px solid #ddd6fe;
+    }
+    .badge-freq {
+      background-color: #dcfce7;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+    .badge-qid {
+      background-color: #f3e8ff;
+      color: #7e22ce;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 0.15rem 0.45rem;
+      border-radius: 6px;
+    }
+
+    /* Question Cards */
+    .question-box {
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin: 1.25rem 0;
+      background: rgba(248, 250, 252, 0.6);
+      transition: all 0.2s ease-in-out;
+    }
+    .question-box:hover {
+      border-color: #0284c7;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+    }
+    @media (prefers-color-scheme: dark) {
+      .question-box {
+        border-color: #334155;
+        background: rgba(30, 41, 59, 0.5);
+      }
+      .question-box:hover {
+        border-color: #38bdf8;
+      }
+    }
+
+    /* Table styling */
+    .markdown-section table {
+      display: table !important;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+    .markdown-section table th {
+      background-color: rgba(2, 132, 199, 0.08);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border: 1px solid #cbd5e1;
+    }
+    .markdown-section table td {
+      padding: 0.65rem 1rem;
+      border: 1px solid #e2e8f0;
+    }
+    .markdown-section table tr:nth-child(even) {
+      background-color: rgba(241, 245, 249, 0.4);
+    }
+
+    /* Callout notice boxes */
+    .callout {
+      border-left: 4px solid #0284c7;
+      background: #f0f9ff;
+      padding: 0.9rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.2rem 0;
+    }
+    .callout-warning {
+      border-left-color: #f59e0b;
+      background: #fffbeb;
+    }
+    .callout-important {
+      border-left-color: #ef4444;
+      background: #fef2f2;
+    }
+
+    /* Coverpage styles */
+    section.cover h1 {
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+    section.cover .cover-main {
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading IGNOU Exam Prep Portal...</div>
+  <script>
+    window.$docsify = {
+      name: 'IGNOU BCA_NEW Prep',
+      repo: '',
+      loadSidebar: true,
+      loadNavbar: true,
+      coverpage: true,
+      onlyCover: false,
+      subMaxLevel: 3,
+      auto2top: true,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Search questions, topics, concepts...',
+        noData: 'No matching questions or topics found',
+        depth: 4,
+        hideOtherSidebarContent: false
+      },
+      pagination: {
+        previousText: 'Previous Guide',
+        nextText: 'Next Guide',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      copyCode: {
+        buttonText: 'Copy Code',
+        errorText: 'Error',
+        successText: 'Copied!'
+      },
+      darklightTheme: {
+        siteFont: 'Inter',
+        defaultTheme: 'light',
+        codeFontFamily: 'JetBrains Mono, monospace',
+        bodyFontSize: '16px',
+        dark: {
+          accent: '#38bdf8',
+          toogleBackground: '#ffffff',
+          background: '#0f172a',
+          textColor: '#f8fafc',
+          codeTextColor: '#f1f5f9',
+          codeBackgroundColor: '#1e293b',
+          borderColor: '#334155',
+          blockQuoteColor: '#94a3b8',
+          highlightColor: '#38bdf8',
+          sidebarSublink: '#94a3b8'
+        },
+        light: {
+          accent: '#0284c7',
+          toogleBackground: '#0f172a',
+          background: '#ffffff',
+          textColor: '#0f172a',
+          codeTextColor: '#0f172a',
+          codeBackgroundColor: '#f8fafc',
+          borderColor: '#e2e8f0',
+          blockQuoteColor: '#64748b',
+          highlightColor: '#0284c7',
+          sidebarSublink: '#64748b'
+        }
+      }
+    }
+  </script>
+  <!-- Docsify Core -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+
+  <!-- KaTeX for LaTeX Math -->
+  <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
+  <!-- Prism Syntax Highlighting for C/C++ -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
+</body>
+</html>
