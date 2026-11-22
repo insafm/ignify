@@ -789,6 +789,16 @@
       border: 1px solid var(--borderColor, #1f2937);
     }
 
+    /* Continuous Topic & Guide Pagination System */
+    .docsify-pagination-container:empty {
+      display: none !important;
+    }
+    .custom-guide-pagination {
+      margin-top: 3.5rem !important;
+      margin-bottom: 0.5rem !important;
+      border-top: 1px solid var(--borderColor, #e2e8f0) !important;
+    }
+
     /* Clean "Edit on GitHub" Action Bar */
     .content-edit-bar {
       display: flex;
@@ -985,6 +995,68 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 6px;
+    }
+
+    /* Question Card In-Page Jumper Navigation */
+    .q-card-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--borderColor, #f1f5f9);
+      font-size: 0.82rem;
+    }
+    .q-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(79, 70, 229, 0.08);
+      color: var(--accent, #4f46e5) !important;
+      font-weight: 600;
+      text-decoration: none !important;
+      font-family: var(--code-font);
+      transition: all 0.16s ease;
+      border: 1px solid rgba(79, 70, 229, 0.2);
+    }
+    .q-nav-btn:hover {
+      background: var(--accent, #4f46e5);
+      color: #ffffff !important;
+      border-color: var(--accent, #4f46e5);
+      transform: translateY(-1px);
+    }
+    .q-nav-btn.q-disabled {
+      opacity: 0.35;
+      cursor: default;
+      background: transparent;
+      border-color: transparent;
+      color: var(--textColor, #94a3b8) !important;
+      pointer-events: none;
+    }
+    .q-nav-count {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--textColor, #64748b);
+      opacity: 0.85;
+      letter-spacing: 0.02em;
+    }
+    [data-theme="dark"] .q-card-nav {
+      border-bottom-color: #1e293b;
+    }
+    [data-theme="dark"] .q-nav-btn {
+      background: rgba(129, 140, 248, 0.14);
+      color: #a5b4fc !important;
+      border-color: rgba(129, 140, 248, 0.3);
+    }
+    [data-theme="dark"] .q-nav-btn:hover {
+      background: #6366f1;
+      color: #ffffff !important;
+      border-color: #6366f1;
+    }
+    [data-theme="dark"] .q-nav-btn.q-disabled {
+      color: #64748b !important;
     }
 
     /* Key Answer Takeaways Box */
@@ -1214,9 +1286,41 @@
 
           // Transform questions into distinct Question Cards & append single minimal footer
           hook.afterEach(function(html) {
+            // Collect all question IDs on the page in order for instant next/previous question navigation
+            var qMatches = [];
+            var qIdRegex = /<h3 id="(q\d+)"/gi;
+            var qm;
+            while ((qm = qIdRegex.exec(html)) !== null) {
+              qMatches.push(qm[1].toLowerCase());
+            }
+
+            var qCardIndex = 0;
+            var currentRoutePath = (vm && vm.route && vm.route.path) || '';
+
             var qCardRegex = /(<h3 id="(q\d+)"[^>]*>[\s\S]*?<\/blockquote>)/gi;
             html = html.replace(qCardRegex, function(match, block, qid) {
               var qUpper = qid.toUpperCase();
+              var prevId = qCardIndex > 0 ? qMatches[qCardIndex - 1] : null;
+              var nextId = qCardIndex < qMatches.length - 1 ? qMatches[qCardIndex + 1] : null;
+              var totalCount = qMatches.length;
+              var currentNum = qCardIndex + 1;
+              qCardIndex++;
+
+              var navHtml = '';
+              if (totalCount > 1) {
+                var prevBtn = prevId
+                  ? '<a href="#' + currentRoutePath + '?id=' + prevId + '" class="q-nav-btn q-prev" title="Previous Question: ' + prevId.toUpperCase() + '">← ' + prevId.toUpperCase() + '</a>'
+                  : '<span class="q-nav-btn q-disabled">Start</span>';
+
+                var countSpan = '<span class="q-nav-count">Question ' + currentNum + ' of ' + totalCount + '</span>';
+
+                var nextBtn = nextId
+                  ? '<a href="#' + currentRoutePath + '?id=' + nextId + '" class="q-nav-btn q-next" title="Next Question: ' + nextId.toUpperCase() + '">' + nextId.toUpperCase() + ' →</a>'
+                  : '<span class="q-nav-btn q-disabled">End</span>';
+
+                navHtml = '  <div class="q-card-nav">' + prevBtn + countSpan + nextBtn + '</div>\n';
+              }
+
               // Format Q001: or [Q001] into <span class="q-badge">Q001</span>
               block = block.replace(
                 new RegExp('<span>(?:\\[?' + qUpper + '\\]?[:•\\s]*)\\s*', 'i'),
@@ -1232,7 +1336,7 @@
                 /<blockquote>\s*<p><strong>🗓️\s*Asked In Papers:?<\/strong>\s*([\s\S]*?)<\/p>\s*<\/blockquote>/i,
                 '<div class="q-papers-box"><span class="q-papers-label">🗓️ Exam Sessions</span><span class="q-papers-list">$1</span></div>'
               );
-              return '<div class="question-card" id="card-' + qid + '">\n' + block + '\n</div>';
+              return '<div class="question-card" id="card-' + qid + '">\n' + navHtml + block + '\n</div>';
             });
 
             var file = (vm && vm.route && vm.route.file) || 'README.md';
@@ -1250,6 +1354,73 @@
               '</div>'
             ].join('\n');
 
+            // Build BCS-131 Continuous Topic & Resource Guide Pagination
+            var bcsGuideChain = [
+              { path: '/bca_new/bcs131/README', file: 'bca_new/bcs131/README.md', title: '📘 BCS-131 Overview' },
+              { path: '/bca_new/bcs131/analysis', file: 'bca_new/bcs131/analysis.md', title: '📊 30-Paper Comprehensive Analysis' },
+              { path: '/bca_new/bcs131/predictions', file: 'bca_new/bcs131/predictions.md', title: '🎯 High-Probability Predictions' },
+              { path: '/bca_new/bcs131/comparisons', file: 'bca_new/bcs131/comparisons.md', title: '⚖️ Repeated Comparison Questions' },
+              { path: '/bca_new/bcs131/questions', file: 'bca_new/bcs131/questions.md', title: '🗂️ Master Question Bank by Topics' },
+              { path: '/bca_new/bcs131/topics/01-classes-objects', file: 'bca_new/bcs131/topics/01-classes-objects.md', title: '01. Classes, Objects, Access & Friend' },
+              { path: '/bca_new/bcs131/topics/02-polymorphism', file: 'bca_new/bcs131/topics/02-polymorphism.md', title: '02. Polymorphism & Virtual Functions' },
+              { path: '/bca_new/bcs131/topics/03-constructors-memory', file: 'bca_new/bcs131/topics/03-constructors-memory.md', title: '03. Constructors, Destructors & Memory' },
+              { path: '/bca_new/bcs131/topics/04-basics-control-flow', file: 'bca_new/bcs131/topics/04-basics-control-flow.md', title: '04. C++ Basics & Control Flow' },
+              { path: '/bca_new/bcs131/topics/05-templates-stl', file: 'bca_new/bcs131/topics/05-templates-stl.md', title: '05. Templates & Standard Template Library' },
+              { path: '/bca_new/bcs131/topics/06-oop-concepts', file: 'bca_new/bcs131/topics/06-oop-concepts.md', title: '06. OOP Concepts & Paradigm' },
+              { path: '/bca_new/bcs131/topics/07-inheritance', file: 'bca_new/bcs131/topics/07-inheritance.md', title: '07. Inheritance & Code Reusability' },
+              { path: '/bca_new/bcs131/topics/08-streams-files', file: 'bca_new/bcs131/topics/08-streams-files.md', title: '08. Streams, Files & Manipulators' },
+              { path: '/bca_new/bcs131/topics/09-functions-overloading', file: 'bca_new/bcs131/topics/09-functions-overloading.md', title: '09. Functions & Overloading' },
+              { path: '/bca_new/bcs131/topics/10-exception-handling', file: 'bca_new/bcs131/topics/10-exception-handling.md', title: '10. Exception Handling' },
+              { path: '/bca_new/bcs131/topics/11-operator-overloading', file: 'bca_new/bcs131/topics/11-operator-overloading.md', title: '11. Operator Overloading' },
+              { path: '/bca_new/bcs131/topics/12-code-debugging', file: 'bca_new/bcs131/topics/12-code-debugging.md', title: '12. Code Debugging & Tracing' },
+              { path: '/bca_new/bcs131/papers', file: 'bca_new/bcs131/papers.md', title: '📑 Question Papers Archive (30 PDFs)' }
+            ];
+
+            var normPath = ((vm && vm.route && vm.route.path) || '').replace(/^\/+|\/+$/g, '').toLowerCase();
+            var normFile = ((vm && vm.route && vm.route.file) || '').replace(/^\/+|\/+$/g, '').replace(/\.md$/i, '').toLowerCase();
+
+            var matchIdx = -1;
+            for (var bi = 0; bi < bcsGuideChain.length; bi++) {
+              var targetPath = bcsGuideChain[bi].path.replace(/^\/+|\/+$/g, '').toLowerCase();
+              var targetFile = bcsGuideChain[bi].file.replace(/^\/+|\/+$/g, '').replace(/\.md$/i, '').toLowerCase();
+              if (normPath === targetPath || normFile === targetFile || (normPath + '/readme') === targetPath) {
+                matchIdx = bi;
+                break;
+              }
+            }
+
+            var paginationBar = '';
+            if (matchIdx !== -1) {
+              var prevGuide = matchIdx > 0 ? bcsGuideChain[matchIdx - 1] : { path: '/bca_new/README', title: '💻 BCA_NEW Programme Hub' };
+              var nextGuide = matchIdx < bcsGuideChain.length - 1 ? bcsGuideChain[matchIdx + 1] : null;
+
+              var prevHtml = prevGuide ? [
+                '<div class="pagination-item pagination-item--previous">',
+                '  <a href="#' + prevGuide.path + '">',
+                '    <div class="pagination-item-label">',
+                '      <svg class="icon" width="10" height="16" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="9 2 2 8 9 14"/></svg>',
+                '      <span>Previous Guide</span>',
+                '    </div>',
+                '    <div class="pagination-item-title">' + prevGuide.title + '</div>',
+                '  </a>',
+                '</div>'
+              ].join('\n') : '';
+
+              var nextHtml = nextGuide ? [
+                '<div class="pagination-item pagination-item--next">',
+                '  <a href="#' + nextGuide.path + '">',
+                '    <div class="pagination-item-label">',
+                '      <span>Next Guide</span>',
+                '      <svg class="icon" width="10" height="16" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="1 2 8 8 1 14"/></svg>',
+                '    </div>',
+                '    <div class="pagination-item-title">' + nextGuide.title + '</div>',
+                '  </a>',
+                '</div>'
+              ].join('\n') : '';
+
+              paginationBar = '<div class="custom-guide-pagination docsify-pagination-container">' + prevHtml + nextHtml + '</div>';
+            }
+
             var footer = [
               '<footer class="portal-footer">',
               '  <div class="footer-brand-wrap">',
@@ -1264,7 +1435,7 @@
               '  </div>',
               '</footer>'
             ].join('\n');
-            return html + editBar + footer;
+            return html + paginationBar + editBar + footer;
           });
 
           // Sync theme attribute to HTML tag for CSS selectors & re-render Math

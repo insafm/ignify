@@ -1,253 +1,169 @@
-# 🗂️ Master Canonical Question Bank (Q001 – Q215)
+# 🗂️ Master Question Bank by Topic Modules
 
-> Across 30 previous-year IGNOU papers (Dec 2012 – Jun 2026), 550 raw question items deduplicate into **215 unique canonical questions**. Slightly over half (109 of 215, or 50.7%) recur multiple times, accounting for 444 appearances.
-
----
-
-## 📊 Distribution by Importance Tier
-
-| Importance Tier | Question Count | Frequency Threshold | Exam Strategy |
-| :--- | :---: | :---: | :--- |
-| **Very High** | **23** | 6 or more appearances | **Mandatory Mastery**: Must prepare full 10-mark answers with compilable C++ code. |
-| **High** | **55** | 3–5 appearances | **High Priority**: Frequently rotated in Section A and B. |
-| **Medium** | **31** | 2 appearances | **Standard Revision**: Revise core definitions and 5-mark short programs. |
-| **Low** | **106** | 1 appearance | **Syllabus Coverage**: Single-appearance variants and niche syntax queries. |
-| **Total** | **215** | 1–16 appearances | **Complete Syllabus Coverage** |
+> **Curriculum & Exam Coverage:** Across 30 previous-year IGNOU Term-End Examination papers (December 2012 – June 2026), 550 raw question items deduplicate into **215 unique canonical questions**. All 215 questions are fully organized, priority-tagged, and answered with canonical notes inside the **12 topic modules** below.
+>
+> 💡 *Note: Questions are grouped by subject topic rather than listed in giant tables, allowing you to study conceptually with full code examples, diagrams, and historical paper citations.*
 
 ---
 
-## Very High Importance Questions (23 Questions)
+## 🏆 Topic Modules by Priority & Exam Weightage
 
-| ID | Topic | Question Statement | Freq | Marks | Type | Detailed Guide |
-| :--- | :--- | :--- | :---: | :---: | :--- | :---: |
-| **Q001** | CLASSES | What are access control specifiers (public, private, protected) in C++? Explain their need, acc... | **15** | 79 marks | Theory (+ Coding in 2015-06) / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q001) |
-| **Q002** | CLASSES | What is a friend function in C++? Explain its properties, advantages, and implementation with a... | **10** | 54 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q002) |
-| **Q003** | CLASSES | What is an object in C++? Explain how an object can be passed as an argument to a function with... | **7** | 37 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q003) |
-| **Q004** | CLASSES | What are static data members and static member functions of a class? Explain their utility with... | **6** | 47 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q004) |
-| **Q005** | CLASSES | What is the this pointer in C++? Explain its significance and usage with an example program. | **6** | 31 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q005) |
-| **Q040** | POLY_VIRT | Why do abstract classes play an important role in OOP? Implement an abstract class using a pure... | **8** | 73 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q040) |
-| **Q041** | POLY_VIRT | What is the difference between function overloading and function overriding in C++? Explain wit... | **7** | 60 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q041) |
-| **Q042** | POLY_VIRT | Write a C++ program defining a base class (Doctor / Teacher / Employee) with a virtual function... | **6** | 58 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q042) |
-| **Q043** | POLY_VIRT | How does a virtual function differ from a pure virtual function? Explain with an example of eac... | **6** | 36 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q043) |
-| **Q044** | POLY_VIRT | What is an abstract class? Justify why it "provides a base upon which other classes may be buil... | **6** | 35 marks | Theory / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q044) |
-| **Q045** | POLY_VIRT | What is a virtual function? Explain its need, advantages, and limitations in C++ with an exampl... | **6** | 30 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q045) |
-| **Q059** | CONSTR | Explain the concept of a copy constructor in C++ with an example program. | **9** | 55 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q059) |
-| **Q060** | CONSTR | What is a destructor in C++? Explain its role in memory management and its need with an example... | **7** | 32 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q060) |
-| **Q115** | TEMPL_STL | What are Containers (Containership) in C++? List the main types of containers with examples, th... | **7** | 54 marks | Theory / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q115) |
-| **Q134** | OOP | What is the Object-Oriented Programming (OOP) paradigm? Explain its basic characteristics and a... | **16** | 103 marks | Theory / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/06-oop-concepts?id=q134) |
-| **Q135** | OOP | What is message passing? Explain how it is used in C++ (and supports interfaces) with an exampl... | **12** | 76 marks | Theory (+ Coding) / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/06-oop-concepts?id=q135) |
-| **Q136** | OOP | What is encapsulation? Are encapsulation and information hiding the same? Differentiate with an... | **6** | 29 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/06-oop-concepts?id=q136) |
-| **Q145** | INHERIT | What is inheritance? Explain the different types of inheritance supported by C++. | **6** | 41 marks | Theory (+ Diagram) / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q145) |
-| **Q167** | STREAMS_FILES | What is a stream manipulator? Explain the use of setw() and setprecision() with examples. | **6** | 31 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q167) |
-| **Q184** | FUNCS | What are inline functions? How does their execution differ from normal functions, and what are ... | **13** | 77 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/09-functions-overloading?id=q184) |
-| **Q185** | FUNCS | What is function overloading? Give its advantages and explain how it is implemented with a C++ ... | **6** | 46 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/09-functions-overloading?id=q185) |
-| **Q194** | EXCEPT | What is an exception? Explain the purpose of exception handling and how exceptions are handled ... | **14** | 101 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/10-exception-handling?id=q194) |
-| **Q203** | OP_OVL | What is operator overloading? Explain its advantages and general rules. | **7** | 42 marks | Theory / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/11-operator-overloading?id=q203) |
+### 🔴 Tier 1: Mandatory Mastery (Very High Priority • 68% of Total Exam Marks)
 
-## High Importance Questions (55 Questions)
+Mastering these three modules covers the vast majority of compulsory Question 1 and high-scoring 10-mark questions across all 30 exam sessions:
 
-| ID | Topic | Question Statement | Freq | Marks | Type | Detailed Guide |
-| :--- | :--- | :--- | :---: | :---: | :--- | :---: |
-| **Q006** | CLASSES | How is a struct (structure) different from a class in C++? Discuss their syntax with an example... | **4** | 20 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q006) |
-| **Q007** | CLASSES | How do we declare and define static data members of a class? Explain their syntax, rules, and c... | **4** | 19 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q007) |
-| **Q008** | CLASSES | Write a C++ program using a Matrix class (with constructor, destructor, and methods) to input a... | **3** | 32 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q008) |
-| **Q009** | CLASSES | Write a C++ program to implement a simple calculator (+, -, *, /) on two operands using class m... | **3** | 30 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q009) |
-| **Q010** | CLASSES | Write a C++ program to find the largest of three numbers using a member function (and construct... | **3** | 25 marks | Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q010) |
-| **Q011** | CLASSES | How is memory allocation performed in C++ when a class is declared versus when a class is insta... | **3** | 25 marks | Theory / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q011) |
-| **Q012** | CLASSES | Define class and object. How are they related? Explain with an example. | **3** | 15 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q012) |
-| **Q013** | CLASSES | What is a static member function in C++? Explain how the static keyword changes a function with... | **3** | 14 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q013) |
-| **Q046** | POLY_VIRT | What is polymorphism? List three or more advantages of polymorphism in OOP. | **5** | 23 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q046) |
-| **Q047** | POLY_VIRT | Compare compile-time polymorphism and run-time polymorphism with examples. | **4** | 33 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q047) |
-| **Q048** | POLY_VIRT | What happens if we do not use a virtual function in inheritance? Explain its importance with an... | **3** | 30 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q048) |
-| **Q049** | POLY_VIRT | Explain the characteristics of virtual/pure virtual functions and illustrate a pure virtual fun... | **3** | 28 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q049) |
-| **Q050** | POLY_VIRT | Define polymorphism, its advantages, and explain the various types of polymorphism supported by... | **3** | 20 marks | Theory / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q050) |
-| **Q051** | POLY_VIRT | Explain the association between dynamic binding and run-time polymorphism with a suitable examp... | **3** | 15 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q051) |
-| **Q052** | POLY_VIRT | Briefly discuss function overriding in C++ with suitable example code. | **3** | 15 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q052) |
-| **Q053** | POLY_VIRT | Compare Early Binding and Late Binding in C++, and explain when to use each. | **3** | 15 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q053) |
-| **Q054** | POLY_VIRT | Write a short note on Pure Virtual Function with an example. | **3** | 14 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q054) |
-| **Q061** | CONSTR | Differentiate between a default constructor and a parameterized constructor with an example. | **4** | 26 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q061) |
-| **Q062** | CONSTR | What are constructors? List five characteristics and discuss the limitations of constructors. | **4** | 25 marks | Theory (+ Coding in 2014-12) / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q062) |
-| **Q063** | CONSTR | What is constructor overloading in C++? Explain with an example. | **4** | 25 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q063) |
-| **Q064** | CONSTR | What is the need for memory management in C++, and how is the memory management process perform... | **4** | 19 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q064) |
-| **Q065** | CONSTR | Differentiate between a copy constructor and a default constructor with an example for each. | **3** | 22 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q065) |
-| **Q066** | CONSTR | What is meant by object initialization, and why is it required? Explain with suitable examples. | **3** | 16 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q066) |
-| **Q067** | CONSTR | What is a constructor? Explain the advantages of using constructors with an example. | **3** | 15 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q067) |
-| **Q068** | CONSTR | Explain the role of new and delete operators in C++ memory management. | **3** | 15 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q068) |
-| **Q079** | BASICS | Explain the use of break and continue statements in C++ with an example program. | **4** | 25 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q079) |
-| **Q080** | BASICS | What is the scope resolution operator (::)? Explain its uses with a C++ program. | **4** | 19 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q080) |
-| **Q081** | BASICS | What is an operator? List and explain the various types of operators available in C++. | **3** | 26 marks | Theory / Long Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q081) |
-| **Q082** | BASICS | What is the scope of a variable? Compare global variables and local variables in C++ with examp... | **3** | 15 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q082) |
-| **Q083** | BASICS | What is type conversion? Differentiate between automatic (implicit) type conversion and explici... | **3** | 15 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q083) |
-| **Q084** | BASICS | What is the difference between a keyword and an identifier? Explain with a simple C++ program. | **3** | 13 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q084) |
-| **Q116** | TEMPL_STL | What is a class template? Explain its concept, advantages, and utility. | **5** | 23 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q116) |
-| **Q117** | TEMPL_STL | Differentiate between a class template and a function template with an example for each. | **4** | 31 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q117) |
-| **Q118** | TEMPL_STL | What is a function template in C++? Explain its advantages with an example. | **4** | 25 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q118) |
-| **Q119** | TEMPL_STL | Explain the use of the STL list container class with an example program. | **4** | 21 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q119) |
-| **Q120** | TEMPL_STL | What is a template class? Give its advantages and create a template class for the Linked List d... | **3** | 30 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q120) |
-| **Q121** | TEMPL_STL | What is a class template? Create a class template for a Stack data structure. | **3** | 30 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q121) |
-| **Q122** | TEMPL_STL | What is STL (Standard Template Library)? Briefly discuss its components and importance in C++. | **3** | 15 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q122) |
-| **Q137** | OOP | Explain the features, advantages, and disadvantages of the structured programming paradigm with... | **3** | 19 marks | Theory / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/06-oop-concepts?id=q137) |
-| **Q138** | OOP | What do you mean by Abstraction and Encapsulation? How are the two terms interrelated? | **3** | 13 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/06-oop-concepts?id=q138) |
-| **Q146** | INHERIT | What are visibility modes (public, private, protected) in inheritance? Explain their meaning an... | **4** | 24 marks | Theory / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q146) |
-| **Q147** | INHERIT | Compare multiple inheritance with multilevel inheritance with an example. | **4** | 24 marks | Theory (+ Diagram) / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q147) |
-| **Q148** | INHERIT | What is multiple inheritance? Explain its advantages and drawbacks with an example. | **4** | 21 marks | Theory / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q148) |
-| **Q149** | INHERIT | What is inheritance? Explain its types and how inheritance is implemented in C++ (class Derived... | **3** | 25 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q149) |
-| **Q150** | INHERIT | What is software/code reusability in the context of C++, and how is it implemented? Explain wit... | **3** | 15 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q150) |
-| **Q168** | STREAMS_FILES | Write a C++ program (with comments) to open an existing file and append "My C++ File" / "File p... | **5** | 50 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q168) |
-| **Q169** | STREAMS_FILES | What are stream manipulators? Briefly discuss the purpose of various stream manipulators (expla... | **5** | 29 marks | Theory / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q169) |
-| **Q170** | STREAMS_FILES | What is a stream in C++? Name the stream classes generally used for file I/O and explain their ... | **4** | 21 marks | Theory / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q170) |
-| **Q171** | STREAMS_FILES | Explain file pointers (get and put pointers) and operations (seekg(), seekp(), tellg(), tellp()... | **3** | 15 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q171) |
-| **Q186** | FUNCS | How are function calls matched with overloaded functions in C++? Explain with an example progra... | **4** | 35 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/09-functions-overloading?id=q186) |
-| **Q187** | FUNCS | Differentiate between call-by-value and call-by-reference in user-defined functions with an exa... | **3** | 28 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/09-functions-overloading?id=q187) |
-| **Q195** | EXCEPT | Explain exception handling in C++ with a program, and describe what happens if an exception is ... | **3** | 30 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/10-exception-handling?id=q195) |
-| **Q196** | EXCEPT | What is exception handling? Name the keywords used and write a C++ program to handle a divide-b... | **3** | 26 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/10-exception-handling?id=q196) |
-| **Q204** | OP_OVL | Write a C++ program (with comments) to overload the binary + operator to add two complex number... | **3** | 25 marks | Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/11-operator-overloading?id=q204) |
-| **Q205** | OP_OVL | List the C++ operators that cannot be overloaded, and give reasons for why they cannot be overl... | **3** | 16 marks | Theory / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/11-operator-overloading?id=q205) |
+#### [Module 01: Classes, Objects, Access Control, Friend & Static Members](/bca_new/bcs131/topics/01-classes-objects.md)
+* **Syllabus Unit:** Block 1 Unit 3
+* **Historical Weight:** **680 Marks** (Offered in 29 of 30 papers) • **Rank #1** • Frequency Score: **155.3**
+* **Canonical Questions:** **39 Unique Questions** (Q001 – Q039)
+* **Core Themes Covered:**
+  * Access specifiers (`public`, `private`, `protected`) and encapsulation rules
+  * Friend functions and friend classes (syntax, properties, advantages, and limitations)
+  * Static data members and static member functions (scope, memory, syntax)
+  * The `this` pointer (definition, usage, method chaining, self-referential assignment)
+  * Object instantiation, passing objects as arguments, and arrays of objects
 
-## Medium Importance Questions (31 Questions)
+#### [Module 02: Polymorphism, Virtual Functions & Abstract Classes](/bca_new/bcs131/topics/02-polymorphism.md)
+* **Syllabus Unit:** Block 2 Unit 3
+* **Historical Weight:** **520 Marks** (Offered in 30 of 30 papers) • **Rank #2** • Frequency Score: **120.0**
+* **Canonical Questions:** **19 Unique Questions** (Q040 – Q058)
+* **Core Themes Covered:**
+  * Pure virtual functions and abstract classes (role as base interfaces)
+  * Compile-time (static) vs. Run-time (dynamic) polymorphism
+  * Function overloading vs. Function overriding (differences and mechanisms)
+  * Early binding vs. Late binding with virtual method tables (VTABLE / VPTR)
+  * Virtual destructors and consequences of omitting virtual methods in inheritance
 
-| ID | Topic | Question Statement | Freq | Marks | Type | Detailed Guide |
-| :--- | :--- | :--- | :---: | :---: | :--- | :---: |
-| **Q014** | CLASSES | Write a C++ program to add two complex numbers by defining a Complex class and proper construct... | **2** | 20 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q014) |
-| **Q015** | CLASSES | Write a C++ program to multiply two complex numbers using a Complex class and constructor. | **2** | 20 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q015) |
-| **Q016** | CLASSES | Explain two merits and two demerits of using friend functions with an example. | **2** | 18 marks | Theory / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q016) |
-| **Q017** | CLASSES | Write a C++ program to create a Book class (publisher/title, author, price) with proper constru... | **2** | 17 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q017) |
-| **Q018** | CLASSES | Write a C++ program to find the sum of n given numbers using a friend function. | **2** | 17 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q018) |
-| **Q019** | CLASSES | Define a member function and briefly discuss its purpose in C++ with a suitable example. | **2** | 10 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q019) |
-| **Q055** | POLY_VIRT | What is Runtime Polymorphism? Explain its utility and how it is achieved in C++. | **2** | 10 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q055) |
-| **Q069** | CONSTR | Write a C++ program to calculate the factorial of a given number using a copy constructor (with... | **2** | 18 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q069) |
-| **Q070** | CONSTR | Explain the process of memory deallocation in C++ with an example. | **2** | 15 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q070) |
-| **Q071** | CONSTR | Discuss the situations when a copy constructor is automatically invoked in C++. | **2** | 9 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q071) |
-| **Q085** | BASICS | What is a data type? List built-in data types (and sizes) with examples, and explain the need f... | **2** | 11 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q085) |
-| **Q086** | BASICS | Write a C++ program to demonstrate the use of the switch statement. | **2** | 11 marks | Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q086) |
-| **Q087** | BASICS | Discuss and draw the taxonomy/hierarchy of data types in C++. | **2** | 10 marks | Theory + Diagram / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q087) |
-| **Q088** | BASICS | Write a program in C++ to calculate the factorial of a given number. | **2** | 10 marks | Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q088) |
-| **Q089** | BASICS | What are breaking statements? Give the syntax of break, continue, goto, and exit. | **2** | 10 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q089) |
-| **Q090** | BASICS | Explain relational and logical operators in C++ (any five) with examples. | **2** | 10 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q090) |
-| **Q091** | BASICS | Explain any five relational operators in C++ with examples. | **2** | 9 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q091) |
-| **Q123** | TEMPL_STL | What is a template function? Write a template function to swap the values of two numbers. | **2** | 20 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q123) |
-| **Q124** | TEMPL_STL | What is a function template? Write a function template SUM to add two numbers. | **2** | 11 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q124) |
-| **Q139** | OOP | Write a short note on Encapsulation with an example. | **2** | 10 marks | Theory (+ Coding) / Short Answer | [Open in Topic](/bca_new/bcs131/topics/06-oop-concepts?id=q139) |
-| **Q140** | OOP | Explain any four benefits of Object-Oriented Programming. | **2** | 9 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/06-oop-concepts?id=q140) |
-| **Q151** | INHERIT | List the merits and demerits of single inheritance over multiple inheritance. | **2** | 10 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q151) |
-| **Q152** | INHERIT | Explain the benefits/advantages of inheritance in C++ with an example. | **2** | 9 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q152) |
-| **Q172** | STREAMS_FILES | Write the general form of user-defined stream manipulators and write a program implementing one... | **2** | 20 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q172) |
-| **Q173** | STREAMS_FILES | What are file stream operations? Write a C++ program demonstrating reading from and writing to ... | **2** | 17 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q173) |
-| **Q174** | STREAMS_FILES | Explain input and output streams and stream classes in C++ with an example. | **2** | 10 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q174) |
-| **Q175** | STREAMS_FILES | Differentiate between: (i) ios::ate vs ios::app, (ii) Binary file vs Text file, (iii) get() vs ... | **2** | 10 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q175) |
-| **Q197** | EXCEPT | Write syntax of try, throw, catch, and write a program to catch all exceptions (catch(...)). Wh... | **2** | 20 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/10-exception-handling?id=q197) |
-| **Q206** | OP_OVL | What is operator overloading? List operators that cannot be overloaded and write a C++ program ... | **2** | 20 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/11-operator-overloading?id=q206) |
-| **Q207** | OP_OVL | Write a C++ program to overload stream insertion (<<) and extraction (>>) operators (e.g., for ... | **2** | 20 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/11-operator-overloading?id=q207) |
-| **Q208** | OP_OVL | Explain the need for operator overloading, why some operators cannot be overloaded, and write a... | **2** | 15 marks | Theory + Coding / Short Answer & Long Answer | [Open in Topic](/bca_new/bcs131/topics/11-operator-overloading?id=q208) |
+#### [Module 03: Constructors, Destructors & Dynamic Memory Management](/bca_new/bcs131/topics/03-constructors-memory.md)
+* **Syllabus Unit:** Block 1 Unit 4
+* **Historical Weight:** **331 Marks** (Offered in 27 of 30 papers) • **Rank #3** • Frequency Score: **91.5**
+* **Canonical Questions:** **20 Unique Questions** (Q059 – Q078)
+* **Core Themes Covered:**
+  * Copy constructors (syntax, deep vs. shallow copy, default memberwise copy)
+  * Destructors and deterministic resource cleanup
+  * Constructor types (default, parameterized, copy) and constructor overloading
+  * Dynamic memory allocation and deallocation (`new` and `delete` operators)
+  * Order of constructor and destructor invocation in inheritance hierarchies
 
-## Low Importance Questions (106 Questions)
+---
 
-| ID | Topic | Question Statement | Freq | Marks | Type | Detailed Guide |
-| :--- | :--- | :--- | :---: | :---: | :--- | :---: |
-| **Q020** | CLASSES | Write a C++ program to define class Circle with a constructor, a method for area (πr²), and a m... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q020) |
-| **Q021** | CLASSES | Write a C++ program to find the sum of n numbers by defining a proper class, constructor, and m... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q021) |
-| **Q022** | CLASSES | How does a friend function differ from a member function? Explain friend function implementatio... | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q022) |
-| **Q023** | CLASSES | Write a C++ program for the subtraction of two matrices. | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q023) |
-| **Q024** | CLASSES | Write a C++ program to create a STUDENT class (Name, Enrollment No, Programme) with constructor... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q024) |
-| **Q025** | CLASSES | Write a program to add and subtract two instances of a Complex class using a friend function an... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q025) |
-| **Q026** | CLASSES | Compare friend function with member function. Write a program to add two Distance instances (km... | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q026) |
-| **Q027** | CLASSES | Create an Employee class allowing multiple constructors and methods to generate a salary report... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q027) |
-| **Q028** | CLASSES | Differentiate between member functions defined inside vs. outside the body of a class. How are ... | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q028) |
-| **Q029** | CLASSES | What is an object? Explain creation and destruction using a Bank-Account class (name, account-n... | **1** | 8 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q029) |
-| **Q030** | CLASSES | Define Member function and Friend function, and write the purpose of each. | **1** | 8 marks | Theory / Long Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q030) |
-| **Q031** | CLASSES | How does a function behave differently when an object is passed by value versus passed by refer... | **1** | 6 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q031) |
-| **Q032** | CLASSES | Write a C++ program to find the average of three given numbers by defining an appropriate class... | **1** | 5 marks | Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q032) |
-| **Q033** | CLASSES | Compare structures and classes, and explain what empty classes are and their purpose in C++. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q033) |
-| **Q034** | CLASSES | What is the utility of a friend function? Does it violate the rule of encapsulation? | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q034) |
-| **Q035** | CLASSES | Differentiate between member functions and global functions with an example. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q035) |
-| **Q036** | CLASSES | What is the this pointer? What happens on the statement delete this; inside a class? | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q036) |
-| **Q037** | CLASSES | Write a short note on array of objects with an example. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q037) |
-| **Q038** | CLASSES | How does the working of a member function differ from a friend function and a non-member functi... | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q038) |
-| **Q039** | CLASSES | What is an Object? Explain with an example how an object is instantiated in C++. | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/01-classes-objects?id=q039) |
-| **Q056** | POLY_VIRT | Explain polymorphism, its advantages, and write a C++ program demonstrating virtual functions. | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q056) |
-| **Q057** | POLY_VIRT | What is polymorphism? Explain its advantages and write a C++ program to demonstrate polymorphis... | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q057) |
-| **Q058** | POLY_VIRT | How does a virtual function differ from a regular (non-virtual) member function in C++? | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/02-polymorphism?id=q058) |
-| **Q072** | CONSTR | Write a C++ program to print Student details (Name, Father's Name, Mother's Name, Address, Zip ... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q072) |
-| **Q073** | CONSTR | Write a short note on Parameterized Constructor. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q073) |
-| **Q074** | CONSTR | How does a constructor differ from automatic initialization? Briefly discuss copy constructor. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q074) |
-| **Q075** | CONSTR | Discuss naming conventions of destructors. Do constructors and destructors have a return type? | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q075) |
-| **Q076** | CONSTR | What are private constructors and destructors? How do they differ from non-private ones? | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q076) |
-| **Q077** | CONSTR | Discuss the order of constructor and destructor calls in an inheritance hierarchy with a progra... | **1** | 5 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q077) |
-| **Q078** | CONSTR | What is a Default Constructor? How is a default constructor equivalent to a constructor with de... | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/03-constructors-memory?id=q078) |
-| **Q092** | BASICS | Write a C++ program that prints numbers and their cubes from 1 to 10 using if-then-else and for... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q092) |
-| **Q093** | BASICS | Write an interactive C++ program reading two integers x, y and an operator (+, -, *, /), printi... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q093) |
-| **Q094** | BASICS | Write a C++ program to find the difference between two times in 24-hour format (e.g., 09:00:00 ... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q094) |
-| **Q095** | BASICS | How are strings handled in C++? Explain how a string can be reversed with the help of a program... | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q095) |
-| **Q096** | BASICS | What are comparison and logical operators? How do they differ from arithmetic and assignment op... | **1** | 8 marks | Theory / Long Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q096) |
-| **Q097** | BASICS | Explain the use of the following operators in C++: (i) &, (ii) ?:, (iii) ::, (iv) &&. | **1** | 8 marks | Theory / Long Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q097) |
-| **Q098** | BASICS | What is looping in C++? Explain its advantages and list the looping options available in C++. | **1** | 6 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q098) |
-| **Q099** | BASICS | Write a C++ program to find the area of a circle. | **1** | 5 marks | Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q099) |
-| **Q100** | BASICS | How do you input non-graphic characters in C++? What do escape sequences \n, \a, and \v represe... | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q100) |
-| **Q101** | BASICS | Compare while() and do-while() looping constructs with a suitable example for each. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q101) |
-| **Q102** | BASICS | Differentiate between C and C++ (give at least five differences). | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q102) |
-| **Q103** | BASICS | Explain the use of && and ! operators in C++ with an example. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q103) |
-| **Q104** | BASICS | What is the difference between an if statement and a for loop? Explain with an example. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q104) |
-| **Q105** | BASICS | What is operator precedence? Explain the precedence order in arithmetical operators in C++ with... | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q105) |
-| **Q106** | BASICS | Explain the working of the goto statement. Does its usage violate the rules of OOP? | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q106) |
-| **Q107** | BASICS | Write a C++ program to find whether a given number is odd or even. | **1** | 5 marks | Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q107) |
-| **Q108** | BASICS | Explain the use of the do-while loop with the help of a C++ program. | **1** | 5 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q108) |
-| **Q109** | BASICS | Explain the working of the for loop with the help of an example C++ program. | **1** | 5 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q109) |
-| **Q110** | BASICS | What is a Reference Variable, and what is its usage in C++? | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q110) |
-| **Q111** | BASICS | What are data modifiers? How do they affect base data types? Give a suitable example. | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q111) |
-| **Q112** | BASICS | Write a C++ program to find the sum of two given numbers. | **1** | 4 marks | Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q112) |
-| **Q113** | BASICS | Explain the use of the nested if statement with an example. | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q113) |
-| **Q114** | BASICS | List any four keywords in C++ and explain their functions. | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/04-basics-control-flow?id=q114) |
-| **Q125** | TEMPL_STL | What are templates in C++? Explain their advantages with an example. | **1** | 15 marks | Theory / Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q125) |
-| **Q126** | TEMPL_STL | Write an OOP program in C++ to read n integers and print the array in reverse order using a cla... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q126) |
-| **Q127** | TEMPL_STL | Write a C++ program using a class/operator template for binary numbers to perform simple arithm... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q127) |
-| **Q128** | TEMPL_STL | Write a function template printarray to display integer, float, and character arrays passed as ... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q128) |
-| **Q129** | TEMPL_STL | Explain class templates and function templates with illustrations. | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q129) |
-| **Q130** | TEMPL_STL | What is a template class? Write a generic class to sort an array into ascending order. | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q130) |
-| **Q131** | TEMPL_STL | Define the Standard Template Library (STL) and explain how a class template differs from a func... | **1** | 6 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q131) |
-| **Q132** | TEMPL_STL | Distinguish between an overloaded function and a function template with a suitable program. | **1** | 5 marks | Theory + Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q132) |
-| **Q133** | TEMPL_STL | What are Iterators? List the five types of iterators supported by STL in C++. | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/05-templates-stl?id=q133) |
-| **Q141** | OOP | What is encapsulation? Explain how it differs from information hiding using a Library Books iss... | **1** | 8 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/06-oop-concepts?id=q141) |
-| **Q142** | OOP | Define Abstraction and Encapsulation, and explain class and object with an example. | **1** | 6 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/06-oop-concepts?id=q142) |
-| **Q143** | OOP | What design concepts would you keep in mind while designing an object-oriented application? Exp... | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/06-oop-concepts?id=q143) |
-| **Q144** | OOP | "A class is a way to accomplish data hiding." Comment with a suitable example. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/06-oop-concepts?id=q144) |
-| **Q153** | INHERIT | Write an interactive C++ program modeling IGNOU BCA result declaration: Student → Exam (6 subje... | **1** | 15 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q153) |
-| **Q154** | INHERIT | What are istream and ostream member functions? Create base class QUEUE and derived class AQUEUE... | **1** | 15 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q154) |
-| **Q155** | INHERIT | What is reusability of code? Create student (name, address, age) and inherit PG_student with a ... | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q155) |
-| **Q156** | INHERIT | Write a C++ program creating a Vehicle base class and deriving Car, Truck, and Bike with proper... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q156) |
-| **Q157** | INHERIT | Explain inheritance and multi-inheritance (multiple inheritance) with an example and C++ progra... | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q157) |
-| **Q158** | INHERIT | What are base and derived classes? Create a base class Stack and derived class Mystack with an ... | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q158) |
-| **Q159** | INHERIT | Create Employee (name, address, age) and derive Part_time employee with a function displaying n... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q159) |
-| **Q160** | INHERIT | Explain ambiguity resolution in multiple inheritance, and what happens if a virtual function is... | **1** | 6 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q160) |
-| **Q161** | INHERIT | Write a C++ program to implement multilevel inheritance with comments clarifying member availab... | **1** | 5 marks | Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q161) |
-| **Q162** | INHERIT | Explain the usage of single inheritance and multiple inheritance. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q162) |
-| **Q163** | INHERIT | Compare multiple inheritance with multilevel and hierarchical inheritance. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q163) |
-| **Q164** | INHERIT | How is the protected access specifier different from public? Explain its usage for a subclass. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q164) |
-| **Q165** | INHERIT | How are parameterized constructors of a base class invoked by derived class constructors? | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q165) |
-| **Q166** | INHERIT | Can a derived class get access privilege for a private member of its base class? If yes, how? | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/07-inheritance?id=q166) |
-| **Q176** | STREAMS_FILES | Explain file pointers and write a C++ program demonstrating put(), get(), read(), and write(). | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q176) |
-| **Q177** | STREAMS_FILES | Explain various file open modes (in, out, app, ate, trunc, binary) and the working of seekg(), ... | **1** | 10 marks | Theory / Long Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q177) |
-| **Q178** | STREAMS_FILES | Write a C++ program to copy the contents of one file into another file. | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q178) |
-| **Q179** | STREAMS_FILES | Explain the use of standard stream objects (cin, cout, cerr, clog) with examples. | **1** | 8 marks | Theory / Long Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q179) |
-| **Q180** | STREAMS_FILES | What is a data stream? Explain the stream class hierarchy in C++. | **1** | 5 marks | Theory + Diagram / Short Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q180) |
-| **Q181** | STREAMS_FILES | Write a C++ program to display a price-list of five vegetables using precision(2). | **1** | 5 marks | Coding / Short Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q181) |
-| **Q182** | STREAMS_FILES | How is unformatted I/O different from formatted I/O? Explain. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q182) |
-| **Q183** | STREAMS_FILES | Write a short note on File Stream Operations. | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/08-streams-files?id=q183) |
-| **Q188** | FUNCS | Explain Reference Variable and the principal reason for passing arguments by reference. Differe... | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/09-functions-overloading?id=q188) |
-| **Q189** | FUNCS | Differentiate C++ from C in terms of parameter passing in functions. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/09-functions-overloading?id=q189) |
-| **Q190** | FUNCS | What is the signature of a method? Briefly discuss its components. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/09-functions-overloading?id=q190) |
-| **Q191** | FUNCS | What is function overloading? Compare default arguments with function overloading. | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/09-functions-overloading?id=q191) |
-| **Q192** | FUNCS | Give the advantages and disadvantages of an inline function. | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/09-functions-overloading?id=q192) |
-| **Q193** | FUNCS | What is Recursion? Explain it with an example. | **1** | 4 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/09-functions-overloading?id=q193) |
-| **Q198** | EXCEPT | What is the need for exception handling? Explain with an example and describe the hierarchy of ... | **1** | 10 marks | Theory + Diagram / Long Answer | [Open in Topic](/bca_new/bcs131/topics/10-exception-handling?id=q198) |
-| **Q199** | EXCEPT | Explain exception handling while executing constructors and destructors, and how exception type... | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/10-exception-handling?id=q199) |
-| **Q200** | EXCEPT | Explain a situation when you will use multiple catch statements in a C++ program for exception ... | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/10-exception-handling?id=q200) |
-| **Q201** | EXCEPT | List any five common examples of exceptions. | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/10-exception-handling?id=q201) |
-| **Q202** | EXCEPT | Briefly discuss the functioning of try, throw, and catch expressions with a suitable block diag... | **1** | 5 marks | Theory + Diagram / Short Answer | [Open in Topic](/bca_new/bcs131/topics/10-exception-handling?id=q202) |
-| **Q209** | OP_OVL | Explain the need for operator overloading, why some operators cannot be overloaded, and write a... | **1** | 10 marks | Theory + Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/11-operator-overloading?id=q209) |
-| **Q210** | OP_OVL | Write a C++ program to overload += and *= operators for a Complex number class (real, imaginary... | **1** | 10 marks | Coding / Long Answer | [Open in Topic](/bca_new/bcs131/topics/11-operator-overloading?id=q210) |
-| **Q211** | OP_OVL | What are the limitations of Operator Overloading and Function Overloading? | **1** | 5 marks | Theory / Short Answer | [Open in Topic](/bca_new/bcs131/topics/11-operator-overloading?id=q211) |
-| **Q212** | DEBUG | Identify the errors in the code segment: cin >> num >> auuto; float area = length * breadth;. | **1** | 4 marks | Debugging / Short Answer | [Open in Topic](/bca_new/bcs131/topics/12-code-debugging?id=q212) |
-| **Q213** | DEBUG | Why will the function fragment (float sum(float, float); declared inside main(), called inside ... | **1** | 4 marks | Debugging / Short Answer | [Open in Topic](/bca_new/bcs131/topics/12-code-debugging?id=q213) |
-| **Q214** | DEBUG | Given int ch=20; cout << ++ch << "\n" << ch << "\n";, what output does it produce, and what is ... | **1** | 4 marks | Debugging / Output / Short Answer | [Open in Topic](/bca_new/bcs131/topics/12-code-debugging?id=q214) |
-| **Q215** | DEBUG | Identify the problem with void large(int &a, int &b); called as large(5, 7); and suggest a fix. | **1** | 4 marks | Debugging / Short Answer | [Open in Topic](/bca_new/bcs131/topics/12-code-debugging?id=q215) |
+### 🟠 Tier 2: High Scoring Core Modules (High Priority • Regular 10-Mark Anchors)
 
+#### [Module 04: C++ Basics, Operators & Control Flow](/bca_new/bcs131/topics/04-basics-control-flow.md)
+* **Syllabus Unit:** Block 1 Unit 2
+* **Historical Weight:** **321 Marks** (Offered in 27 of 30 papers) • **Rank #4** • Frequency Score: **91.0**
+* **Canonical Questions:** **36 Unique Questions** (Q079 – Q114)
+* **Core Themes Covered:**
+  * Scope resolution operator (`::`) for global variables and out-of-class definitions
+  * Control flow branching and loops (`break`, `continue`, `switch-case`, `while`, `for`)
+  * C++ data types hierarchy, type conversion (implicit vs. explicit casting)
+  * C++ operators (arithmetic, relational, logical, bitwise, ternary)
+
+#### [Module 05: Templates & Standard Template Library (STL)](/bca_new/bcs131/topics/05-templates-stl.md)
+* **Syllabus Unit:** Block 3 Unit 2
+* **Historical Weight:** **340 Marks** (Offered in 30 of 30 papers) • **Rank #5** • Frequency Score: **83.0**
+* **Canonical Questions:** **19 Unique Questions** (Q115 – Q133)
+* **Core Themes Covered:**
+  * Function templates and class templates (generic programming concepts)
+  * Standard Template Library (STL) architecture (Containers, Iterators, Algorithms)
+  * Sequential and associative containers (`vector`, `list`, `deque`, `stack`, `queue`)
+  * Template instantiation, type parameters, and non-type parameters
+
+#### [Module 06: OOP Concepts & Paradigm Foundations](/bca_new/bcs131/topics/06-oop-concepts.md)
+* **Syllabus Unit:** Block 1 Unit 1
+* **Historical Weight:** **283 Marks** (Offered in 29 of 30 papers) • **Rank #6** • Frequency Score: **81.5**
+* **Canonical Questions:** **11 Unique Questions** (Q134 – Q144)
+* **Core Themes Covered:**
+  * Object-Oriented paradigm vs. Structured/Procedural programming (C vs. C++)
+  * Fundamental pillars: Encapsulation, Data Abstraction, Inheritance, Polymorphism
+  * Message passing mechanism and modular software design principles
+  * Real-world benefits: code reusability, maintainability, and data security
+
+#### [Module 07: Inheritance & Code Reusability](/bca_new/bcs131/topics/07-inheritance.md)
+* **Syllabus Unit:** Block 2 Unit 1
+* **Historical Weight:** **284 Marks** (Offered in 27 of 30 papers) • **Rank #7** • Frequency Score: **74.2**
+* **Canonical Questions:** **22 Unique Questions** (Q145 – Q166)
+* **Core Themes Covered:**
+  * Visibility modes in derivation (`public`, `protected`, `private`)
+  * Forms of inheritance: Single, Multilevel, Multiple, Hierarchical, and Hybrid
+  * Diamond problem and virtual base classes
+  * Base class constructor parameter passing and member initialization lists
+
+---
+
+### 🟡 Tier 3: Specialized & Applied Modules (Medium to Low Priority)
+
+#### [Module 08: Streams, Manipulators & File Handling](/bca_new/bcs131/topics/08-streams-files.md)
+* **Syllabus Unit:** Block 3 Unit 1
+* **Historical Weight:** **260 Marks** (Offered in 24 of 30 papers) • **Rank #8** • Frequency Score: **68.0**
+* **Canonical Questions:** **17 Unique Questions** (Q167 – Q183)
+* **Core Themes Covered:**
+  * C++ stream class hierarchy (`ios`, `istream`, `ostream`, `ifstream`, `ofstream`, `fstream`)
+  * Built-in and parameterized stream manipulators (`setw`, `setprecision`, `endl`)
+  * File pointers (`seekg`, `seekp`, `tellg`, `tellp`) and binary vs. text file I/O
+
+#### [Module 09: Functions, Parameters & Function Overloading](/bca_new/bcs131/topics/09-functions-overloading.md)
+* **Syllabus Unit:** Block 1 / Block 2
+* **Historical Weight:** **218 Marks** (Offered in 21 of 30 papers) • **Rank #9** • Frequency Score: **56.9**
+* **Canonical Questions:** **10 Unique Questions** (Q184 – Q193)
+* **Core Themes Covered:**
+  * Inline functions (expansion mechanism, trade-offs, restrictions)
+  * Call-by-value vs. Call-by-reference using C++ reference variables
+  * Function overloading resolution rules, type promotions, and default arguments
+
+#### [Module 10: Exception Handling & Robust Programming](/bca_new/bcs131/topics/10-exception-handling.md)
+* **Syllabus Unit:** Block 3 Unit 3
+* **Historical Weight:** **212 Marks** (Offered in 26 of 30 papers) • **Rank #10** • Frequency Score: **54.9**
+* **Canonical Questions:** **9 Unique Questions** (Q194 – Q202)
+* **Core Themes Covered:**
+  * Exception handling mechanism (`try`, `catch`, `throw`)
+  * Catch-all handlers (`catch(...)`) and re-throwing exceptions
+  * Unhandled exceptions, standard exception hierarchy, and divide-by-zero protection
+
+#### [Module 11: Operator Overloading (Binary & Unary)](/bca_new/bcs131/topics/11-operator-overloading.md)
+* **Syllabus Unit:** Block 2 Unit 2
+* **Historical Weight:** **163 Marks** (Offered in 20 of 30 papers) • **Rank #11** • Frequency Score: **43.5**
+* **Canonical Questions:** **9 Unique Questions** (Q203 – Q211)
+* **Core Themes Covered:**
+  * Operator overloading rules and operators that cannot be overloaded (`.`, `.*`, `::`, `?:`, `sizeof`)
+  * Overloading binary arithmetic operators (`+`, `-`) using member and friend functions
+  * Overloading stream insertion (`<<`) and stream extraction (`>>`) operators
+
+#### [Module 12: Code Debugging, Output Tracing & Syntax Corrections](/bca_new/bcs131/topics/12-code-debugging.md)
+* **Syllabus Unit:** Applied Practical Theory
+* **Historical Weight:** **16 Marks** (Offered in 2 of 30 papers) • **Rank #12** • Frequency Score: **6.1**
+* **Canonical Questions:** **4 Unique Questions** (Q212 – Q215)
+* **Core Themes Covered:**
+  * Tracing C++ code snippets with constructor/destructor ordering
+  * Detecting syntax and semantic errors (missing semi-colons after class, pointer misuse)
+
+---
+
+## 📦 Curriculum Alignment by IGNOU Blocks
+
+| Block | Units & Titles | Corresponding Question Modules |
+| :--- | :--- | :--- |
+| **Block 1: Basics of OOP & C++** | Unit 1: OOP Paradigm<br>Unit 2: C++ Basics & Flow<br>Unit 3: Classes & Objects<br>Unit 4: Constructors & Memory | • [Module 06: OOP Concepts](/bca_new/bcs131/topics/06-oop-concepts.md)<br>• [Module 04: Basics & Flow](/bca_new/bcs131/topics/04-basics-control-flow.md) & [Module 09: Functions](/bca_new/bcs131/topics/09-functions-overloading.md)<br>• [Module 01: Classes & Objects](/bca_new/bcs131/topics/01-classes-objects.md)<br>• [Module 03: Constructors & Memory](/bca_new/bcs131/topics/03-constructors-memory.md) |
+| **Block 2: Inheritance & Polymorphism** | Unit 1: Inheritance<br>Unit 2: Operator Overloading<br>Unit 3: Polymorphism & Virtual Functions | • [Module 07: Inheritance](/bca_new/bcs131/topics/07-inheritance.md)<br>• [Module 11: Operator Overloading](/bca_new/bcs131/topics/11-operator-overloading.md)<br>• [Module 02: Polymorphism](/bca_new/bcs131/topics/02-polymorphism.md) |
+| **Block 3: Advanced C++ Features** | Unit 1: Streams & Files<br>Unit 2: Templates & STL<br>Unit 3: Exception Handling | • [Module 08: Streams & Files](/bca_new/bcs131/topics/08-streams-files.md)<br>• [Module 05: Templates & STL](/bca_new/bcs131/topics/05-templates-stl.md)<br>• [Module 10: Exception Handling](/bca_new/bcs131/topics/10-exception-handling.md) |
+
+---
+
+## 🎯 Strategic Exam Preparation Guide
+
+> **🚨 The June 2026 Format Shift:** In the June 2026 TEE session, IGNOU replaced the old pattern of eight 5-mark short questions with **twelve 10-mark long-answer questions**.
+
+To score full marks on 10-mark questions:
+1. **Formal Definition & Technical Purpose (2 marks):** Give concise, standard terminology without fluff.
+2. **Grammar, Syntax & Rules (2 marks):** State exact syntax keywords, access permissions, and return rules.
+3. **Complete Compilable Code Snippet (4 marks):** Provide complete C++ code including `#include <iostream>`, class definition with constructor/methods, and `main()`.
+4. **Output & Trade-offs / Limitations (2 marks):** Show the exact terminal output and state any performance or memory implications.
+
+---
+
+## 🧭 Complementary Analytical Tools
+
+* **[📊 30-Paper Comprehensive Analysis](/bca_new/bcs131/analysis.md):** Full statistical frequency breakdown, longitudinal era comparisons, and top repeated questions leaderboard.
+* **[🎯 High-Probability Predictions](/bca_new/bcs131/predictions.md):** 12 target questions selected via frequency score and exam cycle gap analysis.
+* **[⚖️ Most Repeated Comparison Questions](/bca_new/bcs131/comparisons.md):** High-scoring tabular differences (OOP vs Procedural, Overloading vs Overriding, etc.).
+* **[📑 Question Papers Archive (30 PDFs)](/bca_new/bcs131/papers.md):** Direct links to all 30 original Term-End Examination question paper PDFs.
