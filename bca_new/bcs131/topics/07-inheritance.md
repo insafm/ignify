@@ -1,16 +1,11 @@
 # 07. Inheritance & Code Reusability
 
 > **Syllabus Unit:** Block 2 Unit 1 | **Rank:** #7 | **Frequency Score:** 74.2 | **Offered Marks:** 284 | **Papers Present:** 27/30 | **Importance:** High
+> **Coverage:** 22 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **22 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q145] What is inheritance? Explain the different types of inheritance supported by C++. :id=q145
 

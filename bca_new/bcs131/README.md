@@ -38,23 +38,11 @@ To score maximum marks, ensure you write:
 
 ---
 
-## 🧭 BCS-131 Modules & Resources
+## 🧭 Analytical Resources
 
-- [📊 30-Paper Comprehensive Analysis](/bca_new/bcs131/analysis.md)
-- [🎯 High-Probability Predictions for Upcoming Exam](/bca_new/bcs131/predictions.md)
-- [⚖️ Most Repeated Comparison Questions](/bca_new/bcs131/comparisons.md)
-- [🗂️ Master Question Bank (All 215 Questions)](/bca_new/bcs131/questions.md)
-
-### 📚 BCS-131 Topic Guides (Ranked by Total Marks):
-1. [01. Classes, Objects, Access, Friend & Static](/bca_new/bcs131/topics/01-classes-objects.md) — 680 marks
-2. [02. Polymorphism, Virtual & Abstract Classes](/bca_new/bcs131/topics/02-polymorphism.md) — 520 marks
-3. [03. Constructors, Destructors & Memory Management](/bca_new/bcs131/topics/03-constructors-memory.md) — 331 marks
-4. [04. C++ Basics, Operators & Control Flow](/bca_new/bcs131/topics/04-basics-control-flow.md) — 321 marks
-5. [05. Templates & Standard Template Library (STL)](/bca_new/bcs131/topics/05-templates-stl.md) — 340 marks
-6. [06. OOP Concepts & Paradigms](/bca_new/bcs131/topics/06-oop-concepts.md) — 283 marks
-7. [07. Inheritance & Code Reusability](/bca_new/bcs131/topics/07-inheritance.md) — 284 marks
-8. [08. Streams, Manipulators & File Handling](/bca_new/bcs131/topics/08-streams-files.md) — 260 marks
-9. [09. Functions, Overloading & Parameter Passing](/bca_new/bcs131/topics/09-functions-overloading.md) — 218 marks
-10. [10. Exception Handling](/bca_new/bcs131/topics/10-exception-handling.md) — 212 marks
-11. [11. Operator Overloading](/bca_new/bcs131/topics/11-operator-overloading.md) — 163 marks
-12. [12. Code Debugging & Output Tracing](/bca_new/bcs131/topics/12-code-debugging.md) — 16 marks
+| Resource | Scope | Focus |
+| :--- | :--- | :--- |
+| **[📊 30-Paper Comprehensive Analysis](/bca_new/bcs131/analysis.md)** | All 30 TEE papers | Mark weightages, topic rankings & frequency score formula |
+| **[🎯 High-Probability Predictions](/bca_new/bcs131/predictions.md)** | 12 Target questions | Statistical gap analysis & 10-mark expected questions |
+| **[⚖️ Most Repeated Comparison Questions](/bca_new/bcs131/comparisons.md)** | 14 Repeated pairs | High-scoring difference tables (OOP vs Procedural, Overloading vs Overriding, etc.) |
+| **[🗂️ Master Question Bank (Q001–Q215)](/bca_new/bcs131/questions.md)** | All 215 Questions | Deduplicated question repository organized into 4 priority tiers |

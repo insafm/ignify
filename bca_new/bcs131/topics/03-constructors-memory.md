@@ -1,16 +1,11 @@
 # 03. Constructors, Destructors & Memory Management
 
 > **Syllabus Unit:** Block 1 Unit 4 | **Rank:** #3 | **Frequency Score:** 91.5 | **Offered Marks:** 331 | **Papers Present:** 27/30 | **Importance:** Very High
+> **Coverage:** 20 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **20 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q059] Explain the concept of a copy constructor in C++ with an example program. :id=q059
 

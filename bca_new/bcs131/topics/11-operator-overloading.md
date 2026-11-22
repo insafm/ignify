@@ -1,16 +1,11 @@
 # 11. Operator Overloading
 
 > **Syllabus Unit:** Block 2 Unit 2 | **Rank:** #11 | **Frequency Score:** 43.5 | **Offered Marks:** 163 | **Papers Present:** 20/30 | **Importance:** Medium-Low
+> **Coverage:** 9 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **9 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q203] What is operator overloading? Explain its advantages and general rules. :id=q203
 

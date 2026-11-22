@@ -1,16 +1,11 @@
 # 01. Classes, Objects, Access, Friend & Static
 
 > **Syllabus Unit:** Block 1 Unit 3 | **Rank:** #1 | **Frequency Score:** 155.3 | **Offered Marks:** 680 | **Papers Present:** 29/30 | **Importance:** Very High
+> **Coverage:** 39 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **39 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q001] What are access control specifiers (public, private, protected) in C++? Explain their need, accessibility rules, and usage with examples. :id=q001
 

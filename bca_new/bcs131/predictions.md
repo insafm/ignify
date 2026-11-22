@@ -8,9 +8,7 @@
 
 A major structural shift occurred in the **June 2026** paper. Whereas exams from June 2019 through December 2025 relied heavily on 4- and 5-mark short questions (eight 5-mark questions in compulsory Q1 and short notes in Q5), **June 2026 converted the entire paper into twelve 10-mark long-answer questions** (four in compulsory Q1, two each in Q2–Q5).
 
-> 
-
-**Preparation Rule:** Prepare every high-frequency concept at **10-mark depth**—combining formal definitions, syntax rules, advantages/drawbacks, and complete compilable C++ code.
+> **Preparation Rule:** Prepare every high-frequency concept at **10-mark depth**—combining formal definitions, syntax rules, advantages/drawbacks, and complete compilable C++ code.
 
 ---
 
@@ -18,7 +16,7 @@ A major structural shift occurred in the **June 2026** paper. Whereas exams from
 
 ### #1. Friend Function, Merits/Demerits & Program
 
-**Target #1** **Q002 / Q016 / Q018** **Classes & Objects**
+**Target #1** • [Q002](/bca_new/bcs131/topics/01-classes-objects?id=q002) / [Q016](/bca_new/bcs131/topics/01-classes-objects?id=q016) / [Q018](/bca_new/bcs131/topics/01-classes-objects?id=q018) • [Classes & Objects](/bca_new/bcs131/topics/01-classes-objects.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 
@@ -30,7 +28,7 @@ A 10-mark bundled question asking for formal definition, two merits/demerits, an
 
 ### #2. Access Control Specifiers (public, private, protected) in Class & Inheritance
 
-**Target #2** **Q001 / Q146** **Classes & Inheritance**
+**Target #2** • [Q001](/bca_new/bcs131/topics/01-classes-objects?id=q001) / [Q146](/bca_new/bcs131/topics/07-inheritance?id=q146) • [Classes & Inheritance](/bca_new/bcs131/topics/01-classes-objects.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 
@@ -42,7 +40,7 @@ A combined 10-mark question covering class accessibility rules, default visibili
 
 ### #3. Operator Overloading Rules, Barred Operators & Program
 
-**Target #3** **Q203 / Q205 / Q204 / Q206** **Operator Overloading**
+**Target #3** • [Q203](/bca_new/bcs131/topics/11-operator-overloading?id=q203) / [Q205](/bca_new/bcs131/topics/11-operator-overloading?id=q205) / [Q204](/bca_new/bcs131/topics/11-operator-overloading?id=q204) / [Q206](/bca_new/bcs131/topics/11-operator-overloading?id=q206) • [Operator Overloading](/bca_new/bcs131/topics/11-operator-overloading.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 
@@ -54,7 +52,7 @@ Rules + barred operators (::, ., .*, ?:, sizeof) paired with overloading unary m
 
 ### #4. Encapsulation vs. Information Hiding
 
-**Target #4** **Q136 / Q141 / Q144** **OOP Paradigms**
+**Target #4** • [Q136](/bca_new/bcs131/topics/06-oop-concepts?id=q136) / [Q141](/bca_new/bcs131/topics/06-oop-concepts?id=q141) / [Q144](/bca_new/bcs131/topics/06-oop-concepts?id=q144) • [OOP Paradigms](/bca_new/bcs131/topics/06-oop-concepts.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 
@@ -66,7 +64,7 @@ Paired with class-based data hiding (Q144) or a small library/account code examp
 
 ### #5. Message Passing in C++ with Example
 
-**Target #5** **Q135** **OOP Paradigms**
+**Target #5** • [Q135](/bca_new/bcs131/topics/06-oop-concepts?id=q135) • [OOP Paradigms](/bca_new/bcs131/topics/06-oop-concepts.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 
@@ -78,7 +76,7 @@ A 10-mark OOP interface and object-communication question explaining method call
 
 ### #6. Exception Handling — Modified Variant
 
-**Target #6** **Q195 / Q196 / Q197 / Q200** **Exception Handling**
+**Target #6** • [Q195](/bca_new/bcs131/topics/10-exception-handling?id=q195) / [Q196](/bca_new/bcs131/topics/10-exception-handling?id=q196) / [Q197](/bca_new/bcs131/topics/10-exception-handling?id=q197) / [Q200](/bca_new/bcs131/topics/10-exception-handling?id=q200) • [Exception Handling](/bca_new/bcs131/topics/10-exception-handling.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 
@@ -90,7 +88,7 @@ Divide-by-zero (Q196), catch-all catch(...) (Q197), multiple catch blocks (Q200)
 
 ### #7. Abstract Class + Pure Virtual Program OR Virtual salary() Hierarchy
 
-**Target #7** **Q040 / Q042** **Polymorphism**
+**Target #7** • [Q040](/bca_new/bcs131/topics/02-polymorphism?id=q040) / [Q042](/bca_new/bcs131/topics/02-polymorphism?id=q042) • [Polymorphism](/bca_new/bcs131/topics/02-polymorphism.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 
@@ -102,7 +100,7 @@ Implementing either an abstract Shape class (Circle/Rectangle area) or the Emplo
 
 ### #8. Function Overloading vs. Overriding OR Compile-Time vs. Run-Time Polymorphism
 
-**Target #8** **Q041 / Q047** **Polymorphism**
+**Target #8** • [Q041](/bca_new/bcs131/topics/02-polymorphism?id=q041) / [Q047](/bca_new/bcs131/topics/02-polymorphism?id=q047) • [Polymorphism](/bca_new/bcs131/topics/02-polymorphism.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 
@@ -114,7 +112,7 @@ A comprehensive 10-mark comparison table paired with two distinct code examples 
 
 ### #9. Class Template (Stack / LinkedList / Sort) & Class vs. Function Template
 
-**Target #9** **Q120 / Q121 / Q117** **Templates & STL**
+**Target #9** • [Q120](/bca_new/bcs131/topics/05-templates-stl?id=q120) / [Q121](/bca_new/bcs131/topics/05-templates-stl?id=q121) / [Q117](/bca_new/bcs131/topics/05-templates-stl?id=q117) • [Templates & STL](/bca_new/bcs131/topics/05-templates-stl.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 
@@ -126,7 +124,7 @@ Generic Stack template class with push()/pop() methods or singly LinkedList temp
 
 ### #10. STL Containers & list Container Program
 
-**Target #10** **Q115 / Q119** **Templates & STL**
+**Target #10** • [Q115](/bca_new/bcs131/topics/05-templates-stl?id=q115) / [Q119](/bca_new/bcs131/topics/05-templates-stl?id=q119) • [Templates & STL](/bca_new/bcs131/topics/05-templates-stl.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 
@@ -138,7 +136,7 @@ Container taxonomy (Sequence, Associative, Derived) plus member functions (push_
 
 ### #11. File Handling Program (Append / Copy / Read-Write) + File Pointers
 
-**Target #11** **Q168 / Q173 / Q171** **Streams & Files**
+**Target #11** • [Q168](/bca_new/bcs131/topics/08-streams-files?id=q168) / [Q173](/bca_new/bcs131/topics/08-streams-files?id=q173) / [Q171](/bca_new/bcs131/topics/08-streams-files?id=q171) • [Streams & Files](/bca_new/bcs131/topics/08-streams-files.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 
@@ -150,7 +148,7 @@ A 10-mark program opening an existing file and appending a string (ios::app), co
 
 ### #12. Static Members (Q004) OR Constructor Overloading / Destructors (Q063 / Q060)
 
-**Target #12** **Q004 / Q060 / Q063** **Classes / Constructors**
+**Target #12** • [Q004](/bca_new/bcs131/topics/01-classes-objects?id=q004) / [Q060](/bca_new/bcs131/topics/03-constructors-memory?id=q060) / [Q063](/bca_new/bcs131/topics/03-constructors-memory?id=q063) • [Classes / Constructors](/bca_new/bcs131/topics/01-classes-objects.md)
 
 **🔍 Historical Rationale & Gap Analysis:**
 

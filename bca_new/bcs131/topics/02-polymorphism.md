@@ -1,16 +1,11 @@
 # 02. Polymorphism, Virtual & Abstract Classes
 
 > **Syllabus Unit:** Block 2 Unit 3 | **Rank:** #2 | **Frequency Score:** 120.0 | **Offered Marks:** 520 | **Papers Present:** 30/30 | **Importance:** Very High
+> **Coverage:** 19 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **19 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q040] Why do abstract classes play an important role in OOP? Implement an abstract class using a pure virtual function in C++ (and explain why it cannot be instantiated). :id=q040
 

@@ -1,16 +1,11 @@
 # 05. Templates & Standard Template Library (STL)
 
 > **Syllabus Unit:** Block 3 Unit 2 | **Rank:** #5 | **Frequency Score:** 83.0 | **Offered Marks:** 340 | **Papers Present:** 30/30 | **Importance:** High
+> **Coverage:** 19 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **19 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q115] What are Containers (Containership) in C++? List the main types of containers with examples, their importance, and common member functions. :id=q115
 

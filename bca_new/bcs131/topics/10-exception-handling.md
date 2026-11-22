@@ -1,16 +1,11 @@
 # 10. Exception Handling
 
 > **Syllabus Unit:** Block 3 Unit 3 | **Rank:** #10 | **Frequency Score:** 54.9 | **Offered Marks:** 212 | **Papers Present:** 26/30 | **Importance:** Medium
+> **Coverage:** 9 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **9 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q194] What is an exception? Explain the purpose of exception handling and how exceptions are handled in C++ (try, throw, catch) with an example program. :id=q194
 

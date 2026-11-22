@@ -1,16 +1,11 @@
 # 12. Code Debugging & Output Tracing
 
 > **Syllabus Unit:** Block 1 & 2 Applied | **Rank:** #12 | **Frequency Score:** 6.1 | **Offered Marks:** 16 | **Papers Present:** 2/30 | **Importance:** Low
+> **Coverage:** 4 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **4 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q212] Identify the errors in the code segment: cin >> num >> auuto; float area = length * breadth;. :id=q212
 

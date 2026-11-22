@@ -8,20 +8,20 @@
 
 | Comparison Pair | Related Canonical Question | Frequency | Total Marks | Most Recent Appearance |
 | :--- | :---: | :---: | :---: | :---: |
-| Structured / Procedural Programming vs. OOP | [Q134](/bca_new/bcs131/questions.md#q134) | **16** | 103 | `Jun 2026 Q4(a)` |
-| Function Overloading vs. Function Overriding | [Q041](/bca_new/bcs131/questions.md#q041) | **7** | 60 | `Jun 2024 Q2(b)` |
-| Virtual Function vs. Pure Virtual Function | [Q043](/bca_new/bcs131/questions.md#q043) | **6** | 36 | `Jun 2026 Q1(b)` |
-| Encapsulation vs. Information Hiding | [Q136](/bca_new/bcs131/questions.md#q136) | **6** | 29 | `Jun 2023 Q2(c)` |
-| Compile-Time vs. Run-Time Polymorphism | [Q047](/bca_new/bcs131/questions.md#q047) | **4** | 33 | `Jun 2021 Q4(d)` |
-| Class Template vs. Function Template | [Q117](/bca_new/bcs131/questions.md#q117) | **4** | 31 | `Jun 2021 Q5(b)` |
-| Default Constructor vs. Parameterized Constructor | [Q061](/bca_new/bcs131/questions.md#q061) | **4** | 26 | `Jun 2021 Q5(c-i)` |
-| Multiple vs. Multilevel Inheritance | [Q147](/bca_new/bcs131/questions.md#q147) | **4** | 24 | `Jun 2026 Q1(c)` |
-| Structure vs. Class in C++ | [Q006](/bca_new/bcs131/questions.md#q006) | **4** | 20 | `Dec 2025 Q1(a)` |
-| Call-by-Value vs. Call-by-Reference | [Q187](/bca_new/bcs131/questions.md#q187) | **3** | 28 | `Dec 2022 Q4(b)` |
-| Copy Constructor vs. Default Constructor | [Q065](/bca_new/bcs131/questions.md#q065) | **3** | 22 | `Jun 2026 Q4(b)` |
-| Early Binding vs. Late Binding | [Q053](/bca_new/bcs131/questions.md#q053) | **3** | 15 | `Jun 2025 Q4(c)` |
-| Global vs. Local Variable Scope | [Q082](/bca_new/bcs131/questions.md#q082) | **3** | 15 | `Jun 2025 Q1(b)` |
-| Keyword vs. Identifier | [Q084](/bca_new/bcs131/questions.md#q084) | **3** | 13 | `Dec 2025 Q2(c)` |
+| Structured / Procedural Programming vs. OOP | [Q134](/bca_new/bcs131/topics/06-oop-concepts?id=q134) | **16** | 103 | `Jun 2026 Q4(a)` |
+| Function Overloading vs. Function Overriding | [Q041](/bca_new/bcs131/topics/02-polymorphism?id=q041) | **7** | 60 | `Jun 2024 Q2(b)` |
+| Virtual Function vs. Pure Virtual Function | [Q043](/bca_new/bcs131/topics/02-polymorphism?id=q043) | **6** | 36 | `Jun 2026 Q1(b)` |
+| Encapsulation vs. Information Hiding | [Q136](/bca_new/bcs131/topics/06-oop-concepts?id=q136) | **6** | 29 | `Jun 2023 Q2(c)` |
+| Compile-Time vs. Run-Time Polymorphism | [Q047](/bca_new/bcs131/topics/02-polymorphism?id=q047) | **4** | 33 | `Jun 2021 Q4(d)` |
+| Class Template vs. Function Template | [Q117](/bca_new/bcs131/topics/05-templates-stl?id=q117) | **4** | 31 | `Jun 2021 Q5(b)` |
+| Default Constructor vs. Parameterized Constructor | [Q061](/bca_new/bcs131/topics/03-constructors-memory?id=q061) | **4** | 26 | `Jun 2021 Q5(c-i)` |
+| Multiple vs. Multilevel Inheritance | [Q147](/bca_new/bcs131/topics/07-inheritance?id=q147) | **4** | 24 | `Jun 2026 Q1(c)` |
+| Structure vs. Class in C++ | [Q006](/bca_new/bcs131/topics/01-classes-objects?id=q006) | **4** | 20 | `Dec 2025 Q1(a)` |
+| Call-by-Value vs. Call-by-Reference | [Q187](/bca_new/bcs131/topics/09-functions-overloading?id=q187) | **3** | 28 | `Dec 2022 Q4(b)` |
+| Copy Constructor vs. Default Constructor | [Q065](/bca_new/bcs131/topics/03-constructors-memory?id=q065) | **3** | 22 | `Jun 2026 Q4(b)` |
+| Early Binding vs. Late Binding | [Q053](/bca_new/bcs131/topics/02-polymorphism?id=q053) | **3** | 15 | `Jun 2025 Q4(c)` |
+| Global vs. Local Variable Scope | [Q082](/bca_new/bcs131/topics/04-basics-control-flow?id=q082) | **3** | 15 | `Jun 2025 Q1(b)` |
+| Keyword vs. Identifier | [Q084](/bca_new/bcs131/topics/04-basics-control-flow?id=q084) | **3** | 13 | `Dec 2025 Q2(c)` |
 
 ---
 
@@ -29,7 +29,7 @@
 
 ### ⚖️ Structured / Procedural Programming vs. OOP
 
-**Q134** **Asked 16 times (103 marks)** **Recent: Jun 2026 Q4(a)**
+[**Q134**](/bca_new/bcs131/topics/06-oop-concepts?id=q134) • **Asked 16 times (103 marks)** • *Recent: Jun 2026 Q4(a)*
 
 **Key Differentiating Points:**
 
@@ -37,7 +37,7 @@ Procedural focuses on step-by-step algorithms and functions (top-down), data mov
 
 ### ⚖️ Function Overloading vs. Function Overriding
 
-**Q041** **Asked 7 times (60 marks)** **Recent: Jun 2024 Q2(b)**
+[**Q041**](/bca_new/bcs131/topics/02-polymorphism?id=q041) • **Asked 7 times (60 marks)** • *Recent: Jun 2024 Q2(b)*
 
 **Key Differentiating Points:**
 
@@ -45,7 +45,7 @@ Overloading occurs in the same class/scope with identical function name but diff
 
 ### ⚖️ Virtual Function vs. Pure Virtual Function
 
-**Q043** **Asked 6 times (36 marks)** **Recent: Jun 2026 Q1(b)**
+[**Q043**](/bca_new/bcs131/topics/02-polymorphism?id=q043) • **Asked 6 times (36 marks)** • *Recent: Jun 2026 Q1(b)*
 
 **Key Differentiating Points:**
 
@@ -53,7 +53,7 @@ Virtual function has a definition in the base class and provides default behavio
 
 ### ⚖️ Encapsulation vs. Information Hiding
 
-**Q136** **Asked 6 times (29 marks)** **Recent: Jun 2023 Q2(c)**
+[**Q136**](/bca_new/bcs131/topics/06-oop-concepts?id=q136) • **Asked 6 times (29 marks)** • *Recent: Jun 2023 Q2(c)*
 
 **Key Differentiating Points:**
 
@@ -61,7 +61,7 @@ Encapsulation is the mechanism of packaging data and the methods operating on th
 
 ### ⚖️ Compile-Time vs. Run-Time Polymorphism
 
-**Q047** **Asked 4 times (33 marks)** **Recent: Jun 2021 Q4(d)**
+[**Q047**](/bca_new/bcs131/topics/02-polymorphism?id=q047) • **Asked 4 times (33 marks)** • *Recent: Jun 2021 Q4(d)*
 
 **Key Differentiating Points:**
 
@@ -69,7 +69,7 @@ Compile-time (Early/Static binding) resolves function calls at compile-time via 
 
 ### ⚖️ Class Template vs. Function Template
 
-**Q117** **Asked 4 times (31 marks)** **Recent: Jun 2021 Q5(b)**
+[**Q117**](/bca_new/bcs131/topics/05-templates-stl?id=q117) • **Asked 4 times (31 marks)** • *Recent: Jun 2021 Q5(b)*
 
 **Key Differentiating Points:**
 
@@ -77,7 +77,7 @@ Function template defines a generic algorithm where data types are passed as par
 
 ### ⚖️ Default Constructor vs. Parameterized Constructor
 
-**Q061** **Asked 4 times (26 marks)** **Recent: Jun 2021 Q5(c-i)**
+[**Q061**](/bca_new/bcs131/topics/03-constructors-memory?id=q061) • **Asked 4 times (26 marks)** • *Recent: Jun 2021 Q5(c-i)*
 
 **Key Differentiating Points:**
 
@@ -85,7 +85,7 @@ Default constructor takes zero arguments (or all arguments have default values) 
 
 ### ⚖️ Multiple vs. Multilevel Inheritance
 
-**Q147** **Asked 4 times (24 marks)** **Recent: Jun 2026 Q1(c)**
+[**Q147**](/bca_new/bcs131/topics/07-inheritance?id=q147) • **Asked 4 times (24 marks)** • *Recent: Jun 2026 Q1(c)*
 
 **Key Differentiating Points:**
 
@@ -93,7 +93,7 @@ Multiple inheritance allows one derived class to inherit directly from two or mo
 
 ### ⚖️ Structure vs. Class in C++
 
-**Q006** **Asked 4 times (20 marks)** **Recent: Dec 2025 Q1(a)**
+[**Q006**](/bca_new/bcs131/topics/01-classes-objects?id=q006) • **Asked 4 times (20 marks)** • *Recent: Dec 2025 Q1(a)*
 
 **Key Differentiating Points:**
 
@@ -101,7 +101,7 @@ In a C++ `struct`, members and base classes are `public` by default. In a `class
 
 ### ⚖️ Call-by-Value vs. Call-by-Reference
 
-**Q187** **Asked 3 times (28 marks)** **Recent: Dec 2022 Q4(b)**
+[**Q187**](/bca_new/bcs131/topics/09-functions-overloading?id=q187) • **Asked 3 times (28 marks)** • *Recent: Dec 2022 Q4(b)*
 
 **Key Differentiating Points:**
 
@@ -109,7 +109,7 @@ Call-by-Value copies the argument value into function parameters (modifications 
 
 ### ⚖️ Copy Constructor vs. Default Constructor
 
-**Q065** **Asked 3 times (22 marks)** **Recent: Jun 2026 Q4(b)**
+[**Q065**](/bca_new/bcs131/topics/03-constructors-memory?id=q065) • **Asked 3 times (22 marks)** • *Recent: Jun 2026 Q4(b)*
 
 **Key Differentiating Points:**
 
@@ -117,7 +117,7 @@ Default constructor initializes an object from scratch with default values. Copy
 
 ### ⚖️ Early Binding vs. Late Binding
 
-**Q053** **Asked 3 times (15 marks)** **Recent: Jun 2025 Q4(c)**
+[**Q053**](/bca_new/bcs131/topics/02-polymorphism?id=q053) • **Asked 3 times (15 marks)** • *Recent: Jun 2025 Q4(c)*
 
 **Key Differentiating Points:**
 
@@ -125,7 +125,7 @@ Early Binding associates function call with code address at compile time based o
 
 ### ⚖️ Global vs. Local Variable Scope
 
-**Q082** **Asked 3 times (15 marks)** **Recent: Jun 2025 Q1(b)**
+[**Q082**](/bca_new/bcs131/topics/04-basics-control-flow?id=q082) • **Asked 3 times (15 marks)** • *Recent: Jun 2025 Q1(b)*
 
 **Key Differentiating Points:**
 
@@ -133,7 +133,7 @@ Local variables are declared inside a function or block, stored on stack, and ac
 
 ### ⚖️ Keyword vs. Identifier
 
-**Q084** **Asked 3 times (13 marks)** **Recent: Dec 2025 Q2(c)**
+[**Q084**](/bca_new/bcs131/topics/04-basics-control-flow?id=q084) • **Asked 3 times (13 marks)** • *Recent: Dec 2025 Q2(c)*
 
 **Key Differentiating Points:**
 

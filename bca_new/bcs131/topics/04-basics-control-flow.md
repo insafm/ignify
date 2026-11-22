@@ -1,16 +1,11 @@
 # 04. C++ Basics, Operators & Control Flow
 
 > **Syllabus Unit:** Block 1 Unit 2 | **Rank:** #4 | **Frequency Score:** 91.0 | **Offered Marks:** 321 | **Papers Present:** 27/30 | **Importance:** High
+> **Coverage:** 36 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **36 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q079] Explain the use of break and continue statements in C++ with an example program. :id=q079
 

@@ -1,16 +1,11 @@
 # 08. Streams, Manipulators & File Handling
 
 > **Syllabus Unit:** Block 3 Unit 1 | **Rank:** #8 | **Frequency Score:** 68.0 | **Offered Marks:** 260 | **Papers Present:** 24/30 | **Importance:** Medium-High
+> **Coverage:** 17 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **17 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q167] What is a stream manipulator? Explain the use of setw() and setprecision() with examples. :id=q167
 

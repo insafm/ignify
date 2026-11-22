@@ -66,14 +66,14 @@ Just ten canonical questions account for **111 of the 550 total question items (
 
 | Rank | Canonical Question | Topic | Freq | Total Marks | Recent Presence (2024–2026) |
 | :---: | :--- | :---: | :---: | :---: | :--- |
-| 1 | [OOP vs. Structured/Procedural Programming (Q134)](/bca_new/bcs131/questions.md#q134) | OOP | **16** | 103 | Jun 2024, Jun 2025, Jun 2026 |
-| 2 | [Access Control Specifiers: public, private, protected (Q001)](/bca_new/bcs131/questions.md#q001) | CLASSES | **15** | 79 | Jun 2024, Dec 2024, Jun 2025 |
-| 3 | [Exception Handling Mechanism: try, throw, catch (Q194)](/bca_new/bcs131/questions.md#q194) | EXCEPT | **14** | 101 | All 5 papers (Jun 2024–Jun 2026) |
-| 4 | [Inline Functions, Execution & Advantages (Q184)](/bca_new/bcs131/questions.md#q184) | FUNCS | **13** | 77 | Jun 2024, Jun 2025, Jun 2026 |
-| 5 | [Message Passing in C++ with Example (Q135)](/bca_new/bcs131/questions.md#q135) | OOP | **12** | 76 | Dec 2025 |
-| 6 | [Friend Function: Properties, Advantages & Program (Q002)](/bca_new/bcs131/questions.md#q002) | CLASSES | **10** | 54 | Last seen: Dec 2023 (Overdue!) |
-| 7 | [Copy Constructor Concept & Program (Q059)](/bca_new/bcs131/questions.md#q059) | CONSTR | **9** | 55 | Jun 2025 |
-| 8 | [Abstract Class Role & Pure Virtual Function (Q040)](/bca_new/bcs131/questions.md#q040) | POLY_VIRT | **8** | 73 | Jun 2024 |
-| 9 | [Function Overloading vs. Overriding (Q041)](/bca_new/bcs131/questions.md#q041) | POLY_VIRT | **7** | 60 | Jun 2024 |
-| 10 | [STL Containers: Types, Member Functions & Utility (Q115)](/bca_new/bcs131/questions.md#q115) | TEMPL_STL | **7** | 54 | Jun 2025 |
+| 1 | [OOP vs. Structured/Procedural Programming (Q134)](/bca_new/bcs131/topics/06-oop-concepts?id=q134) | OOP | **16** | 103 | Jun 2024, Jun 2025, Jun 2026 |
+| 2 | [Access Control Specifiers: public, private, protected (Q001)](/bca_new/bcs131/topics/01-classes-objects?id=q001) | CLASSES | **15** | 79 | Jun 2024, Dec 2024, Jun 2025 |
+| 3 | [Exception Handling Mechanism: try, throw, catch (Q194)](/bca_new/bcs131/topics/10-exception-handling?id=q194) | EXCEPT | **14** | 101 | All 5 papers (Jun 2024–Jun 2026) |
+| 4 | [Inline Functions, Execution & Advantages (Q184)](/bca_new/bcs131/topics/09-functions-overloading?id=q184) | FUNCS | **13** | 77 | Jun 2024, Jun 2025, Jun 2026 |
+| 5 | [Message Passing in C++ with Example (Q135)](/bca_new/bcs131/topics/06-oop-concepts?id=q135) | OOP | **12** | 76 | Dec 2025 |
+| 6 | [Friend Function: Properties, Advantages & Program (Q002)](/bca_new/bcs131/topics/01-classes-objects?id=q002) | CLASSES | **10** | 54 | Last seen: Dec 2023 (Overdue!) |
+| 7 | [Copy Constructor Concept & Program (Q059)](/bca_new/bcs131/topics/03-constructors-memory?id=q059) | CONSTR | **9** | 55 | Jun 2025 |
+| 8 | [Abstract Class Role & Pure Virtual Function (Q040)](/bca_new/bcs131/topics/02-polymorphism?id=q040) | POLY_VIRT | **8** | 73 | Jun 2024 |
+| 9 | [Function Overloading vs. Overriding (Q041)](/bca_new/bcs131/topics/02-polymorphism?id=q041) | POLY_VIRT | **7** | 60 | Jun 2024 |
+| 10 | [STL Containers: Types, Member Functions & Utility (Q115)](/bca_new/bcs131/topics/05-templates-stl?id=q115) | TEMPL_STL | **7** | 54 | Jun 2025 |
 

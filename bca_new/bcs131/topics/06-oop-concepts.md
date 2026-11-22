@@ -1,16 +1,11 @@
 # 06. OOP Concepts & Paradigms
 
 > **Syllabus Unit:** Block 1 Unit 1 | **Rank:** #6 | **Frequency Score:** 81.5 | **Offered Marks:** 283 | **Papers Present:** 29/30 | **Importance:** High
+> **Coverage:** 11 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **11 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q134] What is the Object-Oriented Programming (OOP) paradigm? Explain its basic characteristics and advantages over structured/procedural programming. :id=q134
 

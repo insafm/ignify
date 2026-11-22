@@ -1,16 +1,11 @@
 # 09. Functions, Overloading & Parameter Passing
 
 > **Syllabus Unit:** Block 1 Unit 2 / Block 2 | **Rank:** #9 | **Frequency Score:** 56.9 | **Offered Marks:** 218 | **Papers Present:** 21/30 | **Importance:** Medium
+> **Coverage:** 10 canonical questions from 30 TEE papers (Dec 2012 – Jun 2026), ranked by historical frequency.
 
 ---
 
-## 📋 Topic Overview
-
-This module covers **10 canonical questions** asked across 30 previous-year IGNOU Term-End Examination papers. Questions are prioritized by historical recurrence.
-
----
-
-## ❓ Detailed Question Bank & Answers
+## ❓ Question Bank & Canonical Answers
 
 ### [Q184] What are inline functions? How does their execution differ from normal functions, and what are their importance and advantages? Write an example program. :id=q184
 

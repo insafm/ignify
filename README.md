@@ -56,23 +56,9 @@ Upcoming modules include Database Management Systems (**MCS-023**), Java Program
 
 ## 🚀 Active Module: BCS-131 (Programming in C++)
 
-The first complete subject repository on this portal covers **BCS-131 / BCS-031 (Programming in C++)**, analyzing **30 Term-End Examination papers** spanning December 2012 through June 2026.
+The first complete subject repository on this portal covers **BCS-131 / BCS-031 (Programming in C++)**, analyzing 30 Term-End Examination papers (Dec 2012 – Jun 2026), 215 deduplicated canonical questions, high-yield predictions, and tabular comparison guides.
 
-```
-Total Papers Analyzed : 30 TEE Papers (Dec 2012 – Jun 2026)
-Raw Questions Extracted: 512 Questions
-Canonical Deduplicated : 215 Unique Questions
-Weightage Analyzed     : 3,427 Total Marks
-Topic Modules Covered  : 12 Modules (Ranked by Marks)
-```
-
-### Quick Access to BCS-131 Resources:
-
-- **[📘 Subject Overview & Blueprint](/bca_new/bcs131/README.md)**: Syllabus breakdown across 3 blocks and 11 units, plus the June 2026 10-mark pattern shift.
-- **[📊 30-Paper Longitudinal Analysis](/bca_new/bcs131/analysis.md)**: Topic mark weightages, frequency rankings, and the standard Frequency Score formula.
-- **[🎯 Upcoming High-Yield Predictions](/bca_new/bcs131/predictions.md)**: 12 statistically high-probability target questions for the next exam cycle.
-- **[⚖️ Most Repeated Comparisons](/bca_new/bcs131/comparisons.md)**: 14 comparison guides for high-scoring tabular answers.
-- **[🗂️ Master Question Bank (Q001–Q215)](/bca_new/bcs131/questions.md)**: Full canonical repository categorized into Very High, High, Medium, and Low priority tiers.
+👉 **[Open BCS-131 Learning Module →](/bca_new/bcs131/README.md)**
 
 ---
 
