@@ -799,52 +799,53 @@
       border-top: 1px solid var(--borderColor, #e2e8f0) !important;
     }
 
-    /* Clean "Edit on GitHub" Action Bar */
-    .content-edit-bar {
+    /* Top-Right Compact Edit Page Button */
+    .content-header-bar {
       display: flex;
-      align-items: center;
       justify-content: flex-end;
-      margin-top: 3.5rem;
-      margin-bottom: 0.5rem;
-      padding-top: 1rem;
-      border-top: 1px dashed var(--borderColor, #e2e8f0);
+      align-items: center;
+      margin-top: -0.25rem;
+      margin-bottom: 0.65rem;
+      position: relative;
+      z-index: 2;
     }
-    .edit-page-link {
+    .edit-page-btn {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      font-size: 0.84rem;
+      gap: 5px;
+      font-size: 0.78rem;
       font-weight: 600;
       color: var(--textColor, #64748b);
-      text-decoration: none;
-      opacity: 0.8;
-      padding: 6px 12px;
-      border-radius: 8px;
+      text-decoration: none !important;
+      opacity: 0.82;
+      padding: 4px 10px;
+      border-radius: 6px;
       border: 1px solid var(--borderColor, #e2e8f0);
       background: var(--codeBackgroundColor, #f8fafc);
       transition: all 0.16s ease;
+      line-height: 1;
     }
-    .edit-page-link:hover {
+    .edit-page-btn:hover {
       opacity: 1;
       color: var(--accent, #4f46e5);
       border-color: var(--accent, #4f46e5);
       background: rgba(79, 70, 229, 0.08);
       transform: translateY(-1px);
     }
-    [data-theme="dark"] .edit-page-link {
+    [data-theme="dark"] .edit-page-btn {
       background: #111827;
       border-color: #1e293b;
       color: #94a3b8;
     }
-    [data-theme="dark"] .edit-page-link:hover {
+    [data-theme="dark"] .edit-page-btn:hover {
       color: #a5b4fc;
       border-color: #818cf8;
       background: rgba(129, 140, 248, 0.14);
     }
-    .edit-page-link svg.edit-icon {
-      width: 15px;
-      height: 15px;
-      stroke-width: 2;
+    .edit-page-btn svg.edit-icon {
+      width: 13px;
+      height: 13px;
+      stroke-width: 2.2;
     }
 
     /* Clean IGNify Footer with Legal Disclaimer */
@@ -1343,13 +1344,13 @@
             file = file.replace(/^\/+/, '');
             var editUrl = 'https://github.com/insafm/ignify/edit/main/' + file;
             var editBar = [
-              '<div class="content-edit-bar">',
-              '  <a href="' + editUrl + '" target="_blank" rel="noopener" class="edit-page-link" title="Suggest an edit to this document on GitHub">',
+              '<div class="content-header-bar">',
+              '  <a href="' + editUrl + '" target="_blank" rel="noopener" class="edit-page-btn" title="Edit this page on GitHub">',
               '    <svg class="edit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
               '      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>',
               '      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>',
               '    </svg>',
-              '    <span>Edit this page on GitHub</span>',
+              '    <span>Edit</span>',
               '  </a>',
               '</div>'
             ].join('\n');
@@ -1435,7 +1436,7 @@
               '  </div>',
               '</footer>'
             ].join('\n');
-            return html + paginationBar + editBar + footer;
+            return editBar + html + paginationBar + footer;
           });
 
           // Sync theme attribute to HTML tag for CSS selectors & re-render Math
