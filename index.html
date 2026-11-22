@@ -1254,6 +1254,27 @@
       background: var(--borderColor, rgba(148, 163, 184, 0.15)) !important;
     }
 
+    /* Mermaid Diagram Container */
+    .mermaid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1.75rem 0;
+      padding: 1.25rem;
+      background: var(--codeBackgroundColor, #f8fafc);
+      border: 1px solid var(--borderColor, #e2e8f0);
+      border-radius: var(--radius);
+      overflow-x: auto;
+    }
+    [data-theme="dark"] .mermaid {
+      background: #0f172a;
+      border-color: #334155;
+    }
+    .mermaid svg {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
     /* Cover Page (Neutral & Non-Green if enabled) */
     section.cover {
       background: var(--background, #ffffff) !important;
@@ -1373,6 +1394,16 @@
         crossChapter: true,
         crossChapterText: true
       },
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === 'mermaid') {
+              return '<div class="mermaid">' + code + '</div>';
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      },
       copyCode: {
         buttonText: 'Copy Code',
         errorText: 'Error',
@@ -1424,6 +1455,12 @@
 
           // Transform questions into distinct Question Cards & append single minimal footer
           hook.afterEach(function(html) {
+            // Transform mermaid pre blocks to .mermaid divs
+            html = html.replace(/<pre\s+data-lang="mermaid"[^>]*><code[^>]*>([\s\S]*?)<\/code><\/pre>/gi, function(match, code) {
+              var txt = code.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+              return '<div class="mermaid">' + txt.trim() + '</div>';
+            });
+
             var qCardRegex = /(<h3 id="(q\d+)"[^>]*>[\s\S]*?<\/blockquote>)/gi;
             html = html.replace(qCardRegex, function(match, block, qid) {
               var qUpper = qid.toUpperCase();
@@ -1648,6 +1685,19 @@
                 ],
                 throwOnError: false
               });
+            }
+
+            // Render Mermaid diagrams
+            if (window.mermaid && document.querySelector('.mermaid')) {
+              try {
+                mermaid.run({
+                  querySelector: '.mermaid'
+                }).catch(function(err) {
+                  console.warn('Mermaid rendering error:', err);
+                });
+              } catch (err) {
+                console.warn('Mermaid run error:', err);
+              }
             }
 
             // Reliable scroll to query target ID (e.g. ?id=q194)
@@ -1919,6 +1969,18 @@
   <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
+  <!-- Mermaid.js for Diagrams -->
+  <script src="//cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose'
+      });
+    }
+  </script>
 
   <!-- Docsify Core -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>

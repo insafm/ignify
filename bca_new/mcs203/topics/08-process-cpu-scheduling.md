@@ -7,81 +7,28 @@
 
 ## ❓ Question Bank & Canonical Answers
 
-### Q063: Define the Process Control Block (PCB) and detail all of its essential fields. :id=q063
+### Q067: Numerical Simulation — CPU Scheduling for Five Simultaneous Processes. :id=q067
 
-🟠 **High Priority** • **Asked in: June 2022 Q1(d) (10 Marks)** • *Theory / Data Structures*
+🔴 **Very High Priority** • **2 (20 marks)** • *Numerical / Gantt Chart*
 
-**💡 Key Answer Points:**
-- **Definition:** The Process Control Block (PCB, also known as Task Control Block) is the primary kernel data structure that stores all execution state and hardware context for an active process.
-- **Essential PCB Fields:**
-  1. **Process Identifier (PID):** Unique numeric identifier assigned to the process.
-  2. **Process State:** Current state of the process (`New`, `Ready`, `Running`, `Waiting`, `Terminated`).
-  3. **Program Counter (PC):** Hardware register pointing to the address of the next instruction to be fetched.
-  4. **CPU Registers:** Accumulators, index registers, stack pointers, and condition codes saved during a context switch.
-  5. **CPU Scheduling Information:** Process priority value, pointers to scheduling queues, and CPU burst counters.
-  6. **Memory Management Information:** Page table pointers, segment tables, and base/limit registers defining the process address space.
-  7. **Accounting Statistics:** Cumulative CPU execution time, real time elapsed, clock ticks, and account numbers.
-  8. **I/O Status Information:** List of open file descriptors, allocated I/O devices, and pending disk requests.
+**Problem Statement:**
+Processes arriving at $t = 0$: $P_1 = 7, P_2 = 6, P_3 = 9, P_4 = 4, P_5 = 3$ ms.  
+Simulate FCFS, SJF, and Round Robin ($q = 2$).
 
-> **🗓️ Asked In Papers:** `June 2022 Q1(d)`
-
----
-
-### Q064: Differentiate the execution roles and frequencies of Long-Term, Medium-Term, and Short-Term Schedulers. :id=q064
-
-🟠 **High Priority** • **Asked in: June 2024 Q3(b) (10 Marks)** • *Theory / Schedulers*
-
-**💡 Key Answer Points:**
-
-| Parameter | Long-Term Scheduler (Job Scheduler) | Medium-Term Scheduler (Swapper) | Short-Term Scheduler (CPU Scheduler) |
-| :--- | :--- | :--- | :--- |
-| **Execution Frequency** | Infrequent (seconds to minutes); executes only when a job enters or leaves. | Intermediate (seconds); runs when memory becomes overcommitted. | Highly frequent (milliseconds); executes on every clock tick or interrupt. |
-| **Primary Responsibility** | Selects jobs from disk job pool and admits them into the ready queue in RAM. | Temporarily removes processes from RAM to disk swap space (swapping out/in). | Selects a process from the ready queue and allocates the physical CPU to it. |
-| **Core Goal** | Regulates the **Degree of Multiprogramming**; balances CPU- and I/O-bound jobs. | Mitigates memory over-allocation, reduces thrashing, and frees physical RAM. | Optimizes CPU utilization, maximizes throughput, and minimizes turnaround time. |
-| **State Transition** | `New` $\rightarrow$ `Ready` | `Ready` $\leftrightarrow$ `Suspended Ready`, `Blocked` $\leftrightarrow$ `Suspended Blocked` | `Ready` $\rightarrow$ `Running` |
-
-> **🗓️ Asked In Papers:** `June 2024 Q3(b)`
-
----
-
-### Q065: Contrast CPU-bound programs with I/O-bound programs and enumerate primary OS process management duties. :id=q065
-
-🟠 **High Priority** • **Asked in: Dec 2025 Q1(a) (10 Marks)** • *Theory / Workloads*
-
-**💡 Key Answer Points:**
-- **CPU-Bound vs. I/O-Bound Programs:**
-  - **CPU-Bound Programs:** Spend the vast majority of their runtime performing complex mathematical calculations and logic loops on the processor (e.g., scientific matrix multiplication, video encoding). They have very long CPU bursts and rare I/O requests.
-  - **I/O-Bound Programs:** Spend the vast majority of their execution time waiting for input/output operations to complete (e.g., database query engines, text editors, web browsers). They feature numerous very short CPU bursts separated by long I/O waits.
-- **Primary OS Process Management Duties:**
-  1. *Process Creation & Termination:* Spawning processes via `fork()`/`exec()` and reclaiming resources via `exit()`.
-  2. *Process Scheduling:* Allocating CPU cores across ready processes to ensure fairness and maximize throughput.
-  3. *Process Synchronization:* Coordinating concurrent access to shared memory buffers to prevent race conditions.
-  4. *Inter-Process Communication (IPC):* Supplying message queues, pipes, and shared memory abstractions.
-  5. *Deadlock Handling:* Detecting, avoiding, and recovering from resource deadlocks.
-
-> **🗓️ Asked In Papers:** `Dec 2025 Q1(a)`
-
----
-
-### Q066: Define Batch, Time-Sharing, Real-Time, and Distributed Operating Systems. :id=q066
-
-🟡 **Medium Priority** • **Asked in: June 2025 Q1(a) (10 Marks)** • *Theory / OS Classification*
-
-**💡 Key Answer Points:**
-1. **Batch Operating Systems:** Jobs with similar requirements are bundled into batches by an operator and processed sequentially without direct user interaction. Maximizes CPU utilization for heavy corporate reporting.
-2. **Time-Sharing Systems:** Uses rapid CPU scheduling (timer interrupts and round-robin quantum) to provide multiple concurrent interactive users with the illusion of dedicated system ownership. Focuses on minimizing response time.
-3. **Real-Time Systems (RTOS):** Systems where the correctness of an operation depends strictly on the logical result and the exact time envelope in which it is delivered:
-   - *Hard Real-Time:* Missing a deadline results in catastrophic system failure (e.g., pacemaker, flight flight-control).
-   - *Soft Real-Time:* Missing a deadline degrades service quality but does not cause system collapse (e.g., video streaming).
-4. **Distributed Operating Systems:** Manages a collection of autonomous computers connected via high-speed networks, presenting them to the user as a single, coherent, transparent system.
+- **SJF Order:** $P_5(3) \rightarrow P_4(4) \rightarrow P_2(6) \rightarrow P_1(7) \rightarrow P_3(9)$
+- Completion Times: $P_5 = 3, P_4 = 7, P_2 = 13, P_1 = 20, P_3 = 29$
+- Waiting Times: $P_5 = 0, P_4 = 3, P_2 = 7, P_1 = 13, P_3 = 20$
+- **Average Waiting Time (SJF):** $(0 + 3 + 7 + 13 + 20) / 5 = 43 / 5 = 8.6 \text{ ms}$.
 
 > **🗓️ Asked In Papers:** `June 2025 Q1(a), June 2026 Q1(a)`
 
 ---
 
-### Q067: Numerical Simulation — FCFS, SJF, and Round Robin Scheduling (Simultaneous Arrival). :id=q067
+---
 
-🔴 **Very High Priority** • **Asked in: Dec 2022 Q1(b) (10 Marks)** • *Numerical / Gantt Chart*
+### Q068: Numerical Simulation — FCFS, SJF, and Round Robin Scheduling (Simultaneous Arrival). :id=q068
+
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Gantt Chart*
 
 **Problem Statement:**
 Processes arriving simultaneously at time $t = 0$:  
@@ -123,9 +70,11 @@ Execution Order: $P_1 (10) \rightarrow P_2 (8) \rightarrow P_3 (4) \rightarrow P
 
 ---
 
-### Q068: Numerical Simulation — CPU Scheduling with Distinct Arrival Times. :id=q068
+---
 
-🔴 **Very High Priority** • **Asked in: Dec 2023 Q1(a) (10 Marks)** • *Numerical / Distinct Arrivals*
+### Q069: Numerical Simulation — CPU Scheduling with Distinct Arrival Times. :id=q069
+
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Distinct Arrivals*
 
 **Problem Statement:**
 Process Table:  
@@ -150,39 +99,11 @@ Calculate TAT, WT, and CPU Utilization under FCFS, SJF, and Round Robin ($q = 2$
 
 ---
 
-### Q069: Numerical Simulation — CPU Scheduling for Five Simultaneous Processes. :id=q069
-
-🔴 **Very High Priority** • **Asked in: June 2025 Q1(a) (10 Marks)** • *Numerical / Gantt Chart*
-
-**Problem Statement:**
-Processes arriving at $t = 0$: $P_1 = 7, P_2 = 6, P_3 = 9, P_4 = 4, P_5 = 3$ ms.  
-Simulate FCFS, SJF, and Round Robin ($q = 2$).
-
-- **SJF Order:** $P_5(3) \rightarrow P_4(4) \rightarrow P_2(6) \rightarrow P_1(7) \rightarrow P_3(9)$
-- Completion Times: $P_5 = 3, P_4 = 7, P_2 = 13, P_1 = 20, P_3 = 29$
-- Waiting Times: $P_5 = 0, P_4 = 3, P_2 = 7, P_1 = 13, P_3 = 20$
-- **Average Waiting Time (SJF):** $(0 + 3 + 7 + 13 + 20) / 5 = 43 / 5 = 8.6 \text{ ms}$.
-
-> **🗓️ Asked In Papers:** `June 2025 Q1(a), June 2026 Q1(a)`
-
 ---
 
-### Q070: Analyze CPU Scheduling algorithms: FCFS, Round Robin, and Priority Scheduling, discussing discrimination against short processes and starvation. :id=q070
+### Q070: Numerical Simulation — CPU Scheduling with FCFS, SRTN, and Round Robin (q = 2). :id=q070
 
-🟠 **High Priority** • **Asked in: June 2022 Q2(a) (10 Marks)** • *Theory / Comparative Evaluation*
-
-**💡 Key Answer Points:**
-1. **FCFS Evaluation:** Simple, non-preemptive. Severe discrimination against short processes due to the **Convoy Effect**, where short I/O-bound jobs wait behind a single CPU-heavy job.
-2. **Round Robin (RR) Evaluation:** Preemptive, fair, responsive. Solves the convoy effect by imposing a fixed time slice $q$. However, if $q$ is too small, context-switching overhead dominates CPU runtime.
-3. **Priority Scheduling Evaluation:** Allocates CPU to highest-priority tasks. Suffers from **Starvation (Indefinite Blocking)** for low-priority processes. Solved via **Aging** (gradually increasing a waiting process's priority over time).
-
-> **🗓️ Asked In Papers:** `June 2022 Q2(a)`
-
----
-
-### Q069A: Numerical Simulation — CPU Scheduling with FCFS, SRTN, and Round Robin (q = 2). :id=q069a
-
-🔴 **Very High Priority** • **Asked in: June 2026 Q1(b) (10 Marks)** • *Numerical / Gantt Chart & Performance Metrics*
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Gantt Chart & Performance Metrics*
 
 **Problem Statement:**
 Consider processes arriving with distinct arrival times:
@@ -246,3 +167,98 @@ Draw Gantt charts and compute average Turnaround Time ($TAT$), Waiting Time ($WT
 - **WT:** $P_1 = 4, P_2 = 12, P_3 = 2, P_4 = 12, P_5 = 10 \implies \text{Average } WT = 40 / 5 = \mathbf{8.0 \text{ ms}}$
 
 > **🗓️ Asked In Papers:** `June 2026 Q1(b)`
+
+---
+
+### Q071: Define the Process Control Block (PCB) and detail all of its essential fields. :id=q071
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Data Structures*
+
+**💡 Key Answer Points:**
+- **Definition:** The Process Control Block (PCB, also known as Task Control Block) is the primary kernel data structure that stores all execution state and hardware context for an active process.
+- **Essential PCB Fields:**
+  1. **Process Identifier (PID):** Unique numeric identifier assigned to the process.
+  2. **Process State:** Current state of the process (`New`, `Ready`, `Running`, `Waiting`, `Terminated`).
+  3. **Program Counter (PC):** Hardware register pointing to the address of the next instruction to be fetched.
+  4. **CPU Registers:** Accumulators, index registers, stack pointers, and condition codes saved during a context switch.
+  5. **CPU Scheduling Information:** Process priority value, pointers to scheduling queues, and CPU burst counters.
+  6. **Memory Management Information:** Page table pointers, segment tables, and base/limit registers defining the process address space.
+  7. **Accounting Statistics:** Cumulative CPU execution time, real time elapsed, clock ticks, and account numbers.
+  8. **I/O Status Information:** List of open file descriptors, allocated I/O devices, and pending disk requests.
+
+> **🗓️ Asked In Papers:** `June 2022 Q1(d)`
+
+---
+
+---
+
+### Q072: Differentiate the execution roles and frequencies of Long-Term, Medium-Term, and Short-Term Schedulers. :id=q072
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Schedulers*
+
+**💡 Key Answer Points:**
+
+| Parameter | Long-Term Scheduler (Job Scheduler) | Medium-Term Scheduler (Swapper) | Short-Term Scheduler (CPU Scheduler) |
+| :--- | :--- | :--- | :--- |
+| **Execution Frequency** | Infrequent (seconds to minutes); executes only when a job enters or leaves. | Intermediate (seconds); runs when memory becomes overcommitted. | Highly frequent (milliseconds); executes on every clock tick or interrupt. |
+| **Primary Responsibility** | Selects jobs from disk job pool and admits them into the ready queue in RAM. | Temporarily removes processes from RAM to disk swap space (swapping out/in). | Selects a process from the ready queue and allocates the physical CPU to it. |
+| **Core Goal** | Regulates the **Degree of Multiprogramming**; balances CPU- and I/O-bound jobs. | Mitigates memory over-allocation, reduces thrashing, and frees physical RAM. | Optimizes CPU utilization, maximizes throughput, and minimizes turnaround time. |
+| **State Transition** | `New` $\rightarrow$ `Ready` | `Ready` $\leftrightarrow$ `Suspended Ready`, `Blocked` $\leftrightarrow$ `Suspended Blocked` | `Ready` $\rightarrow$ `Running` |
+
+> **🗓️ Asked In Papers:** `June 2024 Q3(b)`
+
+---
+
+---
+
+### Q073: Contrast CPU-bound programs with I/O-bound programs and enumerate primary OS process management duties. :id=q073
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Workloads*
+
+**💡 Key Answer Points:**
+- **CPU-Bound vs. I/O-Bound Programs:**
+  - **CPU-Bound Programs:** Spend the vast majority of their runtime performing complex mathematical calculations and logic loops on the processor (e.g., scientific matrix multiplication, video encoding). They have very long CPU bursts and rare I/O requests.
+  - **I/O-Bound Programs:** Spend the vast majority of their execution time waiting for input/output operations to complete (e.g., database query engines, text editors, web browsers). They feature numerous very short CPU bursts separated by long I/O waits.
+- **Primary OS Process Management Duties:**
+  1. *Process Creation & Termination:* Spawning processes via `fork()`/`exec()` and reclaiming resources via `exit()`.
+  2. *Process Scheduling:* Allocating CPU cores across ready processes to ensure fairness and maximize throughput.
+  3. *Process Synchronization:* Coordinating concurrent access to shared memory buffers to prevent race conditions.
+  4. *Inter-Process Communication (IPC):* Supplying message queues, pipes, and shared memory abstractions.
+  5. *Deadlock Handling:* Detecting, avoiding, and recovering from resource deadlocks.
+
+> **🗓️ Asked In Papers:** `Dec 2025 Q1(a)`
+
+---
+
+---
+
+### Q074: Analyze CPU Scheduling algorithms: FCFS, Round Robin, and Priority Scheduling, discussing discrimination against short processes and starvation. :id=q074
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Comparative Evaluation*
+
+**💡 Key Answer Points:**
+1. **FCFS Evaluation:** Simple, non-preemptive. Severe discrimination against short processes due to the **Convoy Effect**, where short I/O-bound jobs wait behind a single CPU-heavy job.
+2. **Round Robin (RR) Evaluation:** Preemptive, fair, responsive. Solves the convoy effect by imposing a fixed time slice $q$. However, if $q$ is too small, context-switching overhead dominates CPU runtime.
+3. **Priority Scheduling Evaluation:** Allocates CPU to highest-priority tasks. Suffers from **Starvation (Indefinite Blocking)** for low-priority processes. Solved via **Aging** (gradually increasing a waiting process's priority over time).
+
+> **🗓️ Asked In Papers:** `June 2022 Q2(a)`
+
+---
+
+---
+
+### Q075: Define Batch, Time-Sharing, Real-Time, and Distributed Operating Systems. :id=q075
+
+🟡 **Medium Priority** • **2 (20 marks)** • *Theory / OS Classification*
+
+**💡 Key Answer Points:**
+1. **Batch Operating Systems:** Jobs with similar requirements are bundled into batches by an operator and processed sequentially without direct user interaction. Maximizes CPU utilization for heavy corporate reporting.
+2. **Time-Sharing Systems:** Uses rapid CPU scheduling (timer interrupts and round-robin quantum) to provide multiple concurrent interactive users with the illusion of dedicated system ownership. Focuses on minimizing response time.
+3. **Real-Time Systems (RTOS):** Systems where the correctness of an operation depends strictly on the logical result and the exact time envelope in which it is delivered:
+   - *Hard Real-Time:* Missing a deadline results in catastrophic system failure (e.g., pacemaker, flight flight-control).
+   - *Soft Real-Time:* Missing a deadline degrades service quality but does not cause system collapse (e.g., video streaming).
+4. **Distributed Operating Systems:** Manages a collection of autonomous computers connected via high-speed networks, presenting them to the user as a single, coherent, transparent system.
+
+> **🗓️ Asked In Papers:** `June 2025 Q1(a), June 2026 Q1(a)`
+
+---

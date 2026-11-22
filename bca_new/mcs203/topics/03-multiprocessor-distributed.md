@@ -7,31 +7,27 @@
 
 ## ❓ Question Bank & Canonical Answers
 
-### Q031: Explain Lamport's Logical Clocks scheme and the happens-before relation for distributed event ordering. :id=q031
+### Q032: Enumerate and explain the core design challenges and issues in building Distributed Systems. :id=q032
 
-🟠 **High Priority** • **Asked in: June 2022 Q5(a) (10 Marks)** • *Theory / Algorithm*
+🔴 **Very High Priority** • **3 (30 marks)** • *Theory / Short & Long Answer*
 
 **💡 Key Answer Points:**
-- **The Challenge:** Distributed nodes lack physical shared memory and a synchronized global clock.
-- **Happens-Before Relation ($
-ightarrow$):**
-  1. If events $a$ and $b$ occur within the same process, and $a$ occurs before $b$, then $a \rightarrow b$.
-  2. If $a$ is the sending of a message by one process, and $b$ is the receipt of the same message by another process, then $a \rightarrow b$.
-  3. If $a \rightarrow b$ and $b \rightarrow c$, then $a \rightarrow c$ (Transitivity).
-- **Lamport's Clock Algorithm Rules:**
-  - Each process $P_i$ maintains a scalar integer clock $C_i$.
-  - **Rule 1 (Internal Event):** Before executing an event, $P_i$ increments its clock: $C_i = C_i + 1$.
-  - **Rule 2 (Message Passing):** When sending message $m$, $P_i$ attaches timestamp $ts(m) = C_i$.
-  - **Rule 3 (Message Receipt):** When process $P_j$ receives message $m$ with timestamp $ts(m)$, it updates its local clock:
-    $$C_j = \max(C_j, ts(m)) + 1$$
+1. **Heterogeneity:** Managing diverse hardware architectures (ARM, x86), operating systems (Linux, Windows), networks, and programming languages using standardized middleware.
+2. **Openness:** Designing systems with standardized public interfaces (e.g., POSIX, REST) so new services can be added without disrupting existing operations.
+3. **Security:** Protecting data confidentiality and integrity across open network channels through encryption, authentication (Kerberos), and non-repudiation.
+4. **Scalability:** Ensuring performance does not degrade as users, data volumes, and geographically distributed nodes increase.
+5. **Independent Failure Handling:** Detecting and recovering from partial failures without halting the entire system (fault tolerance, data replication, consensus algorithms).
+6. **Transparency:** Concealing distributed complexity from users across 8 dimensions: Access, Location, Migration, Relocation, Replication, Concurrency, Failure, and Persistence transparency.
 
-> **🗓️ Asked In Papers:** `June 2022 Q5(a)`
+> **🗓️ Asked In Papers:** `Dec 2021 Q1(c), June 2024 Q1(b), Dec 2025 Q1(c)`
 
 ---
 
-### Q032: Write and explain Ricart and Agrawala's distributed mutual exclusion algorithm. :id=q032
+---
 
-🔴 **Very High Priority** • **Asked in: Dec 2021 Q3(a), June 2025 Q4(a) (10 Marks)** • *Theory / Algorithm & Protocols*
+### Q033: Write and explain Ricart and Agrawala's distributed mutual exclusion algorithm. :id=q033
+
+🔴 **Very High Priority** • **2 (20 marks)** • *Theory / Algorithm & Protocols*
 
 **💡 Key Answer Points:**
 - **Algorithm Nature:** A permission-based, non-token algorithm optimizing Lamport's algorithm. It requires no central coordinator and reduces communication overhead to exactly **$2(N-1)$ messages** per Critical Section (CS) execution.
@@ -59,55 +55,11 @@ ightarrow$):**
 
 ---
 
-### Q033: Enumerate and explain the core design challenges and issues in building Distributed Systems. :id=q033
-
-🔴 **Very High Priority** • **Asked in: Dec 2021 Q1(c), June 2024 Q1(b), Dec 2025 Q1(c) (10 Marks)** • *Theory / Short & Long Answer*
-
-**💡 Key Answer Points:**
-1. **Heterogeneity:** Managing diverse hardware architectures (ARM, x86), operating systems (Linux, Windows), networks, and programming languages using standardized middleware.
-2. **Openness:** Designing systems with standardized public interfaces (e.g., POSIX, REST) so new services can be added without disrupting existing operations.
-3. **Security:** Protecting data confidentiality and integrity across open network channels through encryption, authentication (Kerberos), and non-repudiation.
-4. **Scalability:** Ensuring performance does not degrade as users, data volumes, and geographically distributed nodes increase.
-5. **Independent Failure Handling:** Detecting and recovering from partial failures without halting the entire system (fault tolerance, data replication, consensus algorithms).
-6. **Transparency:** Concealing distributed complexity from users across 8 dimensions: Access, Location, Migration, Relocation, Replication, Concurrency, Failure, and Persistence transparency.
-
-> **🗓️ Asked In Papers:** `Dec 2021 Q1(c), June 2024 Q1(b), Dec 2025 Q1(c)`
-
 ---
 
-### Q034: Explain the Distributed Shared Memory (DSM) application model with an architectural block diagram. :id=q034
+### Q034: Detail multiprocessor synchronization hardware primitives: Test-and-Set, Compare-and-Swap, and Fetch-and-Add. :id=q034
 
-🟠 **High Priority** • **Asked in: June 2023 Q3(b) (10 Marks)** • *Theory / Diagram & Architecture*
-
-**💡 Key Answer Points:**
-- **Concept:** Distributed Shared Memory provides a virtual shared address space abstraction across physically separate, networked computer nodes. Programmers use standard shared-memory pointers and variables instead of message-passing APIs.
-
-```
-+------------------------+      +------------------------+
-| Application Threads P1 |      | Application Threads P2 |
-+------------------------+      +------------------------+
-|    DSM Software Layer  | <--> |    DSM Software Layer  |
-+------------------------+      +------------------------+
-| Local Physical Memory  |      | Local Physical Memory  |
-+------------------------+      +------------------------+
-| Network Interface Card |      | Network Interface Card |
-+------------------------+      +------------------------+
-            ^                               ^
-            +====== High-Speed Network =====+
-```
-
-- **Operational Coordination:**
-  - When thread $P_1$ accesses a page present in local RAM, access is instantaneous.
-  - If the page resides on a remote node, the MMU fires a page fault intercepted by the DSM runtime layer.
-  - The DSM software requests the page across the network, caches it locally, and uses memory consistency protocols (Strict, Sequential, or Release Consistency) to maintain global coherence.
-
-> **🗓️ Asked In Papers:** `June 2023 Q3(b), June 2026 Q5(e)`
-
----
-
-### Q035: Detail multiprocessor synchronization hardware primitives: Test-and-Set, Compare-and-Swap, and Fetch-and-Add. :id=q035
-
-🔴 **Very High Priority** • **Asked in: June 2023 Q4(a), Dec 2023 Q2(b) (10 Marks)** • *Theory / Hardware Primitives*
+🔴 **Very High Priority** • **2 (20 marks)** • *Theory / Hardware Primitives*
 
 **💡 Key Answer Points:**
 Modern multi-core processors enforce mutual exclusion using low-level, atomic (indivisible) hardware bus instructions:
@@ -142,79 +94,11 @@ int FetchAndAdd(int *variable, int increment) {
 
 ---
 
-### Q036: Contrast the three primary architectures for distributed applications: Client/Server (RPC), Distributed Objects, and Distributed Shared Memory. :id=q036
-
-🟠 **High Priority** • **Asked in: Dec 2023 Q2(a) (10 Marks)** • *Theory / Comparison & Architecture*
-
-**💡 Key Answer Points:**
-
-| Architecture | Communication Paradigm | State Location | Programming Abstraction |
-| :--- | :--- | :--- | :--- |
-| **Client/Server (RPC)** | Synchronous Request / Reply message exchange over network sockets. | Server holds centralized state; clients are stateless or session-bound. | Function calls look local via client/server stubs (`stub.invoke()`). |
-| **Distributed Objects** | Remote Method Invocation (RMI / CORBA / DCOM). | Encapsulated inside distributed objects across network hosts. | Object-oriented method invocations across address spaces (`remoteObj.method()`). |
-| **Distributed Shared Memory (DSM)** | Hardware/software page faulting and virtual memory replication. | Shared virtual address space mapped across nodes' physical memories. | Standard memory load/store operations (`*ptr = value`) with hardware MMU. |
-
-> **🗓️ Asked In Papers:** `Dec 2023 Q2(a)`
-
 ---
 
-### Q037: Explain Remote Procedure Call (RPC): Execution steps, data marshaling, and inherent limitations. :id=q037
+### Q035: Explain Lamport's Distributed Mutual Exclusion Algorithm and message exchange protocol. :id=q035
 
-🟠 **High Priority** • **Asked in: Dec 2023 Q5(d), Dec 2025 Q4(a) (10 Marks)** • *Theory / Architecture*
-
-**💡 Key Answer Points:**
-- **Concept:** RPC abstracts network message passing so calling a function on a remote machine syntactically mirrors a local function call.
-- **Components & Execution Sequence:**
-  1. **Client Stub:** Marshals procedure name and arguments into a standardized network packet (Serialization/XDR).
-  2. **Communication Module:** Transmits the message over network protocols (UDP/TCP).
-  3. **Server Stub:** Unmarshals parameters from the network packet and invokes the actual server procedure.
-  4. **Return Path:** Results are marshaled by the server stub, returned via network, and unmarshaled by the client stub to resume client execution.
-- **Inherent Limitations:**
-  - *Network Latency:* Network traversal is orders of magnitude slower than local register/stack calls.
-  - *Failure Modes:* Network partitions, lost packets, and independent server crashes introduce complex failure states.
-  - *Pointer Passing:* Memory pointers and references cannot be passed directly across distinct address spaces without deep copying.
-
-> **🗓️ Asked In Papers:** `Dec 2023 Q5(d), Dec 2025 Q4(a), June 2026 Q5(a)`
-
----
-
-### Q038: Explain Multiprocessor Operating System configurations: Master/Slave vs. Separate Supervisor. :id=q038
-
-🟠 **High Priority** • **Asked in: June 2025 Q4(b) (10 Marks)** • *Theory / Architecture*
-
-**💡 Key Answer Points:**
-1. **Master/Slave Configuration:**
-   - One designated processor (the Master) executes the operating system kernel, handles interrupts, coordinates memory allocations, and schedules jobs.
-   - Remaining processors (Slaves) execute user application tasks only. When a slave requires OS services, it generates a trap to the master.
-   - *Limitation:* The master CPU becomes a massive system bottleneck; master failure brings down the entire system.
-2. **Separate Supervisor Configuration:**
-   - Each processor runs its own private copy of the operating system kernel.
-   - Each processor manages its own local memory, interrupts, and ready queues independently.
-   - *Limitation:* Resource sharing across processors is difficult; memory tables and process states must be explicitly duplicated.
-
-> **🗓️ Asked In Papers:** `June 2025 Q4(b)`
-
----
-
-### Q039: Contrast Tightly-Coupled Systems with Loosely-Coupled Systems. :id=q039
-
-🟡 **Medium Priority** • **Asked in: Dec 2024 Q4(c) (5 Marks)** • *Theory / Comparison*
-
-**💡 Key Answer Points:**
-- **Tightly-Coupled Systems (Multiprocessors):**
-  - Processors share a single central memory (RAM), system bus, clock, and peripherals.
-  - Coordinated by a single unified operating system. Communication occurs at memory bus speeds (nanoseconds) via shared variables.
-- **Loosely-Coupled Systems (Distributed Systems):**
-  - Consists of autonomous independent computers, each possessing its own local CPU, memory, clock, and operating system instance.
-  - Nodes communicate strictly via message-passing packets across local or wide area network links (millisecond latency).
-
-> **🗓️ Asked In Papers:** `Dec 2024 Q4(c)`
-
----
-
-### Q032A: Explain Lamport's Distributed Mutual Exclusion Algorithm and message exchange protocol. :id=q032a
-
-🔴 **Very High Priority** • **Asked in: June 2026 Q1(d) (10 Marks)** • *Theory & Distributed Protocols*
+🔴 **Very High Priority** • **1 (10 marks)** • *Theory & Distributed Protocols*
 
 **💡 Key Answer Points:**
 - **Foundation:** Lamport's Distributed Mutual Exclusion Algorithm was the first permission-based algorithm designed to achieve mutual exclusion without a central coordinator, relying on Lamport Logical Clocks to establish total event ordering.
@@ -236,3 +120,137 @@ int FetchAndAdd(int *variable, int increment) {
 - **Message Complexity:** Requires $3(N-1)$ messages per critical section invocation ($(N-1)$ requests + $(N-1)$ replies + $(N-1)$ releases). *(Note: Ricart-Agrawala later optimized this to $2(N-1)$ messages by eliminating explicit release messages).*
 
 > **🗓️ Asked In Papers:** `June 2026 Q1(d)`
+
+---
+
+### Q036: Explain Remote Procedure Call (RPC): Execution steps, data marshaling, and inherent limitations. :id=q036
+
+🟠 **High Priority** • **3 (30 marks)** • *Theory / Architecture*
+
+**💡 Key Answer Points:**
+- **Concept:** RPC abstracts network message passing so calling a function on a remote machine syntactically mirrors a local function call.
+- **Components & Execution Sequence:**
+  1. **Client Stub:** Marshals procedure name and arguments into a standardized network packet (Serialization/XDR).
+  2. **Communication Module:** Transmits the message over network protocols (UDP/TCP).
+  3. **Server Stub:** Unmarshals parameters from the network packet and invokes the actual server procedure.
+  4. **Return Path:** Results are marshaled by the server stub, returned via network, and unmarshaled by the client stub to resume client execution.
+- **Inherent Limitations:**
+  - *Network Latency:* Network traversal is orders of magnitude slower than local register/stack calls.
+  - *Failure Modes:* Network partitions, lost packets, and independent server crashes introduce complex failure states.
+  - *Pointer Passing:* Memory pointers and references cannot be passed directly across distinct address spaces without deep copying.
+
+> **🗓️ Asked In Papers:** `Dec 2023 Q5(d), Dec 2025 Q4(a), June 2026 Q5(a)`
+
+---
+
+---
+
+### Q037: Explain the Distributed Shared Memory (DSM) application model with an architectural block diagram. :id=q037
+
+🟠 **High Priority** • **2 (20 marks)** • *Theory / Diagram & Architecture*
+
+**💡 Key Answer Points:**
+- **Concept:** Distributed Shared Memory provides a virtual shared address space abstraction across physically separate, networked computer nodes. Programmers use standard shared-memory pointers and variables instead of message-passing APIs.
+
+```
++------------------------+      +------------------------+
+| Application Threads P1 |      | Application Threads P2 |
++------------------------+      +------------------------+
+|    DSM Software Layer  | <--> |    DSM Software Layer  |
++------------------------+      +------------------------+
+| Local Physical Memory  |      | Local Physical Memory  |
++------------------------+      +------------------------+
+| Network Interface Card |      | Network Interface Card |
++------------------------+      +------------------------+
+            ^                               ^
+            +====== High-Speed Network =====+
+```
+
+- **Operational Coordination:**
+  - When thread $P_1$ accesses a page present in local RAM, access is instantaneous.
+  - If the page resides on a remote node, the MMU fires a page fault intercepted by the DSM runtime layer.
+  - The DSM software requests the page across the network, caches it locally, and uses memory consistency protocols (Strict, Sequential, or Release Consistency) to maintain global coherence.
+
+> **🗓️ Asked In Papers:** `June 2023 Q3(b), June 2026 Q5(e)`
+
+---
+
+---
+
+### Q038: Explain Lamport's Logical Clocks scheme and the happens-before relation for distributed event ordering. :id=q038
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Algorithm*
+
+**💡 Key Answer Points:**
+- **The Challenge:** Distributed nodes lack physical shared memory and a synchronized global clock.
+- **Happens-Before Relation ($
+ightarrow$):**
+  1. If events $a$ and $b$ occur within the same process, and $a$ occurs before $b$, then $a \rightarrow b$.
+  2. If $a$ is the sending of a message by one process, and $b$ is the receipt of the same message by another process, then $a \rightarrow b$.
+  3. If $a \rightarrow b$ and $b \rightarrow c$, then $a \rightarrow c$ (Transitivity).
+- **Lamport's Clock Algorithm Rules:**
+  - Each process $P_i$ maintains a scalar integer clock $C_i$.
+  - **Rule 1 (Internal Event):** Before executing an event, $P_i$ increments its clock: $C_i = C_i + 1$.
+  - **Rule 2 (Message Passing):** When sending message $m$, $P_i$ attaches timestamp $ts(m) = C_i$.
+  - **Rule 3 (Message Receipt):** When process $P_j$ receives message $m$ with timestamp $ts(m)$, it updates its local clock:
+    $$C_j = \max(C_j, ts(m)) + 1$$
+
+> **🗓️ Asked In Papers:** `June 2022 Q5(a)`
+
+---
+
+---
+
+### Q039: Contrast the three primary architectures for distributed applications: Client/Server (RPC), Distributed Objects, and Distributed Shared Memory. :id=q039
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Comparison & Architecture*
+
+**💡 Key Answer Points:**
+
+| Architecture | Communication Paradigm | State Location | Programming Abstraction |
+| :--- | :--- | :--- | :--- |
+| **Client/Server (RPC)** | Synchronous Request / Reply message exchange over network sockets. | Server holds centralized state; clients are stateless or session-bound. | Function calls look local via client/server stubs (`stub.invoke()`). |
+| **Distributed Objects** | Remote Method Invocation (RMI / CORBA / DCOM). | Encapsulated inside distributed objects across network hosts. | Object-oriented method invocations across address spaces (`remoteObj.method()`). |
+| **Distributed Shared Memory (DSM)** | Hardware/software page faulting and virtual memory replication. | Shared virtual address space mapped across nodes' physical memories. | Standard memory load/store operations (`*ptr = value`) with hardware MMU. |
+
+> **🗓️ Asked In Papers:** `Dec 2023 Q2(a)`
+
+---
+
+---
+
+### Q040: Explain Multiprocessor Operating System configurations: Master/Slave vs. Separate Supervisor. :id=q040
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Architecture*
+
+**💡 Key Answer Points:**
+1. **Master/Slave Configuration:**
+   - One designated processor (the Master) executes the operating system kernel, handles interrupts, coordinates memory allocations, and schedules jobs.
+   - Remaining processors (Slaves) execute user application tasks only. When a slave requires OS services, it generates a trap to the master.
+   - *Limitation:* The master CPU becomes a massive system bottleneck; master failure brings down the entire system.
+2. **Separate Supervisor Configuration:**
+   - Each processor runs its own private copy of the operating system kernel.
+   - Each processor manages its own local memory, interrupts, and ready queues independently.
+   - *Limitation:* Resource sharing across processors is difficult; memory tables and process states must be explicitly duplicated.
+
+> **🗓️ Asked In Papers:** `June 2025 Q4(b)`
+
+---
+
+---
+
+### Q041: Contrast Tightly-Coupled Systems with Loosely-Coupled Systems. :id=q041
+
+🟡 **Medium Priority** • **1 (5 marks)** • *Theory / Comparison*
+
+**💡 Key Answer Points:**
+- **Tightly-Coupled Systems (Multiprocessors):**
+  - Processors share a single central memory (RAM), system bus, clock, and peripherals.
+  - Coordinated by a single unified operating system. Communication occurs at memory bus speeds (nanoseconds) via shared variables.
+- **Loosely-Coupled Systems (Distributed Systems):**
+  - Consists of autonomous independent computers, each possessing its own local CPU, memory, clock, and operating system instance.
+  - Nodes communicate strictly via message-passing packets across local or wide area network links (millisecond latency).
+
+> **🗓️ Asked In Papers:** `Dec 2024 Q4(c)`
+
+---

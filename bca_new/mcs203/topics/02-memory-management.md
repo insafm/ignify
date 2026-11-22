@@ -9,7 +9,7 @@
 
 ### Q018: Define Segmentation. With the help of an architectural diagram, explain the address translation hardware and protection mechanisms. :id=q018
 
-🔴 **Very High Priority** • **Asked in: June 2022 Q3(a), June 2023 Q1(c), Dec 2024 Q5(b) (10 Marks)** • *Theory / Diagram & Architecture*
+🔴 **Very High Priority** • **4 (40 marks)** • *Theory / Diagram & Architecture*
 
 **💡 Key Answer Points:**
 - **Definition:** Segmentation is a variable-length memory management scheme that mirrors the programmer's view of a program. A logical address space is a collection of named/numbered segments (code, stack, heap, symbol table).
@@ -54,42 +54,11 @@
 
 ---
 
-### Q019: Define Thrashing. Explain its causes, consequences, and prevention techniques (Working Set Model and Page Fault Frequency). :id=q019
-
-🟠 **High Priority** • **Asked in: June 2022 Q4(b) (10 Marks)** • *Theory / Long Answer*
-
-**💡 Key Answer Points:**
-- **Definition:** Thrashing occurs when an operating system spends substantially more time swapping pages in and out of backing store than executing user instructions.
-- **Underlying Cause:** Occurs when the sum of the **localities** (working sets) of all active processes exceeds total available physical memory frames:
-  $$\sum WSS_i > D > \text{Total Physical Frames}$$
-  Processes continuously fault, enter waiting queues for disk I/O, and CPU utilization plummets. In response, a naive OS medium-term scheduler attempts to admit more processes to increase CPU utilization, compounding the catastrophe.
-- **Prevention Techniques:**
-  1. **Working Set Model:** Introduced by Peter Denning. Monitors the set of pages referenced by a process during the most recent $\Delta$ page references (the Working Set Window). The OS only admits a process if its working set can be completely accommodated in free frames.
-  2. **Page Fault Frequency (PFF) Strategy:** Measures the direct rate of page faults. If a process's page-fault rate exceeds an upper threshold, the OS allocates it more frames. If the rate falls below a lower threshold, frames are reclaimed.
-
-> **🗓️ Asked In Papers:** `June 2022 Q4(b), June 2026 Q2(a)`
-
 ---
 
-### Q020: Define and contrast Segmented Paging and Paged Segmentation. :id=q020
+### Q019: Explain Virtual Memory principles, logical-to-physical address translation, memory protection, and page sharing. :id=q019
 
-🟡 **Medium Priority** • **Asked in: Dec 2021 Q2(a) (10 Marks)** • *Theory / Comparison*
-
-**💡 Key Answer Points:**
-- **Segmented Paging:** Virtual memory is divided into variable-length logical segments, and each segment is subdivided into fixed-size pages. Address translation uses a two-level indexing hierarchy: Segment Table points to a Page Table, which points to the physical frame.
-  - *Advantage:* Combines the logical protection and sharing of segmentation with the elimination of external fragmentation provided by paging.
-- **Paged Segmentation:** A massive virtual address space is first partitioned into uniform pages, and these pages are grouped into logical segments.
-- **Structural Differences:**
-  - *Segmented Paging:* Logical view is primary; segments are paged to simplify memory allocation.
-  - *Paged Segmentation:* Hardware paging is primary; segments provide access-control tags over page ranges.
-
-> **🗓️ Asked In Papers:** `Dec 2021 Q2(a)`
-
----
-
-### Q021: Explain Virtual Memory principles, logical-to-physical address translation, memory protection, and page sharing. :id=q021
-
-🔴 **Very High Priority** • **Asked in: Dec 2022 Q1(c), June 2024 Q4(a), Dec 2024 Q4(b) (10 Marks)** • *Theory / Architecture*
+🔴 **Very High Priority** • **3 (30 marks)** • *Theory / Architecture*
 
 **💡 Key Answer Points:**
 - **Principle of Virtual Memory:** Abstracts physical RAM into a massive, contiguous logical address space, allowing processes to execute without being completely loaded in physical RAM.
@@ -107,26 +76,11 @@
 
 ---
 
-### Q022: Define an Overlay with an example and contrast Overlays with Swapping. :id=q022
-
-🟠 **High Priority** • **Asked in: Dec 2022 Q3(a) (10 Marks)** • *Theory / Comparison*
-
-**💡 Key Answer Points:**
-- **Definition of Overlay:** A programming technique that allows a program larger than physical RAM to execute by loading into memory only those instructions and data needed at a given phase. When a new phase is entered, the overlay manager overwrites previous modules in the same memory partition.
-- **Classic Example:** A two-pass assembler where Pass 1 (symbol table generation) and Pass 2 (machine code generation) are 80 KB each, running in a 100 KB memory space:
-  - Common Driver: 20 KB (Resident in RAM).
-  - Overlay Area: 80 KB (Pass 1 loads, executes, terminates; Pass 2 overwrites Pass 1).
-- **Contrast with Swapping:**
-  - *Overlays:* Managed manually by the programmer / compiler; sub-process granularity; no special OS virtual memory hardware required.
-  - *Swapping:* Managed automatically by the operating system kernel; process-level granularity; entire memory spaces are rolled between RAM and swap partition on disk.
-
-> **🗓️ Asked In Papers:** `Dec 2022 Q3(a)`
-
 ---
 
-### Q023: Detail the step-by-step sequence of handling a Page Fault in a Demand-Paging system. :id=q023
+### Q020: Detail the step-by-step sequence of handling a Page Fault in a Demand-Paging system. :id=q020
 
-🔴 **Very High Priority** • **Asked in: Dec 2022 Q4(a), June 2024 Q5(b) (10 Marks)** • *Theory / Algorithmic Flow*
+🔴 **Very High Priority** • **2 (20 marks)** • *Theory / Algorithmic Flow*
 
 **💡 Key Answer Points:**
 When a CPU executes an instruction that accesses a page whose Valid/Invalid bit is set to `Invalid` (0), the hardware initiates an 8-step sequence:
@@ -166,23 +120,11 @@ When a CPU executes an instruction that accesses a page whose Valid/Invalid bit 
 
 ---
 
-### Q024: Explain the virtual-to-physical address mapping model and the purpose of the Valid/Invalid bit. :id=q024
-
-🟡 **Medium Priority** • **Asked in: Dec 2025 Q3(a) (10 Marks)** • *Theory / Short Answer*
-
-**💡 Key Answer Points:**
-- **Mapping Model:** The logical address space is divided into contiguous, equal-sized units called pages. The physical memory is divided into fixed-size frames of the identical size. The Page Table translates the logical page identifier to the physical frame identifier.
-- **Valid/Invalid Bit Role:**
-  - **Valid (1):** The associated page is legal and currently resident in physical RAM frames. The MMU proceeds with address reconstruction.
-  - **Invalid (0):** The page is either not in the process's logical address space (illegal access) or is valid but currently resides on the backing disk storage. Any attempt to access an invalid page immediately fires a page fault exception.
-
-> **🗓️ Asked In Papers:** `Dec 2025 Q3(a)`
-
 ---
 
-### Q025: Define Paging. With the help of a diagram, explain address translation hardware and the role of the Translation Lookaside Buffer (TLB). :id=q025
+### Q021: Define Paging. With the help of a diagram, explain address translation hardware and the role of the Translation Lookaside Buffer (TLB). :id=q021
 
-🔴 **Very High Priority** • **Asked in: June 2025 Q1(b) (10 Marks)** • *Theory / Diagram & Architecture*
+🔴 **Very High Priority** • **1 (10 marks)** • *Theory / Diagram & Architecture*
 
 **💡 Key Answer Points:**
 - **Definition:** Paging is a physical memory management scheme that permits a process's physical address space to be non-contiguous, completely eliminating external fragmentation.
@@ -219,9 +161,11 @@ When a CPU executes an instruction that accesses a page whose Valid/Invalid bit 
 
 ---
 
-### Q026: Numerical Simulation — LRU and Optimal Page Replacement on 3 Frames. :id=q026
+---
 
-🔴 **Very High Priority** • **Asked in: Dec 2021 Q1(b) (10 Marks)** • *Numerical / Step-by-Step Trace*
+### Q022: Numerical Simulation — LRU and Optimal Page Replacement on 3 Frames. :id=q022
+
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Step-by-Step Trace*
 
 **Problem Statement:**
 Reference String: `1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6`  
@@ -277,9 +221,11 @@ Replaces the page that will not be used for the longest period in the future.
 
 ---
 
-### Q027: Numerical Simulation — Optimal and FIFO Page Replacement on 3 Frames. :id=q027
+---
 
-🔴 **Very High Priority** • **Asked in: June 2023 Q2(a) (10 Marks)** • *Numerical / Step-by-Step Trace*
+### Q023: Numerical Simulation — Optimal and FIFO Page Replacement on 3 Frames. :id=q023
+
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Step-by-Step Trace*
 
 **Problem Statement:**
 Reference String: `0, 1, 3, 4, 6, 4, 3, 9, 6, 4`  
@@ -313,9 +259,11 @@ Number of Frames: **3 (Initially Empty)**. Calculate page faults for: (i) Optima
 
 ---
 
-### Q028: Numerical Simulation — LRU and FIFO Page Replacement on 3 Frames. :id=q028
+---
 
-🔴 **Very High Priority** • **Asked in: Dec 2023 Q1(b) (10 Marks)** • *Numerical / Step-by-Step Trace*
+### Q024: Numerical Simulation — LRU and FIFO Page Replacement on 3 Frames. :id=q024
+
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Step-by-Step Trace*
 
 **Problem Statement:**
 Reference String: `1, 3, 2, 4, 3, 1, 4, 5, 2, 1, 3`  
@@ -349,9 +297,11 @@ Number of Frames: **3**. Calculate page faults for: (i) LRU, (ii) FIFO.
 
 ---
 
-### Q029: Numerical Simulation — FIFO, LRU, and LFU Page Replacement on 4 Frames. :id=q029
+---
 
-🔴 **Very High Priority** • **Asked in: Dec 2024 Q1(d) (10 Marks)** • *Numerical / Step-by-Step Trace*
+### Q025: Numerical Simulation — FIFO, LRU, and LFU Page Replacement on 4 Frames. :id=q025
+
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Step-by-Step Trace*
 
 **Problem Statement:**
 Reference String: `1, 2, 5, 4, 2, 1, 3, 2, 6, 4`  
@@ -383,9 +333,11 @@ Number of Frames: **4 (Initially Empty)**. Calculate page faults for: (i) FIFO, 
 
 ---
 
-### Q030: Numerical Simulation — LRU and FIFO on Extended Reference String with 4 Frames. :id=q030
+---
 
-🔴 **Very High Priority** • **Asked in: Dec 2025 Q2(a) (10 Marks)** • *Numerical / Step-by-Step Trace*
+### Q026: Numerical Simulation — LRU and FIFO on Extended Reference String with 4 Frames. :id=q026
+
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Step-by-Step Trace*
 
 **Problem Statement:**
 Reference String: `1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 1, 2, 3, 6` (20 references)  
@@ -398,43 +350,111 @@ Number of Frames: **4**. Calculate page faults for: (i) LRU, (ii) FIFO.
 
 ---
 
-### Q030A: Numerical Simulation — Contiguous Memory Allocation (First-Fit, Best-Fit, Worst-Fit). :id=q030a
+---
 
-🔴 **Very High Priority** • **Asked in: June 2026 Q2(b) (10 Marks)** • *Numerical / Memory Partitioning*
+### Q027: Numerical Simulation — Contiguous Memory Allocation (First-Fit, Best-Fit, Worst-Fit). :id=q027
+
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Memory Partitioning*
 
 **Problem Statement:**
-Consider six memory partitions of size:  (in that order).  
-Four processes arrive with sizes:  (in that order).  
+Consider six memory partitions of size: $200\text{ kB}, 400\text{ kB}, 600\text{ kB}, 500\text{ kB}, 300\text{ kB}, 250\text{ kB}$ (in that order).  
+Four processes arrive with sizes: $357\text{ kB}, 210\text{ kB}, 468\text{ kB}, 491\text{ kB}$ (in that order).  
 Perform allocation using: (i) First-fit, (ii) Best-fit, and (iii) Worst-fit.
 
 **Step-by-Step Allocation Traces:**
 
 #### (i) First-Fit Algorithm (Allocates the first hole that is big enough):
--  (357 	ext{ kB})$: Searches from start: 00$ (no) $
-ightarrow$ **00$ kB allocated**. Leftover: 00 - 357 = 43$ kB.
--  (210 	ext{ kB})$: Searches from start: 00$ (no) $
-ightarrow 43$ (no) $
-ightarrow$ **00$ kB allocated**. Leftover: 00 - 210 = 390$ kB.
--  (468 	ext{ kB})$: Searches from start: 00$ (no) $
-ightarrow 43$ (no) $
-ightarrow 390$ (no) $
-ightarrow$ **00$ kB allocated**. Leftover: 00 - 468 = 32$ kB.
--  (491 	ext{ kB})$: Searches from start: 00, 43, 390, 32, 300, 250$ — **Cannot be allocated** (must wait).
+- $P_1$ ($357\text{ kB}$): Searches from start: $200$ (no) $\rightarrow$ **$400\text{ kB}$ allocated**. Leftover: $400 - 357 = 43\text{ kB}$.
+- $P_2$ ($210\text{ kB}$): Searches from start: $200$ (no) $\rightarrow 43$ (no) $\rightarrow$ **$600\text{ kB}$ allocated**. Leftover: $600 - 210 = 390\text{ kB}$.
+- $P_3$ ($468\text{ kB}$): Searches from start: $200$ (no) $\rightarrow 43$ (no) $\rightarrow 390$ (no) $\rightarrow$ **$500\text{ kB}$ allocated**. Leftover: $500 - 468 = 32\text{ kB}$.
+- $P_4$ ($491\text{ kB}$): Searches from start: $200, 43, 390, 32, 300, 250$ — **Cannot be allocated** (must wait).
 
 #### (ii) Best-Fit Algorithm (Allocates the smallest hole that is big enough):
-Holes available initially: 00, 250, 300, 400, 500, 600$ kB.
--  (357 	ext{ kB})$: Best fits in **00$ kB**. Leftover: 00 - 357 = 43$ kB.
--  (210 	ext{ kB})$: Best fits in **50$ kB**. Leftover: 50 - 210 = 40$ kB.
--  (468 	ext{ kB})$: Best fits in **00$ kB**. Leftover: 00 - 468 = 32$ kB.
--  (491 	ext{ kB})$: Best fits in **00$ kB**. Leftover: 00 - 491 = 109$ kB.
+Holes available initially: $200, 400, 600, 500, 300, 250\text{ kB}$.
+- $P_1$ ($357\text{ kB}$): Best fits in **$400\text{ kB}$**. Leftover: $400 - 357 = 43\text{ kB}$.
+- $P_2$ ($210\text{ kB}$): Best fits in **$250\text{ kB}$**. Leftover: $250 - 210 = 40\text{ kB}$.
+- $P_3$ ($468\text{ kB}$): Best fits in **$500\text{ kB}$**. Leftover: $500 - 468 = 32\text{ kB}$.
+- $P_4$ ($491\text{ kB}$): Best fits in **$600\text{ kB}$**. Leftover: $600 - 491 = 109\text{ kB}$.
 - **Outcome:** **All four processes successfully allocated!**
 
 #### (iii) Worst-Fit Algorithm (Allocates the largest available hole):
--  (357 	ext{ kB})$: Allocated in largest hole (**00$ kB**). Leftover: 00 - 357 = 243$ kB.
--  (210 	ext{ kB})$: Largest remaining is **00$ kB**. Leftover: 00 - 210 = 290$ kB.
--  (468 	ext{ kB})$: Largest remaining is 00$ kB $\implies$ **Cannot be allocated** (must wait).
--  (491 	ext{ kB})$: Cannot be allocated (must wait).
+- $P_1$ ($357\text{ kB}$): Allocated in largest hole (**$600\text{ kB}$**). Leftover: $600 - 357 = 243\text{ kB}$.
+- $P_2$ ($210\text{ kB}$): Largest remaining is **$500\text{ kB}$**. Leftover: $500 - 210 = 290\text{ kB}$.
+- $P_3$ ($468\text{ kB}$): Largest remaining is $400\text{ kB} \implies$ **Cannot be allocated** (must wait).
+- $P_4$ ($491\text{ kB}$): Cannot be allocated (must wait).
 
 **Conclusion:** Best-Fit achieves 100% allocation efficiency, whereas First-Fit and Worst-Fit leave processes waiting.
 
-> **🗓️ Asked In Papers:** 
+> **🗓️ Asked In Papers:** `June 2026 Q2(b)`
+
+---
+
+### Q028: Define Thrashing. Explain its causes, consequences, and prevention techniques (Working Set Model and Page Fault Frequency). :id=q028
+
+🟠 **High Priority** • **2 (20 marks)** • *Theory / Long Answer*
+
+**💡 Key Answer Points:**
+- **Definition:** Thrashing occurs when an operating system spends substantially more time swapping pages in and out of backing store than executing user instructions.
+- **Underlying Cause:** Occurs when the sum of the **localities** (working sets) of all active processes exceeds total available physical memory frames:
+  $$\sum WSS_i > D > \text{Total Physical Frames}$$
+  Processes continuously fault, enter waiting queues for disk I/O, and CPU utilization plummets. In response, a naive OS medium-term scheduler attempts to admit more processes to increase CPU utilization, compounding the catastrophe.
+- **Prevention Techniques:**
+  1. **Working Set Model:** Introduced by Peter Denning. Monitors the set of pages referenced by a process during the most recent $\Delta$ page references (the Working Set Window). The OS only admits a process if its working set can be completely accommodated in free frames.
+  2. **Page Fault Frequency (PFF) Strategy:** Measures the direct rate of page faults. If a process's page-fault rate exceeds an upper threshold, the OS allocates it more frames. If the rate falls below a lower threshold, frames are reclaimed.
+
+> **🗓️ Asked In Papers:** `June 2022 Q4(b), June 2026 Q2(a)`
+
+---
+
+---
+
+### Q029: Define an Overlay with an example and contrast Overlays with Swapping. :id=q029
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Comparison*
+
+**💡 Key Answer Points:**
+- **Definition of Overlay:** A programming technique that allows a program larger than physical RAM to execute by loading into memory only those instructions and data needed at a given phase. When a new phase is entered, the overlay manager overwrites previous modules in the same memory partition.
+- **Classic Example:** A two-pass assembler where Pass 1 (symbol table generation) and Pass 2 (machine code generation) are 80 KB each, running in a 100 KB memory space:
+  - Common Driver: 20 KB (Resident in RAM).
+  - Overlay Area: 80 KB (Pass 1 loads, executes, terminates; Pass 2 overwrites Pass 1).
+- **Contrast with Swapping:**
+  - *Overlays:* Managed manually by the programmer / compiler; sub-process granularity; no special OS virtual memory hardware required.
+  - *Swapping:* Managed automatically by the operating system kernel; process-level granularity; entire memory spaces are rolled between RAM and swap partition on disk.
+
+> **🗓️ Asked In Papers:** `Dec 2022 Q3(a)`
+
+---
+
+---
+
+### Q030: Define and contrast Segmented Paging and Paged Segmentation. :id=q030
+
+🟡 **Medium Priority** • **1 (10 marks)** • *Theory / Comparison*
+
+**💡 Key Answer Points:**
+- **Segmented Paging:** Virtual memory is divided into variable-length logical segments, and each segment is subdivided into fixed-size pages. Address translation uses a two-level indexing hierarchy: Segment Table points to a Page Table, which points to the physical frame.
+  - *Advantage:* Combines the logical protection and sharing of segmentation with the elimination of external fragmentation provided by paging.
+- **Paged Segmentation:** A massive virtual address space is first partitioned into uniform pages, and these pages are grouped into logical segments.
+- **Structural Differences:**
+  - *Segmented Paging:* Logical view is primary; segments are paged to simplify memory allocation.
+  - *Paged Segmentation:* Hardware paging is primary; segments provide access-control tags over page ranges.
+
+> **🗓️ Asked In Papers:** `Dec 2021 Q2(a)`
+
+---
+
+---
+
+### Q031: Explain the virtual-to-physical address mapping model and the purpose of the Valid/Invalid bit. :id=q031
+
+🟡 **Medium Priority** • **1 (10 marks)** • *Theory / Short Answer*
+
+**💡 Key Answer Points:**
+- **Mapping Model:** The logical address space is divided into contiguous, equal-sized units called pages. The physical memory is divided into fixed-size frames of the identical size. The Page Table translates the logical page identifier to the physical frame identifier.
+- **Valid/Invalid Bit Role:**
+  - **Valid (1):** The associated page is legal and currently resident in physical RAM frames. The MMU proceeds with address reconstruction.
+  - **Invalid (0):** The page is either not in the process's logical address space (illegal access) or is valid but currently resides on the backing disk storage. Any attempt to access an invalid page immediately fires a page fault exception.
+
+> **🗓️ Asked In Papers:** `Dec 2025 Q3(a)`
+
+---

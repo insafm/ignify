@@ -7,9 +7,9 @@
 
 ## ❓ Question Bank & Canonical Answers
 
-### Q040: Define a Semaphore. Explain its atomic operations wait() and signal(), and provide the complete solution to the Bounded-Buffer Producer-Consumer problem. :id=q040
+### Q042: Define a Semaphore. Explain its atomic operations wait() and signal(), and provide the complete solution to the Bounded-Buffer Producer-Consumer problem. :id=q042
 
-🔴 **Very High Priority** • **Asked in: Dec 2021 Q3(b), June 2023 Q1(a), Dec 2024 Q3(b) (10 Marks)** • *Theory & Code Implementation*
+🔴 **Very High Priority** • **3 (30 marks)** • *Theory & Code Implementation*
 
 **💡 Key Answer Points:**
 - **Definition:** A Semaphore $S$ is a protected integer synchronization variable accessed exclusively through two atomic, indivisible operations: `wait()` (also known as $P$ or `down()`) and `signal()` (also known as $V$ or `up()`).
@@ -83,9 +83,91 @@ void Consumer() {
 
 ---
 
-### Q041: Define concurrent processes and explain Dekker's Algorithm for mutual exclusion between two processes. :id=q041
+---
 
-🟠 **High Priority** • **Asked in: Dec 2022 Q1(a) (10 Marks)** • *Theory & Algorithm*
+### Q043: Present Lamport's Bakery Algorithm for mutual exclusion among n processes. :id=q043
+
+🟠 **High Priority** • **2 (20 marks)** • *Theory & Algorithm*
+
+**💡 Key Answer Points:**
+- **Analogy:** Mirrors a traditional bakery where each customer entering the shop receives a numbered ticket. The customer holding the smallest number is served first. If two processes receive the same ticket number, the process with the smaller process identifier (PID) is given priority: $(a, b) < (c, d) \iff (a < c) \lor (a == c \land b < d)$.
+- **Shared Data Structures:**
+```c
+bool choosing[n] = {false}; // choosing[i] = true while Pi is picking a number
+int number[n] = {0};        // number[i] is the ticket assigned to process Pi
+```
+- **Algorithm for Process $P_i$:**
+```c
+do {
+    choosing[i] = true;
+    // Pick ticket number strictly greater than all existing numbers
+    number[i] = 1 + max(number[0], number[1], ..., number[n-1]);
+    choosing[i] = false;
+
+    // Wait for all other processes to finish choosing and have lower priority
+    for (int j = 0; j < n; j++) {
+        while (choosing[j]); // Wait if Pj is currently choosing a ticket
+        
+        while (number[j] != 0 && 
+              (number[j] < number[i] || (number[j] == number[i] && j < i)));
+    }
+
+    // CRITICAL SECTION
+    /* Access shared resource */
+
+    number[i] = 0; // Release ticket upon exit
+
+    // REMAINDER SECTION
+} while (true);
+```
+
+> **🗓️ Asked In Papers:** `June 2024 Q3(a), Dec 2024 Q3(a)`
+
+---
+
+---
+
+### Q044: Solve the Dining Philosophers Problem using semaphores, discussing deadlock prevention strategies. :id=q044
+
+🟠 **High Priority** • **2 (20 marks)** • *Theory & Concurrency*
+
+**💡 Key Answer Points:**
+- **Problem Description:** Five philosophers sit around a circular table with 5 bowls of rice and 5 chopsticks. A philosopher alternates between thinking and eating. To eat, a philosopher must acquire both their left and right chopsticks.
+- **Deadlock Condition:** If all five philosophers sit simultaneously and pick up their left chopstick, all chopsticks are held, and each philosopher waits indefinitely for their right chopstick (Circular Wait).
+- **Deadlock Prevention Solutions:**
+  1. **Asymmetric Protocol:** Odd-numbered philosophers pick up their left chopstick first, then their right; even-numbered philosophers pick up their right chopstick first, then their left.
+  2. **Bounded Capacity:** Allow at most 4 philosophers to sit at the table simultaneously using a counting semaphore initialized to 4.
+  3. **Atomic Dual Pickup:** Allow a philosopher to pick up chopsticks only if both are currently available.
+
+```c
+semaphore chopstick[5] = {1, 1, 1, 1, 1};
+
+void Philosopher(int i) {
+    while (1) {
+        think();
+        if (i % 2 == 0) { // Even philosopher: Right then Left
+            wait(chopstick[(i + 1) % 5]);
+            wait(chopstick[i]);
+        } else {          // Odd philosopher: Left then Right
+            wait(chopstick[i]);
+            wait(chopstick[(i + 1) % 5]);
+        }
+        eat();
+        signal(chopstick[i]);
+        signal(chopstick[(i + 1) % 5]);
+    }
+}
+```
+
+> **🗓️ Asked In Papers:** `June 2025 Q1(c), Dec 2025 Q1(b)`
+
+---
+
+---
+
+### Q045: Define concurrent processes and explain Dekker's Algorithm for mutual exclusion between two processes. :id=q045
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory & Algorithm*
 
 **💡 Key Answer Points:**
 - **Concurrent Processes:** Processes executing simultaneously on multiple processor cores, or interleaved on a single CPU via time-slicing, potentially sharing resources and variables.
@@ -125,96 +207,11 @@ do {
 
 ---
 
-### Q042: Present Lamport's Bakery Algorithm for mutual exclusion among n processes. :id=q042
-
-🟠 **High Priority** • **Asked in: June 2024 Q3(a), Dec 2024 Q3(a) (10 Marks)** • *Theory & Algorithm*
-
-**💡 Key Answer Points:**
-- **Analogy:** Mirrors a traditional bakery where each customer entering the shop receives a numbered ticket. The customer holding the smallest number is served first. If two processes receive the same ticket number, the process with the smaller process identifier (PID) is given priority: $(a, b) < (c, d) \iff (a < c) \lor (a == c \land b < d)$.
-- **Shared Data Structures:**
-```c
-bool choosing[n] = {false}; // choosing[i] = true while Pi is picking a number
-int number[n] = {0};        // number[i] is the ticket assigned to process Pi
-```
-- **Algorithm for Process $P_i$:**
-```c
-do {
-    choosing[i] = true;
-    // Pick ticket number strictly greater than all existing numbers
-    number[i] = 1 + max(number[0], number[1], ..., number[n-1]);
-    choosing[i] = false;
-
-    // Wait for all other processes to finish choosing and have lower priority
-    for (int j = 0; j < n; j++) {
-        while (choosing[j]); // Wait if Pj is currently choosing a ticket
-        
-        while (number[j] != 0 && 
-              (number[j] < number[i] || (number[j] == number[i] && j < i)));
-    }
-
-    // CRITICAL SECTION
-    /* Access shared resource */
-
-    number[i] = 0; // Release ticket upon exit
-
-    // REMAINDER SECTION
-} while (true);
-```
-
-> **🗓️ Asked In Papers:** `June 2024 Q3(a), Dec 2024 Q3(a)`
-
 ---
 
-### Q043: Formulate the semaphore-based coordination solution to the Sleeping Barber problem. :id=q043
+### Q046: Formulate the complete algorithmic solution to the Readers-Writers problem using semaphores. :id=q046
 
-🟡 **Medium Priority** • **Asked in: June 2022 Q2(b) (10 Marks)** • *Theory & Algorithm*
-
-**💡 Key Answer Points:**
-- **Scenario:** A barbershop has one barber, one barber chair, and $N$ waiting chairs. If there are no customers, the barber sleeps. When a customer arrives:
-  - If all $N$ waiting chairs are full, the customer leaves (balks).
-  - If chairs are available, the customer sits down and wakes up the sleeping barber.
-- **Synchronization Variables:**
-```c
-#define CHAIRS 5
-semaphore customers = 0; // Tracks waiting customers; wakes barber
-semaphore barber = 0;    // Tracks barber availability
-semaphore mutex = 1;     // Guards shared variable 'waiting'
-int waiting = 0;         // Number of customers currently waiting
-```
-- **Algorithmic Tracing:**
-```c
-void Barber() {
-    while (1) {
-        wait(customers); // Sleep until a customer arrives
-        wait(mutex);     // Lock waiting variable
-        waiting--;       // One customer leaves waiting chair to enter barber chair
-        signal(barber);  // Notify customer that barber is ready
-        signal(mutex);   // Unlock waiting
-        cut_hair();
-    }
-}
-
-void Customer() {
-    wait(mutex);
-    if (waiting < CHAIRS) {
-        waiting++;
-        signal(customers); // Wake up barber if sleeping
-        signal(mutex);
-        wait(barber);      // Wait until barber is ready
-        get_haircut();
-    } else {
-        signal(mutex);     // Shop full; customer balks
-    }
-}
-```
-
-> **🗓️ Asked In Papers:** `June 2022 Q2(b)`
-
----
-
-### Q044: Formulate the complete algorithmic solution to the Readers-Writers problem using semaphores. :id=q044
-
-🟠 **High Priority** • **Asked in: Dec 2023 Q1(c) (10 Marks)** • *Theory & Algorithm*
+🟠 **High Priority** • **1 (10 marks)** • *Theory & Algorithm*
 
 **💡 Key Answer Points:**
 - **Problem Statement:** A database is shared among multiple concurrent processes. Multiple readers may access the database simultaneously without conflict, but writers must have exclusive access (no other reader or writer allowed).
@@ -261,45 +258,60 @@ void Writer() {
 
 ---
 
-### Q045: Solve the Dining Philosophers Problem using semaphores, discussing deadlock prevention strategies. :id=q045
+---
 
-🟠 **High Priority** • **Asked in: June 2025 Q1(c), Dec 2025 Q1(b) (10 Marks)** • *Theory & Concurrency*
+### Q047: Formulate the semaphore-based coordination solution to the Sleeping Barber problem. :id=q047
+
+🟡 **Medium Priority** • **1 (10 marks)** • *Theory & Algorithm*
 
 **💡 Key Answer Points:**
-- **Problem Description:** Five philosophers sit around a circular table with 5 bowls of rice and 5 chopsticks. A philosopher alternates between thinking and eating. To eat, a philosopher must acquire both their left and right chopsticks.
-- **Deadlock Condition:** If all five philosophers sit simultaneously and pick up their left chopstick, all chopsticks are held, and each philosopher waits indefinitely for their right chopstick (Circular Wait).
-- **Deadlock Prevention Solutions:**
-  1. **Asymmetric Protocol:** Odd-numbered philosophers pick up their left chopstick first, then their right; even-numbered philosophers pick up their right chopstick first, then their left.
-  2. **Bounded Capacity:** Allow at most 4 philosophers to sit at the table simultaneously using a counting semaphore initialized to 4.
-  3. **Atomic Dual Pickup:** Allow a philosopher to pick up chopsticks only if both are currently available.
-
+- **Scenario:** A barbershop has one barber, one barber chair, and $N$ waiting chairs. If there are no customers, the barber sleeps. When a customer arrives:
+  - If all $N$ waiting chairs are full, the customer leaves (balks).
+  - If chairs are available, the customer sits down and wakes up the sleeping barber.
+- **Synchronization Variables:**
 ```c
-semaphore chopstick[5] = {1, 1, 1, 1, 1};
-
-void Philosopher(int i) {
+#define CHAIRS 5
+semaphore customers = 0; // Tracks waiting customers; wakes barber
+semaphore barber = 0;    // Tracks barber availability
+semaphore mutex = 1;     // Guards shared variable 'waiting'
+int waiting = 0;         // Number of customers currently waiting
+```
+- **Algorithmic Tracing:**
+```c
+void Barber() {
     while (1) {
-        think();
-        if (i % 2 == 0) { // Even philosopher: Right then Left
-            wait(chopstick[(i + 1) % 5]);
-            wait(chopstick[i]);
-        } else {          // Odd philosopher: Left then Right
-            wait(chopstick[i]);
-            wait(chopstick[(i + 1) % 5]);
-        }
-        eat();
-        signal(chopstick[i]);
-        signal(chopstick[(i + 1) % 5]);
+        wait(customers); // Sleep until a customer arrives
+        wait(mutex);     // Lock waiting variable
+        waiting--;       // One customer leaves waiting chair to enter barber chair
+        signal(barber);  // Notify customer that barber is ready
+        signal(mutex);   // Unlock waiting
+        cut_hair();
+    }
+}
+
+void Customer() {
+    wait(mutex);
+    if (waiting < CHAIRS) {
+        waiting++;
+        signal(customers); // Wake up barber if sleeping
+        signal(mutex);
+        wait(barber);      // Wait until barber is ready
+        get_haircut();
+    } else {
+        signal(mutex);     // Shop full; customer balks
     }
 }
 ```
 
-> **🗓️ Asked In Papers:** `June 2025 Q1(c), Dec 2025 Q1(b)`
+> **🗓️ Asked In Papers:** `June 2022 Q2(b)`
 
 ---
 
-### Q046: Define Locks in concurrent programming and contrast Spinlocks with Sleep Mutexes. :id=q046
+---
 
-🟡 **Medium Priority** • **Asked in: Dec 2024 Q5(c) (5 Marks)** • *Theory / Short Answer*
+### Q048: Define Locks in concurrent programming and contrast Spinlocks with Sleep Mutexes. :id=q048
+
+🟡 **Medium Priority** • **1 (5 marks)** • *Theory / Short Answer*
 
 **💡 Key Answer Points:**
 - **Lock Definition:** A mutual exclusion synchronization mechanism designed to enforce exclusive access to a shared resource among concurrent threads.

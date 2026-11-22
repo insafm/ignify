@@ -9,19 +9,19 @@
 | Comparison Pair | Related Canonical Question | Historical Frequency | Total Marks | Most Recent Appearance |
 | :--- | :---: | :---: | :---: | :---: |
 | **Segmentation vs. Paging** | [Q018](/bca_new/mcs203/topics/02-memory-management?id=q018) | **4** | 35 | `June 2026 Q1(c)` |
-| **Windows 10 vs. Linux Operating System** | [Q075](/bca_new/mcs203/topics/09-windows10-case-study?id=q075) | **3** | 25 | `June 2026 Q4(b)` |
+| **Windows 10 vs. Linux Operating System** | [Q080](/bca_new/mcs203/topics/09-windows10-case-study?id=q080) | **3** | 25 | `June 2026 Q4(b)` |
 | **Symbian OS vs. Android OS** | [Q005](/bca_new/mcs203/topics/01-mobile-os?id=q005) | **3** | 25 | `Dec 2025 Q5(c)` |
-| **Process vs. Thread** | [Q063](/bca_new/mcs203/topics/08-process-cpu-scheduling?id=q063) | **3** | 20 | `Dec 2023 Q3(b)` |
-| **Loosely-Coupled vs. Tightly-Coupled Systems** | [Q039](/bca_new/mcs203/topics/03-multiprocessor-distributed?id=q039) | **3** | 20 | `Dec 2024 Q4(c)` |
+| **Process vs. Thread** | [Q071](/bca_new/mcs203/topics/08-process-cpu-scheduling?id=q071) | **3** | 20 | `Dec 2023 Q3(b)` |
+| **Loosely-Coupled vs. Tightly-Coupled Systems** | [Q041](/bca_new/mcs203/topics/03-multiprocessor-distributed?id=q041) | **3** | 20 | `Dec 2024 Q4(c)` |
 | **Security Policy vs. Security Model** | [Q050](/bca_new/mcs203/topics/05-linux-case-study?id=q050) | **2** | 15 | `Dec 2022 Q2(a)` |
-| **Overlays vs. Swapping** | [Q022](/bca_new/mcs203/topics/02-memory-management?id=q022) | **2** | 15 | `Dec 2022 Q3(a)` |
-| **CPU-Bound vs. I/O-Bound Programs** | [Q065](/bca_new/mcs203/topics/08-process-cpu-scheduling?id=q065) | **2** | 15 | `Dec 2025 Q1(a)` |
-| **SCAN vs. C-SCAN Disk Scheduling** | [Q057](/bca_new/mcs203/topics/07-file-disk-management?id=q057) | **2** | 15 | `June 2023 Q1(b)` |
-| **Master-Slave vs. Separate Supervisor OS** | [Q038](/bca_new/mcs203/topics/03-multiprocessor-distributed?id=q038) | **2** | 15 | `June 2025 Q4(b)` |
-| **Test-and-Set vs. Compare-and-Swap (CAS)** | [Q035](/bca_new/mcs203/topics/03-multiprocessor-distributed?id=q035) | **2** | 15 | `Dec 2023 Q2(b)` |
-| **Linked Allocation vs. Indexed Allocation** | [Q056](/bca_new/mcs203/topics/07-file-disk-management?id=q056) | **2** | 15 | `June 2022 Q4(a)` |
-| **Paged Segmentation vs. Segmented Paging** | [Q020](/bca_new/mcs203/topics/02-memory-management?id=q020) | **1** | 10 | `Dec 2021 Q2(a)` |
-| **Qualcomm Snapdragon vs. Intel Atom** | [Q011](/bca_new/mcs203/topics/01-mobile-os?id=q011) | **1** | 10 | `June 2023 Q4(b)` |
+| **Overlays vs. Swapping** | [Q029](/bca_new/mcs203/topics/02-memory-management?id=q029) | **2** | 15 | `Dec 2022 Q3(a)` |
+| **CPU-Bound vs. I/O-Bound Programs** | [Q073](/bca_new/mcs203/topics/08-process-cpu-scheduling?id=q073) | **2** | 15 | `Dec 2025 Q1(a)` |
+| **SCAN vs. C-SCAN Disk Scheduling** | [Q064](/bca_new/mcs203/topics/07-file-disk-management?id=q064) | **2** | 15 | `June 2023 Q1(b)` |
+| **Master-Slave vs. Separate Supervisor OS** | [Q040](/bca_new/mcs203/topics/03-multiprocessor-distributed?id=q040) | **2** | 15 | `June 2025 Q4(b)` |
+| **Test-and-Set vs. Compare-and-Swap (CAS)** | [Q034](/bca_new/mcs203/topics/03-multiprocessor-distributed?id=q034) | **2** | 15 | `Dec 2023 Q2(b)` |
+| **Linked Allocation vs. Indexed Allocation** | [Q060](/bca_new/mcs203/topics/07-file-disk-management?id=q060) | **2** | 15 | `June 2022 Q4(a)` |
+| **Paged Segmentation vs. Segmented Paging** | [Q030](/bca_new/mcs203/topics/02-memory-management?id=q030) | **1** | 10 | `Dec 2021 Q2(a)` |
+| **Qualcomm Snapdragon vs. Intel Atom** | [Q014](/bca_new/mcs203/topics/01-mobile-os?id=q014) | **1** | 10 | `June 2023 Q4(b)` |
 | **Rule-Based Access Control vs. Role-Based Access Control** | [Q050](/bca_new/mcs203/topics/05-linux-case-study?id=q050) | **1** | 10 | `June 2025 Q5(d)` |
 
 ---
@@ -62,7 +62,7 @@
 
 ### ⚖️ 3. Process vs. Thread
 
-[**Q063**](/bca_new/mcs203/topics/08-process-cpu-scheduling?id=q063) • **Asked 3 times (20 marks)** • *Recent: Dec 2023 Q3(b), Dec 2022 Q1(a)*
+[**Q071**](/bca_new/mcs203/topics/08-process-cpu-scheduling?id=q071) • **Asked 3 times (20 marks)** • *Recent: Dec 2023 Q3(b), Dec 2022 Q1(a)*
 
 | Characteristic | Process | Thread (Lightweight Process) |
 | :--- | :--- | :--- |
@@ -78,7 +78,7 @@
 
 ### ⚖️ 4. Loosely-Coupled vs. Tightly-Coupled Systems
 
-[**Q039**](/bca_new/mcs203/topics/03-multiprocessor-distributed?id=q039) • **Asked 3 times (20 marks)** • *Recent: Dec 2024 Q4(c), June 2024 Q1(b)*
+[**Q041**](/bca_new/mcs203/topics/03-multiprocessor-distributed?id=q041) • **Asked 3 times (20 marks)** • *Recent: Dec 2024 Q4(c), June 2024 Q1(b)*
 
 | Feature | Tightly-Coupled Systems (Multiprocessors) | Loosely-Coupled Systems (Distributed Systems) |
 | :--- | :--- | :--- |
@@ -93,7 +93,7 @@
 
 ### ⚖️ 5. Overlays vs. Swapping
 
-[**Q022**](/bca_new/mcs203/topics/02-memory-management?id=q022) • **Asked 2 times (15 marks)** • *Recent: Dec 2022 Q3(a)*
+[**Q029**](/bca_new/mcs203/topics/02-memory-management?id=q029) • **Asked 2 times (15 marks)** • *Recent: Dec 2022 Q3(a)*
 
 | Feature | Overlays | Swapping |
 | :--- | :--- | :--- |
@@ -121,7 +121,7 @@
 
 ### ⚖️ 7. SCAN vs. C-SCAN Disk Scheduling
 
-[**Q057**](/bca_new/mcs203/topics/07-file-disk-management?id=q057) • **Asked 2 times (15 marks)** • *Recent: June 2023 Q1(b), Dec 2021 Q4(a)*
+[**Q064**](/bca_new/mcs203/topics/07-file-disk-management?id=q064) • **Asked 2 times (15 marks)** • *Recent: June 2023 Q1(b), Dec 2021 Q4(a)*
 
 | Aspect | SCAN (Elevator Algorithm) | C-SCAN (Circular SCAN) |
 | :--- | :--- | :--- |
@@ -134,7 +134,7 @@
 
 ### ⚖️ 8. Windows 10 vs. Linux Operating System
 
-[**Q075**](/bca_new/mcs203/topics/09-windows10-case-study?id=q075) • **Asked 3 times (25 marks)** • *Recent: June 2026 Q4(b), Dec 2023 Q5(c)*
+[**Q080**](/bca_new/mcs203/topics/09-windows10-case-study?id=q080) • **Asked 3 times (25 marks)** • *Recent: June 2026 Q4(b), Dec 2023 Q5(c)*
 
 | Evaluation Metric | Microsoft Windows 10 | Linux Operating System (GNU/Linux) |
 | :--- | :--- | :--- |

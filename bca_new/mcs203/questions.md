@@ -26,7 +26,7 @@ Mastering these three modules covers the vast majority of compulsory Question 1 
 #### [Module 02: Memory Management & Virtual Memory](/bca_new/mcs203/topics/02-memory-management.md)
 * **Syllabus Units:** Block 2 Units 1–2
 * **Historical Weight:** **220 Marks** (Offered in 10 of 10 papers) • **Rank #2** • Frequency Score: **12.0**
-* **Canonical Questions:** **14 Unique Questions** (Q018 – Q030A)
+* **Canonical Questions:** **14 Unique Questions** (Q018 – Q031)
 * **Core Themes Covered:**
   * Segmentation address translation hardware diagram ($\langle s, d \rangle$, Segment Table, Base/Limit)
   * Paging hardware, PTBR, and Translation Lookaside Buffer (TLB) acceleration
@@ -39,7 +39,7 @@ Mastering these three modules covers the vast majority of compulsory Question 1 
 #### [Module 03: Advanced OS – Multiprocessor & Distributed Systems](/bca_new/mcs203/topics/03-multiprocessor-distributed.md)
 * **Syllabus Units:** Block 3 Units 1–2
 * **Historical Weight:** **180 Marks** (Offered in 9 of 10 papers) • **Rank #3** • Frequency Score: **8.6**
-* **Canonical Questions:** **10 Unique Questions** (Q031 – Q039, Q032A)
+* **Canonical Questions:** **10 Unique Questions** (Q032 – Q041)
 * **Core Themes Covered:**
   * Distributed system design challenges (heterogeneity, openness, security, scalability, failure handling)
   * Lamport's Logical Clocks scheme and the happens-before ($\rightarrow$) relation
@@ -56,7 +56,7 @@ Mastering these three modules covers the vast majority of compulsory Question 1 
 #### [Module 04: Process Synchronization & Mutual Exclusion](/bca_new/mcs203/topics/04-process-synchronization.md)
 * **Syllabus Unit:** Block 1 Unit 3
 * **Historical Weight:** **135 Marks** (Offered in 8 of 10 papers) • **Rank #4** • Frequency Score: **7.6**
-* **Canonical Questions:** **7 Unique Questions** (Q040 – Q046)
+* **Canonical Questions:** **7 Unique Questions** (Q042 – Q048)
 * **Core Themes Covered:**
   * Semaphores and atomic primitives (`wait()` and `signal()`)
   * Bounded-Buffer Producer-Consumer complete algorithmic implementation
@@ -68,7 +68,7 @@ Mastering these three modules covers the vast majority of compulsory Question 1 
 #### [Module 05: Case Study – Linux Architecture & System Security](/bca_new/mcs203/topics/05-linux-case-study.md)
 * **Syllabus Unit:** Block 4 Unit 2
 * **Historical Weight:** **125 Marks** (Offered in 9 of 10 papers) • **Rank #5** • Frequency Score: **6.8**
-* **Canonical Questions:** **5 Unique Questions** (Q047 – Q050A)
+* **Canonical Questions:** **5 Unique Questions** (Q049 – Q053)
 * **Core Themes Covered:**
   * Linux monolithic kernel architecture diagram (SCI, VFS, Memory Manager, CFS Scheduler, Drivers)
   * Process management, states, priorities, and `clone()` task creation
@@ -79,7 +79,7 @@ Mastering these three modules covers the vast majority of compulsory Question 1 
 #### [Module 06: Deadlocks](/bca_new/mcs203/topics/06-deadlocks.md)
 * **Syllabus Unit:** Block 1 Unit 4
 * **Historical Weight:** **105 Marks** (Offered in 8 of 10 papers) • **Rank #6** • Frequency Score: **6.4**
-* **Canonical Questions:** **6 Unique Questions** (Q051 – Q055, Q054A)
+* **Canonical Questions:** **6 Unique Questions** (Q054 – Q059)
 * **Core Themes Covered:**
   * Deadlock definition and the 4 Coffman necessary conditions
   * Havender's deadlock prevention rules and elimination protocols
@@ -94,7 +94,7 @@ Mastering these three modules covers the vast majority of compulsory Question 1 
 #### [Module 07: File Systems & Disk Management](/bca_new/mcs203/topics/07-file-disk-management.md)
 * **Syllabus Unit:** Block 2 Unit 3
 * **Historical Weight:** **95 Marks** (Offered in 7 of 10 papers) • **Rank #7** • Frequency Score: **5.8**
-* **Canonical Questions:** **7 Unique Questions** (Q056 – Q062)
+* **Canonical Questions:** **7 Unique Questions** (Q060 – Q066)
 * **Core Themes Covered:**
   * Disk space allocation methods: Contiguous Allocation vs. Non-Contiguous Allocation (Linked & Indexed)
   * Disk scheduling algorithms: FCFS, SSTF, SCAN (Elevator), and C-SCAN (Circular SCAN)
@@ -104,7 +104,7 @@ Mastering these three modules covers the vast majority of compulsory Question 1 
 #### [Module 08: Process Management & CPU Scheduling](/bca_new/mcs203/topics/08-process-cpu-scheduling.md)
 * **Syllabus Units:** Block 1 Units 1–2
 * **Historical Weight:** **95 Marks** (Offered in 7 of 10 papers) • **Rank #8** • Frequency Score: **5.6**
-* **Canonical Questions:** **9 Unique Questions** (Q063 – Q070, Q069A)
+* **Canonical Questions:** **9 Unique Questions** (Q067 – Q075)
 * **Core Themes Covered:**
   * Process Control Block (PCB) fields and execution contexts
   * Schedulers hierarchy: Long-Term, Medium-Term, and Short-Term schedulers
@@ -116,7 +116,7 @@ Mastering these three modules covers the vast majority of compulsory Question 1 
 #### [Module 09: Case Study – Windows 10 Architecture](/bca_new/mcs203/topics/09-windows10-case-study.md)
 * **Syllabus Unit:** Block 4 Unit 1
 * **Historical Weight:** **70 Marks** (Offered in 6 of 10 papers) • **Rank #9** • Frequency Score: **5.2**
-* **Canonical Questions:** **5 Unique Questions** (Q071 – Q075)
+* **Canonical Questions:** **5 Unique Questions** (Q076 – Q080)
 * **Core Themes Covered:**
   * Windows 10 Virtual Memory 64-bit flat logical address space and Demand Paging
   * Windows 10 Memory Compression architecture and compressed memory store in RAM

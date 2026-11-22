@@ -7,50 +7,9 @@
 
 ## ❓ Question Bank & Canonical Answers
 
-### Q047: Describe Process Management in Linux, including process hierarchy, process states, the CFS scheduler, and the clone() system call. :id=q047
-
-🟠 **High Priority** • **Asked in: June 2022 Q1(b) (10 Marks)** • *Theory / Architecture*
-
-**💡 Key Answer Points:**
-- **Process Hierarchy:** Linux maintains a strict parent-child process tree rooted at PID 1 (`init` or `systemd`). Every process is spawned via `fork()` and tracks parent PID (`ppid`).
-- **Process States in Linux:**
-  - `TASK_RUNNING`: Process is either executing on a CPU or waiting in the runqueue.
-  - `TASK_INTERRUPTIBLE`: Process is suspended waiting for an event/resource; can be awakened early by signals.
-  - `TASK_UNINTERRUPTIBLE`: Process is waiting directly on hardware I/O; will not wake up for signals.
-  - `TASK_STOPPED`: Execution suspended (via SIGSTOP or debugger breakpoint).
-  - `TASK_ZOMBIE`: Process terminated, but parent has not yet called `wait()` to collect exit status.
-- **Completely Fair Scheduler (CFS):**
-  - Manages normal non-real-time processes using a balanced **Red-Black Tree** ordered by `vruntime` (virtual runtime).
-  - The process with the smallest `vruntime` is positioned at the leftmost leaf of the tree and scheduled next.
-- **The `clone()` System Call:** Linux does not distinguish between threads and processes at the kernel level; both are represented by `task_struct`. The `clone()` system call creates lightweight tasks by passing sharing flags (`CLONE_VM`, `CLONE_FS`, `CLONE_FILES`, `CLONE_SIGHAND`).
-
-> **🗓️ Asked In Papers:** `June 2022 Q1(b)`
-
----
-
-### Q048: Explain Virtual Memory mapping and physical memory management in Linux, including page cache and the Buddy System allocator. :id=q048
-
-🟠 **High Priority** • **Asked in: Dec 2021 Q2(b), Dec 2024 Q5(a), June 2025 Q5(c), Dec 2025 Q5(d) (10 Marks)** • *Theory / Long Answer*
-
-**💡 Key Answer Points:**
-- **Memory Architecture:** Linux divides memory into two primary zones:
-  - **Kernel Space (Top 1 GB on 32-bit / Upper half on 64-bit):** Directly mapped physical RAM containing kernel code and page tables.
-  - **User Space (Lower 3 GB on 32-bit):** Private address space per process containing code, data, heap, and stack.
-- **Four-Level Paging Hardware:** Linux employs a 4-level paging hierarchy (PGD $\rightarrow$ P4D $\rightarrow$ PUD $\rightarrow$ PMD $\rightarrow$ PTE) to translate virtual addresses across multi-terabyte address spaces.
-- **Buddy System Allocator:**
-  - Manages contiguous physical page frames to prevent external memory fragmentation.
-  - Memory blocks are maintained in size-powers of two ($2^0, 2^1, \dots, 2^{10}$ pages).
-  - When a block is freed, the kernel checks if its "buddy" block of identical size is also free; if so, they merge into a larger block.
-- **Slab Allocator:** Sits on top of the Buddy System to allocate small kernel objects (e.g., `task_struct`, `mm_struct`) without wasting full 4 KB page frames.
-- **Page Cache & Swapping:** Frequently read disk blocks are cached in physical RAM (Page Cache). When free RAM drops, modified dirty pages are flushed to swap partitions via `kswapd`.
-
-> **🗓️ Asked In Papers:** `Dec 2021 Q2(b), Dec 2024 Q5(a), June 2025 Q5(c), Dec 2025 Q5(d)`
-
----
-
 ### Q049: Detail the multi-layered security model of the Linux Operating System across its five core pillars. :id=q049
 
-🔴 **Very High Priority** • **Asked in: Dec 2021 Q4(b), Dec 2022 Q5(c), June 2023 Q5(c), Dec 2023 Q1(d), June 2025 Q5(c) (10 Marks)** • *Theory / Multi-Tier Security*
+🔴 **Very High Priority** • **5 (50 marks)** • *Theory / Multi-Tier Security*
 
 **💡 Key Answer Points:**
 Linux enforces a multi-tier defense-in-depth model across five standard security layers:
@@ -89,9 +48,11 @@ Linux enforces a multi-tier defense-in-depth model across five standard security
 
 ---
 
+---
+
 ### Q050: Draw and explain the core architecture diagram of the Linux Operating System. :id=q050
 
-🔴 **Very High Priority** • **Asked in: June 2023 Q1(d), June 2024 Q4(b) (10 Marks)** • *Theory / Diagram & Architecture*
+🔴 **Very High Priority** • **3 (30 marks)** • *Theory / Diagram & Architecture*
 
 **💡 Key Answer Points:**
 Linux employs a modular, monolithic kernel architecture where all core OS subsystems execute within a single privileged memory address space.
@@ -131,9 +92,56 @@ Linux employs a modular, monolithic kernel architecture where all core OS subsys
 
 ---
 
-### Q050A: Explain the Access Matrix Security Model implemented in operating systems with an example. :id=q050a
+---
 
-🟠 **High Priority** • **Asked in: June 2026 Q4(a) (10 Marks)** • *Theory / Security Architecture*
+### Q051: Explain Virtual Memory mapping and physical memory management in Linux, including page cache and the Buddy System allocator. :id=q051
+
+🟠 **High Priority** • **4 (40 marks)** • *Theory / Long Answer*
+
+**💡 Key Answer Points:**
+- **Memory Architecture:** Linux divides memory into two primary zones:
+  - **Kernel Space (Top 1 GB on 32-bit / Upper half on 64-bit):** Directly mapped physical RAM containing kernel code and page tables.
+  - **User Space (Lower 3 GB on 32-bit):** Private address space per process containing code, data, heap, and stack.
+- **Four-Level Paging Hardware:** Linux employs a 4-level paging hierarchy (PGD $\rightarrow$ P4D $\rightarrow$ PUD $\rightarrow$ PMD $\rightarrow$ PTE) to translate virtual addresses across multi-terabyte address spaces.
+- **Buddy System Allocator:**
+  - Manages contiguous physical page frames to prevent external memory fragmentation.
+  - Memory blocks are maintained in size-powers of two ($2^0, 2^1, \dots, 2^{10}$ pages).
+  - When a block is freed, the kernel checks if its "buddy" block of identical size is also free; if so, they merge into a larger block.
+- **Slab Allocator:** Sits on top of the Buddy System to allocate small kernel objects (e.g., `task_struct`, `mm_struct`) without wasting full 4 KB page frames.
+- **Page Cache & Swapping:** Frequently read disk blocks are cached in physical RAM (Page Cache). When free RAM drops, modified dirty pages are flushed to swap partitions via `kswapd`.
+
+> **🗓️ Asked In Papers:** `Dec 2021 Q2(b), Dec 2024 Q5(a), June 2025 Q5(c), Dec 2025 Q5(d)`
+
+---
+
+---
+
+### Q052: Describe Process Management in Linux, including process hierarchy, process states, the CFS scheduler, and the clone() system call. :id=q052
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Architecture*
+
+**💡 Key Answer Points:**
+- **Process Hierarchy:** Linux maintains a strict parent-child process tree rooted at PID 1 (`init` or `systemd`). Every process is spawned via `fork()` and tracks parent PID (`ppid`).
+- **Process States in Linux:**
+  - `TASK_RUNNING`: Process is either executing on a CPU or waiting in the runqueue.
+  - `TASK_INTERRUPTIBLE`: Process is suspended waiting for an event/resource; can be awakened early by signals.
+  - `TASK_UNINTERRUPTIBLE`: Process is waiting directly on hardware I/O; will not wake up for signals.
+  - `TASK_STOPPED`: Execution suspended (via SIGSTOP or debugger breakpoint).
+  - `TASK_ZOMBIE`: Process terminated, but parent has not yet called `wait()` to collect exit status.
+- **Completely Fair Scheduler (CFS):**
+  - Manages normal non-real-time processes using a balanced **Red-Black Tree** ordered by `vruntime` (virtual runtime).
+  - The process with the smallest `vruntime` is positioned at the leftmost leaf of the tree and scheduled next.
+- **The `clone()` System Call:** Linux does not distinguish between threads and processes at the kernel level; both are represented by `task_struct`. The `clone()` system call creates lightweight tasks by passing sharing flags (`CLONE_VM`, `CLONE_FS`, `CLONE_FILES`, `CLONE_SIGHAND`).
+
+> **🗓️ Asked In Papers:** `June 2022 Q1(b)`
+
+---
+
+---
+
+### Q053: Explain the Access Matrix Security Model implemented in operating systems with an example. :id=q053
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Security Architecture*
 
 **💡 Key Answer Points:**
 - **Access Matrix Concept:** A formal conceptual model representing the protection state of a computer system. It models access rights as a 2D matrix where:

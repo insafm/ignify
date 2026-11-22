@@ -36,7 +36,7 @@ Across **5 academic years (10 exam sessions)**, the examination pattern of MCS-2
 
 ## 🔗 How This Archive Powers the Learning Portal
 
-Every single question across the [🗂️ Master Question Bank (Q001 – Q075)](/bca_new/mcs203/questions.md) is cross-referenced with exact session tags mapping directly to these 10 PDFs (e.g., `🗓️ Asked In: June 2022 Q1(a), Dec 2022 Q3(b), Dec 2024 Q1(b), Dec 2025 Q1(b), June 2026 Q1(c)`).
+Every single question across the [🗂️ Master Question Bank (Q006 – Q080)](/bca_new/mcs203/questions.md) is cross-referenced with exact session tags mapping directly to these 10 PDFs (e.g., `🗓️ Asked In: June 2022 Q1(a), Dec 2022 Q3(b), Dec 2024 Q1(b), Dec 2025 Q1(b), June 2026 Q1(c)`).
 
 - **For Full Statistical Breakdown:** See the [📊 10-Paper Comprehensive Analysis](/bca_new/mcs203/analysis.md).
 - **For High-Yield Predictions:** See the [🎯 High-Probability Predictions](/bca_new/mcs203/predictions.md).

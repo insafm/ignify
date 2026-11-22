@@ -7,43 +7,9 @@
 
 ## ❓ Question Bank & Canonical Answers
 
-### Q071: Describe the Virtual Memory architecture, demand paging, and page files in Windows 10. :id=q071
+### Q076: Detail the file management system of Windows 10, highlighting NTFS features and Journaling (Transaction Logging). :id=q076
 
-🟠 **High Priority** • **Asked in: June 2022 Q1(c), June 2024 Q1(d) (10 Marks)** • *Theory / Windows Architecture*
-
-**💡 Key Answer Points:**
-- **Flat 64-Bit Address Space:** Each 64-bit user-mode process in Windows 10 is allocated a private, flat logical address space of up to **128 TB**, with the operating system reserving the remaining high-order virtual address space.
-- **Demand Paging Implementation:** Pages are mapped via two-level or four-level page table trees and brought into physical RAM only upon reference (demand paging).
-- **Working Set Management:**
-  - Every process is assigned a **Working Set** (the collection of pages currently resident in physical memory).
-  - The Windows Memory Manager dynamically trims working sets of idle background apps when free system RAM drops below threshold watermarks.
-- **Page Files (`pagefile.sys`):** Windows 10 supports multiple concurrent paging files on disk to back private, modified virtual pages that cannot be recreated from executable binaries.
-
-> **🗓️ Asked In Papers:** `June 2022 Q1(c), June 2024 Q1(d)`
-
----
-
-### Q072: Explain Memory Compression in Windows 10 and how it improves system responsiveness. :id=q072
-
-🟠 **High Priority** • **Asked in: Dec 2021 Q1(d) (10 Marks)** • *Theory / Memory Optimization*
-
-**💡 Key Answer Points:**
-- **The Classical Bottleneck:** In traditional operating systems, when physical memory fills up, modified pages are written directly to secondary disk storage (`pagefile.sys`). Disk I/O latencies (even on SSDs) cause noticeable application stutter.
-- **Memory Compression Mechanism:**
-  - Instead of immediately flushing least-recently-used pages to disk, Windows 10 compresses the pages using an in-memory compression algorithm.
-  - The compressed pages are stored inside a dedicated in-memory pool called the **Compressed Memory Store** (visible as the "System and compressed memory" process in Task Manager).
-- **Performance Benefits:**
-  - Reduces disk I/O operations by up to 50–70%.
-  - Increases the effective capacity of physical RAM without hardware upgrades.
-  - Retrieving a compressed page from RAM requires microsecond CPU decompression, which is thousands of times faster than waiting for secondary disk retrieval.
-
-> **🗓️ Asked In Papers:** `Dec 2021 Q1(d)`
-
----
-
-### Q073: Detail the file management system of Windows 10, highlighting NTFS features and Journaling (Transaction Logging). :id=q073
-
-🔴 **Very High Priority** • **Asked in: Dec 2021 Q4(a), June 2023 Q5(b) (10 Marks)** • *Theory / NTFS File System*
+🔴 **Very High Priority** • **2 (20 marks)** • *Theory / NTFS File System*
 
 **💡 Key Answer Points:**
 - **NTFS (New Technology File System) Architecture:** The default filesystem for Windows 10, designed for massive volume capacities, reliability, and security.
@@ -60,9 +26,49 @@
 
 ---
 
-### Q074: Explain Process Management and Thread Scheduling in Windows 10. :id=q074
+---
 
-🟡 **Medium Priority** • **Asked in: Dec 2023 Q3(b) (10 Marks)** • *Theory / Scheduling*
+### Q077: Describe the Virtual Memory architecture, demand paging, and page files in Windows 10. :id=q077
+
+🟠 **High Priority** • **2 (20 marks)** • *Theory / Windows Architecture*
+
+**💡 Key Answer Points:**
+- **Flat 64-Bit Address Space:** Each 64-bit user-mode process in Windows 10 is allocated a private, flat logical address space of up to **128 TB**, with the operating system reserving the remaining high-order virtual address space.
+- **Demand Paging Implementation:** Pages are mapped via two-level or four-level page table trees and brought into physical RAM only upon reference (demand paging).
+- **Working Set Management:**
+  - Every process is assigned a **Working Set** (the collection of pages currently resident in physical memory).
+  - The Windows Memory Manager dynamically trims working sets of idle background apps when free system RAM drops below threshold watermarks.
+- **Page Files (`pagefile.sys`):** Windows 10 supports multiple concurrent paging files on disk to back private, modified virtual pages that cannot be recreated from executable binaries.
+
+> **🗓️ Asked In Papers:** `June 2022 Q1(c), June 2024 Q1(d)`
+
+---
+
+---
+
+### Q078: Explain Memory Compression in Windows 10 and how it improves system responsiveness. :id=q078
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Memory Optimization*
+
+**💡 Key Answer Points:**
+- **The Classical Bottleneck:** In traditional operating systems, when physical memory fills up, modified pages are written directly to secondary disk storage (`pagefile.sys`). Disk I/O latencies (even on SSDs) cause noticeable application stutter.
+- **Memory Compression Mechanism:**
+  - Instead of immediately flushing least-recently-used pages to disk, Windows 10 compresses the pages using an in-memory compression algorithm.
+  - The compressed pages are stored inside a dedicated in-memory pool called the **Compressed Memory Store** (visible as the "System and compressed memory" process in Task Manager).
+- **Performance Benefits:**
+  - Reduces disk I/O operations by up to 50–70%.
+  - Increases the effective capacity of physical RAM without hardware upgrades.
+  - Retrieving a compressed page from RAM requires microsecond CPU decompression, which is thousands of times faster than waiting for secondary disk retrieval.
+
+> **🗓️ Asked In Papers:** `Dec 2021 Q1(d)`
+
+---
+
+---
+
+### Q079: Explain Process Management and Thread Scheduling in Windows 10. :id=q079
+
+🟡 **Medium Priority** • **1 (10 marks)** • *Theory / Scheduling*
 
 **💡 Key Answer Points:**
 - **Thread-Based Execution:** Windows 10 schedules **threads**, not processes. A process is simply a container holding an address space, security tokens, and handles.
@@ -79,9 +85,11 @@
 
 ---
 
-### Q075: Detail Inter-Process Communication (IPC) mechanisms in Windows 10. :id=q075
+---
 
-🟡 **Medium Priority** • **Asked in: Dec 2024 Q2(a) (10 Marks)** • *Theory / IPC Mechanisms*
+### Q080: Detail Inter-Process Communication (IPC) mechanisms in Windows 10. :id=q080
+
+🟡 **Medium Priority** • **1 (10 marks)** • *Theory / IPC Mechanisms*
 
 **💡 Key Answer Points:**
 Windows 10 provides a versatile suite of IPC mechanisms:

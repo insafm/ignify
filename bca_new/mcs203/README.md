@@ -58,4 +58,4 @@ Historical analysis across all 10 TEE papers (Dec 2021 – Jun 2026) reveals tha
 | **[📊 10-Paper Comprehensive Analysis](/bca_new/mcs203/analysis.md)** | All 10 TEE papers | Mathematical topic rankings, frequency score formula & macro trends |
 | **[🎯 High-Probability Predictions](/bca_new/mcs203/predictions.md)** | Top 12 Target questions | Gap analysis, 10-mark expected questions & high-yield topics |
 | **[⚖️ Most Repeated Comparison Questions](/bca_new/mcs203/comparisons.md)** | 14 Repeated pairs | Comprehensive difference tables (Segmentation vs. Paging, Windows 10 vs. Linux, etc.) |
-| **[🗂️ Master Question Bank (Q001–Q075)](/bca_new/mcs203/questions.md)** | All 75 Questions | Deduplicated canonical question repository organized into 3 priority tiers |
+| **[🗂️ Master Question Bank (Q006–Q080)](/bca_new/mcs203/questions.md)** | All 75 Questions | Deduplicated canonical question repository organized into 3 priority tiers |

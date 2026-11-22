@@ -7,9 +7,9 @@
 
 ## ❓ Question Bank & Canonical Answers
 
-### Q056: Explain file disk space allocation methods: Contiguous Allocation vs. Non-Contiguous Allocation (Linked and Indexed) for effective disk utilization and quick access. :id=q056
+### Q060: Explain file disk space allocation methods: Contiguous Allocation vs. Non-Contiguous Allocation (Linked and Indexed) for effective disk utilization and quick access. :id=q060
 
-🔴 **Very High Priority** • **Asked in: June 2022 Q4(a), June 2026 Q3(b) (10 Marks)** • *Theory / Storage Allocation*
+🔴 **Very High Priority** • **2 (20 marks)** • *Theory / Storage Allocation*
 
 **💡 Key Answer Points:**
 - **Contiguous Allocation:**
@@ -42,48 +42,11 @@ Block 19 (Index Block): [ 71 | 14 | 88 | 32 | -1 | -1 ... ]
 
 ---
 
-### Q057: Explain the mechanics of SCAN and C-SCAN disk scheduling algorithms. :id=q057
-
-🟠 **High Priority** • **Asked in: Dec 2021 Q4(a), June 2023 Q1(b) (10 Marks)** • *Theory & Mechanics*
-
-**💡 Key Answer Points:**
-- **SCAN (Elevator Algorithm):**
-  - The disk arm starts at one end of the disk and moves toward the opposite end, servicing requests in cylinder order until it reaches the final cylinder of the disk platter.
-  - Upon reaching the end, the direction of head movement reverses, servicing pending requests on the return sweep.
-  - *Characteristics:* Prevents starvation, but requests at the far end wait longer if the arm just reversed.
-- **C-SCAN (Circular SCAN):**
-  - Designed to provide more uniform waiting times.
-  - Services requests in one direction only (e.g., from cylinder 0 to cylinder $MAX$).
-  - When the arm reaches the end, it immediately reverses and sweeps back to the beginning of the disk without servicing any I/O requests along the return path.
-  - *Characteristics:* Treats cylinders as a circular list, eliminating the bias towards edge tracks.
-
-> **🗓️ Asked In Papers:** `Dec 2021 Q4(a), June 2023 Q1(b)`
-
 ---
 
-### Q058: Define Disk Scheduling and explain FCFS and Shortest Seek Time First (SSTF) scheduling. :id=q058
+### Q061: Numerical Simulation — SSTF and C-SCAN Disk Scheduling. :id=q061
 
-🟠 **High Priority** • **Asked in: Dec 2022 Q4(b) (10 Marks)** • *Theory / Scheduling*
-
-**💡 Key Answer Points:**
-- **Definition:** Disk scheduling algorithms re-order pending disk I/O requests to minimize total disk arm seek time (the time taken for the physical read/write head to position itself over the target cylinder).
-- **First-Come First-Served (FCFS):**
-  - Services I/O requests in strict arrival order.
-  - *Merits:* Fair, starvation-free, simple queue management.
-  - *Demerits:* Wildly inefficient; produces erratic head movement across platter tracks.
-- **Shortest Seek Time First (SSTF):**
-  - Selects the request with the minimum seek distance from the current head position:
-    $$\min(|\text{Target Cylinder} - \text{Current Head Position}|)$$
-  - *Merits:* Significantly reduces total head movement compared to FCFS.
-  - *Demerits:* Can lead to **starvation** of requests on outer or inner tracks if a continuous stream of requests clusters around the current head position.
-
-> **🗓️ Asked In Papers:** `Dec 2022 Q4(b)`
-
----
-
-### Q059: Numerical Simulation — SSTF and C-SCAN Disk Scheduling. :id=q059
-
-🔴 **Very High Priority** • **Asked in: June 2023 Q1(b) (10 Marks)** • *Numerical / Step-by-Step Trace*
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Step-by-Step Trace*
 
 **Problem Statement:**
 Request Sequence: `61, 141, 40, 160, 15, 63, 60, 125`  
@@ -118,9 +81,11 @@ $$\text{Total Head Movement (C-SCAN)} = 199 + 199 = 398 \text{ cylinders} \quad 
 
 ---
 
-### Q060: Numerical Simulation — SCAN Disk Scheduling. :id=q060
+---
 
-🔴 **Very High Priority** • **Asked in: Dec 2025 Q3(b) (10 Marks)** • *Numerical / Step-by-Step Trace*
+### Q062: Numerical Simulation — SCAN Disk Scheduling. :id=q062
+
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Step-by-Step Trace*
 
 **Problem Statement:**
 Request Queue: `47, 38, 121, 191, 87, 11, 92, 10`  
@@ -142,9 +107,70 @@ $$\text{Total Head Movement} = (199 - 63) + (199 - 10) = 136 + 189 = 325 \text{ 
 
 ---
 
-### Q061: Explain Hierarchical Directory Structures: Two-Level, Tree, Acyclic Graph, and General Graph. :id=q061
+---
 
-🟠 **High Priority** • **Asked in: June 2025 Q2(a) (10 Marks)** • *Theory / File Systems*
+### Q063: Numerical Simulation — SSTF and SCAN Disk Scheduling. :id=q063
+
+🔴 **Very High Priority** • **1 (10 marks)** • *Numerical / Step-by-Step Trace*
+
+**Problem Statement:**
+Request Queue: `49, 90, 149, 41, 129, 17, 139, 69, 60`  
+Initial Head Position: Cylinder `49`, moving toward larger cylinders on disk $0–199$.
+
+**Results:**
+- **SSTF Trace:** $49 \rightarrow 41 (8) \rightarrow 60 (19) \rightarrow 69 (9) \rightarrow 90 (21) \rightarrow 129 (39) \rightarrow 139 (10) \rightarrow 149 (10) \rightarrow 17 (132) = 248 \text{ cylinders}$.
+- **SCAN Trace:** $49 \rightarrow 60 \rightarrow 69 \rightarrow 90 \rightarrow 129 \rightarrow 139 \rightarrow 149 \rightarrow 199 (150) \rightarrow 41 \rightarrow 17 (182) = 332 \text{ cylinders}$.
+
+> **🗓️ Asked In Papers:** `Dec 2024 Q1(a)`
+
+---
+
+### Q064: Explain the mechanics of SCAN and C-SCAN disk scheduling algorithms. :id=q064
+
+🟠 **High Priority** • **2 (20 marks)** • *Theory & Mechanics*
+
+**💡 Key Answer Points:**
+- **SCAN (Elevator Algorithm):**
+  - The disk arm starts at one end of the disk and moves toward the opposite end, servicing requests in cylinder order until it reaches the final cylinder of the disk platter.
+  - Upon reaching the end, the direction of head movement reverses, servicing pending requests on the return sweep.
+  - *Characteristics:* Prevents starvation, but requests at the far end wait longer if the arm just reversed.
+- **C-SCAN (Circular SCAN):**
+  - Designed to provide more uniform waiting times.
+  - Services requests in one direction only (e.g., from cylinder 0 to cylinder $MAX$).
+  - When the arm reaches the end, it immediately reverses and sweeps back to the beginning of the disk without servicing any I/O requests along the return path.
+  - *Characteristics:* Treats cylinders as a circular list, eliminating the bias towards edge tracks.
+
+> **🗓️ Asked In Papers:** `Dec 2021 Q4(a), June 2023 Q1(b)`
+
+---
+
+---
+
+### Q065: Define Disk Scheduling and explain FCFS and Shortest Seek Time First (SSTF) scheduling. :id=q065
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / Scheduling*
+
+**💡 Key Answer Points:**
+- **Definition:** Disk scheduling algorithms re-order pending disk I/O requests to minimize total disk arm seek time (the time taken for the physical read/write head to position itself over the target cylinder).
+- **First-Come First-Served (FCFS):**
+  - Services I/O requests in strict arrival order.
+  - *Merits:* Fair, starvation-free, simple queue management.
+  - *Demerits:* Wildly inefficient; produces erratic head movement across platter tracks.
+- **Shortest Seek Time First (SSTF):**
+  - Selects the request with the minimum seek distance from the current head position:
+    $$\min(|\text{Target Cylinder} - \text{Current Head Position}|)$$
+  - *Merits:* Significantly reduces total head movement compared to FCFS.
+  - *Demerits:* Can lead to **starvation** of requests on outer or inner tracks if a continuous stream of requests clusters around the current head position.
+
+> **🗓️ Asked In Papers:** `Dec 2022 Q4(b)`
+
+---
+
+---
+
+### Q066: Explain Hierarchical Directory Structures: Two-Level, Tree, Acyclic Graph, and General Graph. :id=q066
+
+🟠 **High Priority** • **1 (10 marks)** • *Theory / File Systems*
 
 **💡 Key Answer Points:**
 1. **Two-Level Directory:**
@@ -163,17 +189,3 @@ $$\text{Total Head Movement} = (199 - 63) + (199 - 10) = 136 + 189 = 325 \text{ 
 > **🗓️ Asked In Papers:** `June 2025 Q2(a)`
 
 ---
-
-### Q062: Numerical Simulation — SSTF and SCAN Disk Scheduling. :id=q062
-
-🔴 **Very High Priority** • **Asked in: Dec 2024 Q1(a) (10 Marks)** • *Numerical / Step-by-Step Trace*
-
-**Problem Statement:**
-Request Queue: `49, 90, 149, 41, 129, 17, 139, 69, 60`  
-Initial Head Position: Cylinder `49`, moving toward larger cylinders on disk $0–199$.
-
-**Results:**
-- **SSTF Trace:** $49 \rightarrow 41 (8) \rightarrow 60 (19) \rightarrow 69 (9) \rightarrow 90 (21) \rightarrow 129 (39) \rightarrow 139 (10) \rightarrow 149 (10) \rightarrow 17 (132) = 248 \text{ cylinders}$.
-- **SCAN Trace:** $49 \rightarrow 60 \rightarrow 69 \rightarrow 90 \rightarrow 129 \rightarrow 139 \rightarrow 149 \rightarrow 199 (150) \rightarrow 41 \rightarrow 17 (182) = 332 \text{ cylinders}$.
-
-> **🗓️ Asked In Papers:** `Dec 2024 Q1(a)`

@@ -65,11 +65,11 @@ Ten canonical questions account for **over 35% of all marks offered** across the
 | :---: | :--- | :---: | :---: | :---: | :--- |
 | 1 | [Linux Security Model & Access Matrix (Q049)](/bca_new/mcs203/topics/05-linux-case-study?id=q049) | LINUX | **6** | 55 | Jun 2023, Dec 2023, Jun 2025, Dec 2025, Jun 2026 |
 | 2 | [Segmentation Address Translation Hardware (Q018)](/bca_new/mcs203/topics/02-memory-management?id=q018) | MEMORY | **4** | 35 | Jun 2022, Jun 2023, Dec 2024, Jun 2026 |
-| 3 | [Deadlock Coffman Conditions & Prevention (Q051)](/bca_new/mcs203/topics/06-deadlocks?id=q051) | DEADLOCK | **4** | 40 | Jun 2022, Dec 2022, Dec 2024, Dec 2025 |
-| 4 | [iOS 4-Layer Architecture Stack (Q016)](/bca_new/mcs203/topics/01-mobile-os?id=q016) | MOBILE | **3** | 30 | Jun 2024, Jun 2025, Dec 2025 |
-| 5 | [Producer-Consumer Semaphore Solution (Q040)](/bca_new/mcs203/topics/04-process-synchronization?id=q040) | SYNCH | **3** | 30 | Dec 2021, Jun 2023, Dec 2024 |
-| 6 | [iOS Sandboxed Directory Structure (Q002)](/bca_new/mcs203/topics/01-mobile-os?id=q002) | MOBILE | **3** | 20 | Dec 2021, Jun 2023, Dec 2024 |
-| 7 | [Distributed Systems Design Challenges (Q033)](/bca_new/mcs203/topics/03-multiprocessor-distributed?id=q033) | DISTRIB | **3** | 25 | Dec 2021, Jun 2024, Dec 2025 |
-| 8 | [Virtual Memory Abstract Model & Translation (Q021)](/bca_new/mcs203/topics/02-memory-management?id=q021) | MEMORY | **3** | 30 | Dec 2022, Jun 2024, Dec 2024 |
+| 3 | [Deadlock Coffman Conditions & Prevention (Q054)](/bca_new/mcs203/topics/06-deadlocks?id=q054) | DEADLOCK | **4** | 40 | Jun 2022, Dec 2022, Dec 2024, Dec 2025 |
+| 4 | [iOS 4-Layer Architecture Stack (Q002)](/bca_new/mcs203/topics/01-mobile-os?id=q002) | MOBILE | **3** | 30 | Jun 2024, Jun 2025, Dec 2025 |
+| 5 | [Producer-Consumer Semaphore Solution (Q042)](/bca_new/mcs203/topics/04-process-synchronization?id=q042) | SYNCH | **3** | 30 | Dec 2021, Jun 2023, Dec 2024 |
+| 6 | [iOS Sandboxed Directory Structure (Q001)](/bca_new/mcs203/topics/01-mobile-os?id=q001) | MOBILE | **3** | 20 | Dec 2021, Jun 2023, Dec 2024 |
+| 7 | [Distributed Systems Design Challenges (Q032)](/bca_new/mcs203/topics/03-multiprocessor-distributed?id=q032) | DISTRIB | **3** | 25 | Dec 2021, Jun 2024, Dec 2025 |
+| 8 | [Virtual Memory Abstract Model & Translation (Q019)](/bca_new/mcs203/topics/02-memory-management?id=q019) | MEMORY | **3** | 30 | Dec 2022, Jun 2024, Dec 2024 |
 | 9 | [Android Layered Architecture Block Diagram (Q003)](/bca_new/mcs203/topics/01-mobile-os?id=q003) | MOBILE | **2** | 20 | Dec 2022, Dec 2024 |
-| 10 | [Thrashing Causes & Prevention (Q019)](/bca_new/mcs203/topics/02-memory-management?id=q019) | MEMORY | **2** | 20 | Jun 2022, Jun 2026 |
+| 10 | [Thrashing Causes & Prevention (Q028)](/bca_new/mcs203/topics/02-memory-management?id=q028) | MEMORY | **2** | 20 | Jun 2022, Jun 2026 |
