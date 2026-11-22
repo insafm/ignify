@@ -178,8 +178,9 @@
       }
     }
 
-    /* Built-in High-Contrast Theme Toggle Button */
-    .theme-toggle-btn {
+    /* Built-in High-Contrast Theme Toggle & Header Icon Buttons */
+    .theme-toggle-btn,
+    .header-icon-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -194,13 +195,16 @@
       transition: all 0.18s ease;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
       flex-shrink: 0;
+      text-decoration: none;
     }
-    .theme-toggle-btn:hover {
+    .theme-toggle-btn:hover,
+    .header-icon-btn:hover {
       border-color: var(--accent, #4f46e5);
       color: var(--accent, #4f46e5);
       transform: scale(1.05);
     }
-    .theme-toggle-btn svg {
+    .theme-toggle-btn svg,
+    .header-icon-btn svg {
       width: 18px;
       height: 18px;
       stroke-width: 2;
@@ -221,13 +225,17 @@
       display: none;
     }
     [data-theme="dark"] .theme-toggle-btn,
-    html[style*="color-scheme: dark"] .theme-toggle-btn {
+    [data-theme="dark"] .header-icon-btn,
+    html[style*="color-scheme: dark"] .theme-toggle-btn,
+    html[style*="color-scheme: dark"] .header-icon-btn {
       background: #1e293b;
       border-color: #334155;
       color: #f8fafc;
     }
     [data-theme="dark"] .theme-toggle-btn:hover,
-    html[style*="color-scheme: dark"] .theme-toggle-btn:hover {
+    [data-theme="dark"] .header-icon-btn:hover,
+    html[style*="color-scheme: dark"] .theme-toggle-btn:hover,
+    html[style*="color-scheme: dark"] .header-icon-btn:hover {
       border-color: #818cf8;
       color: #818cf8;
     }
@@ -290,13 +298,14 @@
       background: rgba(0, 0, 0, 0.45);
       backdrop-filter: blur(3px);
       -webkit-backdrop-filter: blur(3px);
-      z-index: 1000 !important;
+      z-index: 1003 !important;
       opacity: 0;
       transition: opacity 0.22s ease;
       cursor: pointer;
     }
     @media screen and (max-width: 768px) {
-      body.close .sidebar-overlay {
+      body.close .sidebar-overlay,
+      body.drawer-open .sidebar-overlay {
         display: block;
         opacity: 1;
       }
@@ -350,10 +359,15 @@
       .app-nav {
         position: fixed !important;
         top: 10px !important;
-        right: 68px !important;
+        right: 114px !important;
         margin: 0 !important;
         padding: 0 !important;
-        z-index: 1000 !important;
+        z-index: 1004 !important;
+      }
+      .app-nav p {
+        margin: 0 !important;
+        display: inline-flex !important;
+        align-items: center;
       }
       .app-nav > ul {
         display: flex;
@@ -365,51 +379,61 @@
       }
       .app-nav > ul > li {
         position: relative;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
         margin: 0;
         padding: 0;
-        font-size: 0.85rem;
-        font-weight: 600;
       }
-      .app-nav > ul > li > a,
-      .app-nav > ul > li > span {
+      .app-nav a,
+      .app-nav strong,
+      .app-nav span {
         display: inline-flex;
         align-items: center;
         gap: 5px;
         padding: 6px 12px;
         border-radius: 8px;
-        background: transparent;
-        border: 1px solid transparent;
+        font-size: 0.85rem;
+        font-weight: 600;
         color: var(--textColor, #334155);
         text-decoration: none;
         transition: all 0.15s ease;
         cursor: pointer;
-        font-size: 0.85rem;
+        white-space: nowrap;
+        background: transparent;
+        border: 1px solid transparent;
       }
-      .app-nav > ul > li > a:hover,
-      .app-nav > ul > li:hover > span {
+      .app-nav a:hover,
+      .app-nav strong:hover {
         background: rgba(79, 70, 229, 0.08);
         color: var(--accent, #4f46e5);
-        border-color: rgba(79, 70, 229, 0.2);
+        border-color: rgba(79, 70, 229, 0.15);
       }
-      [data-theme="dark"] .app-nav > ul > li > a:hover,
-      [data-theme="dark"] .app-nav > ul > li:hover > span {
+      [data-theme="dark"] .app-nav a,
+      [data-theme="dark"] .app-nav strong,
+      html[style*="color-scheme: dark"] .app-nav a,
+      html[style*="color-scheme: dark"] .app-nav strong {
+        color: #e2e8f0;
+      }
+      [data-theme="dark"] .app-nav a:hover,
+      [data-theme="dark"] .app-nav strong:hover,
+      html[style*="color-scheme: dark"] .app-nav a:hover,
+      html[style*="color-scheme: dark"] .app-nav strong:hover {
         background: rgba(129, 140, 248, 0.14);
         color: #a5b4fc;
-        border-color: rgba(129, 140, 248, 0.3);
+        border-color: rgba(129, 140, 248, 0.25);
       }
       /* Dropdown Menus */
       .app-nav > ul > li ul {
         position: absolute;
         top: calc(100% + 6px);
         right: 0;
-        min-width: 220px;
+        min-width: 210px;
         margin-top: 0;
         padding: 6px;
         background: var(--background, #ffffff);
         border: 1px solid var(--borderColor, #e2e8f0);
         border-radius: 10px;
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
         list-style: none;
         z-index: 1010;
         display: none;
@@ -421,11 +445,11 @@
       html[style*="color-scheme: dark"] .app-nav > ul > li ul {
         background: var(--codeBackgroundColor, #111827);
         border-color: var(--borderColor, #1e293b);
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
       }
       .app-nav > ul > li ul li {
         display: block;
-        margin: 0;
+        margin: 2px 0;
         padding: 0;
       }
       .app-nav > ul > li ul li a {
@@ -458,7 +482,7 @@
         left: 250px !important;
       }
       .app-nav {
-        right: 54px !important;
+        right: 98px !important;
       }
       .app-nav > ul {
         gap: 5px;
@@ -530,7 +554,7 @@
         max-width: 85vw !important;
         transform: translateX(-100%) !important; /* HIDDEN OFF-SCREEN */
         transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        z-index: 1001 !important;
+        z-index: 1005 !important;
         box-shadow: none !important;
         border-right: 1px solid var(--borderColor, #1e293b) !important;
         background: var(--background, #ffffff) !important;
@@ -549,9 +573,10 @@
         line-height: 1.4 !important;
       }
       /* Opened Sidebar Drawer */
-      body.close .sidebar {
+      body.close .sidebar,
+      body.drawer-open .sidebar {
         transform: translateX(0) !important; /* SLIDES INTO VIEW */
-        box-shadow: 8px 0 32px rgba(0, 0, 0, 0.38) !important;
+        box-shadow: 10px 0 38px rgba(0, 0, 0, 0.4) !important;
       }
 
       /* Hide raw app-nav on mobile since sidebar drawer has complete navigation */
@@ -585,26 +610,106 @@
       max-width: 100%;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     }
+    /* Refined & Scan-Friendly Sidebar Arrangement */
+    .sidebar {
+      border-right: 1px solid var(--borderColor, #e2e8f0);
+      font-size: 0.9rem;
+      background: var(--background, #ffffff) !important;
+    }
+    .sidebar-nav {
+      padding: 10px 14px 48px 14px !important;
+    }
     .sidebar-nav ul {
-      padding-left: 1.1rem;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none !important;
     }
     .sidebar-nav > ul > li {
-      margin-bottom: 0.75rem;
+      margin-bottom: 1.15rem;
     }
-    .sidebar-nav strong {
+    .sidebar-nav > ul > li > p {
+      margin: 0 0 6px 0 !important;
+    }
+    .sidebar-nav > ul > li > strong,
+    .sidebar-nav > ul > li > p > strong {
+      display: block;
       font-weight: 700;
-      font-size: 0.8rem;
+      font-size: 0.74rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--textColor);
-      opacity: 0.7;
-      display: inline-block;
-      margin-top: 0.4rem;
+      letter-spacing: 0.08em;
+      color: var(--textColor, #64748b);
+      opacity: 0.75;
+      padding: 8px 8px 4px 8px;
+      margin-top: 8px;
+      border-bottom: 1px solid var(--borderColor, rgba(148, 163, 184, 0.15));
+    }
+    [data-theme="dark"] .sidebar-nav > ul > li > strong,
+    [data-theme="dark"] .sidebar-nav > ul > li > p > strong {
+      color: #94a3b8;
+      border-bottom-color: rgba(51, 65, 85, 0.4);
+    }
+    .sidebar-nav a strong {
+      display: inline !important;
+      font-size: inherit !important;
+      text-transform: none !important;
+      letter-spacing: normal !important;
+      border-bottom: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      color: inherit !important;
+      opacity: 1 !important;
+    }
+    .sidebar-nav ul ul {
+      padding-left: 6px !important;
+      margin-top: 4px !important;
+    }
+    .sidebar-nav li {
+      margin: 3px 0;
+      line-height: 1.45;
     }
     .sidebar-nav a {
-      transition: all 0.15s ease-in-out;
+      display: block;
+      padding: 6px 10px;
       border-radius: 6px;
-      padding: 2px 6px;
+      color: var(--textColor, #334155);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      white-space: normal;
+      word-break: break-word;
+    }
+    .sidebar-nav a:hover {
+      background: rgba(79, 70, 229, 0.08);
+      color: var(--accent, #4f46e5) !important;
+      transform: translateX(2px);
+    }
+    .sidebar-nav li.active > a {
+      color: var(--accent, #4f46e5) !important;
+      font-weight: 700 !important;
+      background: rgba(79, 70, 229, 0.1) !important;
+      border-left: 3px solid var(--accent, #4f46e5);
+      border-radius: 0 6px 6px 0;
+    }
+    [data-theme="dark"] .sidebar-nav a {
+      color: #cbd5e1;
+    }
+    [data-theme="dark"] .sidebar-nav a:hover {
+      background: rgba(129, 140, 248, 0.14);
+      color: #a5b4fc !important;
+    }
+    [data-theme="dark"] .sidebar-nav li.active > a {
+      color: #a5b4fc !important;
+      background: rgba(129, 140, 248, 0.16) !important;
+      border-left-color: #818cf8;
+    }
+    .sidebar-nav em {
+      font-style: normal;
+      font-size: 0.81rem;
+      color: var(--textColor, #64748b);
+      opacity: 0.8;
+      display: block;
+      padding: 4px 8px;
     }
 
     /* Tables (Fluid, Scrollable & High Contrast) */
@@ -943,6 +1048,11 @@
       </a>
     </div>
     <div class="header-right">
+      <a href="https://github.com/insafm/ignify" target="_blank" rel="noopener" class="header-icon-btn" aria-label="GitHub Repository" title="GitHub Repository: insafm/ignify">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
       <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme" title="Switch Light/Dark Theme">
         <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -974,7 +1084,7 @@
       loadNavbar: true,
       coverpage: false,
       onlyCover: false,
-      subMaxLevel: 3,
+      subMaxLevel: 0,
       auto2top: true,
       search: {
         maxAge: 86400000,
@@ -1072,7 +1182,7 @@
               '    IGNify is an independent student resource platform and is not affiliated with, endorsed by, or officially associated with Indira Gandhi National Open University (IGNOU).',
               '  </p>',
               '  <div class="footer-meta">',
-              '    Engineered with longitudinal exam analysis by <a href="https://mohammedinsaf.com" target="_blank" rel="noopener">Mohammed Insaf M</a>',
+              '    Engineered with longitudinal exam analysis by <a href="https://mohammedinsaf.com" target="_blank" rel="noopener">Mohammed Insaf M</a> &bull; <a href="https://github.com/insafm/ignify" target="_blank" rel="noopener">GitHub (insafm/ignify)</a>',
               '  </div>',
               '</footer>'
             ].join('\n');
@@ -1086,6 +1196,7 @@
 
             // Auto-close sidebar on mobile navigation
             if (window.innerWidth <= 768) {
+              document.body.classList.remove('drawer-open');
               document.body.classList.remove('close');
             }
 
@@ -1232,6 +1343,7 @@
         menuBtn.addEventListener('click', function(e) {
           e.preventDefault();
           e.stopPropagation();
+          document.body.classList.toggle('drawer-open');
           document.body.classList.toggle('close');
         });
       }
@@ -1241,6 +1353,7 @@
         overlay.addEventListener('click', function(e) {
           e.preventDefault();
           e.stopPropagation();
+          document.body.classList.remove('drawer-open');
           document.body.classList.remove('close');
         });
       }
@@ -1252,6 +1365,7 @@
           if (sidebarEl) {
             if (e.target.closest('a')) {
               setTimeout(function() {
+                document.body.classList.remove('drawer-open');
                 document.body.classList.remove('close');
               }, 150);
             } else {

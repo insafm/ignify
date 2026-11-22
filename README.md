@@ -87,4 +87,4 @@ This portal is continuously updated with every new IGNOU Term-End Examination se
 
 - **Platform:** **IGNify** — *Your IGNOU Journey, Simplified.*
 - **Author & Maintainer:** [Mohammed Insaf M](https://mohammedinsaf.com)
-- **Source Repository:** Hosted on GitHub Pages ([insignou.insafweb.in](https://insignou.insafweb.in))
+- **Source Repository:** [github.com/insafm/ignify](https://github.com/insafm/ignify) (Hosted on GitHub Pages at [insignou.insafweb.in](https://insignou.insafweb.in))
