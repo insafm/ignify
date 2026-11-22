@@ -1519,23 +1519,70 @@
               { path: '/bca_new/bcs131/papers', file: 'bca_new/bcs131/papers.md', title: '📑 Question Papers Archive (30 PDFs)' }
             ];
 
+            // Build MCS-203 Continuous Topic & Resource Guide Pagination
+            var mcsGuideChain = [
+              { path: '/bca_new/mcs203/README', file: 'bca_new/mcs203/README.md', title: '🖥️ MCS-203 Overview' },
+              { path: '/bca_new/mcs203/analysis', file: 'bca_new/mcs203/analysis.md', title: '📊 10-Paper Comprehensive Analysis' },
+              { path: '/bca_new/mcs203/predictions', file: 'bca_new/mcs203/predictions.md', title: '🎯 High-Probability Predictions' },
+              { path: '/bca_new/mcs203/comparisons', file: 'bca_new/mcs203/comparisons.md', title: '⚖️ Repeated Comparison Questions' },
+              { path: '/bca_new/mcs203/questions', file: 'bca_new/mcs203/questions.md', title: '🗂️ Master Question Bank by Topics' },
+              { path: '/bca_new/mcs203/topics/01-mobile-os', file: 'bca_new/mcs203/topics/01-mobile-os.md', title: '01. Case Study: Mobile OS (Android & iOS)' },
+              { path: '/bca_new/mcs203/topics/02-memory-management', file: 'bca_new/mcs203/topics/02-memory-management.md', title: '02. Memory Management & Virtual Memory' },
+              { path: '/bca_new/mcs203/topics/03-multiprocessor-distributed', file: 'bca_new/mcs203/topics/03-multiprocessor-distributed.md', title: '03. Multiprocessor & Distributed Systems' },
+              { path: '/bca_new/mcs203/topics/04-process-synchronization', file: 'bca_new/mcs203/topics/04-process-synchronization.md', title: '04. Process Synchronization & Concurrency' },
+              { path: '/bca_new/mcs203/topics/05-linux-case-study', file: 'bca_new/mcs203/topics/05-linux-case-study.md', title: '05. Case Study: Linux Architecture & Security' },
+              { path: '/bca_new/mcs203/topics/06-deadlocks', file: 'bca_new/mcs203/topics/06-deadlocks.md', title: '06. Deadlocks (Coffman, Havender, Banker\'s)' },
+              { path: '/bca_new/mcs203/topics/07-file-disk-management', file: 'bca_new/mcs203/topics/07-file-disk-management.md', title: '07. File Systems & Disk Management' },
+              { path: '/bca_new/mcs203/topics/08-process-cpu-scheduling', file: 'bca_new/mcs203/topics/08-process-cpu-scheduling.md', title: '08. Process Management & CPU Scheduling' },
+              { path: '/bca_new/mcs203/topics/09-windows10-case-study', file: 'bca_new/mcs203/topics/09-windows10-case-study.md', title: '09. Case Study: Windows 10 Architecture' },
+              { path: '/bca_new/mcs203/papers', file: 'bca_new/mcs203/papers.md', title: '📑 Question Papers Archive (10 PDFs)' }
+            ];
+
+            // Build MCS-203 Continuous Topic & Resource Guide Pagination
+            var mcsGuideChain = [
+              { path: '/bca_new/mcs203/README', file: 'bca_new/mcs203/README.md', title: '🖥️ MCS-203 Overview' },
+              { path: '/bca_new/mcs203/analysis', file: 'bca_new/mcs203/analysis.md', title: '📊 10-Paper Comprehensive Analysis' },
+              { path: '/bca_new/mcs203/predictions', file: 'bca_new/mcs203/predictions.md', title: '🎯 High-Probability Predictions' },
+              { path: '/bca_new/mcs203/comparisons', file: 'bca_new/mcs203/comparisons.md', title: '⚖️ Repeated Comparison Questions' },
+              { path: '/bca_new/mcs203/questions', file: 'bca_new/mcs203/questions.md', title: '🗂️ Master Question Bank by Topics' },
+              { path: '/bca_new/mcs203/topics/01-mobile-os', file: 'bca_new/mcs203/topics/01-mobile-os.md', title: '01. Case Study: Mobile OS (Android & iOS)' },
+              { path: '/bca_new/mcs203/topics/02-memory-management', file: 'bca_new/mcs203/topics/02-memory-management.md', title: '02. Memory Management & Virtual Memory' },
+              { path: '/bca_new/mcs203/topics/03-multiprocessor-distributed', file: 'bca_new/mcs203/topics/03-multiprocessor-distributed.md', title: '03. Multiprocessor & Distributed Systems' },
+              { path: '/bca_new/mcs203/topics/04-process-synchronization', file: 'bca_new/mcs203/topics/04-process-synchronization.md', title: '04. Process Synchronization & Concurrency' },
+              { path: '/bca_new/mcs203/topics/05-linux-case-study', file: 'bca_new/mcs203/topics/05-linux-case-study.md', title: '05. Case Study: Linux Architecture & Security' },
+              { path: '/bca_new/mcs203/topics/06-deadlocks', file: 'bca_new/mcs203/topics/06-deadlocks.md', title: '06. Deadlocks (Coffman, Havender, Banker\'s)' },
+              { path: '/bca_new/mcs203/topics/07-file-disk-management', file: 'bca_new/mcs203/topics/07-file-disk-management.md', title: '07. File Systems & Disk Management' },
+              { path: '/bca_new/mcs203/topics/08-process-cpu-scheduling', file: 'bca_new/mcs203/topics/08-process-cpu-scheduling.md', title: '08. Process Management & CPU Scheduling' },
+              { path: '/bca_new/mcs203/topics/09-windows10-case-study', file: 'bca_new/mcs203/topics/09-windows10-case-study.md', title: '09. Case Study: Windows 10 Architecture' },
+              { path: '/bca_new/mcs203/papers', file: 'bca_new/mcs203/papers.md', title: '📑 Question Papers Archive (10 PDFs)' }
+            ];
+
             var normPath = ((vm && vm.route && vm.route.path) || '').replace(/^\/+|\/+$/g, '').toLowerCase();
             var normFile = ((vm && vm.route && vm.route.file) || '').replace(/^\/+|\/+$/g, '').replace(/\.md$/i, '').toLowerCase();
 
+            var activeGuideChain = null;
+            if (normPath.indexOf('bca_new/mcs203') !== -1 || normFile.indexOf('bca_new/mcs203') !== -1) {
+              activeGuideChain = mcsGuideChain;
+            } else if (normPath.indexOf('bca_new/bcs131') !== -1 || normFile.indexOf('bca_new/bcs131') !== -1) {
+              activeGuideChain = bcsGuideChain;
+            }
+
             var matchIdx = -1;
-            for (var bi = 0; bi < bcsGuideChain.length; bi++) {
-              var targetPath = bcsGuideChain[bi].path.replace(/^\/+|\/+$/g, '').toLowerCase();
-              var targetFile = bcsGuideChain[bi].file.replace(/^\/+|\/+$/g, '').replace(/\.md$/i, '').toLowerCase();
-              if (normPath === targetPath || normFile === targetFile || (normPath + '/readme') === targetPath) {
-                matchIdx = bi;
-                break;
+            if (activeGuideChain) {
+              for (var bi = 0; bi < activeGuideChain.length; bi++) {
+                var targetPath = activeGuideChain[bi].path.replace(/^\/+|\/+$/g, '').toLowerCase();
+                var targetFile = activeGuideChain[bi].file.replace(/^\/+|\/+$/g, '').replace(/\.md$/i, '').toLowerCase();
+                if (normPath === targetPath || normFile === targetFile || (normPath + '/readme') === targetPath) {
+                  matchIdx = bi;
+                  break;
+                }
               }
             }
 
             var paginationBar = '';
-            if (matchIdx !== -1) {
-              var prevGuide = matchIdx > 0 ? bcsGuideChain[matchIdx - 1] : { path: '/bca_new/README', title: '💻 BCA_NEW Programme Hub' };
-              var nextGuide = matchIdx < bcsGuideChain.length - 1 ? bcsGuideChain[matchIdx + 1] : null;
+            if (activeGuideChain && matchIdx !== -1) {
+              var prevGuide = matchIdx > 0 ? activeGuideChain[matchIdx - 1] : { path: '/bca_new/README', title: '💻 BCA_NEW Programme Hub' };
+              var nextGuide = matchIdx < activeGuideChain.length - 1 ? activeGuideChain[matchIdx + 1] : null;
 
               var prevHtml = prevGuide ? [
                 '<div class="pagination-item pagination-item--previous">',
@@ -1813,8 +1860,10 @@
                 var keyPoints = answerBox ? answerBox.textContent.trim() : '';
 
                 // Build IGNOU-focused Exam Answer Prompt
+                var isMCS = (window.location.hash || '').indexOf('mcs203') !== -1;
+                var courseContext = isMCS ? 'Course: MCS-203 - Operating Systems' : 'Course: BCS-131 / Dual: BCS-031 - Programming in C++';
                 var promptLines = [
-                  'You are an expert tutor for IGNOU BCA (Course: BCS-131 / Dual: BCS-031 - Programming in C++).',
+                  'You are an expert tutor for IGNOU BCA (' + courseContext + ').',
                   '',
                   'Please provide a complete, high-scoring exam answer for the following IGNOU Term-End Examination (TEE) question according to the IGNOU marking scheme:',
                   '',
@@ -1831,9 +1880,15 @@
                 promptLines.push('');
                 promptLines.push('Please structure your answer with:');
                 promptLines.push('1. Formal Definition & Need (Concise, accurate terminology)');
-                promptLines.push('2. Grammar, Syntax & Accessibility Rules (with parameter/return details)');
-                promptLines.push('3. Complete Compilable C++ Code Snippet (complete with #include <iostream>, class definition, methods, and main())');
-                promptLines.push('4. Expected Terminal Output & Key Constraints / Trade-offs');
+                if (isMCS) {
+                  promptLines.push('2. Architectural Principles, Mechanics & Core Algorithms / Diagrams');
+                  promptLines.push('3. Complete Pseudocode / Code / Step-by-Step Numerical Trace with Formulas');
+                  promptLines.push('4. Structural Comparison / Trade-offs / System Limitations');
+                } else {
+                  promptLines.push('2. Grammar, Syntax & Accessibility Rules (with parameter/return details)');
+                  promptLines.push('3. Complete Compilable C++ Code Snippet (complete with #include <iostream>, class definition, methods, and main())');
+                  promptLines.push('4. Expected Terminal Output & Key Constraints / Trade-offs');
+                }
                 promptLines.push('5. Quick Exam Revision Takeaways');
 
                 var fullPrompt = promptLines.join('\n');

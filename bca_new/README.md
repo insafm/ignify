@@ -64,7 +64,7 @@ Based on empirical credit weighting from the official curriculum guide, individu
 | :---: | :--- | :---: | :---: | :---: |
 | **FEG-02** | Foundation Course in English-2 | 4 | SOH | ⚪ *Planned* |
 | **MCS-202** | Computer Organisation | 4 | SOCIS | ⚪ *Planned* |
-| **MCS-203** | Operating Systems | 4 | SOCIS | 🟡 *In Pipeline* |
+| **MCS-203** | **Operating Systems** | **4** | **SOCIS** | 🟢 **Complete** (10 PDFs / 80 Qs) → [Open Module](/bca_new/mcs203/README.md) |
 | **MCSL-204** | WINDOWS and LINUX Lab | 2 | SOCIS | ⚪ *Planned* |
 | **MCS-201** | Programming in C and Python | 4 | SOCIS | 🟡 *In Pipeline* |
 | **MCSL-205** | C and Python Lab | 2 | SOCIS | ⚪ *Planned* |
