@@ -1745,7 +1745,8 @@
             var fetchCount = function() {
               var countEl = document.getElementById('page-views-count');
               if (!countEl) return;
-              fetch('https://insafweb.goatcounter.com/counter/' + encodeURIComponent(routePath) + '.json')
+              var cacheBuster = Math.floor(Date.now() / 60000);
+              fetch('https://insafweb.goatcounter.com/counter/' + encodeURIComponent(routePath) + '.json?start=2020-01-01&_t=' + cacheBuster)
                 .then(function(res) {
                   // GoatCounter returns HTTP 404 with {"count_unique":"0","count":"0"} when visits are 0
                   if (res.ok || res.status === 404) return res.json();
