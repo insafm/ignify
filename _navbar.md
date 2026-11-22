@@ -1,14 +1,16 @@
 * **Course: BCA_NEW**
   * [BCS-131: Programming in C++](/bca_new/bcs131/)
-  * [BCS-011: Problem Solving & C (Coming Soon)](#)
-  * [BCS-012: Basic Mathematics (Coming Soon)](#)
-  * [BCS-040: Statistical Techniques (Coming Soon)](#)
+  * [BCS-011: Problem Solving & C (Upcoming)](#)
+  * [BCS-012: Basic Mathematics (Upcoming)](#)
+  * [BCS-040: Statistical Techniques (Upcoming)](#)
 
-* **BCS-131 Fast Links**
-  * [Blueprint & Syllabus](/bca_new/bcs131/README.md)
+* **BCS-131 Modules**
+  * [Syllabus & Blueprint](/bca_new/bcs131/README.md)
   * [30-Paper Analysis](/bca_new/bcs131/analysis.md)
   * [Upcoming Predictions](/bca_new/bcs131/predictions.md)
-  * [Comparisons](/bca_new/bcs131/comparisons.md)
-  * [215 Questions](/bca_new/bcs131/questions.md)
+  * [Comparisons Matrix](/bca_new/bcs131/comparisons.md)
+  * [215 Canonical Questions](/bca_new/bcs131/questions.md)
 
-* [GitHub](https://github.com/)
+* **[⚡ Mohammed Insaf M](https://mohammedinsaf.com)**
+  * [Portfolio & Works](https://mohammedinsaf.com)
+  * [About Me](https://mohammedinsaf.com)
