@@ -815,15 +815,56 @@
       border-top: 1px solid var(--borderColor, #e2e8f0) !important;
     }
 
-    /* Top-Right Compact Edit Page Button */
+    /* Document Top Bar: Live View Counter & Edit Button */
     .content-header-bar {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
       margin-top: -0.25rem;
       margin-bottom: 0.65rem;
       position: relative;
       z-index: 2;
+    }
+    .header-bar-left,
+    .header-bar-right {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .page-views-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--textColor, #64748b);
+      text-decoration: none !important;
+      opacity: 0.82;
+      padding: 4px 9px;
+      border-radius: 6px;
+      border: 1px solid var(--borderColor, #e2e8f0);
+      background: var(--codeBackgroundColor, #f8fafc);
+      transition: all 0.16s ease;
+      line-height: 1;
+    }
+    .page-views-badge:hover {
+      opacity: 1;
+      color: var(--accent, #4f46e5);
+      border-color: var(--accent, #4f46e5);
+    }
+    [data-theme="dark"] .page-views-badge {
+      background: #111827;
+      border-color: #1e293b;
+      color: #94a3b8;
+    }
+    [data-theme="dark"] .page-views-badge:hover {
+      color: #a5b4fc;
+      border-color: #818cf8;
+    }
+    .page-views-badge svg.view-icon {
+      width: 13px;
+      height: 13px;
+      stroke-width: 2;
     }
     .edit-page-btn {
       display: inline-flex;
@@ -1444,13 +1485,24 @@
             var editUrl = 'https://github.com/insafm/ignify/edit/main/' + file;
             var editBar = [
               '<div class="content-header-bar">',
-              '  <a href="' + editUrl + '" target="_blank" rel="noopener" class="edit-page-btn" title="Edit this page on GitHub">',
-              '    <svg class="edit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
-              '      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>',
-              '      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>',
-              '    </svg>',
-              '    <span>Edit</span>',
-              '  </a>',
+              '  <div class="header-bar-left">',
+              '    <a href="https://insafweb.goatcounter.com" target="_blank" rel="noopener" class="page-views-badge" id="page-views-badge" title="Live page visits (powered by GoatCounter)">',
+              '      <svg class="view-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
+              '        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>',
+              '        <circle cx="12" cy="12" r="3"></circle>',
+              '      </svg>',
+              '      <span id="page-views-count">Views: ...</span>',
+              '    </a>',
+              '  </div>',
+              '  <div class="header-bar-right">',
+              '    <a href="' + editUrl + '" target="_blank" rel="noopener" class="edit-page-btn" title="Edit this page on GitHub">',
+              '      <svg class="edit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
+              '        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>',
+              '        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>',
+              '      </svg>',
+              '      <span>Edit</span>',
+              '    </a>',
+              '  </div>',
               '</div>'
             ].join('\n');
 
@@ -1531,7 +1583,7 @@
               '    IGNify is an independent student resource platform and is not affiliated with, endorsed by, or officially associated with Indira Gandhi National Open University (IGNOU).',
               '  </p>',
               '  <div class="footer-meta">',
-              '    Engineered with longitudinal exam analysis by <a href="https://mohammedinsaf.com" target="_blank" rel="noopener">Mohammed Insaf M</a> &bull; <a href="https://github.com/insafm/ignify" target="_blank" rel="noopener">GitHub (insafm/ignify)</a>',
+              '    Engineered with longitudinal exam analysis by <a href="https://mohammedinsaf.com" target="_blank" rel="noopener">Mohammed Insaf M</a> &bull; <a href="https://github.com/insafm/ignify" target="_blank" rel="noopener">GitHub (insafm/ignify)</a> &bull; <a href="https://insafweb.goatcounter.com" target="_blank" rel="noopener">Analytics</a>',
               '  </div>',
               '</footer>'
             ].join('\n');
@@ -1574,6 +1626,55 @@
                 }
               }, 150);
             }
+
+            // GoatCounter: Track individual page view & fetch live visitor count for this route
+            var rawRoute = (location.hash ? location.hash.replace(/^#\/?/, '/') : '/').split('?')[0];
+            if (!rawRoute.startsWith('/')) rawRoute = '/' + rawRoute;
+            var routePath = rawRoute.replace(/\/README$/i, '') || '/';
+
+            var sendPageView = function() {
+              if (window.goatcounter && window.goatcounter.count) {
+                window.goatcounter.count({
+                  path: routePath,
+                  title: document.title || 'IGNify'
+                });
+              }
+            };
+
+            if (window.goatcounter && window.goatcounter.count) {
+              sendPageView();
+            } else {
+              var gcWait = setInterval(function() {
+                if (window.goatcounter && window.goatcounter.count) {
+                  clearInterval(gcWait);
+                  sendPageView();
+                }
+              }, 120);
+              setTimeout(function() { clearInterval(gcWait); }, 3500);
+            }
+
+            // Fetch live visitor count for this route
+            var fetchCount = function() {
+              var countEl = document.getElementById('page-views-count');
+              if (!countEl) return;
+              fetch('https://insafweb.goatcounter.com/counter/' + encodeURIComponent(routePath) + '.json')
+                .then(function(res) {
+                  if (res.ok) return res.json();
+                  throw new Error('Counter disabled');
+                })
+                .then(function(data) {
+                  if (data && data.count) {
+                    var val = String(data.count).trim();
+                    countEl.textContent = val + (val === '1' ? ' view' : ' views');
+                  } else {
+                    countEl.textContent = '1 view';
+                  }
+                })
+                .catch(function() {
+                  countEl.textContent = 'Views: –';
+                });
+            };
+            fetchCount();
           });
 
           // In-page smooth scrolling for jump links (e.g. ?id=about, ?id=programmes, #q194)
@@ -1879,5 +1980,13 @@
       });
     });
   </script>
+
+  <!-- GoatCounter Web Analytics (Official Tracking Script) -->
+  <script>
+    window.goatcounter = {
+      no_onload: true // Managed dynamically per route by Docsify router
+    };
+  </script>
+  <script data-goatcounter="https://insafweb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
