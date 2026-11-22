@@ -425,10 +425,10 @@
       /* Dropdown Menus */
       .app-nav > ul > li ul {
         position: absolute;
-        top: calc(100% + 6px);
+        top: 100%;
         right: 0;
         min-width: 210px;
-        margin-top: 0;
+        margin-top: 4px;
         padding: 6px;
         background: var(--background, #ffffff);
         border: 1px solid var(--borderColor, #e2e8f0);
@@ -438,7 +438,18 @@
         z-index: 1010;
         display: none;
       }
-      .app-nav > ul > li:hover ul {
+      /* Invisible hover bridge: keeps hover intact between button and menu */
+      .app-nav > ul > li ul::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 0;
+        right: 0;
+        height: 8px;
+      }
+      .app-nav > ul > li:hover ul,
+      .app-nav > ul > li.open ul,
+      .app-nav > ul > li:focus-within ul {
         display: block;
       }
       [data-theme="dark"] .app-nav > ul > li ul,
@@ -1377,6 +1388,31 @@
           document.body.classList.remove('close');
         });
       }
+
+      // Navbar dropdown click toggle & dismiss
+      document.addEventListener('click', function(e) {
+        var trigger = e.target.closest('.app-nav > ul > li > p, .app-nav > ul > li > strong');
+        if (trigger) {
+          var parentLi = trigger.closest('li');
+          if (parentLi && parentLi.querySelector('ul')) {
+            e.preventDefault();
+            e.stopPropagation();
+            var isOpen = parentLi.classList.contains('open');
+            document.querySelectorAll('.app-nav > ul > li.open').forEach(function(li) {
+              li.classList.remove('open');
+            });
+            if (!isOpen) {
+              parentLi.classList.add('open');
+            }
+            return;
+          }
+        }
+        if (!e.target.closest('.app-nav ul ul')) {
+          document.querySelectorAll('.app-nav > ul > li.open').forEach(function(li) {
+            li.classList.remove('open');
+          });
+        }
+      });
 
       // Handle mobile drawer clicks: allow link navigation then close, but keep drawer open on scroll/search/toggle
       document.addEventListener('click', function(e) {
