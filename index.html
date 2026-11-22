@@ -101,7 +101,7 @@
       left: 0;
       right: 0;
       height: 56px;
-      background: rgba(255, 255, 255, 0.88);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--borderColor, #e2e8f0);
@@ -115,13 +115,18 @@
     }
     [data-theme="dark"] .site-header,
     html[style*="color-scheme: dark"] .site-header {
-      background: rgba(10, 15, 29, 0.88);
+      background: rgba(10, 15, 29, 0.92);
       border-bottom-color: var(--borderColor, #1e293b);
     }
     .header-left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
     .header-brand {
       display: inline-flex;
@@ -130,7 +135,7 @@
       text-decoration: none;
       color: var(--textColor, #0f172a);
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.05rem;
       letter-spacing: -0.02em;
       transition: opacity 0.15s ease;
       white-space: nowrap;
@@ -139,27 +144,139 @@
       opacity: 0.85;
     }
     .brand-icon {
-      font-size: 1.22rem;
+      font-size: 1.25rem;
       line-height: 1;
     }
-    .header-subject-pill {
+
+    /* Built-in High-Contrast Theme Toggle Button */
+    .theme-toggle-btn {
       display: inline-flex;
       align-items: center;
-      padding: 2px 9px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      border-radius: 9999px;
-      background: rgba(79, 70, 229, 0.1);
-      color: var(--accent, #4f46e5);
-      border: 1px solid rgba(79, 70, 229, 0.22);
-      letter-spacing: 0.02em;
-      white-space: nowrap;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      border-radius: 8px;
+      border: 1px solid var(--borderColor, #e2e8f0);
+      background: var(--codeBackgroundColor, #f8fafc);
+      color: var(--textColor, #0f172a);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      flex-shrink: 0;
     }
-    [data-theme="dark"] .header-subject-pill,
-    html[style*="color-scheme: dark"] .header-subject-pill {
-      background: rgba(129, 140, 248, 0.16);
-      color: #a5b4fc;
-      border-color: rgba(129, 140, 248, 0.3);
+    .theme-toggle-btn:hover {
+      border-color: var(--accent, #4f46e5);
+      color: var(--accent, #4f46e5);
+      transform: scale(1.05);
+    }
+    .theme-toggle-btn svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2;
+    }
+    .theme-toggle-btn .icon-sun {
+      display: none;
+    }
+    .theme-toggle-btn .icon-moon {
+      display: block;
+    }
+    [data-theme="dark"] .theme-toggle-btn .icon-sun,
+    html[style*="color-scheme: dark"] .theme-toggle-btn .icon-sun {
+      display: block;
+      stroke: #fbbf24;
+    }
+    [data-theme="dark"] .theme-toggle-btn .icon-moon,
+    html[style*="color-scheme: dark"] .theme-toggle-btn .icon-moon {
+      display: none;
+    }
+    [data-theme="dark"] .theme-toggle-btn,
+    html[style*="color-scheme: dark"] .theme-toggle-btn {
+      background: #1e293b;
+      border-color: #334155;
+      color: #f8fafc;
+    }
+    [data-theme="dark"] .theme-toggle-btn:hover,
+    html[style*="color-scheme: dark"] .theme-toggle-btn:hover {
+      border-color: #818cf8;
+      color: #818cf8;
+    }
+
+    /* Integrated Mobile Menu Hamburger Button */
+    .header-menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      border-radius: 8px;
+      border: 1px solid var(--borderColor, #e2e8f0);
+      background: var(--codeBackgroundColor, #f8fafc);
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: all 0.18s ease;
+    }
+    .header-menu-btn:hover {
+      border-color: var(--accent, #4f46e5);
+    }
+    .header-menu-btn .menu-bar {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: var(--textColor, #0f172a);
+      border-radius: 2px;
+      transition: transform 0.22s ease, opacity 0.22s ease;
+    }
+    [data-theme="dark"] .header-menu-btn,
+    html[style*="color-scheme: dark"] .header-menu-btn {
+      background: #1e293b;
+      border-color: #334155;
+    }
+    [data-theme="dark"] .header-menu-btn .menu-bar,
+    html[style*="color-scheme: dark"] .header-menu-btn .menu-bar {
+      background: #f8fafc;
+    }
+    body.close .header-menu-btn .menu-bar:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    body.close .header-menu-btn .menu-bar:nth-child(2) {
+      opacity: 0;
+    }
+    body.close .header-menu-btn .menu-bar:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* Mobile Sidebar Backdrop Overlay */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      z-index: 996;
+      opacity: 0;
+      transition: opacity 0.22s ease;
+    }
+    @media screen and (max-width: 768px) {
+      body.close .sidebar-overlay {
+        display: block;
+        opacity: 1;
+      }
+    }
+
+    /* Hide redundant default plugin elements */
+    #docsify-darklight-theme {
+      display: none !important;
+    }
+    .sidebar-toggle {
+      display: none !important;
     }
 
     /* Desktop Sidebar & Content Layout */
@@ -202,7 +319,7 @@
       .app-nav {
         position: fixed !important;
         top: 10px !important;
-        right: 58px !important;
+        right: 68px !important;
         margin: 0 !important;
         padding: 0 !important;
         z-index: 1000 !important;
@@ -210,7 +327,7 @@
       .app-nav > ul {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -228,10 +345,10 @@
         display: inline-flex;
         align-items: center;
         gap: 5px;
-        padding: 6px 13px;
+        padding: 6px 12px;
         border-radius: 8px;
-        background: var(--codeBackgroundColor, #f8fafc);
-        border: 1px solid var(--borderColor, #e2e8f0);
+        background: transparent;
+        border: 1px solid transparent;
         color: var(--textColor, #334155);
         text-decoration: none;
         transition: all 0.15s ease;
@@ -240,16 +357,22 @@
       }
       .app-nav > ul > li > a:hover,
       .app-nav > ul > li:hover > span {
-        background: var(--borderColor, #e2e8f0);
+        background: rgba(79, 70, 229, 0.08);
         color: var(--accent, #4f46e5);
-        border-color: var(--accent, #4f46e5);
+        border-color: rgba(79, 70, 229, 0.2);
+      }
+      [data-theme="dark"] .app-nav > ul > li > a:hover,
+      [data-theme="dark"] .app-nav > ul > li:hover > span {
+        background: rgba(129, 140, 248, 0.14);
+        color: #a5b4fc;
+        border-color: rgba(129, 140, 248, 0.3);
       }
       /* Dropdown Menus */
       .app-nav > ul > li ul {
         position: absolute;
         top: calc(100% + 6px);
         right: 0;
-        min-width: 250px;
+        min-width: 220px;
         margin-top: 0;
         padding: 6px;
         background: var(--background, #ffffff);
@@ -258,6 +381,10 @@
         box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
         list-style: none;
         z-index: 1010;
+        display: none;
+      }
+      .app-nav > ul > li:hover ul {
+        display: block;
       }
       [data-theme="dark"] .app-nav > ul > li ul,
       html[style*="color-scheme: dark"] .app-nav > ul > li ul {
@@ -289,28 +416,6 @@
         background: rgba(129, 140, 248, 0.14);
         color: #a5b4fc;
       }
-
-      /* Desktop Theme Switch Button */
-      #docsify-darklight-theme {
-        position: fixed !important;
-        top: 10px !important;
-        right: 14px !important;
-        width: 36px !important;
-        height: 36px !important;
-        z-index: 1000 !important;
-        padding: 6px !important;
-        border-radius: 8px !important;
-        background-size: 20px 20px !important;
-        background-position: center !important;
-        border: 1px solid var(--borderColor, #e2e8f0);
-        background-color: var(--codeBackgroundColor, #f8fafc);
-        cursor: pointer;
-        transition: border-color 0.15s ease, transform 0.15s ease;
-      }
-      #docsify-darklight-theme:hover {
-        border-color: var(--accent, #4f46e5);
-        transform: scale(1.04);
-      }
     }
 
     /* Tablet Responsive (769px to 1050px) */
@@ -337,18 +442,23 @@
     /* Mobile Responsive Overhaul (<= 768px) */
     @media screen and (max-width: 768px) {
       .site-header {
-        padding: 0 48px 0 52px; /* Leaves room for hamburger on left, theme switch on right */
-        height: 52px;
+        height: 54px;
+        padding: 0 14px;
+      }
+      .header-left {
+        gap: 10px;
+      }
+      .header-right {
+        gap: 10px;
       }
       .header-brand {
-        font-size: 0.93rem;
+        font-size: 0.96rem;
       }
       .brand-icon {
-        font-size: 1.15rem;
+        font-size: 1.2rem;
       }
-      .header-subject-pill {
-        padding: 2px 7px;
-        font-size: 0.68rem;
+      .header-menu-btn {
+        display: inline-flex;
       }
 
       /* Content Area on Mobile */
@@ -356,7 +466,7 @@
         left: 0 !important;
         width: 100% !important;
         position: relative !important;
-        padding-top: 52px !important;
+        padding-top: 54px !important;
       }
       .markdown-section {
         max-width: 100% !important;
@@ -385,126 +495,25 @@
         top: 0 !important;
         bottom: 0 !important;
         left: 0 !important;
-        width: 285px !important;
-        max-width: 82vw !important;
+        width: 290px !important;
+        max-width: 84vw !important;
         transform: translateX(-100%) !important; /* HIDDEN OFF-SCREEN */
         transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        z-index: 1000 !important;
+        z-index: 997 !important;
         box-shadow: none !important;
         border-right: 1px solid var(--borderColor, #1e293b) !important;
         background: var(--background, #ffffff) !important;
-        padding-top: 8px !important;
+        padding-top: 60px !important;
       }
-      /* Title inside Mobile Drawer neatly aligned with toggle button */
       .sidebar h1.app-name {
-        margin: 8px 14px 6px 50px !important;
-        font-size: 1rem !important;
-        line-height: 38px !important;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        margin: 10px 14px !important;
+        font-size: 1.05rem !important;
+        line-height: 1.4 !important;
       }
       /* Opened Sidebar Drawer */
       body.close .sidebar {
         transform: translateX(0) !important; /* SLIDES INTO VIEW */
         box-shadow: 6px 0 30px rgba(0, 0, 0, 0.35) !important;
-      }
-
-      /* Backdrop Overlay when Sidebar is open on Mobile */
-      body.close::after {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.52);
-        backdrop-filter: blur(3px);
-        -webkit-backdrop-filter: blur(3px);
-        z-index: 999;
-        animation: fadeInBackdrop 0.2s ease;
-      }
-      @keyframes fadeInBackdrop {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-
-      /* Hamburger Toggle Button on Mobile */
-      .sidebar-toggle {
-        position: fixed !important;
-        top: 7px !important;
-        left: 8px !important;
-        bottom: auto !important;
-        width: 38px !important;
-        height: 38px !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border-radius: 8px !important;
-        background: var(--codeBackgroundColor, #ffffff) !important;
-        border: 1px solid var(--borderColor, #e2e8f0) !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
-        z-index: 1002 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
-        cursor: pointer;
-      }
-      [data-theme="dark"] .sidebar-toggle,
-      html[style*="color-scheme: dark"] .sidebar-toggle {
-        background: var(--codeBackgroundColor, #111827) !important;
-        border-color: var(--borderColor, #1e293b) !important;
-      }
-      .sidebar-toggle .sidebar-toggle-button {
-        width: 18px;
-        height: 14px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .sidebar-toggle span {
-        display: block !important;
-        background-color: var(--textColor, #0f172a) !important;
-        height: 2px !important;
-        width: 18px !important;
-        margin: 0 !important;
-        border-radius: 2px;
-        transition: transform 0.22s ease, opacity 0.22s ease;
-      }
-      /* Hamburger turns into 'X' when open on mobile */
-      body.close .sidebar-toggle span:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
-      }
-      body.close .sidebar-toggle span:nth-child(2) {
-        opacity: 0;
-      }
-      body.close .sidebar-toggle span:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
-      }
-
-      /* Theme Toggle Button on Mobile */
-      #docsify-darklight-theme {
-        position: fixed !important;
-        top: 8px !important;
-        right: 8px !important;
-        bottom: auto !important;
-        left: auto !important;
-        width: 34px !important;
-        height: 34px !important;
-        z-index: 1002 !important;
-        padding: 5px !important;
-        border-radius: 8px !important;
-        border: 1px solid var(--borderColor, #e2e8f0);
-        background-color: var(--codeBackgroundColor, #ffffff);
-        background-size: 20px 20px !important;
-        background-position: center !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-      }
-      [data-theme="dark"] #docsify-darklight-theme,
-      html[style*="color-scheme: dark"] #docsify-darklight-theme {
-        background-color: var(--codeBackgroundColor, #111827);
-        border-color: var(--borderColor, #1e293b);
       }
 
       /* Hide raw app-nav on mobile since sidebar drawer has complete navigation */
@@ -671,16 +680,63 @@
   </style>
 </head>
 <body>
+  <script>
+    // Early theme initialization to prevent theme flashing
+    (function() {
+      var currentTheme = localStorage.getItem('DARK_LIGHT_THEME') || 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      document.documentElement.style.colorScheme = currentTheme;
+      if (currentTheme === 'dark') {
+        document.documentElement.style.setProperty('--background', '#0a0f1d');
+        document.documentElement.style.setProperty('--textColor', '#e2e8f0');
+        document.documentElement.style.setProperty('--borderColor', '#1e293b');
+        document.documentElement.style.setProperty('--codeBackgroundColor', '#111827');
+        document.documentElement.style.setProperty('--accent', '#818cf8');
+      } else {
+        document.documentElement.style.setProperty('--background', '#ffffff');
+        document.documentElement.style.setProperty('--textColor', '#0f172a');
+        document.documentElement.style.setProperty('--borderColor', '#e2e8f0');
+        document.documentElement.style.setProperty('--codeBackgroundColor', '#f8fafc');
+        document.documentElement.style.setProperty('--accent', '#4f46e5');
+      }
+    })();
+  </script>
+
   <!-- Unified Responsive Site Header -->
   <header class="site-header">
     <div class="header-left">
+      <button id="mobile-menu-btn" class="header-menu-btn" aria-label="Toggle navigation menu" title="Menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
       <a href="#/" class="header-brand">
         <span class="brand-icon">🎓</span>
         <span class="brand-title">IGNOU BCA_NEW</span>
       </a>
-      <span class="header-subject-pill">BCA_NEW Hub</span>
+    </div>
+    <div class="header-right">
+      <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme" title="Switch Light/Dark Theme">
+        <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
     </div>
   </header>
+  <!-- Mobile Sidebar Backdrop Overlay -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
   <div id="app">Loading IGNOU BCA_NEW Prep Portal...</div>
   <script>
     window.$docsify = {
@@ -769,23 +825,6 @@
           hook.doneEach(function() {
             var currentTheme = localStorage.getItem('DARK_LIGHT_THEME') || 'light';
             document.documentElement.setAttribute('data-theme', currentTheme);
-
-            // Dynamic Header Subject Pill based on active route
-            var pill = document.querySelector('.header-subject-pill');
-            if (pill) {
-              var hash = window.location.hash || '';
-              if (hash.indexOf('bcs131') !== -1) {
-                pill.textContent = 'Sem 3 • BCS-131';
-              } else if (hash.indexOf('bcs011') !== -1) {
-                pill.textContent = 'Sem 1 • BCS-011';
-              } else if (hash.indexOf('bcs012') !== -1) {
-                pill.textContent = 'Sem 1 • BCS-012';
-              } else if (hash.indexOf('bcs040') !== -1) {
-                pill.textContent = 'Sem 2 • BCS-040';
-              } else {
-                pill.textContent = 'BCA_NEW Hub';
-              }
-            }
 
             // Auto-close sidebar on mobile navigation
             if (window.innerWidth <= 768) {
@@ -893,5 +932,66 @@
   <!-- Prism Syntax Highlighting for C/C++ -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
+
+  <!-- Navigation & Theme Toggle Controller -->
+  <script>
+    function toggleThemeMode() {
+      var currentTheme = localStorage.getItem('DARK_LIGHT_THEME') || 'light';
+      var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('DARK_LIGHT_THEME', newTheme);
+      document.documentElement.setAttribute('data-theme', newTheme);
+      document.documentElement.style.colorScheme = newTheme;
+
+      if (newTheme === 'dark') {
+        document.documentElement.style.setProperty('--background', '#0a0f1d');
+        document.documentElement.style.setProperty('--textColor', '#e2e8f0');
+        document.documentElement.style.setProperty('--borderColor', '#1e293b');
+        document.documentElement.style.setProperty('--codeBackgroundColor', '#111827');
+        document.documentElement.style.setProperty('--accent', '#818cf8');
+      } else {
+        document.documentElement.style.setProperty('--background', '#ffffff');
+        document.documentElement.style.setProperty('--textColor', '#0f172a');
+        document.documentElement.style.setProperty('--borderColor', '#e2e8f0');
+        document.documentElement.style.setProperty('--codeBackgroundColor', '#f8fafc');
+        document.documentElement.style.setProperty('--accent', '#4f46e5');
+      }
+
+      var defaultBtn = document.getElementById('docsify-darklight-theme');
+      if (defaultBtn) {
+        defaultBtn.click();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var themeBtn = document.getElementById('theme-toggle-btn');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', toggleThemeMode);
+      }
+
+      var menuBtn = document.getElementById('mobile-menu-btn');
+      if (menuBtn) {
+        menuBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          document.body.classList.toggle('close');
+        });
+      }
+
+      var overlay = document.getElementById('sidebar-overlay');
+      if (overlay) {
+        overlay.addEventListener('click', function() {
+          document.body.classList.remove('close');
+        });
+      }
+
+      // Close mobile drawer when clicking any link inside sidebar
+      document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          if (e.target.closest('.sidebar a')) {
+            document.body.classList.remove('close');
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
