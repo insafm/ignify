@@ -7,6 +7,4 @@
   * [BCS-131: C++ (Semester 3)](/bca_new/bcs131/README.md)
   * [All Academic Programmes](/#/README?id=-academic-programmes-directory)
 
-* [🐙 GitHub](https://github.com/insafm/ignify)
-
 * [🌐 mohammedinsaf.com](https://mohammedinsaf.com)
