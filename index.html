@@ -94,6 +94,12 @@
       color: var(--textColor);
     }
 
+    /* Fix stacking context interference from Docsify darklight theme */
+    main {
+      position: static !important;
+      z-index: auto !important;
+    }
+
     /* Unified Top Header Bar (Full width, frosted glass) */
     .site-header {
       position: fixed;
@@ -105,7 +111,7 @@
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--borderColor, #e2e8f0);
-      z-index: 998;
+      z-index: 1002;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -258,11 +264,12 @@
       right: 0;
       bottom: 0;
       background: rgba(0, 0, 0, 0.45);
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-      z-index: 996;
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      z-index: 1000 !important;
       opacity: 0;
       transition: opacity 0.22s ease;
+      cursor: pointer;
     }
     @media screen and (max-width: 768px) {
       body.close .sidebar-overlay {
@@ -496,14 +503,21 @@
         bottom: 0 !important;
         left: 0 !important;
         width: 290px !important;
-        max-width: 84vw !important;
+        max-width: 85vw !important;
         transform: translateX(-100%) !important; /* HIDDEN OFF-SCREEN */
         transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        z-index: 997 !important;
+        z-index: 1001 !important;
         box-shadow: none !important;
         border-right: 1px solid var(--borderColor, #1e293b) !important;
         background: var(--background, #ffffff) !important;
         padding-top: 60px !important;
+        box-sizing: border-box !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+      }
+      [data-theme="dark"] .sidebar,
+      html[style*="color-scheme: dark"] .sidebar {
+        background: var(--background, #0a0f1d) !important;
       }
       .sidebar h1.app-name {
         margin: 10px 14px !important;
@@ -513,7 +527,7 @@
       /* Opened Sidebar Drawer */
       body.close .sidebar {
         transform: translateX(0) !important; /* SLIDES INTO VIEW */
-        box-shadow: 6px 0 30px rgba(0, 0, 0, 0.35) !important;
+        box-shadow: 8px 0 32px rgba(0, 0, 0, 0.38) !important;
       }
 
       /* Hide raw app-nav on mobile since sidebar drawer has complete navigation */
@@ -1141,6 +1155,7 @@
       var menuBtn = document.getElementById('mobile-menu-btn');
       if (menuBtn) {
         menuBtn.addEventListener('click', function(e) {
+          e.preventDefault();
           e.stopPropagation();
           document.body.classList.toggle('close');
         });
@@ -1148,16 +1163,25 @@
 
       var overlay = document.getElementById('sidebar-overlay');
       if (overlay) {
-        overlay.addEventListener('click', function() {
+        overlay.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
           document.body.classList.remove('close');
         });
       }
 
-      // Close mobile drawer when clicking any link inside sidebar
+      // Handle mobile drawer clicks: allow link navigation then close, but keep drawer open on scroll/search/toggle
       document.addEventListener('click', function(e) {
         if (window.innerWidth <= 768) {
-          if (e.target.closest('.sidebar a')) {
-            document.body.classList.remove('close');
+          var sidebarEl = e.target.closest('.sidebar');
+          if (sidebarEl) {
+            if (e.target.closest('a')) {
+              setTimeout(function() {
+                document.body.classList.remove('close');
+              }, 150);
+            } else {
+              e.stopPropagation();
+            }
           }
         }
       });

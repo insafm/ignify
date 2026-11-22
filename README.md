@@ -38,17 +38,18 @@ Rather than memorizing 500 pages linearly, learners achieve higher academic perf
 The portal is structured hierarchically by degree programme. Each programme contains its complete multi-semester syllabus, subject breakdowns, past papers archive, and canonical question banks:
 
 ### 🟢 Active Programme: BCA_NEW
-The flagship programme currently live on this portal is the **Bachelor of Computer Applications (Revised Syllabus — BCA_NEW)**:
+The flagship programme currently live on this portal is the **Bachelor of Computer Applications (Revised NEP Syllabus — BCA_NEW)**:
 
 | Programme Details | Specifications |
 | :--- | :--- |
-| **Programme Code** | **BCA_NEW** (Dual-coded with legacy BCA) |
-| **Degree Level** | Undergraduate (Bachelor's Degree) |
-| **Duration & Credits** | 3 Years (6 Semesters) • 99 Credits |
-| **Evaluation Pattern** | 30% Continuous Assessment (Assignments) + 70% Term-End Examination (TEE) |
-| **Active Subject Modules** | **BCS-131: Programming in C++** (30 Exam Papers • 215 Canonical Questions) |
+| **Programme Code** | **BCA_NEW** (Revised 120-Credit Curriculum) |
+| **Degree Level** | Undergraduate (Bachelor's Degree • 3 Years / 6 Semesters) |
+| **Total Credits** | **120 Credits** (24 Sem I + 20 Sem II + 20 Sem III + 20 Sem IV + 20 Sem V + 16 Sem VI) |
+| **Evaluation Pattern** | 30% Continuous Assessment (Assignments) + 70% Term-End Examination (TEE) • Separate 40% passing |
+| **Official Document** | [📥 Download BCA_NEW Program Structure & CGPA Guide (PDF)](bca_new/files/sylabuss.pdf ':target=_blank') |
+| **Active Subject Modules** | **Semester 3: BCS-131 (Programming in C++)** (30 Exam Papers • 215 Canonical Questions) |
 
-👉 **[Enter Programme: BCA_NEW Hub →](/bca_new/README.md)**
+👉 **[Enter Programme: BCA_NEW Hub & Curriculum Roadmap →](/bca_new/README.md)**
 
 ---
 

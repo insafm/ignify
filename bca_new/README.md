@@ -2,7 +2,7 @@
 
 > **Programme Code:** BCA_NEW (Revised Syllabus) | **Degree Level:** Undergraduate (3 Years / 6 Semesters) | **Total Credits:** 120 Credits  
 > **Evaluation Pattern:** 30% Continuous Assessment (Assignments) + 70% Term-End Examination (TEE) • Minimum 40% separate passing marks required in each component.  
-> 📥 **Official Document:** [Download BCA_NEW Program Structure & CGPA Guide (PDF)](/bca_new/files/sylabuss.pdf ':ignore')
+> 📥 **Official Document:** [Download BCA_NEW Program Structure & CGPA Guide (PDF)](bca_new/files/sylabuss.pdf ':target=_blank')
 
 ---
 
@@ -18,13 +18,31 @@ The **BCA_NEW** curriculum under the National Education Policy (NEP) revision co
 
 ### 📈 CGPA Weightage & Strategic Impact
 
-| Credit Category | Total Courses | Total Credits | % of CGPA | Strategic Priority |
+Based on empirical credit weighting from the official curriculum guide, individual courses exert vastly different impacts on your cumulative grade point average (CGPA):
+
+| Credit Category | Total Courses | Total Credits | % of Total CGPA | Strategic Priority & Examination Guidance |
 | :--- | :---: | :---: | :---: | :--- |
-| **12-Credit Capstone Project** (`BCSP-165`) | 1 Course | 12 Credits | **10.00%** | 🔴 **High Priority** — Maximum single course impact on CGPA (Sem VI) |
-| **6-Credit Heavy Courses** (`BEGLA-136`, `BCOC-131`) | 2 Courses | 12 Credits | **10.00%** | 🔴 **High Priority** — Combined 10% from just two subjects |
-| **4-Credit Core Courses** (e.g., `BCS-131`, `MCS-208`, `MCS-207`) | 20 Courses | 80 Credits | **66.67%** | 🔴 **High Priority** — Foundation of degree performance |
-| **2-Credit Practical Lab Courses** | 8 Courses | 16 Credits | **13.33%** | 🟡 **Medium Priority** — High scoring potential in practical labs |
-| **Programme Total** | **31 Courses** | **120 Credits** | **100.00%** | Complete 3-year curriculum |
+| **12-Credit Capstone Project** (`BCSP-165`) | 1 Course | 12 Credits | **10.00%** | 🔴 **High Priority** — Single highest impact course in the entire degree (Semester VI). Allocate maximum preparation and documentation rigor here. |
+| **6-Credit Heavy Courses** (`BEGLA-136`, `BCOC-131`) | 2 Courses | 12 Credits | **10.00%** | 🔴 **High Priority** — These two foundational subjects alone control 10% of total degree CGPA. |
+| **4-Credit Core Theory** (e.g., `BCS-131`, `MCS-208`, `MCS-207`) | 20 Courses | 80 Credits | **66.67%** | 🔴 **High Priority** — Forms two-thirds of your entire degree. Consistent high performance across these core technical courses determines your final division. |
+| **2-Credit Practical Lab Courses** | 8 Courses | 16 Credits | **13.33%** | 🟡 **Medium Priority** — Often easier to score high percentages in hands-on practical lab viva and code executions; do not neglect despite lower credit weight. |
+| **Programme Total** | **31 Courses** | **120 Credits** | **100.00%** | Full 3-Year NEP Academic Programme |
+
+### 📊 Semester-Wise CGPA Accumulation
+
+| Semester | Total Credits | % of Total CGPA | Cumulative % | Semester Focus & Strategic Importance |
+| :---: | :---: | :---: | :---: | :--- |
+| **Semester I** | **24 Credits** | **20.00%** | **20.00%** | ⚠️ **Highest single-semester weight (20%)** — Crucial for establishing a strong initial CGPA foundation. |
+| **Semester II** | **20 Credits** | **16.67%** | **36.67%** | Core programming (C/Python) and low-level computer architecture. |
+| **Semester III** | **20 Credits** | **16.67%** | **53.33%** | Crossing the halfway milestone (53.33%). Flagship **BCS-131 (C++)**, DSA, and DBMS. |
+| **Semester IV** | **20 Credits** | **16.67%** | **70.00%** | OOP with Java, Computer Networks, and 6-credit Financial Accounting (`BCOC-131`). |
+| **Semester V** | **20 Credits** | **16.67%** | **86.67%** | Advanced software engineering, algorithm design, cyber security, and data analysis. |
+| **Semester VI** | **16 Credits** | **13.33%** | **100.00%** | 12-credit capstone project (`BCSP-165`), entrepreneurship, and digital forensics. |
+
+> [!TIP]
+> **Strategic Prioritization Formula:**
+> - **HIGH PRIORITY (76.67% of CGPA):** The Capstone Project (12 credits) + Both 6-credit courses (12 credits) + All 13 core CS 4-credit courses (52 credits). Focus 80% of your revision energy here.
+> - **MEDIUM PRIORITY (23.33% of CGPA):** The remaining 7 general/elective 4-credit courses (28 credits) + All 8 practical lab courses (16 credits).
 
 ---
 

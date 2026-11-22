@@ -4,7 +4,7 @@
 
 * **Programme: BCA_NEW**
   * [📘 **BCA_NEW Programme Hub**](/bca_new/README.md)
-  * [📥 **Syllabus & CGPA Guide (PDF)**](/bca_new/files/sylabuss.pdf ':ignore')
+  * [📥 **Syllabus & CGPA Guide (PDF)**](bca_new/files/sylabuss.pdf ':target=_blank')
   * **Semester 3: Active Subject**
     * [📘 **BCS-131: Programming in C++**](/bca_new/bcs131/README.md)
     * [📑 Question Papers Archive (30 PDFs)](/bca_new/bcs131/papers.md)
@@ -26,8 +26,10 @@
       * [11. Operator Overloading](/bca_new/bcs131/topics/11-operator-overloading.md)
       * [12. Code Debugging](/bca_new/bcs131/topics/12-code-debugging.md)
   * **Upcoming BCA_NEW Subjects**
-    * *Semester 1: BCS-011, BCS-012 (🟡 Pipeline)*
-    * *Semester 2: BCS-040 (🟡 Pipeline)*
-    * *Semesters 4–6: MCS-023, MCS-024 (⚪ Planned)*
+    * *Semester 1: BCS-111, BCS-012 (🟡 Pipeline)*
+    * *Semester 2: MCS-201 (C/Python), MCS-203 (OS)*
+    * *Semester 3: MCS-208 (DSA), MCS-207 (DBMS)*
+    * *Semester 4: MCS-206 (Java), BCS-041 (Networks)*
+    * *Semester 5–6: BCS-151 (SE), BCSP-165 (Project)*
 
 * [🌐 mohammedinsaf.com](https://mohammedinsaf.com)
