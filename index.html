@@ -1248,33 +1248,62 @@
       color: var(--textColor, #475569);
       padding-top: 2px;
     }
-    /* Example PQP Question Box */
-    .q-example-box {
+    /* Example PQP Question Box (Collapsible, collapsed by default) */
+    details.q-example-box {
       margin: 0.95rem 0 !important;
-      padding: 0.9rem 1.1rem !important;
+      padding: 0.65rem 1.05rem !important;
       border-radius: 8px;
       background: rgba(14, 165, 233, 0.05);
       border-left: 3.5px solid #0284c7;
+      transition: background-color 0.15s ease;
     }
-    [data-theme="dark"] .q-example-box {
+    details.q-example-box[open] {
+      padding-bottom: 0.9rem !important;
+    }
+    [data-theme="dark"] details.q-example-box {
       background: rgba(56, 189, 248, 0.08);
       border-left-color: #38bdf8;
     }
-    .q-example-label {
+    summary.q-example-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
       font-size: 0.8rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.04em;
       color: #0369a1;
-      margin-bottom: 0.4rem;
+      margin: 0;
     }
-    [data-theme="dark"] .q-example-label {
+    summary.q-example-label::-webkit-details-marker {
+      display: none;
+    }
+    summary.q-example-label::after {
+      content: '▸';
+      font-size: 0.9rem;
+      transition: transform 0.18s ease;
+      opacity: 0.8;
+    }
+    details.q-example-box[open] > summary.q-example-label::after {
+      transform: rotate(90deg);
+    }
+    [data-theme="dark"] summary.q-example-label {
       color: #7dd3fc;
     }
     .q-example-text {
+      margin-top: 0.55rem;
+      padding-top: 0.55rem;
+      border-top: 1px dashed rgba(2, 132, 199, 0.2);
       font-size: 0.9rem;
       line-height: 1.6;
       color: var(--textColor, #1e293b);
+    }
+    [data-theme="dark"] .q-example-text {
+      border-top-color: rgba(56, 189, 248, 0.22);
     }
     .q-example-text p:last-child {
       margin-bottom: 0;
@@ -1588,10 +1617,10 @@
                 /<blockquote>\s*<p><strong>🗓️\s*Asked In Papers:?<\/strong>\s*([\s\S]*?)<\/p>\s*<\/blockquote>/i,
                 '<div class="q-papers-box"><span class="q-papers-label">🗓️ Exam Sessions</span><span class="q-papers-list">$1</span></div>'
               );
-              // Format Example PQP Question box
+              // Format Example PQP Question box (collapsible, collapsed by default)
               block = block.replace(
                 /<p><strong>📝\s*Example PQP Question\s*\((.+?)\):?<\/strong>(?:<\/p>|\s*<br\s*\/?>|\s*)([\s\S]*?)(?=<div class="q-papers-box">)/i,
-                '<div class="q-example-box"><div class="q-example-label">📝 Example PQP Question ($1)</div><div class="q-example-text">$2</div></div>'
+                '<details class="q-example-box"><summary class="q-example-label"><span>📝 Example PQP Question ($1)</span></summary><div class="q-example-text">$2</div></details>'
               );
 
               var aiDropdown = [
