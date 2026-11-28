@@ -2060,19 +2060,48 @@
 
                 if (!card) return;
 
-                // Extract Question Statement (removing any question ID badge)
-                var h3 = card.querySelector('h3');
+                // Extract complete content of the question card (excluding Ask AI dropdown)
+                var cardClone = card.cloneNode(true);
+                var aiDropdownEl = cardClone.querySelector('.q-ai-dropdown');
+                if (aiDropdownEl) aiDropdownEl.remove();
+
+                var h3 = cardClone.querySelector('h3');
                 var qTitle = '';
                 if (h3) {
-                  var clone = h3.cloneNode(true);
-                  var badge = clone.querySelector('.q-badge');
+                  var badge = h3.querySelector('.q-badge');
                   if (badge) badge.remove();
-                  qTitle = clone.textContent.trim().replace(/^:\s*/, '');
+                  qTitle = h3.textContent.trim().replace(/^:\s*/, '');
+                  h3.remove();
                 }
 
-                // Extract Key Answer Takeaways
-                var answerBox = card.querySelector('.q-answer-text');
-                var keyPoints = answerBox ? answerBox.textContent.trim() : '';
+                var answerBox = cardClone.querySelector('.q-answer-box');
+                var keyPoints = '';
+                if (answerBox) {
+                  var ansBody = answerBox.querySelector('.q-answer-text');
+                  keyPoints = (ansBody ? ansBody.textContent : answerBox.textContent).trim();
+                  answerBox.remove();
+                }
+
+                var exampleBox = cardClone.querySelector('.q-example-box');
+                var exampleLabel = '';
+                var exampleText = '';
+                if (exampleBox) {
+                  var exLbl = exampleBox.querySelector('.q-example-label');
+                  var exBody = exampleBox.querySelector('.q-example-text');
+                  exampleLabel = exLbl ? exLbl.textContent.trim() : 'Example PQP Question';
+                  exampleText = (exBody ? exBody.textContent : exampleBox.textContent).trim();
+                  exampleBox.remove();
+                }
+
+                var papersBox = cardClone.querySelector('.q-papers-box');
+                var papersText = '';
+                if (papersBox) {
+                  var pList = papersBox.querySelector('.q-papers-list');
+                  papersText = (pList ? pList.textContent : papersBox.textContent).trim();
+                  papersBox.remove();
+                }
+
+                var extraContent = cardClone.textContent.replace(/\n{3,}/g, '\n\n').trim();
 
                 // Build IGNOU-focused Exam Answer Prompt
                 var promptLines = [
@@ -2084,10 +2113,28 @@
                   qTitle
                 ];
 
+                if (extraContent) {
+                  promptLines.push('');
+                  promptLines.push('DETAILS & CONTEXT:');
+                  promptLines.push(extraContent);
+                }
+
                 if (keyPoints) {
                   promptLines.push('');
                   promptLines.push('KEY ANSWER TAKEAWAYS (FROM SYLLABUS / ARCHIVE):');
                   promptLines.push(keyPoints);
+                }
+
+                if (exampleText) {
+                  promptLines.push('');
+                  promptLines.push(exampleLabel.toUpperCase() + ':');
+                  promptLines.push(exampleText);
+                }
+
+                if (papersText) {
+                  promptLines.push('');
+                  promptLines.push('EXAM SESSIONS:');
+                  promptLines.push(papersText);
                 }
 
                 promptLines.push('');
