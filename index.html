@@ -2075,10 +2075,8 @@
                 var keyPoints = answerBox ? answerBox.textContent.trim() : '';
 
                 // Build IGNOU-focused Exam Answer Prompt
-                var isMCS = (window.location.hash || '').indexOf('mcs203') !== -1;
-                var courseContext = isMCS ? 'Course: MCS-203 - Operating Systems' : 'Course: BCS-131 / Dual: BCS-031 - Programming in C++';
                 var promptLines = [
-                  'You are an expert tutor for IGNOU BCA (' + courseContext + ').',
+                  'You are an expert tutor for IGNOU.',
                   '',
                   'Please provide a complete, high-scoring exam answer for the following IGNOU Term-End Examination (TEE) question according to the IGNOU marking scheme:',
                   '',
@@ -2093,18 +2091,9 @@
                 }
 
                 promptLines.push('');
-                promptLines.push('Please structure your answer with:');
-                promptLines.push('1. Formal Definition & Need (Concise, accurate terminology)');
-                if (isMCS) {
-                  promptLines.push('2. Architectural Principles, Mechanics & Core Algorithms / Diagrams');
-                  promptLines.push('3. Complete Pseudocode / Code / Step-by-Step Numerical Trace with Formulas');
-                  promptLines.push('4. Structural Comparison / Trade-offs / System Limitations');
-                } else {
-                  promptLines.push('2. Grammar, Syntax & Accessibility Rules (with parameter/return details)');
-                  promptLines.push('3. Complete Compilable C++ Code Snippet (complete with #include <iostream>, class definition, methods, and main())');
-                  promptLines.push('4. Expected Terminal Output & Key Constraints / Trade-offs');
-                }
-                promptLines.push('5. Quick Exam Revision Takeaways');
+                promptLines.push('Write an accurate, complete, high-scoring answer appropriate to the question and its marks. Use IGNOU terminology, explain concepts clearly, and focus on what the question asks without forcing a fixed outline or adding irrelevant sections.');
+                promptLines.push('Include relevant examples, formulas, diagrams, code, or step-by-step working only when they help answer the question.');
+                promptLines.push('Add concise revision takeaways when they are useful.');
 
                 var fullPrompt = promptLines.join('\n');
 
