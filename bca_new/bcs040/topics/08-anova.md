@@ -60,7 +60,21 @@ The three drying techniques for a glue were studied and the following times (in 
 | **Dec 2021 (Q7)** | 3 Industrial Processes | $N = 18$ | $F = 2.658$ | $F(2,15) = 3.24$ | Fail to reject $H_0$ |
 | **Jun 2026 (Q8)** | 3 Glue Drying Techniques | $N = 15$ | $F = 24.970$ | $F(2,12) = 3.89$ | **Reject $H_0$** |
 
-> **🗓️ Asked In Papers:** `Jun 2017 (Q8), Jun 2018 (Q9), Dec 2018 (Q10), 2019-I (Q6), Dec June 2019 (Q7), Jun 2021 (Q7), Dec 2021 (Q7), Jun 2026 (Q8)`
+**📝 Example PQP Question (Jun 2026 Q8):**
+
+The three drying techniques for a glue were studied and the following times (in minutes) were observed:
+
+| Technique A | Technique B | Technique C |
+| :---: | :---: | :---: |
+| 13 | 10 | 5 |
+| 10 | 11 | 4 |
+| 8 | 14 | 4 |
+| 11 | 14 | 5 |
+| 8 | 15 | 6 |
+
+Using ANOVA, test the hypothesis that the average times for three techniques are same at 5% level of significance. (Given $F(2, 12), 5\% = 3.89$) *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2017 (Q8)](/bca_new/bcs040/pqp/BCS-040_June_2017.pdf ':ignore'), [Jun 2018 (Q9)](/bca_new/bcs040/pqp/BCS-040_June_2018.pdf ':ignore'), [Dec 2018 (Q10)](/bca_new/bcs040/pqp/BCS-040_Dec_2018.pdf ':ignore'), [2019-I (Q6)](/bca_new/bcs040/pqp/BCS-040_June_2019.pdf ':ignore'), [Dec June 2019 (Q7)](/bca_new/bcs040/pqp/BCS-040_Dec_2019.pdf ':ignore'), [Jun 2021 (Q7)](/bca_new/bcs040/pqp/BCS-040_June_2021.pdf ':ignore'), [Dec 2021 (Q7)](/bca_new/bcs040/pqp/BCS-040_Dec_2021.pdf ':ignore'), [Jun 2026 (Q8)](/bca_new/bcs040/pqp/BCS-040_June_2026.pdf ':ignore')
 
 ---
 
@@ -71,7 +85,20 @@ The three drying techniques for a glue were studied and the following times (in 
 **💡 Key Answer Points:**
 N = 12, k = 3, G = 180, CF = 2700, $SSB = 6.00$ ($MSB = 3.00$), $SSW = 300.00$ ($MSW = 33.33$), $F = 0.0900 < 4.26$ (fail to reject $H_0$; means equal).
 
-> **🗓️ Asked In Papers:** `Dec 2015 (Q8), Jun 2016 (Q8), June 2020 (Q8), Dec 2025 (Q7)`
+**📝 Example PQP Question (Dec 2025 Q7):**
+
+The following table shows the sample value of 3 independent normal random variables $X_1$, $X_2$ and $X_3$. Assuming that they have equal variances, test the hypothesis that they have the same mean by using ANOVA (Given $F(2, 9)(0.05) = 4.26$):
+
+| $X_1$ | $X_2$ | $X_3$ |
+| :---: | :---: | :---: |
+| 13 | 16 | 15 |
+| 11 | 8 | 12 |
+| 16 | 21 | 25 |
+| 22 | 11 | 10 |
+
+*(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2015 (Q8)](/bca_new/bcs040/pqp/BCS-040_Dec_2015.pdf ':ignore'), [Jun 2016 (Q8)](/bca_new/bcs040/pqp/BCS-040_June_2016.pdf ':ignore'), [June 2020 (Q8)](/bca_new/bcs040/pqp/BCS-040_June_2020.pdf ':ignore'), [Dec 2025 (Q7)](/bca_new/bcs040/pqp/BCS-040_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -82,7 +109,21 @@ N = 12, k = 3, G = 180, CF = 2700, $SSB = 6.00$ ($MSB = 3.00$), $SSW = 300.00$ (
 **💡 Key Answer Points:**
 Dec 17 Q8 / Jun 23 Q9 (4 methods, N = 16, crit 5.95): $SSB = 70.25, SSW = 29.50, F = 9.5254 > 5.95$ (reject $H_0$). Jun 22 Q9 (3 methods, N = 12, crit 4.26): $SSB = 40.17, SSW = 24.50, F = 7.3776 > 4.26$ (reject $H_0$). Dec 24 Q7 (3 methods, n = 5, crit 3.885): $SSB = 2.533, SSW = 60.40, F = 0.2517 < 3.885$ (fail to reject).
 
-> **🗓️ Asked In Papers:** `Dec 2017 (Q8), Jun 2022 (Q9), Jun 2023 (Q9), Dec 2024 (Q7)`
+**📝 Example PQP Question (Dec 2024 Q7):**
+
+A Computer Engineer identifies three methods (A, B and C) to do a certain job. The engineer assigns each method to 5 operators and note-downs the time of completion of job by each operator (in minutes) in the following table:
+
+| A | B | C |
+| :---: | :---: | :---: |
+| 19 | 16 | 17 |
+| 17 | 20 | 20 |
+| 21 | 23 | 20 |
+| 18 | 21 | 15 |
+| 20 | 19 | 18 |
+
+Construct the relevant analysis of variance (ANOVA) table and test the hypothesis that the average time of each method is same at 5% level of significance. (Given $F(2, 12) = 3.885$). *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2017 (Q8)](/bca_new/bcs040/pqp/BCS-040_Dec_2017.pdf ':ignore'), [Jun 2022 (Q9)](/bca_new/bcs040/pqp/BCS-040_June_2022.pdf ':ignore'), [Jun 2023 (Q9)](/bca_new/bcs040/pqp/BCS-040_June_2023.pdf ':ignore'), [Dec 2024 (Q7)](/bca_new/bcs040/pqp/BCS-040_Dec_2024.pdf ':ignore')
 
 ---
 
@@ -93,7 +134,11 @@ Dec 17 Q8 / Jun 23 Q9 (4 methods, N = 16, crit 5.95): $SSB = 70.25, SSW = 29.50,
 **💡 Key Answer Points:**
 Columns for Source (Between Treatments, Within Treatments/Error, Total), Sum of Squares ($SSB, SSW, TSS$), Degrees of Freedom ($k-1, N-k, N-1$), Mean Square ($MSB = SSB/(k-1)$, $MSW = SSW/(N-k)$), and $F = MSB/MSW$.
 
-> **🗓️ Asked In Papers:** `Jun 2014 (Q4), June 2020 (Q5), Jun 2025 (Q2)`
+**📝 Example PQP Question (Jun 2025 Q2):**
+
+Construct Model ANOVA table for one-way classification. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2014 (Q4)](/bca_new/bcs040/pqp/BCS-040_June_2014.pdf ':ignore'), [June 2020 (Q5)](/bca_new/bcs040/pqp/BCS-040_June_2020.pdf ':ignore'), [Jun 2025 (Q2)](/bca_new/bcs040/pqp/BCS-040_June_2025.pdf ':ignore')
 
 ---
 
@@ -104,7 +149,19 @@ Columns for Source (Between Treatments, Within Treatments/Error, Total), Sum of 
 **💡 Key Answer Points:**
 N = 12, G = 26, CF = 56.3333, $TSS = 11.6667$, $SS_{\text{catalyst}} = 1.00$ (df = 3), $SS_{\text{plant}} = 0.1667$ (df = 2), $SS_{\text{error}} = 10.50$ (df = 6, $MS = 1.75$). $F_{\text{catalyst}} = 0.1905 < 4.76$ (not significant).
 
-> **🗓️ Asked In Papers:** `Jun 2015 (Q7), Dec 2020 (Q8), Dec 2023 (Q9)`
+**📝 Example PQP Question (Dec 2023 Q9):**
+
+A chemical firm wants to determine how four catalysts differ in yield? The firm runs the experiment in three of its plant, namely A, B & C. In each plant, the yield is measured with each catalyst. The yield (in quintals) are as follows:
+
+| Plant \ Catalyst | 1 | 2 | 3 | 4 |
+| :--- | :---: | :---: | :---: | :---: |
+| A | 2 | 1 | 2 | 4 |
+| B | 3 | 2 | 1 | 3 |
+| C | 1 | 3 | 3 | 1 |
+
+Perform an ANOVA and comment whether the yield due to a particular catalyst is significant or not at 5% level of significance (Given $F_{3,6} = 4.76$). *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2015 (Q7)](/bca_new/bcs040/pqp/BCS-040_June_2015.pdf ':ignore'), [Dec 2020 (Q8)](/bca_new/bcs040/pqp/BCS-040_Dec_2020.pdf ':ignore'), [Dec 2023 (Q9)](/bca_new/bcs040/pqp/BCS-040_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -115,4 +172,8 @@ N = 12, G = 26, CF = 56.3333, $TSS = 11.6667$, $SS_{\text{catalyst}} = 1.00$ (df
 **💡 Key Answer Points:**
 Analysis of Variance; compares 3 or more population means simultaneously by partitioning total variability into between-group and within-group components, preventing Type I error inflation from multiple pairwise $t$-tests (e.g., comparing crop yield across 4 fertilizers).
 
-> **🗓️ Asked In Papers:** `Jun 2013 (Q4)`
+**📝 Example PQP Question (Jun 2013 Q4):**
+
+Expand the term ANOVA. Briefly discuss the utility of ANOVA, with suitable examples. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2013 (Q4)](/bca_new/bcs040/pqp/BCS-040_June_2013.pdf ':ignore')

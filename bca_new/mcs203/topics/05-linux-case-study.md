@@ -44,7 +44,16 @@ Linux enforces a multi-tier defense-in-depth model across five standard security
    - Eliminates insecure cleartext protocols (Telnet, RSH) in favor of **OpenSSH**.
    - Employs asymmetric public-key cryptography (Ed25519 / RSA), disablement of root password logins, and port-knocking/fail2ban defense.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q4(b), Dec 2022 Q5(c), June 2023 Q5(c), Dec 2023 Q1(d), June 2025 Q5(c)`
+**📝 Example PQP Question (Dec 2023 Q1(d)):**
+
+Discuss the security features in LINUX with respect to the following :
+
+(i) User Accounts
+(ii) File Permissions
+(iii) Encrypted Storage
+(iv) Remote Access *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q4(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore'), [Dec 2022 Q5(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2022.pdf ':ignore'), [June 2023 Q5(c)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore'), [Dec 2023 Q1(d)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore'), [June 2025 Q5(c)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore')
 
 ---
 
@@ -88,7 +97,11 @@ Linux employs a modular, monolithic kernel architecture where all core OS subsys
   5. **Network Stack:** Implements standard communication protocols (TCP/IP, UDP, IPv6) and BSD socket interfaces.
   6. **Device Drivers:** Modules dynamically loaded into the running kernel to communicate with physical hardware peripherals.
 
-> **🗓️ Asked In Papers:** `June 2023 Q1(d), June 2024 Q4(b), June 2026 Q5(d)`
+**📝 Example PQP Question (June 2024 Q4(b)):**
+
+With the help of a diagram, explain LINUX architecture with a special focus on ‘Kernel’ and its components. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2023 Q1(d)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore'), [June 2024 Q4(b)](/bca_new/mcs203/pqp/MCS-203_June_2024.pdf ':ignore'), [June 2026 Q5(d)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -110,7 +123,11 @@ Linux employs a modular, monolithic kernel architecture where all core OS subsys
 - **Slab Allocator:** Sits on top of the Buddy System to allocate small kernel objects (e.g., `task_struct`, `mm_struct`) without wasting full 4 KB page frames.
 - **Page Cache & Swapping:** Frequently read disk blocks are cached in physical RAM (Page Cache). When free RAM drops, modified dirty pages are flushed to swap partitions via `kswapd`.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q2(b), Dec 2024 Q5(a), June 2025 Q5(c), Dec 2025 Q5(d)`
+**📝 Example PQP Question (June 2025 Q3(b)):**
+
+Explain memory management in LINUX with the help of a diagram. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q2(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore'), [Dec 2024 Q5(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore'), [June 2025 Q5(c)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore'), [Dec 2025 Q5(d)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -133,7 +150,11 @@ Linux employs a modular, monolithic kernel architecture where all core OS subsys
   - The process with the smallest `vruntime` is positioned at the leftmost leaf of the tree and scheduled next.
 - **The `clone()` System Call:** Linux does not distinguish between threads and processes at the kernel level; both are represented by `task_struct`. The `clone()` system call creates lightweight tasks by passing sharing flags (`CLONE_VM`, `CLONE_FS`, `CLONE_FILES`, `CLONE_SIGHAND`).
 
-> **🗓️ Asked In Papers:** `June 2022 Q1(b)`
+**📝 Example PQP Question (June 2022 Q3(a)):**
+
+Describe the process management in LINUX which includes process priorities, process hierarchy, process states and threads management. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q1(b)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore')
 
 ---
 
@@ -161,4 +182,8 @@ Linux employs a modular, monolithic kernel architecture where all core OS subsys
   1. **Access Control Lists (ACLs):** Stored column-wise with the object (e.g., File 2 tracks ACL: `[Domain 1: rw, Domain 2: rw]`). Used in modern filesystems (NTFS, ext4).
   2. **Capability Lists:** Stored row-wise with the domain/process (e.g., Domain 2 holds capability tickets for File 1 [r], File 2 [rw], Printer [print]).
 
-> **🗓️ Asked In Papers:** `June 2026 Q4(a)`
+**📝 Example PQP Question (June 2026 Q4(a)):**
+
+Briefly explain the Access Matrix Security Model that can possibly be implemented in operating systems with the help of an example. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2026 Q4(a)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')

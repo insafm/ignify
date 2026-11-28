@@ -38,7 +38,14 @@ Block 19 (Index Block): [ 71 | 14 | 88 | 32 | -1 | -1 ... ]
  [Data Data Data Data]
 ```
 
-> **🗓️ Asked In Papers:** `June 2022 Q4(a), June 2026 Q3(b)`
+**📝 Example PQP Question (June 2026 Q3(b)):**
+
+How to allocate space to files for effective disk space utilization and quick access using the following methods.
+
+(i) Continuous allocation
+(ii) Non-continuous allocation *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q4(a)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore'), [June 2026 Q3(b)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -77,7 +84,15 @@ Queue: `15, 40, 60, 61, 63, 125, 141, 160`. Moves right toward 199:
 
 $$\text{Total Head Movement (C-SCAN)} = 199 + 199 = 398 \text{ cylinders} \quad (\text{or } 199 \text{ if non-servicing return jump is ignored})$$
 
-> **🗓️ Asked In Papers:** `June 2023 Q1(b)`
+**📝 Example PQP Question (June 2023 Q1(b)):**
+
+Using SSTF and C-SCAN disk scheduling algorithms, calculate the total head movement for the following block sequence :
+
+`61, 141, 40, 160, 15, 63, 60, 125`
+
+Note : Initially the head is at cylinder numbered 0. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2023 Q1(b)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore')
 
 ---
 
@@ -103,7 +118,11 @@ Initial Head Position: Cylinder `63`, moving toward **larger cylinder numbers**.
 
 $$\text{Total Head Movement} = (199 - 63) + (199 - 10) = 136 + 189 = 325 \text{ cylinders}$$
 
-> **🗓️ Asked In Papers:** `Dec 2025 Q3(b)`
+**📝 Example PQP Question (Dec 2025 Q3(b)):**
+
+Consider a disk queue with requests for I/O to blocks on cylinders 47, 38, 121, 191, 87, 11, 92, 10. The SCAN scheduling algorithm is used. The head is initially at cylinder number 63, moving towards larger cylinder numbers on its servicing pass. The cylinders are numbered from 0 to 199. Find the total head movement (in number of cylinders) incurred while servicing these requests. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2025 Q3(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -121,7 +140,15 @@ Initial Head Position: Cylinder `49`, moving toward larger cylinders on disk $0�
 - **SSTF Trace:** $49 \rightarrow 41 (8) \rightarrow 60 (19) \rightarrow 69 (9) \rightarrow 90 (21) \rightarrow 129 (39) \rightarrow 139 (10) \rightarrow 149 (10) \rightarrow 17 (132) = 248 \text{ cylinders}$.
 - **SCAN Trace:** $49 \rightarrow 60 \rightarrow 69 \rightarrow 90 \rightarrow 129 \rightarrow 139 \rightarrow 149 \rightarrow 199 (150) \rightarrow 41 \rightarrow 17 (182) = 332 \text{ cylinders}$.
 
-> **🗓️ Asked In Papers:** `Dec 2024 Q1(a)`
+**📝 Example PQP Question (Dec 2024 Q1(a)):**
+
+Explain the significance of disk scheduling. Discuss the Shortest Seek Time First (SSTF) and SCAN scheduling algorithms. Trace the total head movement with SSTF and SCAN scheduling by representing them through a diagram for the following disk queue :
+
+`49, 90, 149, 41, 129, 17, 139, 69, 60`
+
+Assume that the disk head is initially at 49. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2024 Q1(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore')
 
 ---
 
@@ -140,7 +167,11 @@ Initial Head Position: Cylinder `49`, moving toward larger cylinders on disk $0�
   - When the arm reaches the end, it immediately reverses and sweeps back to the beginning of the disk without servicing any I/O requests along the return path.
   - *Characteristics:* Treats cylinders as a circular list, eliminating the bias towards edge tracks.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q4(a), June 2023 Q1(b)`
+**📝 Example PQP Question (Dec 2021 Q1(a)):**
+
+Discuss SCAN and C-SCAN disk scheduling algorithms. List the advantages of SCAN over C-SCAN algorithm. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q4(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore'), [June 2023 Q1(b)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore')
 
 ---
 
@@ -162,7 +193,14 @@ Initial Head Position: Cylinder `49`, moving toward larger cylinders on disk $0�
   - *Merits:* Significantly reduces total head movement compared to FCFS.
   - *Demerits:* Can lead to **starvation** of requests on outer or inner tracks if a continuous stream of requests clusters around the current head position.
 
-> **🗓️ Asked In Papers:** `Dec 2022 Q4(b)`
+**📝 Example PQP Question (Dec 2022 Q4(b)):**
+
+What is Disk Scheduling ? With the help of an example for each, explain the following disk scheduling algorithms :
+
+(i) FCFS
+(ii) SSTF *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2022 Q4(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2022.pdf ':ignore')
 
 ---
 
@@ -186,6 +224,10 @@ Initial Head Position: Cylinder `49`, moving toward larger cylinders on disk $0�
    - Allows cycles in the directory graph (e.g., links pointing back to ancestor folders).
    - *Challenge:* Traversing directories can trigger infinite loops. Requires garbage collection (mark-and-sweep) to reclaim unreferenced cyclic storage.
 
-> **🗓️ Asked In Papers:** `June 2025 Q2(a)`
+**📝 Example PQP Question (June 2025 Q2(b)):**
+
+Describe the operating system’s view of file management. In this context, explain two-level directory structure, acyclic-graph directory structure and general graph directory structure. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2025 Q2(a)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore')
 
 ---

@@ -79,7 +79,11 @@ void Consumer() {
 }
 ```
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q3(b), June 2023 Q1(a), Dec 2024 Q3(b)`
+**📝 Example PQP Question (June 2023 Q1(a)):**
+
+Define a Semaphore. List and explain the two standard atomic operations of it. Also write the solution to producer-consumer problem using semaphores and explain. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q3(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore'), [June 2023 Q1(a)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore'), [Dec 2024 Q3(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore')
 
 ---
 
@@ -121,7 +125,11 @@ do {
 } while (true);
 ```
 
-> **🗓️ Asked In Papers:** `June 2024 Q3(a), Dec 2024 Q3(a)`
+**📝 Example PQP Question (June 2024 Q3(a)):**
+
+Write and explain Bakery’s algorithm that handles critical section problem for ‘n’ processes. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2024 Q3(a)](/bca_new/mcs203/pqp/MCS-203_June_2024.pdf ':ignore'), [Dec 2024 Q3(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore')
 
 ---
 
@@ -159,7 +167,11 @@ void Philosopher(int i) {
 }
 ```
 
-> **🗓️ Asked In Papers:** `June 2025 Q1(c), Dec 2025 Q1(b)`
+**📝 Example PQP Question (June 2025 Q1(c)):**
+
+Write and explain dining philosopher’s problem. Also, provide the solution for the problem using semaphores. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2025 Q1(c)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore'), [Dec 2025 Q1(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -203,7 +215,11 @@ do {
   2. *Progress:* If both want to enter, `turn` breaks the tie deterministically.
   3. *Bounded Waiting:* Alternating `turn = j` prevents starvation.
 
-> **🗓️ Asked In Papers:** `Dec 2022 Q1(a)`
+**📝 Example PQP Question (Dec 2022 Q1(a)):**
+
+What are concurrent processes ? Write Dekker’s solution for mutual exclusion and explain it. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2022 Q1(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2022.pdf ':ignore')
 
 ---
 
@@ -254,7 +270,11 @@ void Writer() {
 }
 ```
 
-> **🗓️ Asked In Papers:** `Dec 2023 Q1(c)`
+**📝 Example PQP Question (Dec 2023 Q1(c)):**
+
+Define a semaphore. Using semaphores, write and explain the algorithm that solves the Reader’s and Writer’s problem. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2023 Q1(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -303,7 +323,11 @@ void Customer() {
 }
 ```
 
-> **🗓️ Asked In Papers:** `June 2022 Q2(b)`
+**📝 Example PQP Question (June 2022 Q5(a)):**
+
+What is a Semaphore ? Give solution to the Sleeping Barber Problem using Semaphore. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q2(b)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore')
 
 ---
 
@@ -323,4 +347,8 @@ void Customer() {
     - *Advantages:* Does not waste CPU cycles; ideal for long-running critical sections or disk I/O operations.
     - *Disadvantages:* High context-switch latency when sleeping and waking threads.
 
-> **🗓️ Asked In Papers:** `Dec 2024 Q5(c)`
+**📝 Example PQP Question (Dec 2024 Q5(c)):**
+
+Write short notes on: Locks (Process synchronization mechanism) *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2024 Q5(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore')

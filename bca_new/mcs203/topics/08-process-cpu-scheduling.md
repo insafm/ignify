@@ -20,7 +20,21 @@ Simulate FCFS, SJF, and Round Robin ($q = 2$).
 - Waiting Times: $P_5 = 0, P_4 = 3, P_2 = 7, P_1 = 13, P_3 = 20$
 - **Average Waiting Time (SJF):** $(0 + 3 + 7 + 13 + 20) / 5 = 43 / 5 = 8.6 \text{ ms}$.
 
-> **🗓️ Asked In Papers:** `June 2025 Q1(a), June 2026 Q1(a)`
+**📝 Example PQP Question (June 2025 Q1(a)):**
+
+For the following given 5 processes arrived at the same time in the order with the length of their CPU time in milliseconds :
+
+| Process | Processing Time |
+| :--- | :--- |
+| P1 | 7 |
+| P2 | 6 |
+| P3 | 9 |
+| P4 | 4 |
+| P5 | 3 |
+
+calculate the turnaround time, average waiting time, throughput and processor utilization for FCFS, SJF and RR (quantum = 2) scheduling algorithms. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2025 Q1(a)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore'), [June 2026 Q1(a)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -66,7 +80,20 @@ Execution Order: $P_1 (10) \rightarrow P_2 (8) \rightarrow P_3 (4) \rightarrow P
   - $P_4 = 22 - 6 = 16$
 - **Average Waiting Time:** $(18 + 18 + 10 + 16) / 4 = 62 / 4 = 15.5 \text{ ms}$
 
-> **🗓️ Asked In Papers:** `Dec 2022 Q1(b)`
+**📝 Example PQP Question (Dec 2022 Q1(b)):**
+
+Consider the following set of processes, with the length of CPU burst time given in milliseconds :
+
+| Process | CPU burst time |
+| :--- | :--- |
+| P1 | 10 |
+| P2 | 8 |
+| P3 | 4 |
+| P4 | 6 |
+
+All the four processes (P1, P2, P3, P4) arrived at the same time in the order P1, P2, P3 and P4. Draw Gantt charts illustrating the execution of the processes using SJF, FCFS and RR (Quantum = 2) scheduling. What is the turnaround time of each process for each of the scheduling algorithms ? Also find the average waiting time for each of the processes. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2022 Q1(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2022.pdf ':ignore')
 
 ---
 
@@ -95,7 +122,21 @@ Calculate TAT, WT, and CPU Utilization under FCFS, SJF, and Round Robin ($q = 2$
   - $P_5: 14–17 \implies TAT = 17 - 5 = 12, WT = 9$
 - **Total CPU Utilization:** $(16 / 17) \times 100 = 94.12\%$.
 
-> **🗓️ Asked In Papers:** `Dec 2023 Q1(a)`
+**📝 Example PQP Question (Dec 2023 Q1(a)):**
+
+Consider the following set of processes (P1, P2, P3, P4, P5) with the length of the CPU burst time given in milliseconds along with the arrival time :
+
+| Process | Arrival Time | CPU Burst Time |
+| :--- | :--- | :--- |
+| P1 | 1 | 6 |
+| P2 | 2 | 4 |
+| P3 | 4 | 1 |
+| P4 | 3 | 2 |
+| P5 | 5 | 3 |
+
+Draw Gantt charts illustrating the execution of the processes using FCFS, SJF and RR (with quantum = 2) scheduling algorithms. Also find the average turn around time, average waiting time, processor utilization and throughput for all the algorithms. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2023 Q1(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -166,7 +207,21 @@ Draw Gantt charts and compute average Turnaround Time ($TAT$), Waiting Time ($WT
 - **TAT:** $P_1 = 8, P_2 = 18, P_3 = 4, P_4 = 17, P_5 = 13 \implies \text{Average } TAT = 60 / 5 = \mathbf{12.0 \text{ ms}}$
 - **WT:** $P_1 = 4, P_2 = 12, P_3 = 2, P_4 = 12, P_5 = 10 \implies \text{Average } WT = 40 / 5 = \mathbf{8.0 \text{ ms}}$
 
-> **🗓️ Asked In Papers:** `June 2026 Q1(b)`
+**📝 Example PQP Question (June 2026 Q1(b)):**
+
+Consider the following set of processes (P1, P2, P3, P4, P5) with the length of the CPU burst time given in milliseconds along with the arrival time :
+
+| Process | Arrival Time | CPU Burst Time |
+| :--- | :--- | :--- |
+| P1 | 1 | 4 |
+| P2 | 2 | 6 |
+| P3 | 3 | 2 |
+| P4 | 4 | 5 |
+| P5 | 5 | 3 |
+
+Draw Gantt charts illustrating the execution of the processes using FCFS, SRTN (Shortest Remaining Time Next) and RR (with quantum = 2) scheduling algorithms. Also, find the average turn around time, average waiting time, processor utilization and throughput for all the algorithms. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2026 Q1(b)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -186,7 +241,11 @@ Draw Gantt charts and compute average Turnaround Time ($TAT$), Waiting Time ($WT
   7. **Accounting Statistics:** Cumulative CPU execution time, real time elapsed, clock ticks, and account numbers.
   8. **I/O Status Information:** List of open file descriptors, allocated I/O devices, and pending disk requests.
 
-> **🗓️ Asked In Papers:** `June 2022 Q1(d)`
+**📝 Example PQP Question (June 2022 Q5(b)):**
+
+List the contents of a Process Control Block (PCB). Explain the significance of each of its components. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q1(d)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore')
 
 ---
 
@@ -205,7 +264,11 @@ Draw Gantt charts and compute average Turnaround Time ($TAT$), Waiting Time ($WT
 | **Core Goal** | Regulates the **Degree of Multiprogramming**; balances CPU- and I/O-bound jobs. | Mitigates memory over-allocation, reduces thrashing, and frees physical RAM. | Optimizes CPU utilization, maximizes throughput, and minimizes turnaround time. |
 | **State Transition** | `New` $\rightarrow$ `Ready` | `Ready` $\leftrightarrow$ `Suspended Ready`, `Blocked` $\leftrightarrow$ `Suspended Blocked` | `Ready` $\rightarrow$ `Running` |
 
-> **🗓️ Asked In Papers:** `June 2024 Q3(b)`
+**📝 Example PQP Question (June 2024 Q5(i)):**
+
+Write short notes on: Types of Schedulers (Short-term, Long-term and Medium term) *(5 marks)*
+
+> **🗓️ Asked In Papers:** [June 2024 Q3(b)](/bca_new/mcs203/pqp/MCS-203_June_2024.pdf ':ignore')
 
 ---
 
@@ -226,7 +289,11 @@ Draw Gantt charts and compute average Turnaround Time ($TAT$), Waiting Time ($WT
   4. *Inter-Process Communication (IPC):* Supplying message queues, pipes, and shared memory abstractions.
   5. *Deadlock Handling:* Detecting, avoiding, and recovering from resource deadlocks.
 
-> **🗓️ Asked In Papers:** `Dec 2025 Q1(a)`
+**📝 Example PQP Question (Dec 2025 Q1(a)):**
+
+What do you understand by CPU bound programs and I/O bound programs ? What are the various process management functions that are performed by the operating systems ? *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2025 Q1(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -241,7 +308,17 @@ Draw Gantt charts and compute average Turnaround Time ($TAT$), Waiting Time ($WT
 2. **Round Robin (RR) Evaluation:** Preemptive, fair, responsive. Solves the convoy effect by imposing a fixed time slice $q$. However, if $q$ is too small, context-switching overhead dominates CPU runtime.
 3. **Priority Scheduling Evaluation:** Allocates CPU to highest-priority tasks. Suffers from **Starvation (Indefinite Blocking)** for low-priority processes. Solved via **Aging** (gradually increasing a waiting process's priority over time).
 
-> **🗓️ Asked In Papers:** `June 2022 Q2(a)`
+**📝 Example PQP Question (June 2022 Q2(a)):**
+
+Discuss briefly the following Scheduling algorithms :
+
+(i) FCFS
+(ii) Round Robin
+(iii) Priority-based Scheduling
+
+Explain the difference in the degree to which the above scheduling algorithms discriminate in favour of short processes. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q2(a)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore')
 
 ---
 
@@ -259,6 +336,16 @@ Draw Gantt charts and compute average Turnaround Time ($TAT$), Waiting Time ($WT
    - *Soft Real-Time:* Missing a deadline degrades service quality but does not cause system collapse (e.g., video streaming).
 4. **Distributed Operating Systems:** Manages a collection of autonomous computers connected via high-speed networks, presenting them to the user as a single, coherent, transparent system.
 
-> **🗓️ Asked In Papers:** `June 2025 Q1(a), June 2026 Q1(a)`
+**📝 Example PQP Question (June 2026 Q1(a)):**
+
+Define the essential properties of the following types of operating systems :
+
+(i) Batch
+(ii) Interactive
+(iii) Time-sharing
+(iv) Real-Time
+(v) Distributed *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2025 Q1(a)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore'), [June 2026 Q1(a)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---

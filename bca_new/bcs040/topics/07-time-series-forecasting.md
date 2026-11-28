@@ -14,7 +14,11 @@
 **💡 Key Answer Points:**
 A chronological sequence of observations recorded over equal time intervals. Components: Secular Trend (long-term direction, e.g., steady population growth), Seasonal Variation (intra-year periodic swings, e.g., winter heater sales), Cyclical Variation (multi-year boom/recession cycles), and Irregular Variation (unpredictable shocks like strikes or floods).
 
-> **🗓️ Asked In Papers:** `Jun 2013 (Q8), Dec 2014 (Q6), Dec 2016 (Q5), Jun 2017 (Q7(a)), June 2020 (Q9), Jun 2022 (Q6(a)), Dec 2022 (Q8(b)), Jun 2024 (Q5), Jun 2025 (Q9), Jun 2026 (Q10(i))`
+**📝 Example PQP Question (Dec 2022 Q8(b)):**
+
+Define time series and discuss various components of time series. *(4 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2013 (Q8)](/bca_new/bcs040/pqp/BCS-040_June_2013.pdf ':ignore'), [Dec 2014 (Q6)](/bca_new/bcs040/pqp/BCS-040_Dec_2014.pdf ':ignore'), [Dec 2016 (Q5)](/bca_new/bcs040/pqp/BCS-040_Dec_2016.pdf ':ignore'), [Jun 2017 (Q7(a))](/bca_new/bcs040/pqp/BCS-040_June_2017.pdf ':ignore'), [June 2020 (Q9)](/bca_new/bcs040/pqp/BCS-040_June_2020.pdf ':ignore'), [Jun 2022 (Q6(a))](/bca_new/bcs040/pqp/BCS-040_June_2022.pdf ':ignore'), [Dec 2022 (Q8(b))](/bca_new/bcs040/pqp/BCS-040_Dec_2022.pdf ':ignore'), [Jun 2024 (Q5)](/bca_new/bcs040/pqp/BCS-040_June_2024.pdf ':ignore'), [Jun 2025 (Q9)](/bca_new/bcs040/pqp/BCS-040_June_2025.pdf ':ignore'), [Jun 2026 (Q10(i))](/bca_new/bcs040/pqp/BCS-040_June_2026.pdf ':ignore')
 
 ---
 
@@ -58,7 +62,17 @@ Consider the following data of sales of milk by a dairy in a week:
 | **Dec 2024 (Q4)** | Weekly milk sales (7 days) | 3-day moving average | [450.0, 450.0, 516.67, 600.0, 600.0] |
 | **Jun 2026 (Q3)** | Weekly milk sales (7 days) | 3-day moving average | [450.0, 450.0, 516.67, 600.0, 700.0] |
 
-> **🗓️ Asked In Papers:** `Dec 2016 (Q8), Jun 2017 (Q7(b)), Jun 2018 (Q10(e)), Dec 2018 (Q9), Jun 2021 (Q6), Dec 2021 (Q6), Jun 2022 (Q7(a)), Dec 2024 (Q4), Jun 2026 (Q3)`
+**📝 Example PQP Question (Jun 2026 Q3):**
+
+Consider the following data of sales of milk by a dairy in a week:
+
+| Day | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Sales (in litre) | 500 | 400 | 450 | 500 | 600 | 700 | 800 |
+
+Find the moving average of length 3. Also plot these moving averages. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2016 (Q8)](/bca_new/bcs040/pqp/BCS-040_Dec_2016.pdf ':ignore'), [Jun 2017 (Q7(b))](/bca_new/bcs040/pqp/BCS-040_June_2017.pdf ':ignore'), [Jun 2018 (Q10(e))](/bca_new/bcs040/pqp/BCS-040_June_2018.pdf ':ignore'), [Dec 2018 (Q9)](/bca_new/bcs040/pqp/BCS-040_Dec_2018.pdf ':ignore'), [Jun 2021 (Q6)](/bca_new/bcs040/pqp/BCS-040_June_2021.pdf ':ignore'), [Dec 2021 (Q6)](/bca_new/bcs040/pqp/BCS-040_Dec_2021.pdf ':ignore'), [Jun 2022 (Q7(a))](/bca_new/bcs040/pqp/BCS-040_June_2022.pdf ':ignore'), [Dec 2024 (Q4)](/bca_new/bcs040/pqp/BCS-040_Dec_2024.pdf ':ignore'), [Jun 2026 (Q3)](/bca_new/bcs040/pqp/BCS-040_June_2026.pdf ':ignore')
 
 ---
 
@@ -69,7 +83,11 @@ Consider the following data of sales of milk by a dairy in a week:
 **💡 Key Answer Points:**
 Forecasting projects future outcomes systematically from historical data to guide planning (inventory, budgets, staffing); prediction can be qualitative/subjective without statistical extrapolation. Models split into Quantitative (Time Series: Moving Averages, Exponential Smoothing, Trend Projection; Causal: Regression) and Qualitative (Delphi, expert judgment, surveys).
 
-> **🗓️ Asked In Papers:** `Jun 2014 (Q7), Dec 2020 (Q9), Jun 2023 (Q10(c)), Dec 2024 (Q8), Dec 2025 (Q8)`
+**📝 Example PQP Question (Dec 2025 Q8):**
+
+What do you understand by forecasting? How is forecasting related to future planning? Give suitable example in support of your answer. Briefly discuss any forecasting model. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2014 (Q7)](/bca_new/bcs040/pqp/BCS-040_June_2014.pdf ':ignore'), [Dec 2020 (Q9)](/bca_new/bcs040/pqp/BCS-040_Dec_2020.pdf ':ignore'), [Jun 2023 (Q10(c))](/bca_new/bcs040/pqp/BCS-040_June_2023.pdf ':ignore'), [Dec 2024 (Q8)](/bca_new/bcs040/pqp/BCS-040_Dec_2024.pdf ':ignore'), [Dec 2025 (Q8)](/bca_new/bcs040/pqp/BCS-040_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -80,7 +98,17 @@ Forecasting projects future outcomes systematically from historical data to guid
 **💡 Key Answer Points:**
 $\bar{x} = 3.5, \bar{y} = 52.0$; $b = 1.20, a = 47.80 \Rightarrow y = 47.80 + 1.20x$.
 
-> **🗓️ Asked In Papers:** `Jun 2015 (Q4), June 2020 (Q4), Jun 2023 (Q2)`
+**📝 Example PQP Question (Jun 2015 Q4):**
+
+Fit a linear trend $y = a + b \times \text{Demand}$, to the data collected in a unit manufacturing umbrellas, given in the following table:
+
+| Month | 1 | 2 | 3 | 4 | 5 | 6 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| Demand | 46 | 56 | 54 | 43 | 57 | 56 |
+
+*(5 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2015 (Q4)](/bca_new/bcs040/pqp/BCS-040_June_2015.pdf ':ignore'), [June 2020 (Q4)](/bca_new/bcs040/pqp/BCS-040_June_2020.pdf ':ignore'), [Jun 2023 (Q2)](/bca_new/bcs040/pqp/BCS-040_June_2023.pdf ':ignore')
 
 ---
 
@@ -91,4 +119,9 @@ $\bar{x} = 3.5, \bar{y} = 52.0$; $b = 1.20, a = 47.80 \Rightarrow y = 47.80 + 1.
 **💡 Key Answer Points:**
 $F_t = W Y_{t-1} + (1-W) F_{t-1}$. Starting with $F_1 = Y_1 = 5$: Forecasts $= [5, 5.0, 4.8, 4.62, 4.558, 4.4022, 4.5620]$; Errors $= [0, -2.0, -1.8, -0.62, -1.558, 1.5978, -0.5620]$; MAD $= 1.3563$.
 
-> **🗓️ Asked In Papers:** `Jun 2018 (Q7(b)), Jun 2021 (Q10(i))`
+**📝 Example PQP Question (Jun 2021 Q10(i)):**
+
+Write short notes on any two of the following:
+(i) Exponential Smoothing Method *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2018 (Q7(b))](/bca_new/bcs040/pqp/BCS-040_June_2018.pdf ':ignore'), [Jun 2021 (Q10(i))](/bca_new/bcs040/pqp/BCS-040_June_2021.pdf ':ignore')

@@ -56,7 +56,21 @@ Step deviation $d_i = \frac{x_i - A}{h} = \frac{x_i - 500}{100}$.
 | **Dec 2024 (Q5)** | 0–50 marks | $N = 50$ | $\bar{x} = 24.00$ | $\sigma = 12.21$ ($s = 12.33$) |
 | **Jun 2026 (Q1)** | 250–750 daily wages | $N = 50$ | $\bar{x} = 458.00$ | $\sigma = \mathbf{109.71}$ |
 
-> **🗓️ Asked In Papers:** `Dec 2016 (Q1), 2019-I (Q1), Jun 2022 (Q2), Dec 2022 (Q3), Dec 2024 (Q5), Jun 2026 (Q1)`
+**📝 Example PQP Question (Jun 2026 Q1):**
+
+The daily wages (in rupees) of 50 workers of a factory are given as follows:
+
+| Daily wages | No. of workers |
+| :---: | :---: |
+| 250–350 | 10 |
+| 350–450 | 12 |
+| 450–550 | 20 |
+| 550–650 | 5 |
+| 650–750 | 3 |
+
+Calculate mean and standard deviation of the wages of the workers. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2016 (Q1)](/bca_new/bcs040/pqp/BCS-040_Dec_2016.pdf ':ignore'), [2019-I (Q1)](/bca_new/bcs040/pqp/BCS-040_June_2019.pdf ':ignore'), [Jun 2022 (Q2)](/bca_new/bcs040/pqp/BCS-040_June_2022.pdf ':ignore'), [Dec 2022 (Q3)](/bca_new/bcs040/pqp/BCS-040_Dec_2022.pdf ':ignore'), [Dec 2024 (Q5)](/bca_new/bcs040/pqp/BCS-040_Dec_2024.pdf ':ignore'), [Jun 2026 (Q1)](/bca_new/bcs040/pqp/BCS-040_June_2026.pdf ':ignore')
 
 ---
 
@@ -95,7 +109,21 @@ The number of road accidents occurring in a city across 50 weeks was recorded as
 | **Dec 2023 (Q4)** | 50 weeks accidents ([8, 22, 10, 8, 2]) | $N = 50$ | **$9.90$** | Histogram & mean |
 | **Dec 2024 (Q1)** | 50 weeks accidents ([8, 20, 12, 8, 2]) | $N = 50$ | **$10.10$** | Histogram & mean |
 
-> **🗓️ Asked In Papers:** `Dec 2017 (Q1), Jun 2018 (Q1), Dec 2022 (Q1), Dec 2023 (Q4), Dec 2024 (Q1)`
+**📝 Example PQP Question (Dec 2024 Q1):**
+
+The Government has conducted a survey of road accidents. In this study the data of accidents of a particular road for the last 50 weeks were compiled. This data is grouped into a frequency distribution as follows:
+
+| No. of Accidents | No. of Weeks |
+| :---: | :---: |
+| 0–5 | 8 |
+| 5–10 | 20 |
+| 10–15 | 12 |
+| 15–20 | 8 |
+| 20–25 | 2 |
+
+Draw a histogram and calculate average number of accidents per week. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2017 (Q1)](/bca_new/bcs040/pqp/BCS-040_Dec_2017.pdf ':ignore'), [Jun 2018 (Q1)](/bca_new/bcs040/pqp/BCS-040_June_2018.pdf ':ignore'), [Dec 2022 (Q1)](/bca_new/bcs040/pqp/BCS-040_Dec_2022.pdf ':ignore'), [Dec 2023 (Q4)](/bca_new/bcs040/pqp/BCS-040_Dec_2023.pdf ':ignore'), [Dec 2024 (Q1)](/bca_new/bcs040/pqp/BCS-040_Dec_2024.pdf ':ignore')
 
 ---
 
@@ -106,7 +134,23 @@ The number of road accidents occurring in a city across 50 weeks was recorded as
 **💡 Key Answer Points:**
 Merits: unaffected by extreme values, works for open-end intervals. Demerits: ignores exact magnitudes, lacks algebraic properties. Formula: $M = L + \frac{N/2 - cf}{f_m}\times h$. Missing-frequency version (Jun 15, Dec 20, Jun 23): $f_1 + f_2 = 50$, median class 40–50 gives $46 = 40 + \frac{100-(42+f_1)}{65}\times 10 \Rightarrow f_1 = 19, f_2 = 31$. Dec 25 Q4 (f1 = 34, f2 = 46, N = 230): $M = 40 + \frac{115-76}{65}\times 10 = 46.00$.
 
-> **🗓️ Asked In Papers:** `Jun 2015 (Q6), Dec 2020 (Q6), Jun 2023 (Q1), Dec 2025 (Q4)`
+**📝 Example PQP Question (Dec 2025 Q4):**
+
+Write two merits and two demerits of median. Given the frequency distribution as follows:
+
+| C. I. | Frequency |
+| :---: | :---: |
+| 10–20 | 12 |
+| 20–30 | 30 |
+| 30–40 | 34 |
+| 40–50 | 65 |
+| 50–60 | 46 |
+| 60–70 | 25 |
+| 70–80 | 18 |
+
+Find the median value. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2015 (Q6)](/bca_new/bcs040/pqp/BCS-040_June_2015.pdf ':ignore'), [Dec 2020 (Q6)](/bca_new/bcs040/pqp/BCS-040_Dec_2020.pdf ':ignore'), [Jun 2023 (Q1)](/bca_new/bcs040/pqp/BCS-040_June_2023.pdf ':ignore'), [Dec 2025 (Q4)](/bca_new/bcs040/pqp/BCS-040_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -117,7 +161,16 @@ Merits: unaffected by extreme values, works for open-end intervals. Demerits: ig
 **💡 Key Answer Points:**
 Tally values into continuous intervals $[L, U)$ and plot touching vertical bars. Jun 17 Q1 (50 rainfall readings, 150–160 to 220–230): [4, 5, 3, 9, 6, 8, 7, 8]; 2019-II (6384) Q1 (25 marks, 0–10 to 40–50): [2, 4, 9, 6, 4]; Jun 21 Q1 (30 car services): width 5 (10–15 to 40–45) gives [3, 6, 5, 7, 4, 3, 2] or width 10 (10–20 to 40–50) gives [9, 12, 7, 2]; Jun 24 Q1 (20 bulb lives, width 10, 100–110 to 170–180): [2, 1, 2, 2, 3, 4, 4, 2].
 
-> **🗓️ Asked In Papers:** `Jun 2017 (Q1), Dec June 2019 (Q1), Jun 2021 (Q1), Jun 2024 (Q1)`
+**📝 Example PQP Question (Jun 2024 Q1):**
+
+The life of 20 electric bulbs (in hours) are given as follows:
+
+`125, 160, 175, 170, 111, 101, 165, 150, 140, 130, 120, 135, 145, 155, 165, 145, 105, 157, 167, 153`
+
+(a) Construct a continuous frequency distribution of the data by taking class width 10. *(3 marks)*
+(b) Draw the histogram of the distribution in given above. *(2 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2017 (Q1)](/bca_new/bcs040/pqp/BCS-040_June_2017.pdf ':ignore'), [Dec June 2019 (Q1)](/bca_new/bcs040/pqp/BCS-040_Dec_2019.pdf ':ignore'), [Jun 2021 (Q1)](/bca_new/bcs040/pqp/BCS-040_June_2021.pdf ':ignore'), [Jun 2024 (Q1)](/bca_new/bcs040/pqp/BCS-040_June_2024.pdf ':ignore')
 
 ---
 
@@ -128,7 +181,16 @@ Tally values into continuous intervals $[L, U)$ and plot touching vertical bars.
 **💡 Key Answer Points:**
 For Dec 14 / Undated Q1 (n = 20, largest 79 $\to$ 500): $\bar{x} = 46.35$, Sample Var $s^2 = 384.56$ ($s = 19.61$), Pop Var $= 365.33$; after change, $\bar{x}' = 67.40$ (+21.05), $s'^2 = 10,693.52$ ($s' = 103.41$), Pop Var $= 10,158.84$. For Dec 25 Q2 (n = 10, largest 59 $\to$ 500): $\bar{x} = 38.50$, $s^2 = 327.39$ ($s = 18.09$), Pop Var $= 294.65$; after change, $\bar{x}' = 82.60$ (+44.10), $s'^2 = 21,784.49$, Pop Var $= 19,606.04$. Justification: mean shifts linearly by $\Delta/n$, whereas variance surges because deviations are squared.
 
-> **🗓️ Asked In Papers:** `Dec 2014 (Q1), June 2020 (Q1), Dec 2025 (Q2)`
+**📝 Example PQP Question (Dec 2025 Q2):**
+
+Given the following sample of 10 numbers:
+
+`12, 41, 48, 58, 14, 43, 50, 59, 15, 45`
+
+(a) Compute Mean, Variance and Standard Deviation. *(3 marks)*
+(b) If the largest value in the above set of numbers is changed to 500, to what extent are the mean and variance affected by the change? Justify your answer. *(2 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2014 (Q1)](/bca_new/bcs040/pqp/BCS-040_Dec_2014.pdf ':ignore'), [June 2020 (Q1)](/bca_new/bcs040/pqp/BCS-040_June_2020.pdf ':ignore'), [Dec 2025 (Q2)](/bca_new/bcs040/pqp/BCS-040_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -139,7 +201,22 @@ For Dec 14 / Undated Q1 (n = 20, largest 79 $\to$ 500): $\bar{x} = 46.35$, Sampl
 **💡 Key Answer Points:**
 Jun 14 Q9(b) / Jun 25 Q4 (N = 70, N/2 = 35, class 75–99.9, cf = 31, f = 16): using true boundaries ($L = 74.95, h = 25$), Median $= 81.20$ (nominal limits: $81.225$). 2019-II (6384) Q2 (200–700, N = 50, N/2 = 25, class 400–500, cf = 22, f = 20): Median $= 400 + \frac{25-22}{20}\times 100 = 415.00$.
 
-> **🗓️ Asked In Papers:** `Jun 2014 (Q9(b)), Dec June 2019 (Q2), Jun 2025 (Q4)`
+**📝 Example PQP Question (Jun 2025 Q4):**
+
+Calculate an estimate of median for the following data:
+
+| Class | Frequency |
+| :---: | :---: |
+| 0–24.9 | 6 |
+| 25–49.9 | 11 |
+| 50–74.9 | 14 |
+| 75–99.9 | 16 |
+| 100–124.9 | 13 |
+| 125–149.9 | 10 |
+
+*(5 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2014 (Q9(b))](/bca_new/bcs040/pqp/BCS-040_June_2014.pdf ':ignore'), [Dec June 2019 (Q2)](/bca_new/bcs040/pqp/BCS-040_Dec_2019.pdf ':ignore'), [Jun 2025 (Q4)](/bca_new/bcs040/pqp/BCS-040_June_2025.pdf ':ignore')
 
 ---
 
@@ -150,7 +227,11 @@ Jun 14 Q9(b) / Jun 25 Q4 (N = 70, N/2 = 35, class 75–99.9, cf = 31, f = 16): u
 **💡 Key Answer Points:**
 Corrected $\sum x = 200 - 8 = 192 \Rightarrow$ New Mean $= 192/19 = 10.1053$. If given SD = 2 is population SD, $\sum x^2 = 20(4+100)=2080 \Rightarrow$ New $\sum x^2 = 2016 \Rightarrow$ New SD $= \sqrt{2016/19 - 10.1053^2} = 1.9972$ (if sample SD: $1.9971$).
 
-> **🗓️ Asked In Papers:** `Jun 2016 (Q1), Dec 2018 (Q1)`
+**📝 Example PQP Question (Dec 2018 Q1):**
+
+The mean and standard deviation of 20 items is found to be 10 and 2, respectively. At the time of checking it was found that one item with value 8 was incorrect. Calculate the mean and standard deviation if the wrong item is omitted. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2016 (Q1)](/bca_new/bcs040/pqp/BCS-040_June_2016.pdf ':ignore'), [Dec 2018 (Q1)](/bca_new/bcs040/pqp/BCS-040_Dec_2018.pdf ':ignore')
 
 ---
 
@@ -161,7 +242,11 @@ Corrected $\sum x = 200 - 8 = 192 \Rightarrow$ New Mean $= 192/19 = 10.1053$. If
 **💡 Key Answer Points:**
 $\bar{x} = 41.90$; Mean Deviation about Mean $MD = \frac{\sum |x_i - \bar{x}|}{10} = 17.12$; Sample SD $s = 22.18$ (Pop SD $\sigma = 21.05$).
 
-> **🗓️ Asked In Papers:** `Jun 2013 (Q6)`
+**📝 Example PQP Question (Jun 2013 Q6):**
+
+Given the following sample of 10 numbers: `12, 41, 48, 58, 14, 43, 50, 59, 15, 79`. Compute Mean deviation and Standard deviation for the data given above. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2013 (Q6)](/bca_new/bcs040/pqp/BCS-040_June_2013.pdf ':ignore')
 
 ---
 
@@ -172,7 +257,17 @@ $\bar{x} = 41.90$; Mean Deviation about Mean $MD = \frac{\sum |x_i - \bar{x}|}{1
 **💡 Key Answer Points:**
 $\bar{x} = 6.40$; Sample SD $s = 0.6944 \Rightarrow CV = (s/\bar{x})\times 100 = 10.85\%$ (Pop SD $\sigma = 0.6588 \Rightarrow CV = 10.29\%$).
 
-> **🗓️ Asked In Papers:** `Dec 2021 (Q1)`
+**📝 Example PQP Question (Dec 2021 Q1):**
+
+A pharmacologist measured the amount of dopamine (no. of moles/gm) in the brains of each of 10 rats. The observed data is given below:
+
+`6.8, 7.0, 5.3, 6.0, 5.9, 5.6, 6.8, 7.4, 6.2, 7.0`
+
+Calculate:
+(i) The mean and standard deviation
+(ii) Coefficient of variation *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 (Q1)](/bca_new/bcs040/pqp/BCS-040_Dec_2021.pdf ':ignore')
 
 ---
 
@@ -183,7 +278,17 @@ $\bar{x} = 6.40$; Sample SD $s = 0.6944 \Rightarrow CV = (s/\bar{x})\times 100 =
 **💡 Key Answer Points:**
 Merits: rigidly defined, uses every observation, algebraically tractable. Demerits: distorted by extreme outliers, unsuited to open-ended classes or qualitative data. Numerical (N = 45): $\bar{x} = 126/45 = 2.80$; Pop Variance $\sigma^2 = 1.7156$ (Sample Var $s^2 = 1.7545$).
 
-> **🗓️ Asked In Papers:** `Dec 2015 (Q1)`
+**📝 Example PQP Question (Dec 2015 Q1):**
+
+Write any two merits and demerits of Arithmetic Mean. Given below is the data about the number of seeds in a pod of a certain plant. Find the variance:
+
+| No. of Seeds | 1 | 2 | 3 | 4 | 5 | 6 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| Frequency | 8 | 14 | 7 | 12 | 3 | 1 |
+
+*(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2015 (Q1)](/bca_new/bcs040/pqp/BCS-040_Dec_2015.pdf ':ignore')
 
 ---
 
@@ -194,4 +299,9 @@ Merits: rigidly defined, uses every observation, algebraically tractable. Demeri
 **💡 Key Answer Points:**
 Median is the middle positional value dividing sorted data into two equal halves (outlier-resistant); Standard Deviation ($\sigma = \sqrt{\frac{\sum (x_i-\bar{x})^2}{n}}$) is the positive square root of variance quantifying dispersion around the mean in original units.
 
-> **🗓️ Asked In Papers:** `Jun 2024 (Q6(iii))`
+**📝 Example PQP Question (Jun 2024 Q6(iii)):**
+
+Write short notes on any two of the following:
+(iii) Median and Standard deviation *(2.5 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2024 (Q6(iii))](/bca_new/bcs040/pqp/BCS-040_June_2024.pdf ':ignore')

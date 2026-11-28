@@ -22,7 +22,11 @@
   - If a power outage or crash occurs mid-write, the NTFS recovery engine parses the `$LogFile` during reboot, rolling back uncommitted transactions and rolling forward committed ones. This completely eliminates the need for slow `chkdsk` sweeps.
 - **Advanced Features:** Encrypting File System (EFS), native file compression, volume shadow copy, and POSIX hard links.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q4(a), June 2023 Q5(b)`
+**📝 Example PQP Question (Dec 2021 Q4(a)):**
+
+Briefly explain file management system of WINDOWS 10 O/S. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q4(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore'), [June 2023 Q5(b)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore')
 
 ---
 
@@ -40,7 +44,14 @@
   - The Windows Memory Manager dynamically trims working sets of idle background apps when free system RAM drops below threshold watermarks.
 - **Page Files (`pagefile.sys`):** Windows 10 supports multiple concurrent paging files on disk to back private, modified virtual pages that cannot be recreated from executable binaries.
 
-> **🗓️ Asked In Papers:** `June 2022 Q1(c), June 2024 Q1(d)`
+**📝 Example PQP Question (June 2024 Q1(d)):**
+
+With reference to memory management in Windows-10 operating system, explain the following :
+
+(i) Virtual Memory Organization
+(ii) Demand Paging *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q1(c)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore'), [June 2024 Q1(d)](/bca_new/mcs203/pqp/MCS-203_June_2024.pdf ':ignore')
 
 ---
 
@@ -60,7 +71,11 @@
   - Increases the effective capacity of physical RAM without hardware upgrades.
   - Retrieving a compressed page from RAM requires microsecond CPU decompression, which is thousands of times faster than waiting for secondary disk retrieval.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q1(d)`
+**📝 Example PQP Question (Dec 2021 Q1(d)):**
+
+Explain demand paging and memory compression in memory management of WINDOWS-10 O/S. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q1(d)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore')
 
 ---
 
@@ -81,7 +96,11 @@
   - The thread's GUI window receives user keyboard or mouse input.
   - A thread suffers starvation in the ready queue for over 4 seconds (Balance Set Manager boost).
 
-> **🗓️ Asked In Papers:** `Dec 2023 Q3(b)`
+**📝 Example PQP Question (Dec 2023 Q3(b)):**
+
+Explain the process management and process scheduling in Windows-10. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2023 Q3(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -99,4 +118,8 @@ Windows 10 provides a versatile suite of IPC mechanisms:
 4. **Shared Memory (Section Objects):** Allows two processes to map the same physical memory frames into their respective virtual address spaces for instantaneous data transfer.
 5. **Component Object Model (COM / DCOM):** Object-oriented IPC framework allowing software components to interact across process boundaries.
 
-> **🗓️ Asked In Papers:** `Dec 2024 Q2(a)`
+**📝 Example PQP Question (Dec 2024 Q2(a)):**
+
+What is Interprocess communication ? Explain how it is performed in Windows-10. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2024 Q2(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore')

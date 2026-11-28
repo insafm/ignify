@@ -23,7 +23,11 @@ To prevent system-wide compromise, iOS confines each app to an isolated containe
 
 - **iCloud Container:** A cloud-synchronized directory managed by the OS ubiquity service. Changes made to files in this container are automatically synchronized via Apple servers across all devices registered to the same Apple ID, providing seamless state restoration.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q4(a), June 2023 Q5(a), Dec 2024 Q5(d)`
+**📝 Example PQP Question (Dec 2021 Q1(c)):**
+
+List and explain various commonly used directories in iOS. Also mention the purpose of iCloud container of iOS along with its contents. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q4(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore'), [June 2023 Q5(a)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore'), [Dec 2024 Q5(d)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore')
 
 ---
 
@@ -58,7 +62,11 @@ Apple's iOS is structured into four distinct vertical layers, where upper layers
 3. **Core Services Layer:** Supplies fundamental system services below the UI. Includes **Core Data** (object graph persistence), **Core Foundation** (C-based data management), network sockets, and GPS Location services.
 4. **Core OS Layer:** The lowest substrate resting on hardware. Built on **Darwin** (the XNU hybrid kernel combining Mach microkernel message passing with FreeBSD POSIX semantics). Coordinates virtual memory paging, file systems, low-level socket APIs, and communication with the Secure Enclave processor.
 
-> **🗓️ Asked In Papers:** `June 2024 Q1(c), June 2025 Q1(d), Dec 2025 Q4(b)`
+**📝 Example PQP Question (Dec 2025 Q4(b)):**
+
+Give the complete layered architecture of iOS. Briefly explain about each layer and their significances. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2024 Q1(c)](/bca_new/mcs203/pqp/MCS-203_June_2024.pdf ':ignore'), [June 2025 Q1(d)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore'), [Dec 2025 Q4(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -102,7 +110,11 @@ Android is structured as a layered software stack built on top of an open-source
 4. **Application Framework Layer:** Java classes used directly by developers (e.g., Activity Manager for lifecycle, Content Providers for data sharing, Notification Manager for alerts).
 5. **Applications Layer:** Native system applications (Phone, Messages) and third-party applications installed by the user.
 
-> **🗓️ Asked In Papers:** `Dec 2022 Q1(d), Dec 2024 Q2(c)`
+**📝 Example PQP Question (Dec 2024 Q2(c)):**
+
+Discuss the layered architecture of Android OS, with the help of a diagram. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2022 Q1(d)](/bca_new/mcs203/pqp/MCS-203_Dec_2022.pdf ':ignore'), [Dec 2024 Q2(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore')
 
 ---
 
@@ -125,7 +137,11 @@ Low Memory Reclaim Order:
 [Empty Cached Apps] -> [Background Apps] -> [Service Processes] -> [Visible Apps] -> [Foreground App (Protected)]
 ```
 
-> **🗓️ Asked In Papers:** `June 2023 Q5(d), Dec 2023 Q4(b)`
+**📝 Example PQP Question (Dec 2023 Q4(b)):**
+
+Explain the memory management in Android Operating System. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2023 Q5(d)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore'), [Dec 2023 Q4(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -147,7 +163,11 @@ Low Memory Reclaim Order:
 | **Licensing** | Closed proprietary ownership (Nokia / Symbian Ltd.); failed open-source transition. | **Open Source** (Apache 2.0 for user-space, GPL v2 for Linux kernel). |
 | **Security Architecture** | Capability-based security model checked via developer signing certificates. | Multi-tier security: Linux UID isolation, Android Sandbox, runtime permissions, and SELinux. |
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q5(c), Dec 2025 Q5(c)`
+**📝 Example PQP Question (Dec 2021 Q5(c)):**
+
+Write short notes on: Comparative chart of Symbian, Android with respect to the features : OS family, user interface, app stores, licence policy, security, voice assistant and power management. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q5(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore'), [Dec 2025 Q5(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -173,7 +193,11 @@ flowchart TD
     App --> Enclave["Secure Enclave & Hardware AES Engine"]
 ```
 
-> **🗓️ Asked In Papers:** `June 2022 Q4(a)`
+**📝 Example PQP Question (June 2022 Q1(c)):**
+
+Explain the file management system in iOS and also briefly mention the security aspects of file system. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q4(a)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore')
 
 ---
 
@@ -202,7 +226,17 @@ LOWEST PRIORITY (Killed First)
 4. **Background Process:** Holds Activities that are completely obscured from view (`onStop()` called). Preserved in an LRU (Least Recently Used) list.
 5. **Empty Process:** Holds zero active application components; maintained purely as a cached process to accelerate subsequent app restart times.
 
-> **🗓️ Asked In Papers:** `June 2025 Q3(a)`
+**📝 Example PQP Question (June 2025 Q3(a)):**
+
+Discuss the following processes in Android mobile operating system :
+
+(i) Foreground process
+(ii) Visible process
+(iii) Service process
+(iv) Background process
+(v) Empty process *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2025 Q3(a)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore')
 
 ---
 
@@ -220,7 +254,11 @@ Mobile OS design differs fundamentally from desktop OS design due to strict phys
 4. **Dynamic Network Fluctuations:** Devices transition continuously between Wi-Fi, 4G, 5G, and zero-coverage dead zones, requiring fault-tolerant network state machines.
 5. **Small Touch-Screen Form Factor:** Requires dedicated input dispatch engines prioritizing immediate 60/120 Hz gesture response over background calculations.
 
-> **🗓️ Asked In Papers:** `June 2023 Q5(a), Dec 2024 Q1(c), June 2026 Q5(c)`
+**📝 Example PQP Question (June 2024 Q2(b)):**
+
+Elucidate the general design issues for a mobile operating system in detail. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2023 Q5(a)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore'), [Dec 2024 Q1(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore'), [June 2026 Q5(c)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -242,7 +280,11 @@ Mobile OS design differs fundamentally from desktop OS design due to strict phys
   3. **Secure Enclave Processor (SEP):** Dedicated coprocessor running a microkernel OS that manages fingerprint/facial biometrics and encryption keys in physical isolation from the main CPU.
   4. **Data Protection API:** File-level encryption using hardware AES keys combined with the user passcode.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q5(b), Dec 2023 Q3(a)`
+**📝 Example PQP Question (Dec 2023 Q3(a)):**
+
+Describe the evolution of iOS. Also, discuss the features of iOS operating system. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q5(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore'), [Dec 2023 Q3(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -261,7 +303,17 @@ Mobile OS design differs fundamentally from desktop OS design due to strict phys
   - **RF Interference:** Bluetooth shares the crowded 2.4 GHz spectrum with Wi-Fi routers and microwave ovens.
   - **Battery Drain:** Continuous wireless polling and active RF transceivers deplete mobile battery reserves.
 
-> **🗓️ Asked In Papers:** `Dec 2023 Q4(a)`
+**📝 Example PQP Question (Dec 2023 Q4(a)):**
+
+With reference to wireless communication, explain the following ‘two-unit configuration’ ways of device communication :
+
+(i) Infrared connection
+(ii) Bluetooth connection
+(iii) Near Field Communication (NFC)
+
+Also mention the drawbacks, if any, with the ‘two-unit configuration’ model/technique. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2023 Q4(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -277,7 +329,11 @@ Mobile OS design differs fundamentally from desktop OS design due to strict phys
 - **Runtime Permissions Model:** Access to sensitive hardware resources (Camera, Microphone, Contacts, Location) requires explicit runtime approval from the user.
 - **SELinux (Security-Enhanced Linux):** Android enforces Mandatory Access Control (MAC) policies at the kernel level, confining even root processes inside strict domains.
 
-> **🗓️ Asked In Papers:** `June 2024 Q2(a)`
+**📝 Example PQP Question (June 2024 Q2(a)):**
+
+Discuss the file management and security features in Android operating system. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2024 Q2(a)](/bca_new/mcs203/pqp/MCS-203_June_2024.pdf ':ignore')
 
 ---
 
@@ -295,7 +351,11 @@ Mobile OS design differs fundamentally from desktop OS design due to strict phys
   2. **Content Providers:** Structured data sharing mechanism backed by SQLite databases via standard URI access.
   3. **Messengers:** Handler-based IPC mechanism for single-thread sequential message dispatch across processes.
 
-> **🗓️ Asked In Papers:** `Dec 2022 Q5(b)`
+**📝 Example PQP Question (Dec 2022 Q5(b)):**
+
+Write short notes on: IPC mechanisms in Android *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2022 Q5(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2022.pdf ':ignore')
 
 ---
 
@@ -309,7 +369,11 @@ Mobile OS design differs fundamentally from desktop OS design due to strict phys
 - **Libraries Layer (C/C++ Native):** Low-level native compiled code exposed to the system. Includes SQLite for relational data management, WebKit/Blink for HTML rendering, OpenGL ES for graphics hardware acceleration, and the Media Framework for audio/video codecs.
 - **Application Framework Layer (Java/Kotlin API):** High-level architectural abstractions consumed by application developers. Includes the Activity Manager (handles lifecycle), Content Providers (data abstraction), Notification Manager (status-bar alerts), and View System (UI widgets and layouts).
 
-> **🗓️ Asked In Papers:** `June 2024 Q5(a), June 2026 Q5(b)`
+**📝 Example PQP Question (June 2024 Q5(iv)):**
+
+Write short notes on: Libraries and Application Framework Layers of Android Architecture *(5 marks)*
+
+> **🗓️ Asked In Papers:** [June 2024 Q5(a)](/bca_new/mcs203/pqp/MCS-203_June_2024.pdf ':ignore'), [June 2026 Q5(b)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -328,7 +392,14 @@ Mobile OS design differs fundamentally from desktop OS design due to strict phys
 | **Power Consumption & Thermal Profile** | Extremely low power draw (2–8 Watts), designed specifically for passive mobile cooling. | Higher idle power draw and thermal dissipation; struggled with standby battery life. |
 | **Market Outcome** | Dominates modern smartphone, tablet, and wearable ecosystems worldwide. | Deprecating in smartphones; failed to match ARM power efficiency in mobile form factors. |
 
-> **🗓️ Asked In Papers:** `June 2023 Q4(b)`
+**📝 Example PQP Question (June 2023 Q4(b)):**
+
+Write briefly about the following types of processors used in mobile devices :
+
+(i) Qualcomm Snapdragon
+(ii) Intel Atom Processor *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2023 Q4(b)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore')
 
 ---
 
@@ -345,7 +416,11 @@ Mobile OS design differs fundamentally from desktop OS design due to strict phys
 4. **Unified Cloud Synchronization:** Native integration with Google Play Services for push notifications, cloud backups, and authentication.
 5. **Connectivity & Peripheral Support:** Comprehensive driver support for Wi-Fi Direct, Bluetooth LE, NFC, 5G/LTE, and USB OTG.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q5(a)`
+**📝 Example PQP Question (Dec 2021 Q5(a)):**
+
+Write short notes on: Salient features of Android OS *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q5(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore')
 
 ---
 
@@ -364,7 +439,11 @@ Mobile OS design differs fundamentally from desktop OS design due to strict phys
   - **User Interface Layer (Gaia):** The entire user interface, dialer, messaging, and apps are written in pure HTML5/JavaScript.
 - **Resource Constraints:** Operates efficiently on devices with as little as 256 MB or 512 MB of RAM and low-power dual-core processors.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q5(d)`
+**📝 Example PQP Question (Dec 2021 Q5(d)):**
+
+Write short notes on: KaiOS *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q5(d)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore')
 
 ---
 
@@ -380,4 +459,8 @@ Mobile OS design differs fundamentally from desktop OS design due to strict phys
 - **Aggressive Power Optimization:** Event-driven execution loop where the CPU is placed into hardware sleep mode whenever no active events are queued in the event loop.
 - **Active Object Pattern:** Replaced multithreading with cooperative event-driven Active Objects to prevent stack-memory overhead on memory-constrained phone hardware.
 
-> **🗓️ Asked In Papers:** `Dec 2025 Q5(c)`
+**📝 Example PQP Question (Dec 2025 Q5(c)):**
+
+Write short notes on: Symbian Operating Systems *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2025 Q5(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')

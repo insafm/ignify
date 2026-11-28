@@ -14,7 +14,13 @@
 **💡 Key Answer Points:**
 Plots monitoring process stability against $\pm 3\sigma$ control limits. Variables charts ($\bar{X}, R, S$) monitor continuous measurements (weight, diameter); Attributes charts ($p, np, c, u$) monitor discrete counts or proportions of defectives.
 
-> **🗓️ Asked In Papers:** `Jun 2016 (Q9(a)), Jun 2018 (Q10(c)), Jun 2023 (Q10(a)), Dec 2024 (Q10(b))`
+**📝 Example PQP Question (Jun 2016 Q9(a)):**
+
+Discuss the following:
+(i) Control chart for variables
+(ii) Control chart for attributes *(4 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2016 (Q9(a))](/bca_new/bcs040/pqp/BCS-040_June_2016.pdf ':ignore'), [Jun 2018 (Q10(c))](/bca_new/bcs040/pqp/BCS-040_June_2018.pdf ':ignore'), [Jun 2023 (Q10(a))](/bca_new/bcs040/pqp/BCS-040_June_2023.pdf ':ignore'), [Dec 2024 (Q10(b))](/bca_new/bcs040/pqp/BCS-040_Dec_2024.pdf ':ignore')
 
 ---
 
@@ -25,7 +31,17 @@ Plots monitoring process stability against $\pm 3\sigma$ control limits. Variabl
 **💡 Key Answer Points:**
 Jun 17 Q3 ([3,4,4,10,4,2,4,5,4,6]): $n\bar{p} = 4.60, UCL_{np} = 10.73, LCL_{np} = 0$ ($p$-chart $UCL = 0.2146$); Day 4 ($10 < 10.73$) stays in control. Dec 18 Q8 ([8,2,4,1,3,3,2,4,9,7,5,8,5,9]): $n\bar{p} = 5.00, UCL_{np} = 11.54, LCL_{np} = 0$ ($p$-chart $UCL = 0.1154$); all 14 days in control.
 
-> **🗓️ Asked In Papers:** `Jun 2017 (Q3), Dec 2018 (Q8)`
+**📝 Example PQP Question (Dec 2018 Q8):**
+
+Refill of cartons with apple juice is taking place in a plant. Data for 14 days was collected and 100 cartons were checked every day for proper filling. Data is as given below:
+
+| S. No. | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| $X$ | 8 | 2 | 4 | 1 | 3 | 3 | 2 | 4 | 9 | 7 | 5 | 8 | 5 | 9 |
+
+Compute the UCL, LCL and CL using an appropriate control chart. Also draw the chart. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2017 (Q3)](/bca_new/bcs040/pqp/BCS-040_June_2017.pdf ':ignore'), [Dec 2018 (Q8)](/bca_new/bcs040/pqp/BCS-040_Dec_2018.pdf ':ignore')
 
 ---
 
@@ -36,7 +52,11 @@ Jun 17 Q3 ([3,4,4,10,4,2,4,5,4,6]): $n\bar{p} = 4.60, UCL_{np} = 10.73, LCL_{np}
 **💡 Key Answer Points:**
 $\bar{X}$-chart tracks process centering ($CL = \bar{\bar{X}}, UCL/LCL = \bar{\bar{X}} \pm A_2\bar{R}$); $R$-chart tracks dispersion ($CL = \bar{R}, UCL = D_4\bar{R}, LCL = D_3\bar{R}$). Use $R$-chart for small subgroups ($n \le 10$); use $S$-chart for larger subgroups ($n > 10$).
 
-> **🗓️ Asked In Papers:** `Jun 2016 (Q9(b)), Jun 2024 (Q10(i))`
+**📝 Example PQP Question (Jun 2016 Q9(b)):**
+
+Describe control chart for $\bar{X}$ and $R$ in detail. Also suggest when $R$-chart and $S$-chart can be used. *(5+1 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2016 (Q9(b))](/bca_new/bcs040/pqp/BCS-040_June_2016.pdf ':ignore'), [Jun 2024 (Q10(i))](/bca_new/bcs040/pqp/BCS-040_June_2024.pdf ':ignore')
 
 ---
 
@@ -47,7 +67,11 @@ $\bar{X}$-chart tracks process centering ($CL = \bar{\bar{X}}, UCL/LCL = \bar{\b
 **💡 Key Answer Points:**
 $\bar{\bar{X}} = 160.40, \bar{R} = 2.88$. $\bar{X}$-chart: $UCL = 162.50, LCL = 158.30$; $R$-chart: $UCL = 6.57, LCL = 0$.
 
-> **🗓️ Asked In Papers:** `Dec 2017 (Q2), Dec 2023 (Q3)`
+**📝 Example PQP Question (Dec 2023 Q3):**
+
+A football manufacturing company wants to check the variation in the weight of balls. For this, 25 samples (each of size 4) are selected. The weight of each ball is measured (in grams), the sum of sample averages and sum of sample ranges were found to be $\sum_{i=1}^{25} \bar{x}_i = 4010\text{ grams}$ and $\sum_{i=1}^{25} R_i = 72\text{ grams}$, respectively. Compute the control limits for the $\bar{X}$ and $R$-chart. It is given that $A_2 = 0.729$, $D_3 = 0$ and $D_4 = 2.282$. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2017 (Q2)](/bca_new/bcs040/pqp/BCS-040_Dec_2017.pdf ':ignore'), [Dec 2023 (Q3)](/bca_new/bcs040/pqp/BCS-040_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -58,7 +82,26 @@ $\bar{\bar{X}} = 160.40, \bar{R} = 2.88$. $\bar{X}$-chart: $UCL = 162.50, LCL = 
 **💡 Key Answer Points:**
 $\bar{\bar{X}} = 4.23, \bar{R} = 0.28$. $\bar{X}$-chart: $UCL = 4.4341, LCL = 4.0259$; $R$-chart: $UCL = 0.6390, LCL = 0$.
 
-> **🗓️ Asked In Papers:** `Jun 2017 (Q9)`
+**📝 Example PQP Question (Jun 2017 Q9):**
+
+A company manufactures pipes of small diameter. Four observations of diameters of the pipes were taken periodically. The following table gives the values of four observations, taken 10 times during a working day:
+
+| Sample No. | I | II | III | IV |
+| :---: | :---: | :---: | :---: | :---: |
+| 1 | 4.1 | 4.3 | 4.2 | 4.2 |
+| 2 | 4.3 | 4.1 | 4.3 | 4.5 |
+| 3 | 4.2 | 4.3 | 4.4 | 4.3 |
+| 4 | 4.1 | 4.2 | 4.4 | 4.1 |
+| 5 | 4.3 | 4.1 | 4.2 | 4.2 |
+| 6 | 4 | 4.2 | 4.1 | 4.1 |
+| 7 | 4 | 4.5 | 4.2 | 4.1 |
+| 8 | 4.2 | 4.3 | 4.1 | 4.2 |
+| 9 | 4.4 | 4.2 | 4.1 | 4.5 |
+| 10 | 4.4 | 4.2 | 4.3 | 4.3 |
+
+Calculate the control limits for mean and range. (Given that $A_2 = 0.729$, $D_3 = 0$, $D_4 = 2.282$) *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2017 (Q9)](/bca_new/bcs040/pqp/BCS-040_June_2017.pdf ':ignore')
 
 ---
 
@@ -69,4 +112,10 @@ $\bar{\bar{X}} = 4.23, \bar{R} = 0.28$. $\bar{X}$-chart: $UCL = 4.4341, LCL = 4.
 **💡 Key Answer Points:**
 Chance causes are inherent minor random fluctuations (e.g., slight machine vibration); Assignable causes are identifiable faults pushing a process out of control (e.g., worn tool). Producer's risk ($\alpha$) is rejecting a good lot; Consumer's risk ($\beta$) is accepting a bad lot.
 
-> **🗓️ Asked In Papers:** `Jun 2021 (Q5)`
+**📝 Example PQP Question (Jun 2021 Q5):**
+
+Differentiate between the following with one example of each:
+(i) Assignable causes and Chance causes
+(ii) Producer's risk and Consumer's risk *(5 marks)*
+
+> **🗓️ Asked In Papers:** [Jun 2021 (Q5)](/bca_new/bcs040/pqp/BCS-040_June_2021.pdf ':ignore')

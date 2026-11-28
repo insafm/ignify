@@ -19,7 +19,11 @@
   3. **No Preemption:** Resources cannot be forcibly confiscated from a process; a resource can only be released voluntarily by the holding process after completing its task.
   4. **Circular Wait:** A closed chain of processes $\{P_0, P_1, \dots, P_n\}$ must exist such that $P_0$ is waiting for a resource held by $P_1$, $P_1$ is waiting for $P_2$, $\dots$, and $P_n$ is waiting for a resource held by $P_0$.
 
-> **🗓️ Asked In Papers:** `June 2022 Q1(a), Dec 2022 Q3(b), Dec 2024 Q1(b), Dec 2025 Q1(b)`
+**📝 Example PQP Question (Dec 2024 Q1(b)):**
+
+Define a deadlock. List and explain all the four conditions that are must to create the deadlock situation. *(5 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q1(a)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore'), [Dec 2022 Q3(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2022.pdf ':ignore'), [Dec 2024 Q1(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore'), [Dec 2025 Q1(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -42,7 +46,11 @@
        $$F: R \rightarrow \mathbb{N} \quad (\text{e.g., Disk} = 1, \text{Printer} = 2, \text{Tape} = 3)$$
      - A process can only request a resource $R_j$ if $F(R_j) > F(R_i)$, where $R_i$ is any resource already held by that process. This strictly prevents the formation of cycles.
 
-> **🗓️ Asked In Papers:** `June 2022 Q1(a), Dec 2025 Q1(b)`
+**📝 Example PQP Question (Dec 2025 Q2(b)):**
+
+Define a deadlock. How can the deadlock be prevented using Havender’s algorithm ? *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q1(a)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore'), [Dec 2025 Q1(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -98,7 +106,20 @@ Consider a system with four processes ($P_1, P_2, P_3, P_4$) and two resources (
   5. Both $P_1$ and $P_3$ can now complete execution.
 - **Safe Execution Sequence:** $\langle P_2, P_4, P_1, P_3 \rangle$ (or $\langle P_4, P_2, P_3, P_1 \rangle$).
 
-> **🗓️ Asked In Papers:** `June 2026 Q3(a)`
+**📝 Example PQP Question (June 2026 Q3(a)):**
+
+There are four processes and two resources in the system. Each resource has two instances. Furthermore :
+
+(i) P1 acquires an instance of R2, and requests an instance of R1.
+(ii) P2 acquires an instance of R1, and doesn’t need any other resource.
+(iii) P3 acquires an instance of R1, and requires an instance of R2.
+(iv) P4 acquires an instance of R2, and doesn’t need any other resource.
+
+(I) Draw the resource allocation graph.
+(II) Is there any cycle in the graph ? If yes, name it.
+(III) Whether the system is in deadlock ? If yes, explain why; if not, provide sequence of execution of processes. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2026 Q3(a)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -123,7 +144,11 @@ Consider a system with four processes ($P_1, P_2, P_3, P_4$) and two resources (
      Repeat Step 2.
   4. If `Finish[i] == true` for all $i$, the system is in a **Safe State** (a valid execution order $\langle P_0, P_1, \dots, P_{n-1} \rangle$ exists). If not, the system is unsafe and the request is deferred.
 
-> **🗓️ Asked In Papers:** `June 2023 Q2(b), Dec 2023 Q5(b)`
+**📝 Example PQP Question (June 2023 Q2(b)):**
+
+Write and explain “Banker’s algorithm” for Deadlock Avoidance proposed by Dijkstra. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2023 Q2(b)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore'), [Dec 2023 Q5(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -153,7 +178,11 @@ Single Instance Deadlock Example:
     [Cycle P1 -> R1 -> P2 -> R2 -> P1 indicates Deadlock]
 ```
 
-> **🗓️ Asked In Papers:** `June 2024 Q1(a)`
+**📝 Example PQP Question (June 2024 Q1(a)):**
+
+Characterize a deadlock in a system. Using a resource allocation graph, illustrate a deadlock. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2024 Q1(a)](/bca_new/mcs203/pqp/MCS-203_June_2024.pdf ':ignore')
 
 ---
 
@@ -176,6 +205,10 @@ Single Instance Deadlock Example:
      - *Rollback:* Roll the selected victim process back to a safe checkpoint state.
      - *Starvation Avoidance:* Ensure the same process is not repeatedly chosen as a preemption victim.
 
-> **🗓️ Asked In Papers:** `June 2025 Q5(b)`
+**📝 Example PQP Question (June 2025 Q5(b)):**
+
+Write short notes on: Deadlock detection and Recovery *(5 marks)*
+
+> **🗓️ Asked In Papers:** [June 2025 Q5(b)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore')
 
 ---

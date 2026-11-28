@@ -1248,10 +1248,70 @@
       color: var(--textColor, #475569);
       padding-top: 2px;
     }
+    /* Example PQP Question Box */
+    .q-example-box {
+      margin: 0.95rem 0 !important;
+      padding: 0.9rem 1.1rem !important;
+      border-radius: 8px;
+      background: rgba(14, 165, 233, 0.05);
+      border-left: 3.5px solid #0284c7;
+    }
+    [data-theme="dark"] .q-example-box {
+      background: rgba(56, 189, 248, 0.08);
+      border-left-color: #38bdf8;
+    }
+    .q-example-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #0369a1;
+      margin-bottom: 0.4rem;
+    }
+    [data-theme="dark"] .q-example-label {
+      color: #7dd3fc;
+    }
+    .q-example-text {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--textColor, #1e293b);
+    }
+    .q-example-text p:last-child {
+      margin-bottom: 0;
+    }
+
     .q-papers-list code {
       font-size: 0.8rem !important;
       padding: 2px 6px !important;
       background: var(--borderColor, rgba(148, 163, 184, 0.15)) !important;
+    }
+    .q-papers-list a {
+      display: inline-block;
+      font-family: var(--code-font);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 2px 8px;
+      margin: 2px 2px;
+      border-radius: 5px;
+      background: rgba(79, 70, 229, 0.07);
+      color: var(--accent, #4f46e5) !important;
+      text-decoration: none !important;
+      border: 1px solid rgba(79, 70, 229, 0.16);
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .q-papers-list a:hover {
+      background: rgba(79, 70, 229, 0.14);
+      border-color: rgba(79, 70, 229, 0.35);
+      text-decoration: none !important;
+    }
+    [data-theme="dark"] .q-papers-list a {
+      background: rgba(129, 140, 248, 0.12);
+      color: #a5b4fc !important;
+      border-color: rgba(129, 140, 248, 0.25);
+    }
+    [data-theme="dark"] .q-papers-list a:hover {
+      background: rgba(129, 140, 248, 0.22);
+      border-color: rgba(129, 140, 248, 0.45);
     }
 
     /* Mermaid Diagram Container */
@@ -1527,6 +1587,11 @@
               block = block.replace(
                 /<blockquote>\s*<p><strong>🗓️\s*Asked In Papers:?<\/strong>\s*([\s\S]*?)<\/p>\s*<\/blockquote>/i,
                 '<div class="q-papers-box"><span class="q-papers-label">🗓️ Exam Sessions</span><span class="q-papers-list">$1</span></div>'
+              );
+              // Format Example PQP Question box
+              block = block.replace(
+                /<p><strong>📝\s*Example PQP Question\s*\((.+?)\):?<\/strong>(?:<\/p>|\s*<br\s*\/?>|\s*)([\s\S]*?)(?=<div class="q-papers-box">)/i,
+                '<div class="q-example-box"><div class="q-example-label">📝 Example PQP Question ($1)</div><div class="q-example-text">$2</div></div>'
               );
 
               var aiDropdown = [

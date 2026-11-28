@@ -50,7 +50,11 @@
   3. If $d \ge \text{Limit}$, an addressing violation trap is generated.
   4. If valid, the physical address is calculated as: $\text{Physical Address} = \text{Base} + d$.
 
-> **🗓️ Asked In Papers:** `June 2022 Q3(a), June 2023 Q1(c), Dec 2024 Q5(b), June 2026 Q1(c)`
+**📝 Example PQP Question (June 2026 Q1(c)):**
+
+What is segmentation ? With the help of a diagram, explain the Address Translation Scheme in Segmentation. Also, explain protection and sharing in this context. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q3(a)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore'), [June 2023 Q1(c)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore'), [Dec 2024 Q5(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore'), [June 2026 Q1(c)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -72,7 +76,11 @@
   - `Dirty / Modified Bit`: Indicates whether the page has been written to, avoiding unnecessary disk writes during page replacement.
 - **Page Sharing:** Two or more processes share identical physical frames by mapping entries in their respective page tables to the same frame number $f$ (e.g., shared C standard libraries).
 
-> **🗓️ Asked In Papers:** `Dec 2022 Q1(c), June 2024 Q4(a), Dec 2024 Q4(b)`
+**📝 Example PQP Question (Dec 2022 Q1(c)):**
+
+Define virtual memory. Explain the principles of operation and the address mapping scheme of it. Also, write briefly about the protection and sharing in virtual memory. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2022 Q1(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2022.pdf ':ignore'), [June 2024 Q4(a)](/bca_new/mcs203/pqp/MCS-203_June_2024.pdf ':ignore'), [Dec 2024 Q4(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore')
 
 ---
 
@@ -116,7 +124,11 @@ When a CPU executes an instruction that accesses a page whose Valid/Invalid bit 
 7. **Page Table Update:** Once the I/O interrupt signals completion, the OS updates the Page Table entry with the allocated frame number and flips the status bit to `Valid` (1).
 8. **Instruction Restart:** The OS restores saved CPU registers and restarts the exact instruction that triggered the page fault.
 
-> **🗓️ Asked In Papers:** `Dec 2022 Q4(a), June 2024 Q5(b)`
+**📝 Example PQP Question (Dec 2022 Q4(a)):**
+
+When does a page fault occur in demand paging ? Describe the action taken by the operating system when it occurs. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2022 Q4(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2022.pdf ':ignore'), [June 2024 Q5(b)](/bca_new/mcs203/pqp/MCS-203_June_2024.pdf ':ignore')
 
 ---
 
@@ -157,7 +169,11 @@ When a CPU executes an instruction that accesses a page whose Valid/Invalid bit 
   $$\text{EAT} = (h \times (t_{\text{TLB}} + t_{\text{RAM}})) + ((1 - h) \times (t_{\text{TLB}} + 2 \times t_{\text{RAM}}))$$
   where $h$ is the TLB hit ratio, $t_{\text{TLB}}$ is the cache lookup time, and $t_{\text{RAM}}$ is physical memory access latency.
 
-> **🗓️ Asked In Papers:** `June 2025 Q1(b)`
+**📝 Example PQP Question (June 2025 Q1(b)):**
+
+Define paging technique. With the help of a diagram, explain the principles of its operation. Also, discuss the hardware support required for paging. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2025 Q1(b)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore')
 
 ---
 
@@ -217,7 +233,18 @@ Replaces the page that will not be used for the longest period in the future.
 
 - **Total Optimal Page Faults:** **8 Faults** (6 Hits out of 14 accesses).
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q1(b)`
+**📝 Example PQP Question (Dec 2021 Q1(b)):**
+
+Consider the following reference-string :
+
+`1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6`
+
+How many page faults would occur for the following algorithms, assuming memory with three frames :
+
+(i) LRU
+(ii) Optimal Replacement *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q1(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore')
 
 ---
 
@@ -255,7 +282,13 @@ Number of Frames: **3 (Initially Empty)**. Calculate page faults for: (i) Optima
 - `4`: Hit (`[4, 6, 9]`).
 - **Total FIFO Faults:** **6 Page Faults** (4 Hits).
 
-> **🗓️ Asked In Papers:** `June 2023 Q2(a)`
+**📝 Example PQP Question (June 2023 Q2(a)):**
+
+For the reference string as shown below :
+
+`0, 1, 3, 4, 6, 4, 3, 9, 6, 4` and with 3 memory frames, calculate the number of page faults using OPT and FCFS page replacement algorithms. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2023 Q2(a)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore')
 
 ---
 
@@ -293,7 +326,18 @@ Number of Frames: **3**. Calculate page faults for: (i) LRU, (ii) FIFO.
   - `3`: Evicts 1 -> `[2, 3, 5]` -> Fault (8)
   - **FIFO Total:** **8 Page Faults** (3 Hits).
 
-> **🗓️ Asked In Papers:** `Dec 2023 Q1(b)`
+**📝 Example PQP Question (Dec 2023 Q1(b)):**
+
+Following is the sequence of page requests :
+
+`1, 3, 2, 4, 3, 1, 4, 5, 2, 1, 3`
+
+Assume that there are three frames. How many page faults will occur if the following algorithms are used to replace the pages ?
+
+(i) Least Recently Used (LRU)
+(ii) First Come First Serve (FCFS) *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2023 Q1(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -329,7 +373,19 @@ Number of Frames: **4 (Initially Empty)**. Calculate page faults for: (i) FIFO, 
   - Maintains reference counts. Pages with the lowest execution frequencies are evicted first, using FIFO as a tie-breaker.
   - **Total LFU Faults:** **6 Faults**.
 
-> **🗓️ Asked In Papers:** `Dec 2024 Q1(d)`
+**📝 Example PQP Question (Dec 2024 Q1(d)):**
+
+The following is the sequence of page-requests :
+
+`1, 2, 5, 4, 2, 1, 3, 2, 6, 4`
+
+Assume that there are four frames. How many page faults will occur if the following page replacement algorithms are used to replace the pages ?
+
+(i) First Come First Serve (FCFS)
+(ii) Least Recently Used (LRU)
+(iii) Least Frequently Used (LFU) *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2024 Q1(d)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore')
 
 ---
 
@@ -346,7 +402,18 @@ Number of Frames: **4**. Calculate page faults for: (i) LRU, (ii) FIFO.
 - **FIFO Simulation:** Yields **14 Page Faults** (6 hits).
 - **LRU Simulation:** Yields **11 Page Faults** (9 hits), demonstrating the efficiency of temporal locality tracking over long access sequences.
 
-> **🗓️ Asked In Papers:** `Dec 2025 Q2(a)`
+**📝 Example PQP Question (Dec 2025 Q2(a)):**
+
+Consider the following page reference string :
+
+`1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 1, 2, 3, 6.`
+
+How many page faults would occur for the following replacement algorithms, assuming four frames ? Remember all frames are initially empty, so your first unique pages will all cost one fault each :
+
+(i) LRU replacement
+(ii) FIFO replacement *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2025 Q2(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -385,7 +452,17 @@ Holes available initially: $200, 400, 600, 500, 300, 250\text{ kB}$.
 
 **Conclusion:** Best-Fit achieves 100% allocation efficiency, whereas First-Fit and Worst-Fit leave processes waiting.
 
-> **🗓️ Asked In Papers:** `June 2026 Q2(b)`
+**📝 Example PQP Question (June 2026 Q2(b)):**
+
+Consider six memory partitions of size 200 kB, 400 kB, 600 kB, 500 kB, 300 kB and 250 kB. These partitions need to be allocated to four processes of sizes 357 kB, 210 kB, 468 kB and 491 kB in that order.
+
+Perform the allocation of processes using :
+
+(i) First-fit Algorithm
+(ii) Best-fit Algorithm
+(iii) Worst-fit Algorithm *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2026 Q2(b)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -402,7 +479,11 @@ Holes available initially: $200, 400, 600, 500, 300, 250\text{ kB}$.
   1. **Working Set Model:** Introduced by Peter Denning. Monitors the set of pages referenced by a process during the most recent $\Delta$ page references (the Working Set Window). The OS only admits a process if its working set can be completely accommodated in free frames.
   2. **Page Fault Frequency (PFF) Strategy:** Measures the direct rate of page faults. If a process's page-fault rate exceeds an upper threshold, the OS allocates it more frames. If the rate falls below a lower threshold, frames are reclaimed.
 
-> **🗓️ Asked In Papers:** `June 2022 Q4(b), June 2026 Q2(a)`
+**📝 Example PQP Question (June 2026 Q2(a)):**
+
+What is the cause of thrashing ? How does the system detect thrashing ? Once it detects thrashing, what can the system do to eliminate this problem ? *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q4(b)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore'), [June 2026 Q2(a)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -421,7 +502,11 @@ Holes available initially: $200, 400, 600, 500, 300, 250\text{ kB}$.
   - *Overlays:* Managed manually by the programmer / compiler; sub-process granularity; no special OS virtual memory hardware required.
   - *Swapping:* Managed automatically by the operating system kernel; process-level granularity; entire memory spaces are rolled between RAM and swap partition on disk.
 
-> **🗓️ Asked In Papers:** `Dec 2022 Q3(a)`
+**📝 Example PQP Question (Dec 2022 Q3(a)):**
+
+Define an overlay with the help of an example. Explain the allocation scheme using overlays. How is this scheme different from swapping ? *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2022 Q3(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2022.pdf ':ignore')
 
 ---
 
@@ -439,7 +524,11 @@ Holes available initially: $200, 400, 600, 500, 300, 250\text{ kB}$.
   - *Segmented Paging:* Logical view is primary; segments are paged to simplify memory allocation.
   - *Paged Segmentation:* Hardware paging is primary; segments provide access-control tags over page ranges.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q2(a)`
+**📝 Example PQP Question (Dec 2021 Q2(a)):**
+
+Define paged-segmentation and segmented paging. Explain the working principle of paged-segmentation. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q2(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore')
 
 ---
 
@@ -455,6 +544,10 @@ Holes available initially: $200, 400, 600, 500, 300, 250\text{ kB}$.
   - **Valid (1):** The associated page is legal and currently resident in physical RAM frames. The MMU proceeds with address reconstruction.
   - **Invalid (0):** The page is either not in the process's logical address space (illegal access) or is valid but currently resides on the backing disk storage. Any attempt to access an invalid page immediately fires a page fault exception.
 
-> **🗓️ Asked In Papers:** `Dec 2025 Q3(a)`
+**📝 Example PQP Question (Dec 2025 Q3(a)):**
+
+Explain the abstract model of virtual address to physical address mapping. Also, explain the use of valid and invalid bits in page table. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2025 Q3(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')
 
 ---

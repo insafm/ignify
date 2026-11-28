@@ -19,7 +19,11 @@
 5. **Independent Failure Handling:** Detecting and recovering from partial failures without halting the entire system (fault tolerance, data replication, consensus algorithms).
 6. **Transparency:** Concealing distributed complexity from users across 8 dimensions: Access, Location, Migration, Relocation, Replication, Concurrency, Failure, and Persistence transparency.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q1(c), June 2024 Q1(b), Dec 2025 Q1(c)`
+**📝 Example PQP Question (Dec 2025 Q1(c)):**
+
+List and explain design issues involved in Distributed Systems. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q1(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore'), [June 2024 Q1(b)](/bca_new/mcs203/pqp/MCS-203_June_2024.pdf ':ignore'), [Dec 2025 Q1(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore')
 
 ---
 
@@ -51,7 +55,11 @@
   4. **Release Protocol:**
      - Upon exiting the CS, $S_i$ sets `requesting_CS = false` and sends a `REPLY` message to every node waiting in its `deferred_reply_queue`, emptying the queue.
 
-> **🗓️ Asked In Papers:** `Dec 2021 Q3(a), June 2025 Q4(a)`
+**📝 Example PQP Question (June 2025 Q4(a)):**
+
+Write and explain Ricart and Agrawal’s mutual exclusion algorithm for distributed systems. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2021 Q3(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2021.pdf ':ignore'), [June 2025 Q4(a)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore')
 
 ---
 
@@ -90,7 +98,11 @@ int FetchAndAdd(int *variable, int increment) {
 }
 ```
 
-> **🗓️ Asked In Papers:** `June 2023 Q4(a), Dec 2023 Q2(b)`
+**📝 Example PQP Question (June 2023 Q4(a)):**
+
+Describe multiprocessor OS functions and requirements. With respect to synchronization in multiprocessors, explain test-and-set, compare-and-swapes and fetch-and-add techniques. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2023 Q4(a)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore'), [Dec 2023 Q2(b)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -119,7 +131,11 @@ int FetchAndAdd(int *variable, int increment) {
      - When a site receives the `RELEASE`, it removes $S_i$'s request from its queue.
 - **Message Complexity:** Requires $3(N-1)$ messages per critical section invocation ($(N-1)$ requests + $(N-1)$ replies + $(N-1)$ releases). *(Note: Ricart-Agrawala later optimized this to $2(N-1)$ messages by eliminating explicit release messages).*
 
-> **🗓️ Asked In Papers:** `June 2026 Q1(d)`
+**📝 Example PQP Question (June 2026 Q1(d)):**
+
+Explain Lamport’s Distributed Mutual Exclusion Algorithm. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2026 Q1(d)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -139,7 +155,11 @@ int FetchAndAdd(int *variable, int increment) {
   - *Failure Modes:* Network partitions, lost packets, and independent server crashes introduce complex failure states.
   - *Pointer Passing:* Memory pointers and references cannot be passed directly across distinct address spaces without deep copying.
 
-> **🗓️ Asked In Papers:** `Dec 2023 Q5(d), Dec 2025 Q4(a), June 2026 Q5(a)`
+**📝 Example PQP Question (Dec 2025 Q4(a)):**
+
+What is Remote Procedure Call (RPC) ? How does it work ? What are the limitations of Remote Procedure Call ? *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2023 Q5(d)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore'), [Dec 2025 Q4(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2025.pdf ':ignore'), [June 2026 Q5(a)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -171,7 +191,11 @@ int FetchAndAdd(int *variable, int increment) {
   - If the page resides on a remote node, the MMU fires a page fault intercepted by the DSM runtime layer.
   - The DSM software requests the page across the network, caches it locally, and uses memory consistency protocols (Strict, Sequential, or Release Consistency) to maintain global coherence.
 
-> **🗓️ Asked In Papers:** `June 2023 Q3(b), June 2026 Q5(e)`
+**📝 Example PQP Question (June 2023 Q3(b)):**
+
+With the help of a diagram, explain “Distributed Shared Memory” application model. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2023 Q3(b)](/bca_new/mcs203/pqp/MCS-203_June_2023.pdf ':ignore'), [June 2026 Q5(e)](/bca_new/mcs203/pqp/MCS-203_June_2026.pdf ':ignore')
 
 ---
 
@@ -195,7 +219,11 @@ ightarrow$):**
   - **Rule 3 (Message Receipt):** When process $P_j$ receives message $m$ with timestamp $ts(m)$, it updates its local clock:
     $$C_j = \max(C_j, ts(m)) + 1$$
 
-> **🗓️ Asked In Papers:** `June 2022 Q5(a)`
+**📝 Example PQP Question (June 2022 Q1(b)):**
+
+Write and explain the Lamport’s Scheme of Ordering of Events in Distributed Systems. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2022 Q5(a)](/bca_new/mcs203/pqp/MCS-203_June_2022.pdf ':ignore')
 
 ---
 
@@ -213,7 +241,17 @@ ightarrow$):**
 | **Distributed Objects** | Remote Method Invocation (RMI / CORBA / DCOM). | Encapsulated inside distributed objects across network hosts. | Object-oriented method invocations across address spaces (`remoteObj.method()`). |
 | **Distributed Shared Memory (DSM)** | Hardware/software page faulting and virtual memory replication. | Shared virtual address space mapped across nodes' physical memories. | Standard memory load/store operations (`*ptr = value`) with hardware MMU. |
 
-> **🗓️ Asked In Papers:** `Dec 2023 Q2(a)`
+**📝 Example PQP Question (Dec 2023 Q2(a)):**
+
+There are three main alternative ways to structure a distributed application as shown below :
+
+(i) Client/Server (and RPC)
+(ii) Distributed objects
+(iii) Distributed shared memory
+
+Explain all the three models with the help of block diagrams respectively. *(10 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2023 Q2(a)](/bca_new/mcs203/pqp/MCS-203_Dec_2023.pdf ':ignore')
 
 ---
 
@@ -233,7 +271,14 @@ ightarrow$):**
    - Each processor manages its own local memory, interrupts, and ready queues independently.
    - *Limitation:* Resource sharing across processors is difficult; memory tables and process states must be explicitly duplicated.
 
-> **🗓️ Asked In Papers:** `June 2025 Q4(b)`
+**📝 Example PQP Question (June 2025 Q4(b)):**
+
+In context to multiprocessor operating systems, explain the following types :
+
+(i) Separate supervisor
+(ii) Master-Slave *(10 marks)*
+
+> **🗓️ Asked In Papers:** [June 2025 Q4(b)](/bca_new/mcs203/pqp/MCS-203_June_2025.pdf ':ignore')
 
 ---
 
@@ -251,6 +296,10 @@ ightarrow$):**
   - Consists of autonomous independent computers, each possessing its own local CPU, memory, clock, and operating system instance.
   - Nodes communicate strictly via message-passing packets across local or wide area network links (millisecond latency).
 
-> **🗓️ Asked In Papers:** `Dec 2024 Q4(c)`
+**📝 Example PQP Question (Dec 2024 Q4(c)):**
+
+What is the difference between a loosely coupled system and a tightly coupled system ? Give examples for each. *(4 marks)*
+
+> **🗓️ Asked In Papers:** [Dec 2024 Q4(c)](/bca_new/mcs203/pqp/MCS-203_Dec_2024.pdf ':ignore')
 
 ---
